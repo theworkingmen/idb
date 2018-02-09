@@ -48,6 +48,25 @@
 	color: rgba(210,210,210,1);
 }
 
+.model-table {
+	margin: auto;
+	position: relative;
+	width: 70%;
+}
+
+.model-entry {
+	
+}
+
+.model-image {
+	margin: 10px;
+	padding: 10px;
+}
+
+.model-data {
+	font-size: 22px;
+}
+
 body {
 	background-color: rgba(200,200,200,1);
 }
