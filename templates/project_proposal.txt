@@ -1,0 +1,41 @@
+Group name: The Working Men
+
+Canvas group number: 2
+
+Project name: Major Potential
+
+Proposal: To create a website that links universities, the cities where the universities are located,
+and job opportunities in cities for graduates in certain majors.
+
+API Sources
+https://api.data.gov/docs/ed/
+https://www.bls.gov/developers/api_signature_v2.htm
+https://www.mediawiki.org/wiki/API:Main_page
+https://developers.google.com/maps/
+https://developer.twitter.com/en.html
+https://developers.google.com/places/
+https://www.census.gov/data/developers/data-sets/cbp-nonemp-zbp/cbp-api.html
+
+Model 1 - Universities
+Size
+Student-faculty ratio
+Enrollment statistics / demographics
+Media includes photos, location maps, university social media feed
+Link to model 2 - Top majors are offered here
+Link to model 3 - What city the university is located in, others nearby
+
+Model 2 - Degree Plans, Majors
+Jobs you could hold with this major
+Starting salary statistics
+Job growth rates
+Media includes photos of job sites, etc
+Link to model 1 - universities offering a curriculum in this major
+Link to model 3 - cities with good job opportunities for this major
+
+Model 3 - Towns, Cities
+Population
+State, county
+Large companies operating nearby
+Media includes photos, maps
+Link to model 1 - universities located within or near the city
+Link to model 2 - jobs/degrees which this city has good job opportunities
