@@ -1,10 +1,12 @@
-import requests, json
+import requests
+import json
 
-group_members = {'abelhtt':'Abel Tesfaye',
-                 'NealFM':'Neal Friesenhahn',
-                 'smcw66':'Sungsup Lee',
-                 'christian-onuogu':'Christian Onuogu',
-                 'traylor1':'Mitchell Traylor'}
+group_members = {'abelhtt': 'Abel Tesfaye',
+                 'NealFM': 'Neal Friesenhahn',
+                 'smcw66': 'Sungsup Lee',
+                 'christian-onuogu': 'Christian Onuogu',
+                 'traylor1': 'Mitchell Traylor'}
+
 
 def get_commit_stat():
     git_url = "https://api.github.com/repos/smcw66/majorpotential/stats/contributors"
@@ -15,6 +17,7 @@ def get_commit_stat():
     commit_stat = parse_commit_data(commit_data)
 
     return json.dumps(commit_stat)
+
 
 def parse_commit_data(commit_data):
     commit_stat = []

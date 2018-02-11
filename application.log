@@ -1,0 +1,47 @@
+commit 185f5adde44cdc9eee7e9f11bf51d43c7fa839dd
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Sat Feb 10 15:56:58 2018 -0600
+
+    removed unnecessary files
+
+commit d0c54c42b1a391f8b707d2bb154a6de48c8cca52
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Sat Feb 10 11:26:14 2018 -0600
+
+    Added a flask app that renders the html pages and queries github for commit information
+
+commit 792c195521a053443343823e7c5223bd3f7639c5
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Fri Feb 9 08:49:58 2018 -0600
+
+    Created model-major.html.
+
+commit 90ff123d4df639dc4786d1a1d7972ab36213fd75
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Fri Feb 9 07:11:22 2018 -0600
+
+    Created model page for cities.
+
+commit 1b7b68d23a6529a5ac7c04b9e72531bb7a44c861
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Fri Feb 9 06:50:59 2018 -0600
+
+    Dead links added to complete navbar, pages to be created later.
+
+commit e06d298eaba932e1476ddbfff4113e38be52af0f
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Thu Feb 8 19:07:21 2018 -0600
+
+    Created model-college.html, navbar updated to link to it.
+
+commit e1b367a7412eb6a63bda8938c307cece9dce20fa
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Thu Feb 8 15:00:44 2018 -0600
+
+    Created splash page for static site.
+
+commit 1df2285c1ceeee084ac52073ea3cb4025feb00bb
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Wed Feb 7 11:03:42 2018 -0600
+
+    Initial commit
