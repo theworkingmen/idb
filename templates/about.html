@@ -47,11 +47,24 @@
         background-image: url("{{url_for('static', filename='spiration dark.png')}}");
         }
 
+        .container{
+        	max-width: 1000px;
+        	margin: auto;
+        }
+
         .jumbotron{
         	background-color: lavender;
         	color:black;
-        	max-width: 1300px;
+        	max-width: 1000px;
         	margin: auto;
+        }
+
+        .profileimg{
+        	max-width: 100%;
+        	padding: 1em;
+        }
+        .profileimg > img {
+        	width: 100%;
         }
 
     </style>
@@ -93,39 +106,41 @@
 -->
 
 <!-- Profile Pictures  -->
+<div class="container">
 <div class="jumbotron" style="border:1px solid red">
     <div class="row"; >
-        <div class="col-md-4">
-            <img src="../images/authors/default.jpg" class="img-circle center-block" width="300" height="300">
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <img src="../images/authors/default.jpg" class="img-circle center-block profileimg">
             <p class="text-center"> mitchel </p>
             <p class="text-center"> enter role here </p>
         </div>
-        <div class="col-md-4">
-            <img src="../images/authors/default.jpg" class="img-circle center-block" width="300" height="300">
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <img src="../images/authors/default.jpg" class="img-circle center-block profileimg">
             <p class="text-center"> sungsup </p>
             <p class="text-center"> enter role here </p>
         </div>
-        <div class="col-md-4">
-            <img src="../images/authors/default.jpg" class="img-circle center-block" width="300" height="300">
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <img src="../images/authors/default.jpg" class="img-circle center-block profileimg">
             <p class="text-center"> abel </p>
             <p class="text-center"> enter role here </p>
         </div>
     </div>
 
     <div class="row">
-    	<div class="col-md-2"></div> <!-- spacer  -->
-        <div class="col-md-4">
-            <img src="../images/authors/default.jpg" class="img-circle center-block" width="300" height="300">
+    	 <div class="col-lg-2 col-md-2 col-sm-2"> </div> <!-- offset left by 2 columns  -->
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <img src="../images/authors/default.jpg" class="img-circle center-block profileimg">
             <p class="text-center"> neil </p>
             <p class="text-center"> enter role here </p>
         </div>
-        <div class="col-md-4">
-            <img src="../images/authors/default.jpg" class="img-circle center-block" width="300" height="300">
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <img src="../images/authors/default.jpg" class="img-circle center-block profileimg">
             <p class="text-center"> christian </p>
             <p class="text-center"> enter role here </p>
         </div>
     </div>
 
+</div>
 </div>
 
 <br>
