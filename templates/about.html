@@ -1,59 +1,159 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="{{url_for('static', filename='load_about.js')}}"></script>
+    <script src="{{url_for('static', filename='load_about.js')}}"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css">
 
-<style>
 
-table, th, td {
-    border: 1.5px solid black;
-    border-collapse: collapse;
-}
+    <style>
+        table, th, td {
+            border: 1.5px solid black;
+            border-collapse: collapse;
+        }
 
-table {
-	margin-left: auto;
-	margin-right: auto;
-}
+        table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        table tr:nth-child(even) {
+            background-color: #D3D3D3
+        }
+        table tr:nth-child(odd) {
+            background-color: #FFFFFF;
+        }
+        th, td {
+            padding: 5px;
+            text-align: center;
+        }
+        caption {
+           font-size:24px;
+           font-family:Georgia;
+           font-weight:bold;
+           text-color:white;
+           padding: 5px;
+           background: #eee;
+        }
+        body {
+        background-image: url("{{url_for('static', filename='spiration dark.png')}}");
+        }
 
-table tr:nth-child(even) {
-    background-color: #D3D3D3
-}
+    </style>
 
-table tr:nth-child(odd) {
-    background-color: #FFFFFF;
-}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-th, td {
-    padding: 5px;
-    text-align: center;
-}
-
-caption {
-   font-size:24px;
-   font-family:Georgia;
-   font-weight:bold;
-   text-color:white;
-   padding: 5px;
-   background: #eee;
-}
-
-body {
-background-image: url("{{url_for('static', filename='spiration dark.png')}}");
-}
-</style>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body onload="javascript:getCommitsTable()">
 <br>
 <br>
+<h1 align="center">
+    About
+</h1>
+
+<!--
 <table id = "commitTable" style="width:50%">
-  <caption>Major Potential Github Commit Analytics</caption>
-  <tr>
-    <th>Name</th>
-    <th>Number of Commits</th>
-  </tr>
+    <caption>Major Potential Github Commit Analytics</caption>
+    <tr>
+        <th>Name</th>
+        <th>Number of Commits</th>
+    </tr>
 </table>
+-->
+
+<!-- Profile Pictures  -->
+<div class="container" style="border:1px solid red">
+    <div class="row"; >
+        <div class="col-md-4">
+            <img src="../images/authors/default.jpg" class="img-thumbnail" width="300" height="300">
+            <p class="text-center"> mitchel </p>
+            <p class="text-center"> enter role here </p>
+        </div>
+        <div class="col-md-4">
+            <img src="../images/authors/default.jpg" class="img-thumbnail" width="300" height="300">
+            <p class="text-center"> sungsup </p>
+            <p class="text-center"> enter role here </p>
+        </div>
+        <div class="col-md-4">
+            <img src="../images/authors/default.jpg" class="img-thumbnail" width="300" height="300">
+            <p class="text-center"> abel </p>
+            <p class="text-center"> enter role here </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <img src="../images/authors/default.jpg" class="img-thumbnail" width="300" height="300">
+            <p class="text-center"> neil </p>
+            <p class="text-center"> enter role here </p>
+        </div>
+        <div class="col-md-4">
+            <img src="../images/authors/default.jpg" class="img-thumbnail" width="300" height="300">
+            <p class="text-center"> christian </p>
+            <p class="text-center"> enter role here </p>
+        </div>
+    </div>
+
+</div>
+
+<br>
+
+<!-- Tables  -->
+<div class="container" style="border:1px solid blue">
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table table-hover md5">
+                <tr>
+                    <th>
+                        <h3> Stats </h3>
+                    </th>
+                </tr>
+                <tr>
+                    <th># of commits: ??</th>
+                </tr>
+                <tr>
+                    <th># of issues: ??</th>
+                </tr>
+                <tr>
+                    <th># of unit tests: ??</th>
+                </tr>
+
+            </table>
+        </div>
+        <div class="col-md-6">
+            <table class="table table-hover md5">
+                <tr>
+                    <th>
+                        <h3> Tools </h3>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Amazon Beanstalk</th>
+                </tr>
+                <tr>
+                    <th>Amazon S3</th>
+                </tr>
+                <tr>
+                    <th>Slack</th>
+                </tr>
+                <tr>
+                    <th>Bootstrap</th>
+                </tr>
+                <tr>
+                    <th>Flask</th>
+                </tr>
+                <tr>
+                    <th>Travis-CI</th>
+                </tr>
+                <tr>
+                    <th>Github</th>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+    <div class="col-md-4">
+
+    </div>
+</div>
 
 </body>
 
