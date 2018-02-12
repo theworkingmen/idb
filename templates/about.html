@@ -2,7 +2,11 @@
 <html>
 <head>
     <script src="{{url_for('static', filename='load_about.js')}}"></script>
+
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../css/bootstrap.css">
+    <!-- Personal CSS File -->
+	<link rel="stylesheet" href="{{url_for('static', filename='splash.css')}}" type="text/css">
 
 
     <style>
@@ -37,6 +41,17 @@
         background-image: url("{{url_for('static', filename='spiration dark.png')}}");
         }
 
+        .jumbotron{
+        	background-color: lavender;
+        	color:black;
+        	max-width: 1300px;
+        	margin: auto;
+        }
+        img.img-thumbnail {
+        	margin-left: auto;
+        	margin-right: auto;
+        }
+
     </style>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,6 +64,16 @@
 <h1 align="center">
     About
 </h1>
+	<!-- NAVBAR -->
+	<div class="navbar">
+		<div class="navlink"><a class="navtext" href="/">Home</a></div>
+		<div class="navlink"><a class="navtext" href="/colleges">Colleges</a></div>
+		<div class="navlink"><a class="navtext" href="/cities">Cities</a></div>
+		<div class="navlink"><a class="navtext" href="/majors">Majors</a></div>
+		<div class="navlink"><a class="navtext" href="/about">About</a></div>
+	</div>
+
+	<!-- ENDNAVBAR -->
 
 <!--
 <table id = "commitTable" style="width:50%">
@@ -61,32 +86,32 @@
 -->
 
 <!-- Profile Pictures  -->
-<div class="container" style="border:1px solid red">
+<div class="jumbotron" style="border:1px solid red">
     <div class="row"; >
         <div class="col-md-4">
-            <img src="../images/authors/default.jpg" class="img-thumbnail" width="300" height="300">
+            <img src="../images/authors/default.jpg" class="img-thumbnail center-block" width="300" height="300">
             <p class="text-center"> mitchel </p>
             <p class="text-center"> enter role here </p>
         </div>
         <div class="col-md-4">
-            <img src="../images/authors/default.jpg" class="img-thumbnail" width="300" height="300">
+            <img src="../images/authors/default.jpg" class="img-thumbnail center-block" width="300" height="300">
             <p class="text-center"> sungsup </p>
             <p class="text-center"> enter role here </p>
         </div>
         <div class="col-md-4">
-            <img src="../images/authors/default.jpg" class="img-thumbnail" width="300" height="300">
+            <img src="../images/authors/default.jpg" class="img-thumbnail center-block" width="300" height="300">
             <p class="text-center"> abel </p>
             <p class="text-center"> enter role here </p>
         </div>
     </div>
     <div class="row">
         <div class="col-md-4">
-            <img src="../images/authors/default.jpg" class="img-thumbnail" width="300" height="300">
+            <img src="../images/authors/default.jpg" class="img-thumbnail center-block" width="300" height="300">
             <p class="text-center"> neil </p>
             <p class="text-center"> enter role here </p>
         </div>
         <div class="col-md-4">
-            <img src="../images/authors/default.jpg" class="img-thumbnail" width="300" height="300">
+            <img src="../images/authors/default.jpg" class="img-thumbnail center-block" width="300" height="300">
             <p class="text-center"> christian </p>
             <p class="text-center"> enter role here </p>
         </div>
@@ -98,9 +123,10 @@
 
 <!-- Tables  -->
 <div class="container" style="border:1px solid blue">
-    <div class="row">
+    <div class="row" >
         <div class="col-md-6">
-            <table class="table table-hover md5">
+            <table class="table table-hover">
+            	<col width="130">
                 <tr>
                     <th>
                         <h3> Stats </h3>
@@ -119,7 +145,7 @@
             </table>
         </div>
         <div class="col-md-6">
-            <table class="table table-hover md5">
+            <table class="table table-hover">
                 <tr>
                     <th>
                         <h3> Tools </h3>
@@ -154,6 +180,15 @@
 
     </div>
 </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 
 </body>
 
