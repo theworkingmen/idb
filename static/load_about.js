@@ -48,10 +48,10 @@ function loadTable(arr) {
 	{
 		/* add new row */
 		var row = table.insertRow(i+1);
-		var cell1 = row.insertCell(0);
-		var cell2 = row.insertCell(1);
+		var cell1 = row.insertCell(1);
+		//var cell2 = row.insertCell(1);
 		/* add the new values to the row */
 		cell1.innerHTML = arr[i].name;
-		cell2.innerHTML = arr[i].commits;
+		//cell2.innerHTML = arr[i].commits;
 	}
 }
