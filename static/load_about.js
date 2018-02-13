@@ -16,7 +16,7 @@ function loadXMLDoc(url,cfunc)
 	xmlhttp.send();
 }
 
-/* makes a Rest call to the backend to get the data in XML */
+/* makes a Rest call to the backend to get the data in Json */
 function getCommitsTable()
 {
 	loadXMLDoc("api/about",function()
@@ -25,33 +25,23 @@ function getCommitsTable()
 			if (xmlhttp.status == 200)
 			{
 				var myArr = JSON.parse(this.responseText);
-				loadTable(myArr);
+				loadData(myArr);
 			}
 		}
 			});
 }
 
-/* Load the rows in the html table */
-function loadTable(arr) {
+/* Load github api data */
+function loadData(arr) {
 	var x, y, i, xmlDoc;
 	// load the table
-	var table = document.getElementById("commitTable");
+	var total_commits = document.getElementById("total_commits");
+	total_commits.innerHTML = arr.total.commits;
+	var total_issues = document.getElementById("total_issues");
+	total_issues.innerHTML = arr.total.issues;
 
-	// get the response xml
-	//xmlDoc = xmlhttp.responseXML;
-	//x = xmlDoc.getElementsByTagName("name");
-	//y = xmlDoc.getElementsByTagName("meetingNum");
-
-	/* load the table using the xml */
-	//for (i = 0; (i < x.length) && (i < y.length); i++)
-	for (i = 0; i < arr.length; i++)
-	{
-		/* add new row */
-		var row = table.insertRow(i+1);
-		var cell1 = row.insertCell(1);
-		//var cell2 = row.insertCell(1);
-		/* add the new values to the row */
-		cell1.innerHTML = arr[i].name;
-		//cell2.innerHTML = arr[i].commits;
-	}
+	var abel_commits = document.getElementById("abel_commits");
+	abel_commits.innerHTML = "Number of Commits: " + arr.individual.abelhtt.commits ;
+	var abel_issues = document.getElementById("abel_issues");
+	abel_issues.innerHTML = "Number of Issues: " + arr.individual.abelhtt.issues;
 }

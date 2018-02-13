@@ -77,7 +77,7 @@ def major_petroleum_engineering():
 
 @application.route('/api/about')
 def api_about():
-    return git.get_commit_stat()
+    return git.get_git_stat()
 
 if __name__ == '__main__':
     application.run(debug=True)
