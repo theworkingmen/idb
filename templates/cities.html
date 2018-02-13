@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
 
     <!-- Personal CSS File -->
     <link rel="stylesheet" href="{{url_for('static', filename='splash.css')}}" type="text/css">
@@ -16,15 +16,25 @@
   </head>
   <body>
 
-	<!-- NAVBAR -->
-    <div class="navbar">
-    <div class="navlink"><a class="navtext" href="./">Home</a></div>
-    <div class="navlink"><a class="navtext" href="./colleges">Colleges</a></div>
-    <div class="navlink"><a class="navtext" href="./cities">Cities</a></div>
-    <div class="navlink"><a class="navtext" href="./majors">Majors</a></div>
-    <div class="navlink"><a class="navtext" href="./about">About</a></div>
-  </div>
-  <!-- ENDNAVBAR -->
+	<br>
+	<!-- NAVBAR via Bootstrap -->
+	<nav class="navbar navbar-inverse">
+	<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="./">Major Potential</a>
+	</div>
+	<div id="navbar" class="collapse navbar-collapse">
+		<ul class="nav navbar-nav">
+			<li><a href="./">Home</a></li>
+			<li><a href="./colleges">Colleges</a></li>
+			<li class="active"><a href="./cities">Cities</a></li>
+			<li><a href="./majors">Majors</a></li>
+			<li><a href="./about">About</a></li>
+		</ul>
+	</div><!--/.nav-collapse -->
+	</div>
+    </nav>
+	<!-- ENDNAVBAR -->
 
 
     <h1 style="text-align: center; font-weight: bold; font-size: 42px">Cities</h1>

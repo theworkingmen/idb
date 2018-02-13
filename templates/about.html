@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
 
     <!-- Bootstrap CSS -->
     <!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
 
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -16,6 +15,10 @@
 
 
     <style>
+				p {
+					font-family: fantasy;
+				}
+
         table, th, td {
             border: 1.5px solid black;
             border-collapse: collapse;
@@ -80,7 +83,7 @@
 	<nav class="navbar navbar-inverse">
 	<div class="container">
 	<div class="navbar-header">
-		<a class="navbar-brand" href="/splash">Major Potential</a>
+		<a class="navbar-brand" href="./">Major Potential</a>
 	</div>
 	<div id="navbar" class="collapse navbar-collapse">
 		<ul class="nav navbar-nav">
@@ -117,17 +120,22 @@
         <div class="col-lg-4 col-md-4 col-sm-4">
             <img src="{{url_for('static', filename='images/authors/sungsup.jpg')}}" class="img-circle center-block profileimg">
             <p class="text-center">Sungsup Lee</p>
-            <p class="text-center"> __enter role here__ </p>
+            <p class="text-center"> __enter role here__</p>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4">
-            <img src="{{url_for('static', filename='images/authors/abel.jpg')}}" class="img-circle center-block profileimg">
-            <p class="text-center">Abel Tesfaye</p>
-            <p class="text-center"> __enter role here__ </p>
+            <img src="https://abeltesfaye350612815.files.wordpress.com/2018/01/img_1901_facetune_20-01-2018-18-48-19-e1516501911712.jpg?w=302&h=343"
+                  class="img-circle center-block profileimg">
+            <p class="text-center">Abel Tesfaye </p>
+						<p class="text-center"> Back-End </p>
+						<p class="text-center"> I am a junior Computer Science major.</p>
+						<p id = "abel_commits" class="text-center"> </p>
+						<p id = "abel_issues" class="text-center"> </p>
+
         </div>
     </div>
 
     <div class="row">
-    	 <div class="col-lg-2 col-md-2 col-sm-2"> </div> <!-- offset left by 2 columns  -->
+    	<div class="col-lg-2 col-md-2 col-sm-2"> </div> <!-- offset left by 2 columns  -->
         <div class="col-lg-4 col-md-4 col-sm-4">
             <img src="{{url_for('static', filename='images/authors/neal.jpg')}}" class="img-circle center-block profileimg">
             <p class="text-center">Neal Friesenhahn</p>
@@ -146,26 +154,26 @@
 <br>
 
 <!-- Tables  -->
-<div class="container" style="border:1px solid blue">
+<div class="container">
     <div class="row" >
         <div class="col-md-6 col-sm-6">
-            <table class="table table-hover">
-            	<col width="50%">
+            <table id = "commitTable" class="table table-hover">
+            	<col width=""50%"">
                 <tr>
-                    <th><h3> Stats </h3></th>
+                    <th><h3> Github Stats </h3></th>
                     <th><h3> Values </h3></th>
                 </tr>
                 <tr>
-                    <th># of commits: ??</th>
-                    <th> insert value here </th>
+                    <th>Number of Commits:</th>
+                    <th id="total_commits"> </th>
                 </tr>
                 <tr>
-                    <th># of issues: ??</th>
-                    <th> insert value here </th>
+                    <th>Number of Issues:</th>
+                    <th id="total_issues"> </th>
                 </tr>
                 <tr>
-                    <th># of unit tests: ??</th>
-                    <th> insert value here </th>
+                    <th>Number of Unit Tests:</th>
+                    <th> 0 </th>
                 </tr>
 
             </table>

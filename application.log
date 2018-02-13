@@ -1,3 +1,155 @@
+commit 0cd638beb10b16e85dbad3c295ccf80fd00379c6
+Merge: 6a4ecb2 cbfc284
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Mon Feb 12 22:50:58 2018 -0600
+
+    Merge branch 'staticsite' of https://github.com/theworkingmen/majorpotential into staticsite
+
+commit 6a4ecb2f53b5f8e4d340681e8a9738e877b2f530
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Mon Feb 12 22:50:53 2018 -0600
+
+    navbars updated.
+    
+    navbars updated for following pages:
+    splash.html
+    collges.html
+    cities.html
+    majors.html
+
+commit cbfc28445ca42a4e08a41736fdee8d042a16558a
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Mon Feb 12 21:15:49 2018 -0600
+
+    Links added to all model pages.
+
+commit 82ffa51938d9330af72273e90ca907483c1f3182
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Mon Feb 12 19:57:09 2018 -0600
+
+    Majors.html updated
+
+commit 9969901b4e00d2c7ff2be00d2b792f816e30adef
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Mon Feb 12 19:46:53 2018 -0600
+
+    column added in about.html
+
+commit 9d3def4ec9a3fb295078b66060bb5fdf14779b78
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Mon Feb 12 19:38:17 2018 -0600
+
+    Updated application.py to include new instances.
+
+commit d526196c9286171cc1863cb3d7db9bed4d8b0571
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Mon Feb 12 19:28:39 2018 -0600
+
+    Added instance pages without links.
+
+commit 18272311ba9301c895c20b958ef64836fff3d816
+Author: Mitchell Traylor <traylor1@cs.utexas.edu>
+Date:   Mon Feb 12 16:16:49 2018 -0600
+
+    Fixed images on about page, updated our names.
+
+commit e2d22d9ee334812a248b28825bb4ba6dfbd6d79a
+Author: Mitchell Traylor <traylor1@cs.utexas.edu>
+Date:   Mon Feb 12 16:02:07 2018 -0600
+
+    Links updated for all pages so far except for about
+
+commit d7c3d2ed5a7db1af76621e65b3b31f63e9624bb8
+Author: Mitchell Traylor <traylor1@cs.utexas.edu>
+Date:   Mon Feb 12 15:47:55 2018 -0600
+
+    Images reorganized into subdirectory, links fixed in about.html
+
+commit 3fa72c8a05e053aebec5b2fdcf0e155c373558c5
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Mon Feb 12 00:57:43 2018 -0600
+
+    added dynamic scaling to profile images in about.html
+
+commit 82809dcfe6fdf8a8322ab87666f51b14697db1e3
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Sun Feb 11 23:34:29 2018 -0600
+
+    navbar links fixed
+    
+    links were broken.
+
+commit 0d014554009e146892e0659d4c257348026b554d
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Sun Feb 11 23:04:02 2018 -0600
+
+    images centered in about.html. Bootstrap 3.3.7 used for compatability
+    
+    some classes don't behave as they should in Bootstrap 4.0.
+
+commit 017b7567a0a829d1a3ca00a619a1425f5bff23de
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Sun Feb 11 22:55:05 2018 -0600
+
+    navbar added to about.html
+    
+    nav bar based off of Bootstrap isntalled.
+
+commit c35398310480a9838ecee4764fb51a107f1614f4
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Sun Feb 11 22:33:19 2018 -0600
+
+    Python 3.6 in travis.yml
+    
+    python version changed to 3.6 due to build failure
+
+commit d3f0a22af297de4c59f807267f5b18901cabfc37
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Sun Feb 11 22:31:09 2018 -0600
+
+    Merge conflict on travis.yml resolved
+    
+    python verseion reverted back to 2.7
+
+commit 88ebffba66a70700f52eaf4d5a571a4a1c6de340
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Sun Feb 11 22:27:30 2018 -0600
+
+    navbar added to about.html
+
+commit e0cf637ab36e476410e253f8d6253253e6564224
+Merge: 347f5fb dc647e3
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Sun Feb 11 21:32:53 2018 -0600
+
+    Merge branch 'staticsite' of https://github.com/theworkingmen/majorpotential into staticsite
+
+commit 347f5fbef0a965e43363db21c0923ba7dcd316a0
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Sun Feb 11 21:32:47 2018 -0600
+
+    made basic about.html with default profile pictures
+
+commit dc647e33b98594484d79116bd15590486dd832bf
+Author: Abel Tesfaye <abelhaddistt@gmail.com>
+Date:   Sun Feb 11 20:04:19 2018 -0600
+
+    Update travis.yml
+
+commit 86b5aa9b53457b7f34c85887e62bc272f9171065
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Sun Feb 11 19:57:52 2018 -0600
+
+    Bootstrap tools added
+    
+    compiled css and js files from bootstrap 4.0 is ready for use
+
+commit c5423d92de7ffba33ce417f3ed92bbcedddb7884
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Sat Feb 10 20:49:00 2018 -0600
+
+    Travis-CI integration
+
 commit 185f5adde44cdc9eee7e9f11bf51d43c7fa839dd
 Author: abelhtt <abelhaddistt@gmail.com>
 Date:   Sat Feb 10 15:56:58 2018 -0600
