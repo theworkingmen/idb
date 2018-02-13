@@ -1,0 +1,61 @@
+<!-- HTML page template taken from http://getbootstrap.com/docs/4.0/getting-started/introduction/ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+		<!-- Personal CSS File -->
+		<link rel="stylesheet" href="{{url_for('static', filename='splash.css')}}" type="text/css">
+
+    <title>Major Potential</title>
+  </head>
+  <body>
+
+	<!-- NAVBAR -->
+    <div class="navbar">
+    <div class="navlink"><a class="navtext" href="./">Home</a></div>
+    <div class="navlink"><a class="navtext" href="./colleges">Colleges</a></div>
+    <div class="navlink"><a class="navtext" href="./cities">Cities</a></div>
+    <div class="navlink"><a class="navtext" href="./majors">Majors</a></div>
+    <div class="navlink"><a class="navtext" href="./about">About</a></div>
+  </div>
+  <!-- ENDNAVBAR -->
+
+
+<div class="instance-body-upper">
+				<!-- source: https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm -->
+				<img class="instance-image" src="{{url_for('static', filename='images/ITresize.jpg')}}" />
+				<h2>Computer Science / Software Developer</h2>
+				<p>Median pay: $102,280 annually</p>
+				<p>Number of jobs: 1,256,200</p>
+				<p>Job outlook for 2016-26: 24%</p>
+			</div>
+			<div class="instance-body-lower">
+				<p>Notable employers:</p>
+				<ul>
+					<li>Dell, in <a>Round Rock, TX</a></li>
+					<li>IBM, in <a>Austin, TX</a></li>
+				</ul>
+				<p>Top universities, via USNews 2018 Global Rankings:</p>
+				<ul>
+				  <!-- Source: https://www.usnews.com/education/best-global-universities/computer-science -->
+					<!--Link to instance later-->
+					<li><a href="#">The University of Texas at Austin - Rank 2</a></li>
+					<li><a href="#">Texas A&M University - Rank 133</a></li>
+					<li><a href="#">The University of Houston - Rank 163</a></li>
+				</ul>
+			</div>
+
+
+    <!-- Optional JavaScript. Always leave these statements down here, at file bottom. -->
+    <!-- Always have jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
