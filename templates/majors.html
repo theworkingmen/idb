@@ -1,96 +1,100 @@
-<!-- HTML page template taken from http://getbootstrap.com/docs/4.0/getting-started/introduction/ -->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <title>Major Potential</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- Personal CSS File -->
+  <link rel="stylesheet" href="{{url_for('static', filename='splash.css')}}" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <title>Major Potential</title>
+</head>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="./">Major Potential</a>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-
-		<!-- Personal CSS File -->
-		<link rel="stylesheet" href="{{url_for('static', filename='splash.css')}}" type="text/css">
-
-    <title>Major Potential - Majors</title>
-  </head>
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <div id="navbar" class="collapse navbar-collapse">
+      <li class="nav-item">
+        <a class="nav-link" href="./">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./colleges">Colleges</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./cities">Cities</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  href="./majors">Majors</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./about">About</a>
+      </li>
+    </div>
+    </ul>
+  </nav>
+</head>
   <body>
 
-	<br>
-	<!-- NAVBAR via Bootstrap -->
-	<nav class="navbar navbar-inverse">
-	<div class="container">
-	<div class="navbar-header">
-		<a class="navbar-brand" href="./">Major Potential</a>
-	</div>
-	<div id="navbar" class="collapse navbar-collapse">
-		<ul class="nav navbar-nav">
-			<li><a href="./">Home</a></li>
-			<li><a href="./colleges">Colleges</a></li>
-			<li><a href="./cities">Cities</a></li>
-			<li class="active"><a href="./majors">Majors</a></li>
-			<li><a href="./about">About</a></li>
-		</ul>
-	</div><!--/.nav-collapse -->
-	</div>
-    </nav>
-	<!-- ENDNAVBAR -->
 
 
-    <h1 style="text-align: center; font-weight: bold; font-size: 42px">Majors</h1>
 
-		<table class="model-table">
 
-		<div class="model-entry">
-			<tr>    
-				<td class="model-image"><img src="{{url_for('static', filename='images/manufacturingresize.jpg')}}" alt="Manufacturing" width="150" height="150" /></td>
-				<td class="model-data">
-					<h2><a href="./major-petroleumengineering">Petroleum Engineering</a></h2>
+
+
+
+
+    <body style="background-image:url('./static/images/spiration dark.png')">
+
+    <h1 style="text-align: center; font-weight: bold; font-size: 42px; color: #FFFFFF">Majors</h1>
+    <div class="container">
+    <div class="row justify-content-between" >
+      <div class="card" style="width:300px">
+        <img class="card-img-top" src ="{{url_for('static', filename='images/manufacture.jpg')}}" alt="Manufacturing" style="width:100%">
+        <div class="card-body">
+          <p><a href="./major-petroleumengineering">Petroleum Engineering</a></p>
 					<p>Universities:</p>
 					<ul>
 						<li><a href="./college-texasam">Texas A&M University</a></li>
 						<li><a href="./college-utexas">The University of Texas at Austin</a></li>
 					</ul>
 					<p>Most prominent city: <a href="./city-houston">Houston, TX</a></p>
-					<ul>
-					
-					</ul>
-				</td>
-			</tr>
-    </div>
-		<div class="model-entry">
-			<tr>
-				<td class="model-image"><img  src="{{url_for('static', filename='images/UTnursing.jpg')}}" alt="Agriculture" width="150" height="150" /></td>
-				<td class="model-data">
-					<h2><a href="./major-nursing">Nursing</a></h2>
-					<p>Universities:</p>
-					<ul>
-						<li><a href="./college-utexas">The University of Texas at Austin</a></li>
-					</ul>
-					<p>Most prominent city: <a href="./city-houston">Houston, TX</a></p>
-					<ul>
-					
-					</ul>
-				</td>
-			</tr>
-		</div>
-		<div class="model-entry">
-			<tr>
-				<td class="model-image"><img src="{{url_for('static', filename='images/ITresize.jpg')}}" alt="Information Technology" width="150" height="150" /></td>
-				<td class="model-data">
-					<h2><a href="./major-compsci">Computer Science</a></h2>
-					<p>Universities:</p>
-					<ul>
-						<li><a href="./college-utexas">The University of Texas at Austin</a></li>
-						<li><a href="./college-texasam">Texas A&M University</a></li>
-						<li><a href="./college-uhouston">The University of Houston</a></li>
-					</ul>
-					<p>Most prominent city: <a href="./city-austin">Ausitn, TX</a></p>
-				</td>
-			</tr>
-		</div>
+        </div>
+      </div>
 
-		</table>
+        <br>
+        <div class="card" style="width:300px">
+          <img class="card-img-top" src="{{url_for('static', filename='images/UTnursing.jpg')}}" alt="Nursing"  style="width:100%">
+          <div class="card-body">
+            <p><a href="./major-nursing">Nursing</a></p>
+  					<p>Universities:</p>
+  					<ul>
+  						<li><a href="./college-utexas">The University of Texas at Austin</a></li>
+  					</ul>
+  					<p>Most prominent city: <a href="./city-houston">Houston, TX</a></p>
+  					<ul>
+          </div>
+        </div>
+        <br>
+
+          <div class="card" style="width:300px">
+            <img class="card-img-top"  src="{{url_for('static', filename='images/ITresize.jpg')}}" alt="Information Technology" style="width:100%">
+            <div class="card-body">
+              <p><a href="./major-compsci">Computer Science</a></p>
+    					<p>Universities:</p>
+    					<ul>
+    						<li><a href="./college-utexas">The University of Texas at Austin</a></li>
+    						<li><a href="./college-texasam">Texas A&M University</a></li>
+    						<li><a href="./college-uhouston">The University of Houston</a></li>
+    					</ul>
+    					<p>Most prominent city: <a href="./city-austin">Ausitn, TX</a></p>
+            </div>
+          </div>
+        </div>
 
 
     <!-- Optional JavaScript. Always leave these statements down here, at file bottom. -->

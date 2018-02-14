@@ -1,3 +1,4 @@
+
 #carousel-title {
 	position: absolute;
 	top: 10%;
@@ -10,16 +11,25 @@
 #carousel-main {
 	margin: auto;
 	position: relative;
-	height: 600px;
+	height: 700px;
 	width: 900px;
-
 }
 
-.carousel-text {
-	text-align: center;
-	background-color: rgba(255,255,255,.7);
-	font-size: 36px;
-	font-weight: bold;
+.controls {
+   	position: relative;
+   	display: block;
+}
+
+.container{
+	max-width: 1000px;
+	margin: auto;
+}
+
+.jumbotron{
+	background: rgba(255, 255, 255, 0.6);
+	color:black;
+	max-width: 1000px;
+	margin: auto;
 }
 
 .navbar {
@@ -65,8 +75,4 @@
 
 .model-data {
 	font-size: 22px;
-}
-
-body {
-	background-color: rgba(200,200,200,1);
 }

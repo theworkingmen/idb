@@ -44,4 +44,24 @@ function loadData(arr) {
 	abel_commits.innerHTML = "Number of Commits: " + arr.individual.abelhtt.commits ;
 	var abel_issues = document.getElementById("abel_issues");
 	abel_issues.innerHTML = "Number of Issues: " + arr.individual.abelhtt.issues;
+
+	var mitchell_commits = document.getElementById("mitchell_commits");
+	mitchell_commits.innerHTML = "Number of Commits: " + arr.individual.traylor1.commits ;
+	var mitchell_issues = document.getElementById("mitchell_issues");
+	mitchell_issues.innerHTML = "Number of Issues: " + arr.individual.traylor1.issues;
+
+	var neal_commits = document.getElementById("neal_commits");
+	neal_commits.innerHTML = "Number of Commits: " + arr.individual.NealFM.commits ;
+	var neal_issues = document.getElementById("neal_issues");
+	neal_issues.innerHTML = "Number of Issues: " + arr.individual.NealFM.issues;
+
+	var sup_commits = document.getElementById("sup_commits");
+	sup_commits.innerHTML = "Number of Commits: " + arr.individual.smcw66.commits ;
+	var sup_issues = document.getElementById("sup_issues");
+	sup_issues.innerHTML = "Number of Issues: " + arr.individual.smcw66.issues;
+
+	var christian_commits = document.getElementById("christian_commits");
+	christian_commits.innerHTML = "Number of Commits: " + arr.individual.christian-onuogu.commits ;
+	var christian_issues = document.getElementById("christian_issues");
+	christian_issues.innerHTML = "Number of Issues: " + arr.individual.christian-onuogu.issues;
 }

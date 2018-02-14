@@ -1,31 +1,44 @@
-<!-- HTML page template taken from http://getbootstrap.com/docs/4.0/getting-started/introduction/ -->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <title>Major Potential</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- Personal CSS File -->
+  <link rel="stylesheet" href="{{url_for('static', filename='splash.css')}}" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <title>Major Potential - Cities</title>
+</head>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="./">Major Potential</a>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-		<!-- Personal CSS File -->
-		<link rel="stylesheet" href="{{url_for('static', filename='splash.css')}}" type="text/css">
-
-    <title>Major Potential</title>
-  </head>
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <div id="navbar" class="collapse navbar-collapse">
+      <li class="nav-item">
+        <a class="nav-link" href="./">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./colleges">Colleges</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./cities">Cities</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  href="./majors">Majors</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./about">About</a>
+      </li>
+    </div>
+    </ul>
+  </nav>
+</head>
   <body>
-
-	<!-- NAVBAR -->
-    <div class="navbar">
-    <div class="navlink"><a class="navtext" href="./">Home</a></div>
-    <div class="navlink"><a class="navtext" href="./colleges">Colleges</a></div>
-    <div class="navlink"><a class="navtext" href="./cities">Cities</a></div>
-    <div class="navlink"><a class="navtext" href="./majors">Majors</a></div>
-    <div class="navlink"><a class="navtext" href="./about">About</a></div>
-  </div>
-  <!-- ENDNAVBAR -->
-
 
 			<div class="instance-body-upper">
 				<img class="instance-image" src="{{url_for('static', filename='images/UHlogo.png')}}" />

@@ -1,17 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
-    <!-- Bootstrap CSS -->
-    <!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-
-	<!-- Latest compiled JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- Personal CSS File -->
-	<link rel="stylesheet" href="{{url_for('static', filename='splash.css')}}" type="text/css">
-
+  <title>Major Potential</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- Personal CSS File -->
+  <link rel="stylesheet" href="{{url_for('static', filename='splash.css')}}" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="{{url_for('static', filename='load_about.js')}}"></script>
+</head>
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="./">Major Potential</a>
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <div id="navbar" class="collapse navbar-collapse">
+      <li class="nav-item">
+        <a class="nav-link" href="./">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./colleges">Colleges</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./cities">Cities</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  href="./majors">Majors</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./about">About</a>
+      </li>
+    </div>
+    </ul>
+  </nav>
+		<!-- ENDNAVBAR -->
+
+
+
 
 
     <style>
@@ -21,7 +51,6 @@
 
         table, th, td {
             border: 1.5px solid black;
-            border-collapse: collapse;
         }
 
         table {
@@ -47,7 +76,7 @@
            background: #eee;
         }
         body {
-        background-image: url("{{url_for('static', filename='spiration dark.png')}}");
+        background-image: url("{{url_for('static', filename='images/spiration dark.png')}}");
         }
 
         .container{
@@ -56,7 +85,7 @@
         }
 
         .jumbotron{
-        	background-color: lavender;
+        	background: rgba(255, 255, 255, .83);
         	color:black;
         	max-width: 1000px;
         	margin: auto;
@@ -83,25 +112,6 @@
 <body onload="javascript:getCommitsTable()">
 	<br>
 
-	<!-- NAVBAR via Bootstrap -->
-	<nav class="navbar navbar-inverse">
-	<div class="container">
-	<div class="navbar-header">
-		<a class="navbar-brand" href="./">Major Potential</a>
-	</div>
-	<div id="navbar" class="collapse navbar-collapse">
-		<ul class="nav navbar-nav">
-			<li><a href="./">Home</a></li>
-			<li><a href="./colleges">Colleges</a></li>
-			<li><a href="./cities">Cities</a></li>
-			<li><a href="./majors">Majors</a></li>
-			<li class="active"><a href="./about">About</a></li>
-		</ul>
-	</div><!--/.nav-collapse -->
-	</div>
-    </nav>
-	<!-- ENDNAVBAR -->
-
 <!--
 <table id = "commitTable" style="width:50%">
     <caption>Major Potential Github Commit Analytics</caption>
@@ -113,22 +123,39 @@
 -->
 
 <!-- Profile Pictures  -->
+
 <div class="container">
-<div class="jumbotron" style="border:1px solid red">
+  <div class="jumbotron">
+    <h1> <center>Major Potential <sup>&#x00AE;</sup> </center></h1>
+    <p><center> Our aim is to create a website that links universities, the cities where the universities are located,
+			 and job opportunities in cities for graduates in certain majors.</center> </p>
+  </div>
+  <p></p>
+  <p></p>
+</div>
+
+<div class="container">
+<div class="jumbotron" style="border:0.5px solid black">
+		  <h2 class="text-center" style = "font-family: Helvatica;"> The Team </h2>
     <div class="row"; >
         <div class="col-lg-4 col-md-4 col-sm-4">
             <img src="{{url_for('static', filename='images/authors/mitchell.jpg')}}" class="img-circle center-block profileimg">
             <p class="text-center">Mitchell Traylor</p>
             <p class="text-center">Front-End Developer</p>
+						<p class="text-center"> bio</p>
+						<p id = "mitchell_commits" class="text-center"> </p>
+						<p id = "mitchell_issues" class="text-center"> </p>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4">
             <img src="{{url_for('static', filename='images/authors/sungsup.jpg')}}" class="img-circle center-block profileimg">
             <p class="text-center">Sungsup Lee</p>
-            <p class="text-center"> __enter role here__</p>
+            <p class="text-center"> role </p>
+						<p class="text-center"> bio</p>
+						<p id = "sup_commits" class="text-center"> </p>
+						<p id = "sup_issues" class="text-center"> </p>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4">
-            <img src="https://abeltesfaye350612815.files.wordpress.com/2018/01/img_1901_facetune_20-01-2018-18-48-19-e1516501911712.jpg?w=302&h=343"
-                  class="img-circle center-block profileimg">
+            <img src="https://i1.wp.com/abeltesfaye350612815.files.wordpress.com/2018/02/abel.jpg" class="img-circle center-block profileimg">
             <p class="text-center">Abel Tesfaye </p>
 
 						<p class="text-center"> Back-End </p>
@@ -144,12 +171,18 @@
         <div class="col-lg-4 col-md-4 col-sm-4">
             <img src="{{url_for('static', filename='images/authors/neal.jpg')}}" class="img-circle center-block profileimg">
             <p class="text-center">Neal Friesenhahn</p>
-            <p class="text-center"> __enter role here__ </p>
+						<p class="text-center"> role</p>
+						<p class="text-center"> bio</p>
+						<p id = "neal_commits" class="text-center"> </p>
+						<p id = "neal_issues" class="text-center"> </p>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4">
             <img src="{{url_for('static', filename='images/authors/christian.jpg')}}" class="img-circle center-block profileimg">
             <p class="text-center">Christian Onuogu</p>
-            <p class="text-center"> __enter role here__ </p>
+            <p class="text-center"> role</p>
+						<p class="text-center"> bio</p>
+						<p id = "christian_commits" class="text-center"> </p>
+						<p id = "christian_issues" class="text-center"> </p>
         </div>
     </div>
 
@@ -215,6 +248,15 @@
             </table>
         </div>
     </div>
+</div>
+
+<div class="container">
+  <div class="jumbotron">
+    <h2> <center>Project Links</sup> </center></h2>
+    <p><center> <a href = "https://github.com/theworkingmen/majorpotential" > Github </a></center> </p>
+  </div>
+  <p></p>
+  <p></p>
 </div>
 
     <!-- Bootstrap core JavaScript
