@@ -76,3 +76,7 @@
 .model-data {
 	font-size: 22px;
 }
+
+.text-center {
+    line-height: 0.9em;
+}

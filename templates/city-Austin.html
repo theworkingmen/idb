@@ -11,15 +11,22 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <title>Major Potential</title>
+
+  <style type="text/css">
+  .text-center {
+    line-height: 0.9em;
+  }
+</style>
+
 </head>
 
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <!-- Brand/logo -->
-    <a class="navbar-brand" href="./">Major Potential</a>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="./">Major Potential</a>
 
-    <!-- Links -->
-    <ul class="navbar-nav">
-      <div id="navbar" class="collapse navbar-collapse">
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <div id="navbar" class="collapse navbar-collapse">
       <li class="nav-item">
         <a class="nav-link" href="./">Home</a>
       </li>
@@ -36,38 +43,46 @@
         <a class="nav-link" href="./about">About</a>
       </li>
     </div>
-    </ul>
-  </nav>
-  <body>
+  </ul>
+</nav>
+<body>
 
+  <div class="container">
+    <div class = "row">
+      <div class="col-md-12 text-center">
+        <img class="instance-image" src="{{url_for('static', filename='images/austinTX.jpg')}}" />
+        <h2>Austin, TX</h2>
+        <p>County: Travis</p>
+        <p>Population (2010 census): 790,390</p>
+        <p>Growth since previous decade: 20.4%</p>
+      </div>
+    </div>
+    <div class = "row text-center">
 
-		  <div class="instance-body-upper">
-				<img class="instance-image" src="{{url_for('static', filename='images/austinTX.jpg')}}" />
-				<h2>Austin, TX</h2>
-				<p>County: Travis</p>
-				<p>Population (2010 census): 790,390</p>
-				<p>Growth since previous decade: 20.4%</p>
-			</div>
-			<div class="instance-body-lower">
-				<p>Notable employers:</p>
-				<ul>
-					<li>Dell (in Round Rock) - <a href="./major-compsci">Computer Science</a></li>
-					<li>IBM - <a href="./major-compsci">Computer Science</a></li>
-					<li>Applied Materials - Manufacturing</li>
-				</ul>
-				<p>Universities located here:</p>
-				<ul>
-					<!--Link to UT instance later-->
-					<li><a href="./college-utexas">The University of Texas at Austin</a></li>
-					<li>Austin Community College</li>
-				</ul>
-			</div>
+      <div class="col-md-6">
+        <h4>Notable employers:</h4>
+        <ul>
+         <li>Dell (in Round Rock) - <a href="./major-compsci">Computer Science</a></li>
+         <li>IBM - <a href="./major-compsci">Computer Science</a></li>
+         <li>Applied Materials - Manufacturing</li>
+       </ul>
+     </div>
+     <div class="col-md-6">
+       <h4>Universities located here:</h4>
+       <ul>
+         <!--Link to UT instance later-->
+         <li><a href="./college-utexas">The University of Texas at Austin</a></li>
+         <li>Austin Community College</li>
+       </ul>
+     </div>
+     
+   </div>
+ </div>
 
-
-    <!-- Optional JavaScript. Always leave these statements down here, at file bottom. -->
-    <!-- Always have jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+ <!-- Optional JavaScript. Always leave these statements down here, at file bottom. -->
+ <!-- Always have jQuery first, then Popper.js, then Bootstrap JS -->
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
 </html>
