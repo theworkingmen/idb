@@ -14,29 +14,29 @@
 </head>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <!-- Brand/logo -->
-    <a class="navbar-brand" href="./">Major Potential</a>
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="./">Major Potential</a>
 
-    <!-- Links -->
-    <ul class="navbar-nav">
-      <div id="navbar" class="collapse navbar-collapse">
-          <li class="nav-item">
-            <a class="nav-link" href="./">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="./colleges">Colleges</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="./cities">Cities</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link"  href="./majors">Majors</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="./about">About</a>
-        </li>
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <div id="navbar" class="collapse navbar-collapse">
+      <li class="nav-item">
+        <a class="nav-link" href="./">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./colleges">Colleges</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./cities">Cities</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  href="./majors">Majors</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./about">About</a>
+      </li>
     </div>
-</ul>
+  </ul>
 </nav>
 <!-- ENDNAVBAR -->
 
@@ -46,61 +46,61 @@
 
 <style>
 p {
-   font-family: fantasy;
+  font-family: fantasy;
 }
 
 table, th, td {
-    border: 1.5px solid black;
+  border: 1.5px solid black;
 }
 
 table {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 table tr:nth-child(even) {
-    background-color: #D3D3D3
+  background-color: #D3D3D3
 }
 table tr:nth-child(odd) {
-    background-color: #FFFFFF;
+  background-color: #FFFFFF;
 }
 th, td {
-    padding: 5px;
-    text-align: center;
+  padding: 5px;
+  text-align: center;
 }
 caption {
- font-size:24px;
- font-family:Georgia;
- font-weight:bold;
- text-color:white;
- padding: 5px;
- background: #eee;
+  font-size:24px;
+  font-family:Georgia;
+  font-weight:bold;
+  text-color:white;
+  padding: 5px;
+  background: #eee;
 }
 body {
-    background-image: url("{{url_for('static', filename='images/spiration dark.png')}}");
+  background-image: url("{{url_for('static', filename='images/spiration dark.png')}}");
 }
 
 .container{
-   max-width: 1000px;
-   margin: auto;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .jumbotron{
-   background: rgba(255, 255, 255, .83);
-   color:black;
-   max-width: 1000px;
-   margin: auto;
+  background: rgba(255, 255, 255, .83);
+  color:black;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .profileimg{
-   max-width: 100%;
-   padding: 1em;
+  max-width: 100%;
+  padding: 1em;
 }
 .profileimg > img {
-   width: 100%;
+  width: 100%;
 }
 
 .text-center {
-    line-height: 0.7em;
+  line-height: 0.7em;
 }
 
 </style>
@@ -110,15 +110,15 @@ body {
 </head>
 
 <body onload="javascript:getCommitsTable()">
-	<br>
+  <br>
 
 <!--
 <table id = "commitTable" style="width:50%">
-    <caption>Major Potential Github Commit Analytics</caption>
-    <tr>
-        <th>Name</th>
-        <th>Number of Commits</th>
-    </tr>
+<caption>Major Potential Github Commit Analytics</caption>
+<tr>
+<th>Name</th>
+<th>Number of Commits</th>
+</tr>
 </table>
 -->
 
@@ -129,145 +129,145 @@ body {
     <h1> <center>Major Potential <sup>&#x00AE;</sup> </center></h1>
     <p><center> Our aim is to create a website that links universities, the cities where the universities are located,
     and job opportunities in cities for graduates in certain majors.</center> </p>
-</div>
-<p></p>
-<p></p>
+  </div>
+  <p></p>
+  <p></p>
 </div>
 
 <div class="container">
-    <div class="jumbotron" style="border:0.5px solid black">
-        <h2 class="text-center" style = "font-family: Helvatica;"> The Team </h2>
-        <div class="row"; >
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <img src="{{url_for('static', filename='images/authors/mitchell.jpg')}}" class="img-circle center-block profileimg">
-                <p class="text-center">Mitchell Traylor</p>
-                <p class="text-center">Front-End Developer</p>
-                <p class="text-center"> bio</p>
-                <p id = "mitchell_commits" class="text-center"> </p>
-                <p id = "mitchell_issues" class="text-center"> </p>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <img src="{{url_for('static', filename='images/authors/sungsup.jpg')}}" class="img-circle center-block profileimg">
-                <p class="text-center">Sungsup Lee</p>
-                <p class="text-center"> role </p>
-                <p class="text-center"> bio</p>
-                <p id = "sup_commits" class="text-center"> </p>
-                <p id = "sup_issues" class="text-center"> </p>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4">
-                <img src="https://i1.wp.com/abeltesfaye350612815.files.wordpress.com/2018/02/abel.jpg" class="img-circle center-block profileimg">
-                <p class="text-center">Abel Tesfaye </p>
+  <div class="jumbotron" style="border:0.5px solid black">
+    <h2 class="text-center" style = "font-family: Helvatica;"> The Team </h2>
+    <div class="row"; >
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <img src="{{url_for('static', filename='images/authors/mitchell.jpg')}}" class="img-circle center-block profileimg">
+        <p class="text-center">Mitchell Traylor</p>
+        <p class="text-center">Front-End Developer</p>
+        <p class="text-center"> bio</p>
+        <p id = "mitchell_commits" class="text-center"> </p>
+        <p id = "mitchell_issues" class="text-center"> </p>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <img src="{{url_for('static', filename='images/authors/sungsup.jpg')}}" class="img-circle center-block profileimg">
+        <p class="text-center">Sungsup Lee</p>
+        <p class="text-center"> role </p>
+        <p class="text-center"> bio</p>
+        <p id = "sup_commits" class="text-center"> </p>
+        <p id = "sup_issues" class="text-center"> </p>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <img src="https://i1.wp.com/abeltesfaye350612815.files.wordpress.com/2018/02/abel.jpg" class="img-circle center-block profileimg">
+        <p class="text-center">Abel Tesfaye </p>
 
-                <p class="text-center"> Back-End </p>
-                <p class="text-center"> I am a junior Computer Science major.</p>
-                <p id = "abel_commits" class="text-center"> </p>
-                <p id = "abel_issues" class="text-center"> </p>
+        <p class="text-center"> Back-End </p>
+        <p class="text-center"> I am a junior Computer Science major.</p>
+        <p id = "abel_commits" class="text-center"> </p>
+        <p id = "abel_issues" class="text-center"> </p>
 
-            </div>
-        </div>
-
-        <div class="row">
-           <div class="col-lg-2 col-md-2 col-sm-2"> </div> <!-- offset left by 2 columns  -->
-           <div class="col-lg-4 col-md-4 col-sm-4">
-            <img src="{{url_for('static', filename='images/authors/neal.jpg')}}" class="img-circle center-block profileimg">
-            <p class="text-center">Neal Friesenhahn</p>
-            <p class="text-center"> role</p>
-            <p class="text-center"> bio</p>
-            <p id = "neal_commits" class="text-center"> </p>
-            <p id = "neal_issues" class="text-center"> </p>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4">
-            <img src="{{url_for('static', filename='images/authors/christian.jpg')}}" class="img-circle center-block profileimg">
-            <p class="text-center">Christian Onuogu</p>
-            <p class="text-center"> role</p>
-            <p class="text-center"> bio</p>
-            <p id = "christian_commits" class="text-center"> </p>
-            <p id = "christian_issues" class="text-center"> </p>
-        </div>
+      </div>
     </div>
 
-</div>
+    <div class="row">
+      <div class="col-lg-2 col-md-2 col-sm-2"> </div> <!-- offset left by 2 columns  -->
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <img src="{{url_for('static', filename='images/authors/neal.jpg')}}" class="img-circle center-block profileimg">
+        <p class="text-center">Neal Friesenhahn</p>
+        <p class="text-center"> role</p>
+        <p class="text-center"> bio</p>
+        <p id = "neal_commits" class="text-center"> </p>
+        <p id = "neal_issues" class="text-center"> </p>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <img src="{{url_for('static', filename='images/authors/christian.jpg')}}" class="img-circle center-block profileimg">
+        <p class="text-center">Christian Onuogu</p>
+        <p class="text-center"> role</p>
+        <p class="text-center"> bio</p>
+        <p id = "christian_commits" class="text-center"> </p>
+        <p id = "christian_issues" class="text-center"> </p>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 <br>
 
 <!-- Tables  -->
 <div class="container">
-    <div class="row" >
-        <div class="col-md-6 col-sm-6">
-            <table id = "commitTable" class="table table-hover">
-            	<col width=""50%"">
-                <tr>
-                    <th><h3> Github Stats </h3></th>
-                    <th><h3> Values </h3></th>
-                </tr>
-                <tr>
-                    <th>Number of Commits:</th>
-                    <th id="total_commits"> </th>
-                </tr>
-                <tr>
-                    <th>Number of Issues:</th>
-                    <th id="total_issues"> </th>
-                </tr>
-                <tr>
-                    <th>Number of Unit Tests:</th>
-                    <th> 0 </th>
-                </tr>
+  <div class="row" >
+    <div class="col-md-6 col-sm-6">
+      <table id = "commitTable" class="table table-hover">
+        <col width=""50%"">
+        <tr>
+          <th><h3> Github Stats </h3></th>
+          <th><h3> Values </h3></th>
+        </tr>
+        <tr>
+          <th>Number of Commits:</th>
+          <th id="total_commits"> </th>
+        </tr>
+        <tr>
+          <th>Number of Issues:</th>
+          <th id="total_issues"> </th>
+        </tr>
+        <tr>
+          <th>Number of Unit Tests:</th>
+          <th> 0 </th>
+        </tr>
 
-            </table>
-        </div>
-        <div class="col-md-6 col-sm-6">
-            <table class="table table-hover">
-                <tr>
-                    <th>
-                        <h3> Tools </h3>
-                    </th>
-                </tr>
-                <tr>
-                    <th>Amazon Beanstalk</th>
-                </tr>
-                <tr>
-                    <th>Amazon S3</th>
-                </tr>
-                <tr>
-                    <th>Slack</th>
-                </tr>
-                <tr>
-                    <th>Bootstrap</th>
-                </tr>
-                <tr>
-                    <th>Flask</th>
-                </tr>
-                <tr>
-                    <th>Travis-CI</th>
-                </tr>
-                <tr>
-                    <th>Github</th>
-                </tr>
-
-            </table>
-        </div>
+      </table>
     </div>
+    <div class="col-md-6 col-sm-6">
+      <table class="table table-hover">
+        <tr>
+          <th>
+            <h3> Tools </h3>
+          </th>
+        </tr>
+        <tr>
+          <th>Amazon Beanstalk</th>
+        </tr>
+        <tr>
+          <th>Amazon S3</th>
+        </tr>
+        <tr>
+          <th>Slack</th>
+        </tr>
+        <tr>
+          <th>Bootstrap</th>
+        </tr>
+        <tr>
+          <th>Flask</th>
+        </tr>
+        <tr>
+          <th>Travis-CI</th>
+        </tr>
+        <tr>
+          <th>Github</th>
+        </tr>
+
+      </table>
+    </div>
+  </div>
 </div>
 
 <div class="container">
   <div class="jumbotron">
     <h2> <center>Project Links</sup> </center></h2>
     <p><center> <a href = "https://github.com/theworkingmen/majorpotential" > Github </a></center> </p>
+  </div>
+  <p></p>
+  <p></p>
 </div>
-<p></p>
-<p></p>
-</div>
 
-    <!-- Bootstrap core JavaScript
-        ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-        <script src="../../dist/js/bootstrap.min.js"></script>
-        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-        <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+<!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+  <script src="../../dist/js/bootstrap.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 
-    </body>
+</body>
 
-    </html>
+</html>

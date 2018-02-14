@@ -12,6 +12,21 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <title>Major Potential - Cities</title>
+
+  <style type="text/css">
+  .text-center {
+    line-height: 0.9em;
+  }
+  .instance-image {
+    max-width: 15em;
+  }
+  .card-img-top {
+    max-height: 15em;
+    max-width: 15em;
+    margin: auto;
+  }
+</style>
+
 </head>
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <!-- Brand/logo -->
@@ -46,8 +61,8 @@
   <div class="row justify-content-between" >
     <div class="card" style="width:300px">
       <img class="card-img-top"  src="{{url_for('static', filename='images/UTlogo.jpg')}}" alt="University of Texas at Austin" alt="University of Texas at Austin" style="width:100%">
-      <div class="card-body">
-        <p><a href="./college-utexas">The University of Texas at Austin</a></p>
+      <div class="card-body text-center">
+        <h4><a href="./college-utexas">University of Texas at Austin</a></h4>
         <p>Location: <a href="./city-austin">Austin, TX</a></p>
         <p>Highest Ranked Major: <a href="./major-compsci">Computer Science</a></p>
       </div>
@@ -56,8 +71,8 @@
       <br>
       <div class="card" style="width:300px">
         <img class="card-img-top" src="{{url_for('static', filename='images/A&Mlogo.png')}}" alt="College Station, TX"  style="width:100%">
-        <div class="card-body">
-          <p><a href="./college-texasam">Texas A&M University</a></p>
+        <div class="card-body text-center">
+          <h4><a href="./college-texasam">Texas A&M University</a></h4>
           <p>Location: <a href="./city-colstat">College Station, TX</a></p>
           <p>Highest Ranked Major: <a href="./major-petroleumengineering">Petroleum Engineering</a></p>
         </div>
@@ -66,7 +81,7 @@
 
         <div class="card" style="width:300px">
           <img class="card-img-top"  <img src="{{url_for('static', filename='images/UHlogo.png')}}" alt="University of Houston" style="width:100%">
-          <div class="card-body">
+          <div class="card-body text-center">
             <h4 class="card-title"><a href="./city-houston">Houston, TX</a></h4>
             <p><a href="./college-uhouston">The University of Houston</a></p>
             <p>Location: <a href="./city-houston">Houston, TX</a></p>

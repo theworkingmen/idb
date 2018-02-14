@@ -80,3 +80,6 @@
 .text-center {
     line-height: 0.9em;
 }
+.instance-image {
+	max-width: 15em;
+}
