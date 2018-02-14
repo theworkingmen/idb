@@ -11,6 +11,22 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <title>Major Potential</title>
+
+  <style type="text/css">
+  .text-center {
+    line-height: 0.9em;
+  }
+  .instance-image {
+    max-width: 15em;
+  }
+  .card-img-top {
+    height: 10em;
+    width: 15em;
+    margin: auto;
+    object-fit: cover;
+  }
+</style>
+
 </head>
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <!-- Brand/logo -->
@@ -47,8 +63,8 @@
     <div class="row justify-content-between" >
       <div class="card" style="width:300px">
         <img class="card-img-top" src ="{{url_for('static', filename='images/manufacture.jpg')}}" alt="Manufacturing" style="width:100%">
-        <div class="card-body">
-          <p><a href="./major-petroleumengineering">Petroleum Engineering</a></p>
+        <div class="card-body text-center">
+          <h4><a href="./major-petroleumengineering">Petroleum Engineering</a></h4>
 					<p>Universities:</p>
 					<ul>
 						<li><a href="./college-texasam">Texas A&M University</a></li>
@@ -61,8 +77,8 @@
         <br>
         <div class="card" style="width:300px">
           <img class="card-img-top" src="{{url_for('static', filename='images/UTnursing.jpg')}}" alt="Nursing"  style="width:100%">
-          <div class="card-body">
-            <p><a href="./major-nursing">Nursing</a></p>
+          <div class="card-body text-center">
+            <h4><a href="./major-nursing">Nursing</a></h4>
   					<p>Universities:</p>
   					<ul>
   						<li><a href="./college-utexas">The University of Texas at Austin</a></li>
@@ -75,8 +91,8 @@
 
           <div class="card" style="width:300px">
             <img class="card-img-top"  src="{{url_for('static', filename='images/ITresize.jpg')}}" alt="Information Technology" style="width:100%">
-            <div class="card-body">
-              <p><a href="./major-compsci">Computer Science</a></p>
+            <div class="card-body text-center">
+              <h4><a href="./major-compsci">Computer Science</a></h4>
     					<p>Universities:</p>
     					<ul>
     						<li><a href="./college-utexas">The University of Texas at Austin</a></li>
