@@ -1,0 +1,8 @@
+Account ID or alias: thewatch
+IAM user name: 
+sup
+abel
+christian
+mitchell
+Password: password
+[will prompt you to change your password on first login]

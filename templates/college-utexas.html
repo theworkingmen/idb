@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Major Potential</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- Personal CSS File -->
+  <link rel="stylesheet" href="{{url_for('static', filename='splash.css')}}" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <title>Major Potential</title>
+
+  <style type="text/css">
+  .text-center {
+    line-height: 0.9em;
+  }
+  .instance-image {
+    max-width: 15em;
+  }
+
+</style>
+
+</head>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="./">Major Potential</a>
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <div id="navbar" class="collapse navbar-collapse">
+      <li class="nav-item">
+        <a class="nav-link" href="./">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./colleges">Colleges</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./cities">Cities</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  href="./majors">Majors</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./about">About</a>
+      </li>
+    </div>
+  </ul>
+</nav>
+</head>
+
+<body>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <img class="instance-image" src="{{url_for('static', filename='images/UTlogo.jpg')}}" />
+        <h2>The University of Texas at Austin</h2>
+        <p>City: <a href="./city-austin">Austin, TX</a></p>
+        <p>Total enrollment: 51,331</p>
+        <p>Acceptance rate: 40% (Fall 2016)</p>
+        <p>Student-faculty ratio: 18:1</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 text-center">
+      <h4>Top majors:</h4>
+      <ul>
+        <li><a href="./major-compsci">Computer Science</a> (Rank 1)</li>
+        <li><a href="./major-petroleumengineering">Petroleum Engineering</a> (Rank 2)</li>
+        <li><a href="./major-nursing">Nursing</a> (Rank 23)</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- Optional JavaScript. Always leave these statements down here, at file bottom. -->
+  <!-- Always have jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

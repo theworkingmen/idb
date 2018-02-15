@@ -1,0 +1,85 @@
+
+#carousel-title {
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	width: 35%;
+	text-align: center;
+	transform: translate(-50%, -35%);
+}
+
+#carousel-main {
+	margin: auto;
+	position: relative;
+	height: 700px;
+	width: 900px;
+}
+
+.controls {
+   	position: relative;
+   	display: block;
+}
+
+.container{
+	max-width: 1000px;
+	margin: auto;
+}
+
+.jumbotron{
+	background: rgba(255, 255, 255, 0.6);
+	color:black;
+	max-width: 1000px;
+	margin: auto;
+}
+
+.navbar {
+	background-color: rgba(77,77,77,1);
+	width: 100%;
+	height: 70px;
+}
+
+.navlink {
+	margin: 10px;
+	background-color: rgba(100,100,100,1);
+	width: 12%;
+	position: relative;
+	text-align: center;
+	float: left;
+	font-size: 28px;
+	font-weight: bold;
+
+}
+
+.navtext {
+	color: rgba(210,210,210,1);
+}
+
+.navtext:hover {
+	color: rgba(210,210,210,1);
+}
+
+.model-table {
+	margin: auto;
+	position: relative;
+	width: 70%;
+}
+
+.model-entry {
+
+}
+
+.model-image {
+	margin: 10px;
+	padding: 10px;
+}
+
+.model-data {
+	font-size: 22px;
+}
+
+.text-center {
+    line-height: 0.9em;
+}
+.instance-image {
+	max-width: 15em;
+}
