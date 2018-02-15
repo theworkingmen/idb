@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <!-- Personal CSS File -->
   <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='splash.css')}}" >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -150,7 +151,7 @@ body {
         <img src="{{url_for('static', filename='images/authors/sungsup.jpg')}}" class="img-circle center-block profileimg">
         <p class="text-center">Sungsup Lee</p>
         <p class="text-center"> Front-End, Back-End </p>
-        <p class="text-center"> bio</p>
+        <p class="text-center"> Studies Computer Science at UT Austin</p>
         <p id = "sup_commits" class="text-center"> </p>
         <p id = "sup_issues" class="text-center"> </p>
       </div>
@@ -158,7 +159,7 @@ body {
         <img src="https://i1.wp.com/abeltesfaye350612815.files.wordpress.com/2018/02/abel.jpg" class="img-circle center-block profileimg">
         <p class="text-center">Abel Tesfaye </p>
 
-        <p class="text-center"> Back-End, Web Hosting </p>
+        <p class="text-center"> Back-End, Front-End </p>
         <p class="text-center"> I am a junior Computer Science major.</p>
         <p id = "abel_commits" class="text-center"> </p>
         <p id = "abel_issues" class="text-center"> </p>
@@ -172,7 +173,7 @@ body {
         <img src="{{url_for('static', filename='images/authors/neal.jpg')}}" class="img-circle center-block profileimg">
         <p class="text-center">Neal Friesenhahn</p>
         <p class="text-center"> Web Hosting, API Design</p>
-        <p class="text-center"> bio</p>
+        <p class="text-center"> Studies Computer Science at UT Austin</p>
         <p id = "neal_commits" class="text-center"> </p>
         <p id = "neal_issues" class="text-center"> </p>
       </div>
@@ -180,7 +181,7 @@ body {
         <img src="{{url_for('static', filename='images/authors/christian.jpg')}}" class="img-circle center-block profileimg">
         <p class="text-center">Christian Onuogu</p>
         <p class="text-center"> Back-End, API Design</p>
-        <p class="text-center"> bio</p>
+        <p class="text-center"> Studies Computer Science at UT Austin</p>
         <p id = "christian_commits" class="text-center"> </p>
         <p id = "christian_issues" class="text-center"> </p>
       </div>
@@ -253,7 +254,9 @@ body {
 <div class="container">
   <div class="jumbotron">
     <h2> <center>Project Links</sup> </center></h2>
-    <p><center> <a href = "https://github.com/theworkingmen/majorpotential" > Github </a></center> </p>
+    <center> <button <style="font-size:24px"> <a href = "https://github.com/theworkingmen/majorpotential" >Github </a> <i class="fa fa-github"></i></button> </center>
+    <p><center> <a href = "https://theworkingmen.gitbooks.io/api/content/" > API Doc </a></center> </p>
+    <p><center> <a href = "https://theworkingmen.gitbooks.io/major-potential/content/" > Report </a></center> </p>
   </div>
   <p></p>
   <p></p>

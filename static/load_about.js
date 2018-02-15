@@ -61,7 +61,7 @@ function loadData(arr) {
 	sup_issues.innerHTML = "Number of Issues: " + arr.individual.smcw66.issues;
 
 	var christian_commits = document.getElementById("christian_commits");
-	christian_commits.innerHTML = "Number of Commits: " + arr.individual.christian-onuogu.commits ;
+	christian_commits.innerHTML = "Number of Commits: " + arr.individual["christian-onuogu"].commits ;
 	var christian_issues = document.getElementById("christian_issues");
-	christian_issues.innerHTML = "Number of Issues: " + arr.individual.christian-onuogu.issues;
+	christian_issues.innerHTML = "Number of Issues: " + arr.individual["christian-onuogu"].issues;
 }
