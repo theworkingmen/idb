@@ -17,7 +17,7 @@
     line-height: 0.9em;
   }
   .instance-image {
-    max-width: 15em;
+    max-height: 250px;
   }
 </style>
 
@@ -52,13 +52,18 @@
   <br>
   <div class="container">
     <div class="row">
-      <div class="col-md-12 text-center">
-        <img class="instance-image" src="{{url_for('static', filename='images/A&Mlogo.png')}}" />
+			<!-- Column padding -->
+			<div class="col-md-1"></div>
+      <div class="col-md-5 text-center">
         <h2>Texas A&M University</h2>
         <p>City: <a href="./city-colstat">College Station, TX</a></p>
         <p>Total enrollment: 65,302</p>
         <p>Acceptance rate: 66%</p>
         <p>Student-faculty ratio: 21:1</p>
+			</div>
+			<div class="col-md-5 text-center">
+        <img class="instance-image" src="{{url_for('static', filename='images/A&Mlogo.png')}}" />
+				<p></p>
       </div>
     </div>
   </div>
