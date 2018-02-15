@@ -16,8 +16,9 @@
   .text-center {
     line-height: 0.9em;
   }
+	
   .instance-image {
-    max-width: 15em;
+    max-height: 250px;
   }
 
 </style>
@@ -48,19 +49,23 @@
     </div>
   </ul>
 </nav>
-</head>
 
 <body>
   <br>
   <div class="container">
     <div class="row">
-      <div class="col-md-12 text-center">
-        <img class="instance-image" src="{{url_for('static', filename='images/UTlogo.jpg')}}" />
+			<!-- Column padding -->
+			<div class="col-md-1"></div>
+      <div class="col-md-5 text-center">
         <h2>The University of Texas at Austin</h2>
         <p>City: <a href="./city-austin">Austin, TX</a></p>
         <p>Total enrollment: 51,331</p>
         <p>Acceptance rate: 40% (Fall 2016)</p>
         <p>Student-faculty ratio: 18:1</p>
+			</div>
+			<div class="col-md-5 text-center">
+        <img class="instance-image" src="{{url_for('static', filename='images/UTlogo.jpg')}}" />
+				<p></p>
       </div>
     </div>
   </div>

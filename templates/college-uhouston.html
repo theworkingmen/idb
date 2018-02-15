@@ -16,7 +16,10 @@
   .text-center {
     line-height: 0.9em;
   }
-  .
+  .instance-image {
+    max-height: 250px;
+  }
+
 </style>
 
 </head>
@@ -46,29 +49,22 @@
   </ul>
 </nav>
 
-<style type="text/css">
-.text-center {
-  line-height: 0.9em;
-}
-.instance-image {
-  max-width: 15em;
-}
-
-</style>
-
-
-</head>
 <body>
   <br>
   <div class="container">
     <div class="row">
-      <div class="col-md-12 text-center">
-        <img class="instance-image" src="{{url_for('static', filename='images/UHlogo.png')}}" />
+			<!-- Column padding -->
+			<div class="col-md-1"></div>
+      <div class="col-md-5 text-center">
         <h2>The University of Houston</h2>
         <p>City: <a href="./city-houston">Houston, TX</a></p>
         <p>Total enrollment: 47,774</p>
         <p>Acceptance rate: 59%</p>
         <p>Student-faculty ratio: 21:1</p>
+			</div>
+      <div class="col-md-5 text-center">
+        <img class="instance-image" src="{{url_for('static', filename='images/UHlogo.png')}}" />
+				<p></p>
       </div>
     </div>
   </div>
