@@ -7,8 +7,6 @@ application = Flask(__name__)
 @application.route('/')
 def student():
     return render_template('splash.html')
-   # return render_template('about.html')
-
 
 @application.route('/about')
 def about():
