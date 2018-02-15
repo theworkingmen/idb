@@ -11,6 +11,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <title>Major Potential</title>
+	
+	  <style type="text/css">
+  .text-center {
+    line-height: 0.9em;
+  }
+	.instance-image {
+		max-height: 250px;
+	}
+</style>
+
 </head>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand/logo -->
@@ -38,29 +48,28 @@
   </ul>
 </nav>
 
-<style type="text/css">
-.text-center {
-  line-height: 0.9em;
-}
-</style>
-
-</head>
 <body>
   <br>
   <div class="container">
     <div class = "row">
-      <div class="col-md-12 text-center">
-        <img class="instance-image" src="{{url_for('static', filename='images/houstonTX.jpg')}}" />
-        <p></p>
+			<!-- Column padding -->
+			<div class="col-md-1"></div>
+      <div class="col-md-5 text-center">
         <h2>Houston, TX</h2>
         <p>County: Harris</p>
         <p>Population (2010 census): 2,100,263</p>
         2000 pop - 1,953,631
         <p>Growth since previous decade: 7.5%</p>
+			</div>
+      <div class="col-md-5 text-center">
+        <img class="instance-image" src="{{url_for('static', filename='images/houstonTX.jpg')}}" />
+        <p></p>
       </div>
     </div>
-    <div class = "row text-center">
-      <div class="col-md-6">
+    <div class = "row">
+			<!-- Column padding -->
+			<div class="col-md-1"></div>
+      <div class="col-md-5">
         <h4>Notable employers:</h4>
         
         <ul>
@@ -69,7 +78,7 @@
          <li>Marathon Oil Corp - <a href="./major-petroleumengineering">Petroleum Engineering</a></li>
        </ul>
      </div>
-     <div class="col-md-6">
+     <div class="col-md-5">
        <h4>Universities located here:</h4>
        <ul>
          <!--Link to instance later-->
