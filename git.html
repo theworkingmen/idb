@@ -27,11 +27,13 @@
 <font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
     
 <tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
-<td width="100%"><dl><dt><a name="-get_commit_stat"><strong>get_commit_stat</strong></a>(individual_commit_stat)</dt></dl>
- <dl><dt><a name="-get_git_stat"><strong>get_git_stat</strong></a>()</dt></dl>
- <dl><dt><a name="-get_issue_stat"><strong>get_issue_stat</strong></a>(individual_commit_stat)</dt></dl>
- <dl><dt><a name="-minuteMod"><strong>minuteMod</strong></a>(x, p<font color="#909090">=0</font>)</dt></dl>
- <dl><dt><a name="-parse_commit_data"><strong>parse_commit_data</strong></a>(repo_commit_data, individual_commit_stat)</dt></dl>
+<td width="100%"><dl><dt><a name="-get_commit_stat"><strong>get_commit_stat</strong></a>(individual_commit_stat)</dt><dd><tt>Gets&nbsp;the&nbsp;commit&nbsp;stats&nbsp;from&nbsp;the&nbsp;github&nbsp;api</tt></dd></dl>
+ <dl><dt><a name="-get_git_stat"><strong>get_git_stat</strong></a>()</dt><dd><tt>returns&nbsp;the&nbsp;Github&nbsp;status&nbsp;(commits,&nbsp;issues)&nbsp;of&nbsp;the&nbsp;repo&nbsp;in<br>
+a&nbsp;json&nbsp;format.&nbsp;It&nbsp;caches&nbsp;the&nbsp;data.&nbsp;It&nbsp;queries&nbsp;api.github&nbsp;every<br>
+10&nbsp;minutes</tt></dd></dl>
+ <dl><dt><a name="-get_issue_stat"><strong>get_issue_stat</strong></a>(individual_commit_stat)</dt><dd><tt>Gets&nbsp;the&nbsp;issue&nbsp;stats&nbsp;from&nbsp;the&nbsp;github&nbsp;api</tt></dd></dl>
+ <dl><dt><a name="-minuteMod"><strong>minuteMod</strong></a>(x, p<font color="#909090">=0</font>)</dt><dd><tt>Used&nbsp;to&nbsp;make&nbsp;sure&nbsp;the&nbsp;current&nbsp;min&nbsp;%&nbsp;x&nbsp;is&nbsp;0</tt></dd></dl>
+ <dl><dt><a name="-parse_commit_data"><strong>parse_commit_data</strong></a>(repo_commit_data, individual_commit_stat)</dt><dd><tt>parses&nbsp;and&nbsp;stores&nbsp;the&nbsp;data&nbsp;recieved&nbsp;by&nbsp;the&nbsp;github&nbsp;api</tt></dd></dl>
 </td></tr></table><p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
 <tr bgcolor="#55aa55">

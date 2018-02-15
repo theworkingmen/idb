@@ -34,7 +34,7 @@ def get_git_stat():
                    'total': total_commit_stat}
 
     with open('static/cache/github_stat_cache.json', 'w') as fileF:
-         json.dump(data_output, fileF)
+        json.dump(data_output, fileF)
 
     return json.dumps(data_output)
 

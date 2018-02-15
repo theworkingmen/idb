@@ -1,3 +1,152 @@
+commit 7b795429f5c5bc827b992c06b9f6cc91548a8992
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Thu Feb 15 15:07:36 2018 -0600
+
+    Github stats are now working. Closes #31
+
+commit f2d6b9f0aa6ebe6fb5de656d4c978c07d49b917d
+Merge: 06f163f 7915e2c
+Author: Abel Tesfaye <abelhaddistt@gmail.com>
+Date:   Thu Feb 15 15:03:49 2018 -0600
+
+    Merge pull request #32 from theworkingmen/staticsite
+    
+    Staticsite
+
+commit 7915e2cda85a095ece2f44f70af5d6e4a51d1d60
+Author: Mitchell Traylor <traylor1@cs.utexas.edu>
+Date:   Thu Feb 15 14:37:56 2018 -0600
+
+    Fixed Austin city image (misspelled image name in instance page)
+
+commit 030caa0e5c5a7979726505db18a204105c7a38b7
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Thu Feb 15 12:44:38 2018 -0600
+
+    Re-styled major instances.
+
+commit 7c202f17a719f6401b5254af5293e563c831ea98
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Thu Feb 15 12:25:22 2018 -0600
+
+    Re-styled college instances similar to cities.
+
+commit 06f163fa20233f35b7cf43084994f010dd87f5dc
+Merge: 39c6acb 5786f42
+Author: Abel Tesfaye <abelhaddistt@gmail.com>
+Date:   Thu Feb 15 12:16:10 2018 -0600
+
+    Merge pull request #27 from theworkingmen/staticsite
+    
+    Staticsite
+
+commit 5786f42337713c2a754b54dca77c0f25e7b74172
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Thu Feb 15 12:11:07 2018 -0600
+
+    Added AWS elastic-beanstalk file for deployment
+
+commit 4cca0f1ff62199ba77a8f792b1e101a59f084d92
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Thu Feb 15 12:05:32 2018 -0600
+
+    Re-styled city instances.
+
+commit f8ef7bd321104a9c83bc2502b33381a25e3defd4
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Thu Feb 15 11:09:58 2018 -0600
+
+    Added Sources in about.html
+
+commit e728fc53f2bae246a73d6edf91fa5837f0ef1eb9
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Thu Feb 15 10:39:53 2018 -0600
+
+    Page refinements
+
+commit 338646d9792946e557200ba179ae309700f7e61e
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Thu Feb 15 08:19:31 2018 -0600
+
+    Updated about.html role, added personal bio, hid questionable trademark symbol within a comment.
+
+commit 8faf2bea176ae796329621abb747f555553cebf5
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Wed Feb 14 17:36:08 2018 -0600
+
+    Removed bootstrap cached files
+    
+    Bootstrap files are not necessary since they can be pulled dynamically from the web
+
+commit ebd9d0e34b848487c5d4becdf8608d4004733430
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Wed Feb 14 17:24:35 2018 -0600
+
+    adjusted image spacing in instance pages
+
+commit 18b1ede8d61ddf1bd4d112a223940678f8edc4b5
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Wed Feb 14 17:09:58 2018 -0600
+
+    Cleaned up model pages
+    
+    applied image scaling in "cards". Also centered the text and resized the sub-titles
+
+commit e8c6f897e61d073c557619125c40aab2a35cdf59
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Wed Feb 14 16:44:29 2018 -0600
+
+    Bootstrap Grid System applied to majors instances
+
+commit 16fed9545f9ca1ccf373f908380c26823247ca77
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Wed Feb 14 16:16:14 2018 -0600
+
+    Bootstrap Grid System applied to college instances
+
+commit 3088b47aee45544880387ef2fe9157fd11f781ae
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Wed Feb 14 15:37:48 2018 -0600
+
+    Bootstrap Grid System applied to City instances
+
+commit 7c5af0b75a0d845a59187b597c32838a2808712d
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Wed Feb 14 09:09:48 2018 -0600
+
+    Tried to make the webpages more appealing
+
+commit 7c322522b62ba13ba065a91f390bc5f7c61ee55c
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Tue Feb 13 14:04:13 2018 -0600
+
+    Fixed error in major-petroleumengineering.html image, added my (Mitchell's) photo for about page.
+
+commit 6d5b2136cb95ba3ba7e2dca3e04f447f89979c67
+Author: Mitchell Traylor <traylor1@cs.utexas.edu>
+Date:   Tue Feb 13 11:49:28 2018 -0600
+
+    About.html style updated, carousel fixed.
+
+commit 211029bc60ebd3094a6fa428acd0336dbb776aea
+Merge: a91f2e2 e7fba21
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Tue Feb 13 08:16:04 2018 -0600
+
+    Merge branch 'staticsite' of https://github.com/smcw66/majorpotential into staticsite
+
+commit a91f2e246622bc70bded6093d5db6e70c4266df2
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Tue Feb 13 08:15:30 2018 -0600
+
+    Links added to all instance pages.
+
+commit e7fba21a181b381f8fa4667e75e0f1b3b50f5fae
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Tue Feb 13 05:05:05 2018 -0600
+
+    Finish github integration for the about.html page
+
 commit 0cd638beb10b16e85dbad3c295ccf80fd00379c6
 Merge: 6a4ecb2 cbfc284
 Author: smcw66 <32080825+smcw66@users.noreply.github.com>
@@ -180,11 +329,25 @@ Date:   Fri Feb 9 06:50:59 2018 -0600
 
     Dead links added to complete navbar, pages to be created later.
 
+commit 39c6acb94a9f408820ac2d0f70035866fcd458c2
+Author: NealFM <NealFM@users.noreply.github.com>
+Date:   Thu Feb 8 19:33:56 2018 -0600
+
+    Added group login information
+
 commit e06d298eaba932e1476ddbfff4113e38be52af0f
 Author: unknown <mitch.traylor@utexas.edu>
 Date:   Thu Feb 8 19:07:21 2018 -0600
 
     Created model-college.html, navbar updated to link to it.
+
+commit ddc5e381408f6aa938e64ade34bb60fe31b2145c
+Author: Abel Tesfaye <abelhaddistt@gmail.com>
+Date:   Thu Feb 8 15:55:07 2018 -0600
+
+    Add Proposal.txt
+    
+    To check the GitHub API
 
 commit e1b367a7412eb6a63bda8938c307cece9dce20fa
 Author: unknown <mitch.traylor@utexas.edu>

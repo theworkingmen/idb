@@ -1,12 +1,15 @@
 from flask import Flask, render_template, request
 import git
 
+""" A small flask app to run the website """
+
 application = Flask(__name__)
 
 
 @application.route('/')
 def student():
     return render_template('splash.html')
+
 
 @application.route('/about')
 def about():
