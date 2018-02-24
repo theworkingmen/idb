@@ -1,34 +1,14 @@
 import React from 'react';
-import { Navbar, Nav, NavItem, Carousel, Jumbotron} from 'react-bootstrap';
+import {Carousel, Jumbotron} from 'react-bootstrap';
 import ag from './agricultureresize.jpg';
 import man from './manufacturingresize.jpg';
 import it from './ITresize.jpg';
 import './App.css';
+import NavigationBar from './NavigationBar.js';
 
 const App = () => {
-  return (
-<div>
-<Navbar>
-  <Navbar.Header>
-    <Navbar.Brand>
-      <a href="#home">Major Potential</a>
-    </Navbar.Brand>
-  </Navbar.Header>
-  <Nav>
-    <NavItem eventKey={1} href="#">
-      Colleges
-    </NavItem>
-    <NavItem eventKey={2} href="#">
-      Cities
-    </NavItem>
-    <NavItem eventKey={3} href="#">
-      Majors
-    </NavItem>
-    <NavItem eventKey={4} href="#">
-      About
-    </NavItem>
-  </Nav>
-</Navbar>
+  return (<div>
+<NavigationBar/>
 
 <Jumbotron>
   <h1><center>Welcome to Major Potential</center></h1>
