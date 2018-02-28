@@ -1,9 +1,9 @@
 import React from 'react';
 import {Image, Grid, Row, Col, Thumbnail} from 'react-bootstrap';
 import { Link } from 'react-router-dom'
-import nursing from './UTnursing.jpg';
-import petrol from './manufacture.jpg';
-import it from './ITresize.jpg';
+import nursing from '../images/UTnursing.jpg';
+import petrol from '../images/manufacture.jpg';
+import it from '../images/ITresize.jpg';
 
 const Majors = () => {
   return (

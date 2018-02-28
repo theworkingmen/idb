@@ -1,9 +1,9 @@
 import React from 'react';
 import {Image, Grid, Row, Col, Thumbnail} from 'react-bootstrap';
 import { Link } from 'react-router-dom'
-import ut from './UTlogo.jpg';
-import uh from './UHlogo.png';
-import am from './A&Mlogo.png';
+import ut from '../images/UTlogo.jpg';
+import uh from '../images/UHlogo.png';
+import am from '../images/A&Mlogo.png';
 
 const Colleges = () => {
   return (

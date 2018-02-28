@@ -1,9 +1,9 @@
 import React from 'react';
 import {Image, Grid, Row, Col, Thumbnail} from 'react-bootstrap';
 import { Link } from 'react-router-dom'
-import austin from './austinTx.jpg';
-import cstat from './collegestationTX.jpg';
-import houston from './houstonTX.jpg';
+import austin from '../images/austinTx.jpg';
+import cstat from '../images/collegestationTX.jpg';
+import houston from '../images/houstonTX.jpg';
 
 const Cities = () => {
   return (

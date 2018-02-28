@@ -1,8 +1,8 @@
 import React from 'react';
 import {Carousel, Jumbotron} from 'react-bootstrap';
-import ag from './agricultureresize.jpg';
-import man from './manufacturingresize.jpg';
-import it from './ITresize.jpg';
+import ag from '../images/agricultureresize.jpg';
+import man from '../images/manufacturingresize.jpg';
+import it from '../images/ITresize.jpg';
 
 const Splash = () => {
   return (<div>
