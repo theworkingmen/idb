@@ -6,9 +6,14 @@ import InstanceTitle from './InstanceTitle.js';
 class MajorInstance extends Component {
 
 	
+	
 	render() {
+		var boldtext = {
+			color: "red"
+		};
+		
 		return (
-		    <div className="MajorInstance">
+		    <div className="MajorInstance" style={boldtext}>
 		       <InstanceTitle name={this.props.match.params.name}/>
 		    </div>
 		);
