@@ -11,7 +11,7 @@ class NavigationBar extends Component {
 	render() {
 		return (
 		    <div className="NavigationBar">
-		        <Navbar>
+		        <Navbar inverse>
 					<Navbar.Header>
 						<Navbar.Brand>
 							<Link to='/'>Major Potential</Link>

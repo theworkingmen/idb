@@ -5,6 +5,7 @@ import Colleges from './Colleges.js';
 import Cities from './Cities.js';
 import Majors from './Majors.js';
 import About from './About.js';
+import MajorInstance from './MajorInstance.js';
 
 const Main = () => (
   <main>
@@ -12,7 +13,8 @@ const Main = () => (
       <Route exact path='/' component={Splash}/>
       <Route path='/colleges' component={Colleges}/>
       <Route path='/cities' component={Cities}/>
-      <Route path='/majors' component={Majors}/>
+      <Route exact path='/majors' component={Majors}/>
+      <Route exact path='/majors/:name' component={MajorInstance}/>
       <Route path='/about' component={About}/>
     </Switch>
   </main>
