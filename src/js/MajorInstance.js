@@ -2,19 +2,23 @@ import React, { Component } from 'react';
 import { Navbar, Nav, NavItem} from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 import InstanceTitle from './InstanceTitle.js';
+import '../css/App.css';
 
 class MajorInstance extends Component {
 
 	
 	
 	render() {
-		var boldtext = {
-			color: "red"
-		};
-		
 		return (
-		    <div className="MajorInstance" style={boldtext}>
+		    <div className="container">
 		       <InstanceTitle name={this.props.match.params.name}/>
+		       
+		       <p id="summary"> Summary: insert api call here </p>
+		       <p id="employ_rate"> Employment Rate: insert api call here </p>
+		       <p id="relevance"> Relevance in Industry: insert api call here </p>
+		       <p id="salaries"> Salaries: insert api call here </p>
+		       
+		       
 		    </div>
 		);
 	}

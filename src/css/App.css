@@ -6,3 +6,7 @@
   margin: 20px;
   padding: 20px;
 }
+.InstanceTitle p{
+	font-family: 'Oswald';
+	font-size: 4em;
+}
