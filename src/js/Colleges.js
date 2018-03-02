@@ -4,19 +4,13 @@ import { Link } from 'react-router-dom'
 import ut from '../images/UTlogo.jpg';
 import uh from '../images/UHlogo.png';
 import am from '../images/A&Mlogo.png';
+import Card from './Card.js';
 
 const Colleges = () => {
   return (
 <Grid>
-  <Row>
-    <Col xs={6} md={4}>
-      <Thumbnail>
-		<Image src={ut} style={{width:"100%", height:"250px"}}/>
-        <h4><center><Link to='#'>The University of Texas at Austin</Link></center></h4>
-        <p>Location: <Link to='/cities/austin'>Austin, TX</Link></p>
-        <p>Highest Ranked Major: <Link to='#'>Computer Science</Link></p>
-      </Thumbnail>
-    </Col>
+  <Row> {/* Need some sort of row component*/}
+    <Card name='UT Austin' model='colleges' imgsrc='../images/logo.svg'> </Card>
     <Col xs={6} md={4}>
       <Thumbnail>
 		<Image src={am} style={{width:"100%", height:"250px"}}/>
