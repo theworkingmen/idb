@@ -1,0 +1,32 @@
+How to restart the server through the AWS Console:
+Make sure your region is set to N. Virgina 
+Go to the Elastic Beanstalk tab in the console
+There should be tab called Major
+Navigate to it and in it there should be three tabs 
+Environments
+Application versions
+Save configurations
+
+Under Saved Configurations there should be a profile called
+Production Site
+
+Check the box and click load, should work
+
+
+IF Save Config doesn't exist:
+Go to Environments instead and launch a new environment
+
+Select Web Server Environment
+Start from: Predefined Configuration
+Select Python from the list
+Make sure it is the most recent version of Python 2.7
+Next
+If you are uploading a new version of the site then upload the necessary files in a zip.
+That's basically it, you can skip past all the other steps, launch the environment
+and confirm success.
+
+If it works go to the Environments tab again and select the new environment you
+just created. Then once there under Actions:
+Slect save configuration.
+
+That way we can just follow the first steps of this document. 
