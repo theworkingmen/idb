@@ -13,7 +13,7 @@ const Colleges = () => {
       <Thumbnail>
 		<Image src={ut} style={{width:"100%", height:"250px"}}/>
         <h4><center><Link to='#'>The University of Texas at Austin</Link></center></h4>
-        <p>Location: <Link to='#'>Austin, TX</Link></p>
+        <p>Location: <Link to='/cities/austin'>Austin, TX</Link></p>
         <p>Highest Ranked Major: <Link to='#'>Computer Science</Link></p>
       </Thumbnail>
     </Col>

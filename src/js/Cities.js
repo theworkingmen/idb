@@ -12,7 +12,7 @@ const Cities = () => {
     <Col xs={6} md={4}>
       <Thumbnail>
 		<Image src={austin} style={{width:"100%", height:"250px"}}/>
-        <h4><center><Link to='#'>Austin, TX</Link></center></h4>
+        <h4><center><Link to='/cities/Austin'>Austin, TX</Link></center></h4>
         <p>Universities: <Link to='#'>The University of Texas at Austin</Link></p>
         <p>Notable job opportunities: <Link to='#'>Computer Science</Link></p>
       </Thumbnail>
