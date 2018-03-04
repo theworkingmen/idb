@@ -14,15 +14,20 @@ class Cities extends Component {
   render() {
     return (
       <Grid>
-        <Card name='Austin' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='College Station' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='Houston' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default city' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default city' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default city' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default city' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default city' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default city' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='Austin' model='cities' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='College Station' model='cities' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='Houston' model='cities' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='default city' model='cities' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='default city' model='cities' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='default city' model='cities' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='default city' model='cities' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='default city' model='cities' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='default city' model='cities' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='default city' model='cities' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='default city' model='cities' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='default city' model='cities' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='default city' model='cities' imgsrc='http://bit.ly/2CYI94d'/>
+        
       </Grid>
     )
   }

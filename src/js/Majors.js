@@ -14,18 +14,19 @@ class Majors extends Component {
   render() {
     return (
       <Grid>
-        <Card name='Computer Science' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='Nursing' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='Petroleum Engineering' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default major' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default major' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default major' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default major' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default major' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default major' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default major' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default major' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default major' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='Computer Science' model='majors' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='Nursing' model='majors' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='Petroleum Engineering' model='majors' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='default major' model='majors' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='default major' model='majors' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='default major' model='majors' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='default major' model='majors' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='default major' model='majors' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='default major' model='majors' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='default major' model='majors' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='default major' model='majors' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='default major' model='majors' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='default major' model='majors' imgsrc='http://bit.ly/2CYI94d'/>
       </Grid>
     )
   }
