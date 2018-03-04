@@ -1,24 +1,35 @@
-.jumbotron{
-  background: rgba(255, 255, 255, .75);
+.welcome{
+  background: rgba(255, 255, 255, .001);
   position: relative;
   color:black;
+  max-width: 1000px;
+  height: 100px;
+  margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+}
+
+.carousel {
   max-width: 1000px;
   margin: auto;
 }
 
-.carousel {
-	margin: auto;
-	position: relative;
+.controls {
+   	position: relative;
+   	display: block;
+    max-width: 1000px;
 }
 
-block {
+logo_m {
   font-family: 'Open Sans', sans-serif;
-  color: #ffffff4B;
-  font-size: 100px;
+  color:#CECECE;
+  font-size: 62px;
   font-weight: 800;
   letter-spacing: -3px;
   line-height: 1;
-  text-shadow: #EDEDED 3px 2px 0;
+  text-shadow: #000000 3px 2px 0;
   position: relative;
-  margin: 15px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
