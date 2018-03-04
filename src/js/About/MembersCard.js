@@ -4,7 +4,6 @@ import {Image, Grid, Row, Col, Thumbnail, Button, ButtonToolbar, Table} from 're
 
 export default class MembersCard extends Component {
   render () {
-
     let stat_map = Object.keys(this.props.members_info).map((item) =>
 
     <Col xs={6} md={4}>
