@@ -4,7 +4,7 @@ import Splash from './Splash.js';
 import Colleges from './Colleges.js';
 import Cities from './Cities.js';
 import Majors from './Majors.js';
-import About from './About.js';
+import About from './About/About.js';
 import MajorInstance from './MajorInstance.js';
 import CityInstance from './CityInstance.js';
 import CollegeInstance from './CollegeInstance.js';

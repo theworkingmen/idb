@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import { Jumbotron } from 'react-bootstrap';
 import {Image, Grid, Row, Col, Thumbnail, Button, ButtonToolbar, Table} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import '../css/about.css';
-import abel_pic from '../images/authors/abel_pic.jpg';
-import sungsup_pic from '../images/authors/sungsup_pic.jpg';
-import mitchell_pic from '../images/authors/mitchell_pic.jpg';
-import neal_pic from '../images/authors/neal_pic.jpg';
-import christian_pic from '../images/authors/christian_pic.jpg';
+import '../../css/about.css';
+import abel_pic from '../../images/authors/abel_pic.jpg';
+import sungsup_pic from '../../images/authors/sungsup_pic.jpg';
+import mitchell_pic from '../../images/authors/mitchell_pic.jpg';
+import neal_pic from '../../images/authors/neal_pic.jpg';
+import christian_pic from '../../images/authors/christian_pic.jpg';
+import MembersCard from './MembersCard'
 
 let request = require('request')
 export default class About extends Component {
@@ -31,11 +32,36 @@ export default class About extends Component {
            //
          }
          let members_data = {}
-         members_data['abelhtt'] = {"commits":0, "issues":0}
-         members_data['traylor1'] = {"commits":0, "issues":0}
-         members_data['smcw66'] = {"commits":0, "issues":0}
-         members_data['christian-onuogu'] = {"commits":0, "issues":0}
-         members_data['NealFM'] = {"commits":0, "issues":0}
+         members_data['abelhtt'] = {"name": "Abel Tesfaye",
+                                    "role": "Back-End, Front-End",
+                                    "bio" : "I am a junior Computer Science major studying at UT Austin.",
+                                    "photo": abel_pic,
+                                    "commits":0,
+                                    "issues":0}
+         members_data['traylor1'] = {"name": "Mitchell Traylor",
+                                    "role": "Front-End, Report Author",
+                                    "bio" : "Computer Science third-year, with special focus on cybersecurity.",
+                                    "photo": mitchell_pic,
+                                    "commits":0,
+                                    "issues":0}
+         members_data['smcw66'] = {"name": "Sungsup Lee",
+                                    "role": "Front-End, Back-End",
+                                    "bio" : "Studies Computer Science at UT Austin.",
+                                    "photo": sungsup_pic,
+                                    "commits":0,
+                                    "issues":0}
+         members_data['NealFM'] = {"name": "Neal Friesenhahn",
+                                    "role": "Web Hosting, API Design",
+                                    "photo": neal_pic,
+                                    "bio" : "I am a junior Computer Science major.",
+                                    "commits":0,
+                                    "issues":0}
+         members_data['christian-onuogu'] = {"name": "Christian Onuogu",
+                                    "role": "Front-End",
+                                    "bio" : "I am a junior Computer Science major.",
+                                    "photo": christian_pic,
+                                    "commits":0,
+                                    "issues":0}
 
          let commitJSON = JSON.parse(body)
          let totalCommits = 0
@@ -72,9 +98,9 @@ export default class About extends Component {
      }
 
 render () {
-    let members = null
+    let members_info = null
     if (this.state.ready) {
-      members = this.members_stats;
+      members_info = <MembersCard members_info = {this.state.members_stats}/>;
     }
   return (
 <div className ='container'>
@@ -91,58 +117,9 @@ render () {
 
 <div className = 'group_members'>
 <block> <center> The Team </center> </block>
+  {members_info}
 <p></p>
-<Grid>
-  <Row>
-    <Col xs={6} md={4}>
-    <Thumbnail>
-      <Image src={mitchell_pic}
-             style={{width:"100%", height:"250px"}}/>
-      <h4><center>Mitchell Traylor</center></h4>
-      <p>Role: Front-End, Report Author</p>
-      <p>Bio - Computer Science third-year, with special focus on cybersecurity</p>
-    </Thumbnail>
-    </Col>
-    <Col xs={6} md={4}>
-    <Thumbnail>
-      <Image src={sungsup_pic}
-             style={{width:"100%", height:"250px"}}/>
-      <h4><center>Sungsup Lee</center></h4>
-      <p>Role: Back-End, Front-End</p>
-      <p>Bio - Studies Computer Science at UT Austin.</p>
-    </Thumbnail>
-    </Col>
-    <Col xs={6} md={4}>
-      <Thumbnail>
-        <Image src={abel_pic}
-               style={{width:"100%", height:"250px"}}/>
-        <h4><center>Abel Tesfaye</center></h4>
-        <p>Role: Back-End, Front-End</p>
-        <p>Bio - I am a junior Computer Science major at UT Austin.</p>
-      </Thumbnail>
-    </Col>
-  </Row>
-  <Row>
-  <Col xs={6} md={4}>
-  <Thumbnail>
-    <Image src={neal_pic}
-           style={{width:"100%", height:"250px"}}/>
-    <h4><center>Neal Friesenhahn</center></h4>
-    <p>Role: Web Hosting, API Design</p>
-    <p>Bio - Studies Computer Science at UT Austin.</p>
-  </Thumbnail>
-  </Col>
-  <Col xs={6} md={4}>
-  <Thumbnail>
-    <Image src={christian_pic}
-           style={{width:"100%", height:"250px"}}/>
-    <h4><center>Christian Onuogu</center></h4>
-    <p>Role: Front-End</p>
-    <p>Bio - Studies Computer Science at UT Austin.</p>
-  </Thumbnail>
-  </Col>
-  </Row>
-</Grid>
+
 </div>
 
 <div>
