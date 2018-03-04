@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Jumbotron } from 'react-bootstrap';
 import {Image, Grid, Row, Col, Thumbnail, Button, ButtonToolbar, Table} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -9,7 +9,73 @@ import mitchell_pic from '../images/authors/mitchell_pic.jpg';
 import neal_pic from '../images/authors/neal_pic.jpg';
 import christian_pic from '../images/authors/christian_pic.jpg';
 
-const About = () => {
+let request = require('request')
+export default class About extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      ready: false,
+     total_commits: 0,
+     total_issues: 0,
+     members_stats: {},
+   }
+    }
+
+
+    componentWillMount () {
+      this.setState({ready: false})
+       let commits_options = {method: 'GET',
+         url: 'https://api.github.com/repos/theworkingmen/idb/stats/contributors'}
+       request(commits_options, function (error, response, body) {
+         if (error) {
+           //
+         }
+         let members_data = {}
+         members_data['abelhtt'] = {"commits":0, "issues":0}
+         members_data['traylor1'] = {"commits":0, "issues":0}
+         members_data['smcw66'] = {"commits":0, "issues":0}
+         members_data['christian-onuogu'] = {"commits":0, "issues":0}
+         members_data['NealFM'] = {"commits":0, "issues":0}
+
+         let commitJSON = JSON.parse(body)
+         let totalCommits = 0
+         for (let i = 0; i < commitJSON.length; i++) {
+           let curUserCount = commitJSON[i]['total']
+
+           members_data[String(commitJSON[i]['author']['login'])]["commits"] = curUserCount
+           totalCommits += curUserCount
+         }
+
+         this.setState({total_commits: totalCommits})
+
+         var issues_options = { method: 'GET',
+         url: 'https://api.github.com/repos/theworkingmen/idb/issues?state=all&per_page=100&page=' + String(1),
+         qs: { state: 'all' },
+         };
+
+         request(issues_options, function (error, response, body) {
+           if (error) {
+             //
+           }
+           let issueJSON = JSON.parse(body)
+           for (let i = 0; i < issueJSON.length; i++) {
+
+             members_data[String(issueJSON[i]['user']['login'])]["issues"] += 1
+           }
+
+           this.setState({members_stats: members_data,
+             total_issues: issueJSON.length})
+         }.bind(this))
+
+          this.setState({ready: true})
+       }.bind(this))
+     }
+
+render () {
+    let members = null
+    if (this.state.ready) {
+      members = this.members_stats;
+    }
   return (
 <div className ='container'>
 <div className = 'introduction'>
@@ -89,11 +155,11 @@ const About = () => {
   </tr>
   <tr>
     <th>Number of Commits:</th>
-    <th id="total_commits"> </th>
+    <th id="total_commits"> {this.state.total_commits} </th>
   </tr>
   <tr>
     <th>Number of Issues:</th>
-    <th id="total_issues"> </th>
+    <th id="total_issues"> {this.state.total_issues}</th>
   </tr>
   <tr>
     <th>Number of Unit Tests:</th>
@@ -168,6 +234,4 @@ const About = () => {
 
 </div>
 
-);};
-
-export default About;
+);};};
