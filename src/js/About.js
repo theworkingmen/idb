@@ -79,6 +79,30 @@ const About = () => {
 </Grid>
 </div>
 
+<div>
+<Row>
+<Col  xs={6} md={8}>
+<Table>
+  <tr>
+    <th><h4> Github Stats </h4></th>
+    <th><h4> Values </h4></th>
+  </tr>
+  <tr>
+    <th>Number of Commits:</th>
+    <th id="total_commits"> </th>
+  </tr>
+  <tr>
+    <th>Number of Issues:</th>
+    <th id="total_issues"> </th>
+  </tr>
+  <tr>
+    <th>Number of Unit Tests:</th>
+    <th> 0 </th>
+  </tr>
+</Table>
+</Col>
+</Row>
+</div>
 
 <div>
   <block_small> <p> </p> <center> Sources </center> <p></p></block_small>
@@ -88,10 +112,51 @@ const About = () => {
 </div>
 
 <div>
+<Row>
+
+
+  <Col  xs={6} md={8}>
+<Table>
+  <tr>
+    <th>
+      <h3> Tools Used</h3>
+    </th>
+  </tr>
+  <tr>
+    <th>Amazon Beanstalk</th>
+  </tr>
+  <tr>
+    <th>Amazon S3</th>
+  </tr>
+  <tr>
+    <th>Slack</th>
+  </tr>
+  <tr>
+    <th>React</th>
+  </tr>
+  <tr>
+    <th>React Bootstrap</th>
+  </tr>
+  <tr>
+    <th>Flask</th>
+  </tr>
+  <tr>
+    <th>Travis-CI</th>
+  </tr>
+  <tr>
+    <th>Github</th>
+  </tr>
+</Table>
+  </Col>
+</Row>
+
+</div>
+
+<div>
 <center>
 <block_small>  <p> </p> <p> </p> <center>Project Links</center> <p></p> </block_small>
  <Button>
- <a href = "https://theworkingmen.gitbooks.io/api/content/" > Github </a> </Button>
+ <a href = "https://github.com/theworkingmen/idb" > Github </a> </Button>
 <p> </p>
  <Button> <a href = "https://theworkingmen.gitbooks.io/api/content/" > API </a></Button>
 <p> </p>

@@ -26,6 +26,30 @@
   line-height: 0.7em;
 }
 
+table, th, td {
+  border-bottom: 1px solid white;
+  width: 50%;
+}
+
+table {
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+table tr:nth-child(even) {
+  background-color: #D3D3D3
+}
+table tr:nth-child(odd) {
+  background-color: #FFFFFF;
+}
+th, td {
+  padding: 5px;
+  text-align: center;
+}
+
 logo {
   font-family: 'Open Sans', sans-serif;
   color: #555;
