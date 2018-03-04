@@ -7,7 +7,7 @@ import am from '../images/A&Mlogo.png';
 import Card from './Card.js';
 
 
-{/* Use following url for default image: http://bit.ly/2H25MuS */}
+{/* Use following url for default image: http://bit.ly/2CYI94d */}
 {/* Grid automatically creates new rows for additional card components. */}
 
 class Colleges extends Component {
@@ -16,19 +16,19 @@ class Colleges extends Component {
   }
   render() {
     return (
-
       <Grid>
-        
-        <Card name='University of Texas at Austin' model='colleges' imgsrc='http://bit.ly/2H25MuS'> </Card>
-        <Card name='Texas A&M Univeristy' model='colleges' imgsrc='http://bit.ly/2H25MuS'> </Card>
-        <Card name='The University of Houston' model='colleges' imgsrc='http://bit.ly/2H25MuS'> </Card>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-
+        <Card name='University of Texas at Austin' model='colleges' imgsrc='http://bit.ly/2CYI94d'> </Card>
+        <Card name='Texas A&M Univeristy' model='colleges' imgsrc='http://bit.ly/2CYI94d'> </Card>
+        <Card name='The University of Houston' model='colleges' imgsrc='http://bit.ly/2CYI94d'> </Card>
+        <Card name='default college' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='default college' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='default college' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='default college' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='default college' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='default college' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='default college' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='default college' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='default college' imgsrc='http://bit.ly/2CYI94d'/>
       </Grid>
     )
   }
