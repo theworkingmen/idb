@@ -8,7 +8,7 @@ import Card from './Card.js';
 
 
 {/* Use following url for default image: http://bit.ly/2H25MuS */}
-(/* Grid automatically creates new rows for additional card components. */)
+{/* Grid automatically creates new rows for additional card components. */}
 
 class Colleges extends Component {
   constructor(props) {
