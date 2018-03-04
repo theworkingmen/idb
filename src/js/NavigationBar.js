@@ -7,7 +7,7 @@ class NavigationBar extends Component {
 		super(props);
 		this.state = {highlight: props.highlight};
 	}
-	
+
 	render() {
 		return (
 		    <div className="NavigationBar">
@@ -18,17 +18,17 @@ class NavigationBar extends Component {
 						</Navbar.Brand>
 					</Navbar.Header>
 					<Nav activeKey={this.state.highlight}>
-						<NavItem eventKey={1}>
-							<Link to='/colleges'>Colleges</Link>
+						<NavItem eventKey={1} href="/colleges">
+							Colleges
 						</NavItem>
-						<NavItem eventKey={2}>
-							<Link to='/cities'>Cities</Link>
+						<NavItem eventKey={2} href="/cities">
+							Cities
 						</NavItem>
-						<NavItem eventKey={3}>
-							<Link to='/majors'>Majors</Link>
+						<NavItem eventKey={3}  href="/majors">
+							Majors
 						</NavItem>
-						<NavItem eventKey={4} href="#">
-							<Link to='/about'>About</Link>
+						<NavItem eventKey={4} href="/about">
+							About
 						</NavItem>
 					</Nav>
 				</Navbar>

@@ -1,0 +1,71 @@
+.jumbotron{
+  background: rgba(255, 255, 255, .75);
+  color:black;
+  max-width: 1000px;
+  margin-bottom: 25px;
+}
+
+.button {
+  width: 1000px;
+}
+
+.container{
+  max-width: 1000px;
+  margin: auto;
+}
+
+.profileimg{
+  max-width: 100%;
+  padding: 1em;
+}
+.profileimg > img {
+  width: 100%;
+}
+
+.text-center {
+  line-height: 0.7em;
+}
+
+logo {
+  font-family: 'Open Sans', sans-serif;
+  color: #555;
+  font-size: 62px;
+  font-weight: 800;
+  letter-spacing: -3px;
+  line-height: 1;
+  text-shadow: #EDEDED 3px 2px 0;
+  position: relative;
+}
+
+intro {
+  font-family: "Seaweed Script";
+  text-align: center;
+  font-size: 21px;
+  position: relative;
+  margin:0;
+}
+
+block {
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff4B;
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -3px;
+  line-height: 1;
+  text-shadow: #EDEDED 3px 2px 0;
+  position: relative;
+  margin-bottom: 18px;
+}
+
+block_small {
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff4B;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -3px;
+  line-height: 1;
+  text-shadow: #EDEDED 3px 2px 0;
+  position: relative;
+  margin-bottom: 25px;
+  margin-top: 10px;
+}

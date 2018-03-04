@@ -1,5 +1,22 @@
 body {
-  margin: 0;
+  margin: auto;
   padding: 0;
   font-family: sans-serif;
+  background-image: url("../images/spiration dark.png");
+}
+
+.navbar {
+	background-color: rgba(77,77,77,1);
+	width: 100%;
+	height: 65px;
+}
+
+.navbar-brand {
+	color: rgba(210,210,210,1);
+  font-size: 23px;
+}
+
+.nav {
+	color: rgba(210,210,210,1);
+  font-size: 17px;
 }
