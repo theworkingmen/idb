@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import '../css/App.css';
 import NavigationBar from './NavigationBar.js';
-import Main from './Main.js';
+import Router from './Router.js';
 
-const App = () => {
-  return (
-	<div>
-		<NavigationBar/>
-		<Main/>
-	</div>);};
+class App extends Component {
+
+	render() {
+		return (
+			<div>
+				<NavigationBar/>
+				<Router/>
+			</div>
+		)
+	}
+
+}
 
 export default App;
