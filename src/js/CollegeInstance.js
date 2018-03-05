@@ -50,7 +50,7 @@ class CollegeInstance extends Component {
 	
 	render() {
 		return (
-	    <div className={[container, info].join(' ')}>
+	    <div className="container" style={{background:'white'}}>
 		    	
 				<center><InstanceTitle name={this.props.match.params.name}/></center>
 
