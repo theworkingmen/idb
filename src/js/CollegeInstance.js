@@ -67,7 +67,7 @@ class CollegeInstance extends Component {
 				</Col>
 				<Col md={6}>
 		    	<Chart chartData={this.state.chartData} titleText="University Demographic" legendPosition="right"/>
-		    </Col>
+				</Col>
 	    </div>
 		);
 	}
