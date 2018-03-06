@@ -11,6 +11,6 @@
 	font-size: 4em;
 }
 .information {
-	@extend .container;
+	@extends .container;
 	backgroud: white;
 }

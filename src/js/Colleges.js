@@ -13,20 +13,21 @@ class Colleges extends Component {
   }
   render() {
     return (
+
       <Grid>
-        <Card name='University of Texas at Austin' model='colleges' imgsrc='http://bit.ly/2CYI94d'> </Card>
-        <Card name='Texas A&M Univeristy' model='colleges' imgsrc='http://bit.ly/2CYI94d'> </Card>
-        <Card name='The University of Houston' model='colleges' imgsrc='http://bit.ly/2CYI94d'> </Card>
-        <Card name='default college' model='colleges' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default college' model='colleges' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default college' model='colleges' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default college' model='colleges' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default college' model='colleges' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default college' model='colleges' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default college' model='colleges' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default college' model='colleges' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default college' model='colleges' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default college' model='colleges' imgsrc='http://bit.ly/2CYI94d'/>
+        <Card name='Rice University' model='colleges' domain='rice.edu'> </Card>
+        <Card name='The University of Texas at Austin' model='colleges' domain='utexas.edu'> </Card>
+        <Card name='Texas A&M' model='colleges' domain='tamu.edu'> </Card>
+        <Card name='Default College' model='colleges' domain='clearbit.com'> </Card>
+        <Card name='Default College' model='colleges' domain='clearbit.com'> </Card>
+        <Card name='Default College' model='colleges' domain='clearbit.com'> </Card>
+        <Card name='Default College' model='colleges' domain='clearbit.com'> </Card>
+        <Card name='Default College' model='colleges' domain='clearbit.com'> </Card>
+        <Card name='Default College' model='colleges' domain='clearbit.com'> </Card>
+        <Card name='Default College' model='colleges' domain='clearbit.com'> </Card>
+        <Card name='Default College' model='colleges' domain='clearbit.com'> </Card>
+        <Card name='Default College' model='colleges' domain='clearbit.com'> </Card>
+
       </Grid>
     )
   }
