@@ -5,7 +5,6 @@ import json
 universities_list = []
 
 def get_university_stat():
-
     url = 'http://api.datausa.io/attrs/university'
 
     response = requests.get(url)
@@ -16,8 +15,9 @@ def get_university_stat():
 
     for uni in uni_list:
         sector = int(uni[0])
+        has_url = uni[2] is not None
         university_dict = {}
-        if (sector == 1) or (sector == 2) or (sector == 3):
+        if ((sector == 1) or (sector == 2) or (sector == 3)) and has_url:
             university_dict["name"] = uni[1]
             university_dict["website"] = uni[2]
             university_dict["county_id"] = uni[4]
@@ -28,20 +28,9 @@ def get_university_stat():
             university_dict["msa"] = uni[9]
             universities_list.append(university_dict)
 
+    print(len(universities_list))
     with open('university.json', 'w') as f:
         json.dump(universities_list, f)
-
-
-
-def get_commit_stat(individual_commit_stat):
-
-    git_url = "https://api.github.com/repos/smcw66/majorpotential/stats/contributors"
-    response = requests.get(git_url)
-
-    commit_data = json.loads(response.text)
-
-    parse_commit_data(commit_data, individual_commit_stat)
-
 
 
 
