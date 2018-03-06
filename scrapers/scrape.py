@@ -46,16 +46,47 @@ def get_university_stat():
     with open('university.json', 'w') as f:
         json.dump(universities_list, f)
 
-def get_race_stat():
-    uni_data = []
+def add_tuition_stat():
 
-    with open('university.json', 'w') as f:
-         uni_data = json.load(f)
+    temp_dict = {}
 
-    
+    url_get_tuition = 'http://api.datausa.io/api/?show=university&sumlevel=all&year=latest&required=oos_tuition,state_tuition'
+
+    response = requests.get(url_get_tuition)
+    tuition_data = json.loads(response.text)
+
+    uni_data = tuition_data['data']
+
+    for data in uni_data:
+        if data is not None:
+            tuition_list = [0, 0, 0]
+            tuition_list[0] = data[3] # oos
+            tuition_list[1] = data[4] # in state
+            tuition_list[2] = data[0] # survey_year
+            temp_dict[data[2]] = tuition_list
+        else:
+            print("NULL")
+
+    with open('university.json', 'r') as f:
+         uni_total_data = json.load(f)
+
+    for data_curr in uni_total_data:
+        try:
+            tuition_list = temp_dict[data_curr["university_id"]]
+            data_curr["oos_tuition"] = tuition_list[0]
+            data_curr["state_tuition"] = tuition_list[1]
+            data_curr["survey_year"] = tuition_list[2]
+
+        except Exception as e:
+            data_curr["oos_tuition"] = None
+            data_curr["state_tuition"] = None
+            data_curr["survey_year"] = None
 
 
+    with open('university.json', 'w') as fi:
+         json.dump(uni_total_data, fi)
 
 
 if __name__ == '__main__':
-    get_university_stat()
+    #get_university_stat()
+    add_tuition_stat()
