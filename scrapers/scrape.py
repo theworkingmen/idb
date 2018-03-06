@@ -5,9 +5,9 @@ import json
 universities_list = []
 
 def get_university_stat():
-    url = 'http://api.datausa.io/attrs/university'
+    url_basic_uni_info = 'http://api.datausa.io/attrs/university'
 
-    response = requests.get(url)
+    response = requests.get(url_basic_uni_info)
 
     basic_data = json.loads(response.text)
 
@@ -25,12 +25,35 @@ def get_university_stat():
             university_dict["latitude"] = uni[6]
             university_dict["longitude"] = uni[7]
             university_dict["university_id"] = uni[8]
-            university_dict["msa"] = uni[9]
+            university_dict["city_id"] = uni[9]
             universities_list.append(university_dict)
 
-    print(len(universities_list))
+    url_get_state = 'http://api.datausa.io/attrs/geo/'
+    for i in range(0, len(universities_list)):
+        try:
+            uni = universities_list[i]
+            id = uni["state_id"]
+            temp = url_get_state + str(id)
+
+            response = requests.get(temp)
+            state_data = json.loads(response.text)
+            print(state_data["data"][0][1])
+            uni["state"] = state_data["data"][0][1]
+            del uni["state_id"]
+        except Exception as e:
+            pass
+
     with open('university.json', 'w') as f:
         json.dump(universities_list, f)
+
+def get_race_stat():
+    uni_data = []
+
+    with open('university.json', 'w') as f:
+         uni_data = json.load(f)
+
+    
+
 
 
 
