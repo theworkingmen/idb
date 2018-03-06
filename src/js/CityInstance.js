@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import InstanceTitle from './InstanceTitle.js';
+import Map from './Map.js';
 import '../css/App.css';
 
 class CityInstance extends Component {
@@ -18,6 +19,8 @@ class CityInstance extends Component {
 		       <p id="crime_rate"> Crime Rate: insert api call here  </p>
 		       <p id="cost_living"> Average Cost of Living: insert api call here  </p>
 		       <p id="med_income"> Median Income: insert api call here  </p>
+		       
+		       <Map/>
 		          
 		       
 		    </div>
