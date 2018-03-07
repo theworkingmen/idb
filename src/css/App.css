@@ -10,7 +10,3 @@
 	font-family: 'Oswald';
 	font-size: 4em;
 }
-.information {
-	@extends .container;
-	backgroud: white;
-}
