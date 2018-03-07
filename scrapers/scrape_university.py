@@ -191,11 +191,51 @@ def add_race_stat():
     with open('university.json', 'w') as fi:
          json.dump(uni_total_data, fi)
 
+def add_gender_stat():
+    temp_dict = {}
+
+    url_get_gender_data = 'http://api.datausa.io/api/?show=university&sumlevel=all&required=enrolled_men,enrolled_women'
+
+    response = requests.get(url_get_gender_data)
+    gender_data = json.loads(response.text)
+
+    uni_data = gender_data['data']
+
+    for data in uni_data:
+        if data is not None:
+            gender_list = [0, 0]
+            gender_list[0] = data[3] # men
+            gender_list[1] = data[4] # women
+            temp_dict[data[2]] = gender_list
+        else:
+            print("NULL")
+
+    with open('university.json', 'r') as f:
+         uni_total_data = json.load(f)
+
+    for data_curr in uni_total_data:
+        try:
+            gender_list = temp_dict[data_curr["university_id"]]
+            if (gender_list[0] is not None) and (gender_list[1] is not None):
+                total_enrollment = gender_list[0] + gender_list[1]
+                data_curr["enrolled_men"] = round(gender_list[0] / total_enrollment, 2)
+                data_curr["enrolled_women"] = round(gender_list[1] / total_enrollment, 2)
+            else:
+                data_curr["enrolled_men"] = None
+                data_curr["enrolled_women"] = None
+
+        except Exception as e:
+            data_curr["enrolled_men"] = None
+            data_curr["enrolled_women"] = None
+            pass
 
 
+    with open('university.json', 'w') as fi:
+         json.dump(uni_total_data, fi)
 
 if __name__ == '__main__':
     #get_university_stat()
     #add_tuition_stat()
     #scrape_race_stat()
-    add_race_stat()
+    #add_race_stat()
+    add_gender_stat()
