@@ -35,7 +35,7 @@ def __main__() :
             cursor.execute(sql, (pk, name, summary, image_url))
         conn.commit()
         with conn.cursor() as cursor:
-                    # Select all existing major data
+            # Select all existing major data
             sql = "SELECT * FROM majors"
             cursor.execute(sql)
             selectdata = cursor.fetchall()
