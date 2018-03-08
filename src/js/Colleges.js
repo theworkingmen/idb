@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Image, Grid, Row, Col, Thumbnail} from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 import Card from './Card.js';
+import collegeData from '../scrapers/university.json'
 
 
 {/* Use following url for default image: http://bit.ly/2CYI94d */}
@@ -12,25 +13,14 @@ class Colleges extends Component {
     super(props);
   }
   render() {
-    return (
-
-      <Grid>
-        <Card name='Rice University' model='colleges' domain='rice.edu'> </Card>
-        <Card name='The University of Texas at Austin' model='colleges' domain='utexas.edu'> </Card>
-        <Card name='Texas A&M' model='colleges' domain='tamu.edu'> </Card>
-        <Card name='Default College' model='colleges' domain='clearbit.com'> </Card>
-        <Card name='Default College' model='colleges' domain='clearbit.com'> </Card>
-        <Card name='Default College' model='colleges' domain='clearbit.com'> </Card>
-        <Card name='Default College' model='colleges' domain='clearbit.com'> </Card>
-        <Card name='Default College' model='colleges' domain='clearbit.com'> </Card>
-        <Card name='Default College' model='colleges' domain='clearbit.com'> </Card>
-        <Card name='Default College' model='colleges' domain='clearbit.com'> </Card>
-        <Card name='Default College' model='colleges' domain='clearbit.com'> </Card>
-        <Card name='Default College' model='colleges' domain='clearbit.com'> </Card>
-
-      </Grid>
-    )
-  }
+	  
+	let colleges = [];
+    for (var i = 0; i < collegeData.length; i++) {
+        colleges.push(<Card name={collegeData[i].name} model='colleges' domain={collegeData[i].website}> </Card>);
+    }
+    return <Grid>{colleges}</Grid>;
+}
+ 
 
 }
 
