@@ -233,9 +233,60 @@ def add_gender_stat():
     with open('university.json', 'w') as fi:
          json.dump(uni_total_data, fi)
 
+def add_top_majors():
+
+    with open('university.json', 'r') as f:
+         uni_total_data = json.load(f)
+
+    year = 0
+    temp_dict = {} # key = cip -- key = number of graduates
+
+    url_get_major_data = 'http://api.datausa.io/api/?show=cip&required=university,grads_total&university='
+
+    for uni_data in uni_total_data:
+        id = uni_data["university_id"]
+        response = requests.get(url_get_major_data + id)
+        major_data = json.loads(response.text)
+        data = major_data['data']
+        for uni in data:
+            year = uni[0]
+            temp_dict[uni[1]] = uni[3]
+            print(str(uni[1]) + " " + str(uni[3]))
+        print("\n\n***************************\n\n")
+        major_dict = {}
+        for key, value in sorted(temp_dict.iteritems(), key=lambda (k,v): (v,k), reverse = True):
+            major_dict[key] = value
+            print "%s: %s" % (key, value)
+
+def add_top_majorss():
+
+    with open('university.json', 'r') as f:
+         uni_total_data = json.load(f)
+
+    year = 0
+    temp_dict = {} # key = cip -- key = number of graduates
+
+    url_get_major_data = 'http://api.datausa.io/api/?show=cip&sumlevel=4&required=grads_total&university=228778'
+
+
+    response = requests.get(url_get_major_data)
+    major_data = json.loads(response.text)
+    data = major_data['data']
+    for uni in data:
+        year = uni[0]
+        temp_dict[uni[1]] = uni[3]
+        #print(str(uni[1]) + " " + str(uni[3]))
+    #print("\n\n***************************\n\n")
+    major_dict = {}
+    for key, value in sorted(temp_dict.iteritems(), key=lambda (k,v): (v,k), reverse = True):
+        major_dict[key] = value
+        #print "%s: %s" % (key, value)
+
+
 if __name__ == '__main__':
     #get_university_stat()
     #add_tuition_stat()
     #scrape_race_stat()
     #add_race_stat()
-    add_gender_stat()
+    #add_gender_stat()
+    add_top_majorss()
