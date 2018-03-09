@@ -254,33 +254,19 @@ def add_top_majors():
             print(str(uni[1]) + " " + str(uni[3]))
         print("\n\n***************************\n\n")
         major_dict = {}
+        count = 0
         for key, value in sorted(temp_dict.iteritems(), key=lambda (k,v): (v,k), reverse = True):
             major_dict[key] = value
             print "%s: %s" % (key, value)
-
-def add_top_majorss():
-
-    with open('university.json', 'r') as f:
-         uni_total_data = json.load(f)
-
-    year = 0
-    temp_dict = {} # key = cip -- key = number of graduates
-
-    url_get_major_data = 'http://api.datausa.io/api/?show=cip&sumlevel=4&required=grads_total&university=228778'
+            count += 1
+            if count == 5:
+                break
 
 
-    response = requests.get(url_get_major_data)
-    major_data = json.loads(response.text)
-    data = major_data['data']
-    for uni in data:
-        year = uni[0]
-        temp_dict[uni[1]] = uni[3]
-        #print(str(uni[1]) + " " + str(uni[3]))
-    #print("\n\n***************************\n\n")
-    major_dict = {}
-    for key, value in sorted(temp_dict.iteritems(), key=lambda (k,v): (v,k), reverse = True):
-        major_dict[key] = value
-        #print "%s: %s" % (key, value)
+        uni_data["top_grad_majors"] = major_dict
+
+    with open('university.json', 'w') as fi:
+        json.dump(uni_total_data, fi)
 
 
 if __name__ == '__main__':
@@ -289,4 +275,4 @@ if __name__ == '__main__':
     #scrape_race_stat()
     #add_race_stat()
     #add_gender_stat()
-    add_top_majorss()
+    add_top_majors()
