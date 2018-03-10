@@ -241,8 +241,9 @@ def add_top_majors():
     year = 0
     temp_dict = {} # key = cip -- key = number of graduates
 
-    url_get_major_data = 'http://api.datausa.io/api/?show=cip&required=university,grads_total&university='
+    url_get_major_data = 'http://api.datausa.io/api/?show=cip&sumlevel=4&required=university,grads_total&university='
 
+    countt = 0
     for uni_data in uni_total_data:
         id = uni_data["university_id"]
         response = requests.get(url_get_major_data + id)
@@ -251,13 +252,14 @@ def add_top_majors():
         for uni in data:
             year = uni[0]
             temp_dict[uni[1]] = uni[3]
-            print(str(uni[1]) + " " + str(uni[3]))
-        print("\n\n***************************\n\n")
+
+        countt += 1
+        print("\n\n************" + str(countt) + "***************\n\n")
         major_dict = {}
         count = 0
         for key, value in sorted(temp_dict.iteritems(), key=lambda (k,v): (v,k), reverse = True):
+            major_dict["data_year"] = year
             major_dict[key] = value
-            print "%s: %s" % (key, value)
             count += 1
             if count == 5:
                 break
