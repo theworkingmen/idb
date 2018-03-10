@@ -1,0 +1,3296 @@
+[
+    {
+        "city_id": "31000US40060",
+        "city_name": "Richmond, VA Metro Area",
+        "city_image": "https://c2.staticflickr.com/8/7551/15938866299_9f5376e4e0_b.jpg",
+        "image_description": "Skyline at Night, Richmond, VA"
+    },
+    {
+        "city_id": "31000US12060",
+        "city_name": "Atlanta-Sandy Springs-Roswell, GA Metro Area",
+        "city_image": "https://c2.staticflickr.com/4/3867/15186470579_a43a44a2d6_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US14260",
+        "city_name": "Boise City, ID Metro Area",
+        "city_image": "https://c2.staticflickr.com/4/3856/15124658801_c6697385e9_b.jpg",
+        "image_description": "Idaho State House, Boise, ID"
+    },
+    {
+        "city_id": "31000US38540",
+        "city_name": "Pocatello, ID",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US34140",
+        "city_name": "Moscow, ID",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US16980",
+        "city_name": "Chicago-Naperville-Elgin, IL-IN-WI Metro Area",
+        "city_image": "https://c1.staticflickr.com/1/280/18495946173_3a7787bc92_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US14460",
+        "city_name": "Boston-Cambridge-Newton, MA-NH Metro Area",
+        "city_image": "https://c1.staticflickr.com/5/4123/4769294947_299e2e3fa7_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US39980",
+        "city_name": "Richmond, IN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US23060",
+        "city_name": "Fort Wayne, IN Metro Area",
+        "city_image": "https://c1.staticflickr.com/3/2121/2177575877_8b1c66ab0b_b.jpg",
+        "image_description": "Fort Wayne, IN"
+    },
+    {
+        "city_id": "31000US47180",
+        "city_name": "Vincennes, IN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US25700",
+        "city_name": "Hays, KS",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US48620",
+        "city_name": "Wichita, KS Metro Area",
+        "city_image": "https://c1.staticflickr.com/5/4152/5088124097_25902ff561_b.jpg",
+        "image_description": "Keeper of the Plains, Wichita, KS"
+    },
+    {
+        "city_id": "31000US40080",
+        "city_name": "Richmond-Berea, KY",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US10780",
+        "city_name": "Alexandria, LA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US33220",
+        "city_name": "Midland, MI Metro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US41060",
+        "city_name": "St. Cloud, MN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US28140",
+        "city_name": "Kansas City, MO-KS Metro Area",
+        "city_image": "https://c1.staticflickr.com/9/8288/7730952314_acaec44ca8_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US000-2",
+        "city_name": "Wayne County",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US31700",
+        "city_name": "Manchester-Nashua, NH Metro Area",
+        "city_image": "https://c2.staticflickr.com/4/3424/3819961557_27da8a0bc7_b.jpg",
+        "image_description": "Manchester, NH"
+    },
+    {
+        "city_id": "31000US18180",
+        "city_name": "Concord, NH",
+        "city_image": "https://c2.staticflickr.com/2/1246/4610985012_bc4ae515d6_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US35620",
+        "city_name": "New York-Newark-Jersey City, NY-NJ-PA Metro Area",
+        "city_image": "https://c2.staticflickr.com/6/5321/17584761640_ac9b675382_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US27060",
+        "city_name": "Ithaca, NY",
+        "city_image": "https://c1.staticflickr.com/7/6206/6065618927_4576af563c_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US46540",
+        "city_name": "Utica-Rome, NY",
+        "city_image": "https://c2.staticflickr.com/8/7736/17354256682_1fb8d34653_b.jpg",
+        "image_description": "Delta Lake Dam & Bridge, Rome, NY"
+    },
+    {
+        "city_id": "31000US36580",
+        "city_name": "Oneonta, NY",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US10580",
+        "city_name": "Albany-Schenectady-Troy, NY Metro Area",
+        "city_image": "https://c2.staticflickr.com/4/3895/14654233597_ab8bc80fc8_b.jpg",
+        "image_description": "Albany, NY"
+    },
+    {
+        "city_id": "31000US13900",
+        "city_name": "Bismarck, ND",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US45660",
+        "city_name": "Tiffin, OH",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US45780",
+        "city_name": "Toledo, OH Metro Area",
+        "city_image": "https://c2.staticflickr.com/6/5605/14939552904_8c1ed103f7_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US36420",
+        "city_name": "Oklahoma City, OK Metro Area",
+        "city_image": "https://c1.staticflickr.com/5/4017/5153556526_50d75164de_b.jpg",
+        "image_description": "East Wharf of Lake Hefner in Oklahoma City"
+    },
+    {
+        "city_id": "31000US38900",
+        "city_name": "Portland-Vancouver-Hillsboro, OR-WA Metro Area",
+        "city_image": "https://c2.staticflickr.com/8/7443/11062157353_fe6d943874_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US37980",
+        "city_name": "Philadelphia-Camden-Wilmington, PA-NJ-DE-MD Metro Area",
+        "city_image": "https://c1.staticflickr.com/3/2925/14146388982_8eee0a1dbd_b.jpg",
+        "image_description": "Philadelphia night time skyline as seen from Spring Garden Street above the Schuylkill Expressway."
+    },
+    {
+        "city_id": "31000US21500",
+        "city_name": "Erie, PA",
+        "city_image": "https://c1.staticflickr.com/3/2218/1658418484_978df4a608_b.jpg",
+        "image_description": "Erie Harbor Pierhead Lighthouse, Erie, PA"
+    },
+    {
+        "city_id": "31000US49460",
+        "city_name": "Yankton, SD",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US27180",
+        "city_name": "Jackson, TN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US47380",
+        "city_name": "Waco, TX",
+        "city_image": "https://c1.staticflickr.com/7/6010/5942606130_63bf045863_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US48260",
+        "city_name": "Weirton-Steubenville, WV-OH Metro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US14140",
+        "city_name": "Bluefield, WV-VA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US16620",
+        "city_name": "Charleston, WV",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US48580",
+        "city_name": "Whitewater-Elkhorn, WI Micro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US20740",
+        "city_name": "Eau Claire, WI",
+        "city_image": "https://c1.staticflickr.com/3/2530/3812578679_d75fe800e4_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US24580",
+        "city_name": "Green Bay, WI",
+        "city_image": "https://c1.staticflickr.com/7/6031/6265170997_a4b9c0494b_b.jpg",
+        "image_description": "Grassy Island Historic Range Lights, Green Bay, WI"
+    },
+    {
+        "city_id": "31000US29100",
+        "city_name": "La Crosse-Onalaska, WI-MN Metro Area",
+        "city_image": "https://c1.staticflickr.com/1/521/20064349416_b591f7ef38_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US41980",
+        "city_name": "San Juan-Carolina-Caguas, PR Metro Area",
+        "city_image": "https://c1.staticflickr.com/7/6045/6280737770_5d16b80974_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US41180",
+        "city_name": "St. Louis, MO-IL Metro Area",
+        "city_image": "https://c2.staticflickr.com/4/3766/13846812583_5887fbbd65_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US19340",
+        "city_name": "Davenport-Moline-Rock Island, IA-IL Metro Area",
+        "city_image": "https://c1.staticflickr.com/1/52/141358972_579ea82d6c_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US47940",
+        "city_name": "Waterloo-Cedar Falls, IA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US31080",
+        "city_name": "Los Angeles-Long Beach-Anaheim, CA Metro Area",
+        "city_image": "https://c2.staticflickr.com/8/7070/6909688322_1d8a9175d0_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US47260",
+        "city_name": "Virginia Beach-Norfolk-Newport News, VA-NC Metro Area",
+        "city_image": "https://c2.staticflickr.com/6/5494/14397346608_04224357dc_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US36740",
+        "city_name": "Orlando-Kissimmee-Sanford, FL Metro Area",
+        "city_image": "https://c2.staticflickr.com/4/3291/3078531167_c7f8f73acb_b.jpg",
+        "image_description": "Sunset at Lake Eola in downtown Orlando, Florida."
+    },
+    {
+        "city_id": "31000US46520",
+        "city_name": "Urban Honolulu, HI Metro Area",
+        "city_image": "https://c2.staticflickr.com/8/7577/16191692896_d2d250166f_b.jpg",
+        "image_description": "Waikiki and Honolulu"
+    },
+    {
+        "city_id": "31000US33100",
+        "city_name": "Miami-Fort Lauderdale-West Palm Beach, FL Metro Area",
+        "city_image": "https://c2.staticflickr.com/6/5535/9530477943_ea2ce7bbbb_b.jpg",
+        "image_description": "Hillsboro Inlet Lighthouse, Hillsboro Beach"
+    },
+    {
+        "city_id": "31000US19740",
+        "city_name": "Denver-Aurora-Lakewood, CO Metro Area",
+        "city_image": "https://c2.staticflickr.com/8/7414/9388548505_e511ac26aa_b.jpg",
+        "image_description": "Mount Evans sunrise"
+    },
+    {
+        "city_id": "31000US45300",
+        "city_name": "Tampa-St. Petersburg-Clearwater, FL Metro Area",
+        "city_image": "https://c1.staticflickr.com/9/8730/16754348935_86b532df83_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US41500",
+        "city_name": "Salinas, CA Metro Area",
+        "city_image": "https://c2.staticflickr.com/4/3139/3285894205_9e1d82ee69_b.jpg",
+        "image_description": "Pfeiffer Beach Big Sur"
+    },
+    {
+        "city_id": "31000US30780",
+        "city_name": "Little Rock-North Little Rock-Conway, AR Metro Area",
+        "city_image": "https://c1.staticflickr.com/3/2793/4356178179_9ec52dc006_b.jpg",
+        "image_description": "Little Rock, AR"
+    },
+    {
+        "city_id": "31000US37100",
+        "city_name": "Oxnard-Thousand Oaks-Ventura, CA Metro Area",
+        "city_image": "https://c2.staticflickr.com/6/5642/23994896526_23e13a5bbe_b.jpg",
+        "image_description": "Ventura, CA"
+    },
+    {
+        "city_id": "31000US31140",
+        "city_name": "Louisville/Jefferson County, KY-IN Metro Area",
+        "city_image": "https://c2.staticflickr.com/8/7181/6919319393_8d40cedf38_b.jpg",
+        "image_description": "Louisville KY Skyline at night from the Indiana side of the river."
+    },
+    {
+        "city_id": "31000US47900",
+        "city_name": "Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area",
+        "city_image": "https://c1.staticflickr.com/3/2529/3999436525_06fd0cb22b_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US41620",
+        "city_name": "Salt Lake City, UT Metro Area",
+        "city_image": "https://c2.staticflickr.com/6/5109/5694861494_6cd6cfa1cd_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US39660",
+        "city_name": "Rapid City, SD",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US10740",
+        "city_name": "Albuquerque, NM Metro Area",
+        "city_image": "https://c2.staticflickr.com/4/3944/15650560131_a80d04e9d1_b.jpg",
+        "image_description": "Albuquerque International Balloon Fiesta 2014"
+    },
+    {
+        "city_id": "31000US12420",
+        "city_name": "Austin-Round Rock, TX Metro Area",
+        "city_image": "https://c2.staticflickr.com/6/5749/19916275844_fbf8b3d674_b.jpg",
+        "image_description": "The Percy V. Pennybacker Jr. Bridge in Austin, Texas, is a through-arch bridge across Lake Austin which connects the northern and southern sections of the Loop 360 highway, also known as the \"Capital of Texas Highway.\""
+    },
+    {
+        "city_id": "31000US45220",
+        "city_name": "Tallahassee, FL Metro Area",
+        "city_image": "https://c2.staticflickr.com/6/5137/5399705277_c68ba7bc68_b.jpg",
+        "image_description": "Old Florida Capitol, Tallahassee, FL"
+    },
+    {
+        "city_id": "31000US40220",
+        "city_name": "Roanoke, VA",
+        "city_image": "https://c2.staticflickr.com/8/7432/12152445855_1e5bb6fc8a_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US26620",
+        "city_name": "Huntsville, AL Metro Area",
+        "city_image": "https://c2.staticflickr.com/8/7041/6925865343_eafd1dec3b_b.jpg",
+        "image_description": "U.S. Space & Rocket Center at Rocket Park in Huntsville, AL"
+    },
+    {
+        "city_id": "31000US33860",
+        "city_name": "Montgomery, AL Metro Area",
+        "city_image": "https://c1.staticflickr.com/3/2528/5723390635_31a31b37d0_b.jpg",
+        "image_description": "Montgomery Biscuits, Montgomery, AL"
+    },
+    {
+        "city_id": "31000US12220",
+        "city_name": "Auburn-Opelika, AL",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US13820",
+        "city_name": "Birmingham-Hoover, AL Metro Area",
+        "city_image": "https://c1.staticflickr.com/7/6066/6087055504_410ac87864_b.jpg",
+        "image_description": "View of downtown from Railroad Park"
+    },
+    {
+        "city_id": "31000US11500",
+        "city_name": "Anniston-Oxford-Jacksonville, AL Metro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US26900",
+        "city_name": "Indianapolis-Carmel-Anderson, IN Metro Area",
+        "city_image": "https://c1.staticflickr.com/5/4027/4485877710_ae8b113790_b.jpg",
+        "image_description": "Canal walk in downtown Indianapolis."
+    },
+    {
+        "city_id": "31000US33660",
+        "city_name": "Mobile, AL Metro Area",
+        "city_image": "https://c2.staticflickr.com/2/1123/804299835_23f22e529f_b.jpg",
+        "image_description": "RSA Battlehouse Tower, Mobile, AL"
+    },
+    {
+        "city_id": "31000US22520",
+        "city_name": "Florence-Muscle Shoals, AL",
+        "city_image": "https://c1.staticflickr.com/9/8089/8465374522_b26ec43e7f_b.jpg",
+        "image_description": "Overlooking the Tennessee River from Muscle Shoals, Al."
+    },
+    {
+        "city_id": "31000US11260",
+        "city_name": "Anchorage, AK Metro Area",
+        "city_image": "https://c2.staticflickr.com/4/3530/3458917078_775d929263_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US21820",
+        "city_name": "Fairbanks, AK",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US27940",
+        "city_name": "Juneau, AK",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US38060",
+        "city_name": "Phoenix-Mesa-Scottsdale, AZ Metro Area",
+        "city_image": "https://c1.staticflickr.com/1/359/20074519521_a36486f865_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US46060",
+        "city_name": "Tucson, AZ Metro Area",
+        "city_image": "https://c2.staticflickr.com/4/3583/3390754155_c1944a1780_b.jpg",
+        "image_description": "Sonoran Desert"
+    },
+    {
+        "city_id": "31000US39140",
+        "city_name": "Prescott, AZ",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US22380",
+        "city_name": "Flagstaff, AZ",
+        "city_image": "https://c2.staticflickr.com/4/3157/3020442862_f332608719_b.jpg",
+        "image_description": "Red rock formations in Sedona, Arizona"
+    },
+    {
+        "city_id": "31000US12900",
+        "city_name": "Batesville, AR",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US22220",
+        "city_name": "Fayetteville-Springdale-Rogers, AR-MO Metro Area",
+        "city_image": "https://c2.staticflickr.com/8/7432/9959917953_634bac3139_b.jpg",
+        "image_description": "The Boston Mountains in Northwest Arkansas, a subset of the Ozarks."
+    },
+    {
+        "city_id": "31000US38220",
+        "city_name": "Pine Bluff, AR",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US42620",
+        "city_name": "Searcy, AR",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US11660",
+        "city_name": "Arkadelphia, AR",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US22900",
+        "city_name": "Fort Smith, AR-OK",
+        "city_image": "https://c1.staticflickr.com/5/4128/5069551777_1af0dfacfb_b.jpg",
+        "image_description": "Ozark, AR"
+    },
+    {
+        "city_id": "31000US41860",
+        "city_name": "San Francisco-Oakland-Hayward, CA Metro Area",
+        "city_image": "https://c2.staticflickr.com/6/5181/13958551708_56e54aafda_b.jpg",
+        "image_description": "De Young Museum of Art in Golden Gate Park"
+    },
+    {
+        "city_id": "31000US40900",
+        "city_name": "Sacramento--Roseville--Arden-Arcade, CA Metro Area",
+        "city_image": "https://c2.staticflickr.com/8/7063/6974950211_4382cb9f4e_b.jpg",
+        "image_description": "A branch of the Sacramento River Delta in Isleton, CA"
+    },
+    {
+        "city_id": "31000US40140",
+        "city_name": "Riverside-San Bernardino-Ontario, CA Metro Area",
+        "city_image": "https://c2.staticflickr.com/6/5793/20766765113_7cb54a1688_b.jpg",
+        "image_description": "a"
+    },
+    {
+        "city_id": "31000US42020",
+        "city_name": "San Luis Obispo-Paso Robles-Arroyo Grande, CA Metro Area",
+        "city_image": "https://c2.staticflickr.com/8/7596/16610103477_0d308bdff3_b.jpg",
+        "image_description": "La Familia Ranch, San Luis Obispo, CA"
+    },
+    {
+        "city_id": "31000US41740",
+        "city_name": "San Diego-Carlsbad, CA Metro Area",
+        "city_image": "https://c2.staticflickr.com/8/7676/16835735503_c19b0112ee_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US12540",
+        "city_name": "Bakersfield, CA Metro Area",
+        "city_image": "https://c1.staticflickr.com/1/146/329820320_014ad14208_b.jpg",
+        "image_description": "Downtown Bakersfield, CA"
+    },
+    {
+        "city_id": "31000US33700",
+        "city_name": "Modesto, CA Metro Area",
+        "city_image": "https://c1.staticflickr.com/3/2655/4096456382_596d889150_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US17020",
+        "city_name": "Chico, CA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US23420",
+        "city_name": "Fresno, CA Metro Area",
+        "city_image": "https://c1.staticflickr.com/5/4005/4183535832_455d5de4f3_b.jpg",
+        "image_description": "High Sierra at Sunset, Locans, Fresno, CA"
+    },
+    {
+        "city_id": "31000US42200",
+        "city_name": "Santa Maria-Santa Barbara, CA Metro Area",
+        "city_image": "https://c1.staticflickr.com/9/8538/8708719159_5f96eddc90_b.jpg",
+        "image_description": "Santa Barbara, CA"
+    },
+    {
+        "city_id": "31000US42100",
+        "city_name": "Santa Cruz-Watsonville, CA",
+        "city_image": null,
+        "image_description": "Santa Cruz, CA"
+    },
+    {
+        "city_id": "31000US46700",
+        "city_name": "Vallejo-Fairfield, CA Metro Area",
+        "city_image": "https://c1.staticflickr.com/1/370/19740536358_bec1dc050b_b.jpg",
+        "image_description": "Vallejo, CA"
+    },
+    {
+        "city_id": "31000US21700",
+        "city_name": "Eureka-Arcata-Fortuna, CA",
+        "city_image": "https://c1.staticflickr.com/1/481/31882401162_a0e545af63_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US34900",
+        "city_name": "Napa, CA",
+        "city_image": "https://c2.staticflickr.com/8/7045/6996261533_5595ecde98_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US44700",
+        "city_name": "Stockton-Lodi, CA Metro Area",
+        "city_image": "https://c2.staticflickr.com/4/3437/3982501413_51c32c4a30_b.jpg",
+        "image_description": "Stockton, CA"
+    },
+    {
+        "city_id": "31000US41940",
+        "city_name": "San Jose-Sunnyvale-Santa Clara, CA Metro Area",
+        "city_image": "https://c1.staticflickr.com/3/2859/32367971823_170e3ff928_b.jpg",
+        "image_description": "Almost sunset in Santa Teresa County Park."
+    },
+    {
+        "city_id": "31000US39820",
+        "city_name": "Redding, CA",
+        "city_image": "https://c2.staticflickr.com/6/5626/22824924789_68628037bf_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US42220",
+        "city_name": "Santa Rosa, CA Metro Area",
+        "city_image": "https://c2.staticflickr.com/4/3679/14100833249_6b91106c23_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US33460",
+        "city_name": "Minneapolis-St. Paul-Bloomington, MN-WI Metro Area",
+        "city_image": "https://c2.staticflickr.com/4/3910/14603951330_2f1f909d4a_b.jpg",
+        "image_description": "Bush Lake in Bloomington, MN"
+    },
+    {
+        "city_id": "31000US17820",
+        "city_name": "Colorado Springs, CO Metro Area",
+        "city_image": "https://c1.staticflickr.com/9/8121/8610842094_d1b16b2eed_b.jpg",
+        "image_description": "Garden of the Gods"
+    },
+    {
+        "city_id": "31000US14500",
+        "city_name": "Boulder, CO",
+        "city_image": "https://c2.staticflickr.com/4/3777/9067258599_8dd8cc4261_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US22660",
+        "city_name": "Fort Collins, CO Metro Area",
+        "city_image": "https://c1.staticflickr.com/1/608/22038770950_0a4ac6159c_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US20420",
+        "city_name": "Durango, CO",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US24300",
+        "city_name": "Grand Junction, CO",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US24540",
+        "city_name": "Greeley, CO",
+        "city_image": "https://c1.staticflickr.com/3/2447/3652280557_86186607cf_b.jpg",
+        "image_description": "Pawnee Buttes, CO"
+    },
+    {
+        "city_id": "31000US39380",
+        "city_name": "Pueblo, CO",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US35300",
+        "city_name": "New Haven-Milford, CT Metro Area",
+        "city_image": "https://c1.staticflickr.com/3/2940/14751275815_0650770145_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US14860",
+        "city_name": "Bridgeport-Stamford-Norwalk, CT Metro Area",
+        "city_image": "https://c2.staticflickr.com/4/3094/3089365010_66f2ee3dae_b.jpg",
+        "image_description": "Bridgeport, CT"
+    },
+    {
+        "city_id": "31000US25540",
+        "city_name": "Hartford-West Hartford-East Hartford, CT Metro Area",
+        "city_image": "https://c2.staticflickr.com/8/7559/16158947606_edc9a776ae_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US35980",
+        "city_name": "Norwich-New London, CT",
+        "city_image": "https://c2.staticflickr.com/8/7484/16128461822_cd13fc2ab9_b.jpg",
+        "image_description": "Sunset over Noank, CT"
+    },
+    {
+        "city_id": "31000US49340",
+        "city_name": "Worcester, MA-CT Metro Area",
+        "city_image": "https://c2.staticflickr.com/6/5647/20231909013_ab62353c3f_b.jpg",
+        "image_description": "Union Station"
+    },
+    {
+        "city_id": "31000US40380",
+        "city_name": "Rochester, NY Metro Area",
+        "city_image": "https://c2.staticflickr.com/8/7154/6752984795_50717224bd_b.jpg",
+        "image_description": "High Falls, Rochester, NY"
+    },
+    {
+        "city_id": "31000US20100",
+        "city_name": "Dover, DE",
+        "city_image": "https://c2.staticflickr.com/4/3722/13200263884_22ede2d1a4_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US23540",
+        "city_name": "Gainesville, FL",
+        "city_image": "https://c2.staticflickr.com/6/5747/22434320118_31af8c3b48_b.jpg",
+        "image_description": "Sweetwater Wetlands, Gainesville, FL"
+    },
+    {
+        "city_id": "31000US19660",
+        "city_name": "Deltona-Daytona Beach-Ormond Beach, FL Metro Area",
+        "city_image": "https://c2.staticflickr.com/8/7467/16079851085_ea9f086cb8_b.jpg",
+        "image_description": "Daytona Pier"
+    },
+    {
+        "city_id": "31000US27260",
+        "city_name": "Jacksonville, FL Metro Area",
+        "city_image": "https://c2.staticflickr.com/6/5266/5687437936_effb5c2a4a_b.jpg",
+        "image_description": "A view of downtown Jacksonville."
+    },
+    {
+        "city_id": "31000US12940",
+        "city_name": "Baton Rouge, LA Metro Area",
+        "city_image": "https://c2.staticflickr.com/8/7500/16260441205_f0bc231f16_b.jpg",
+        "image_description": "Huey P. Long, State Capital Park, Baton Rouge, Louisiana"
+    },
+    {
+        "city_id": "31000US19820",
+        "city_name": "Detroit-Warren-Dearborn, MI Metro Area",
+        "city_image": "https://c1.staticflickr.com/7/6141/5990788310_3dc4dc2d6f_b.jpg",
+        "image_description": "Ariel view of downtown Detroit"
+    },
+    {
+        "city_id": "31000US37340",
+        "city_name": "Palm Bay-Melbourne-Titusville, FL Metro Area",
+        "city_image": "https://c2.staticflickr.com/4/3833/11754367994_dfa7a474d9_b.jpg",
+        "image_description": "Viera Wetlands in Viera, Florida"
+    },
+    {
+        "city_id": "31000US29820",
+        "city_name": "Las Vegas-Henderson-Paradise, NV Metro Area",
+        "city_image": "https://c2.staticflickr.com/6/5487/10879560743_d372fd82d3_b.jpg",
+        "image_description": "The Las Vegas Strip"
+    },
+    {
+        "city_id": "31000US29460",
+        "city_name": "Lakeland-Winter Haven, FL Metro Area",
+        "city_image": "https://c2.staticflickr.com/8/7265/7498357434_68e747f0c7_b.jpg",
+        "image_description": "Circle B Bar Reserve Sunrise, Lakeland, Florida"
+    },
+    {
+        "city_id": "31000US16740",
+        "city_name": "Charlotte-Concord-Gastonia, NC-SC Metro Area",
+        "city_image": "https://c2.staticflickr.com/4/3256/3181201664_82953c212e_b.jpg",
+        "image_description": "View of Charlotte from the Central Ave. bridge over Independence Blvd."
+    },
+    {
+        "city_id": "31000US34980",
+        "city_name": "Nashville-Davidson--Murfreesboro--Franklin, TN Metro Area",
+        "city_image": "https://c2.staticflickr.com/6/5241/5217752844_8a9df6f062_b.jpg",
+        "image_description": "Nashville Skyline"
+    },
+    {
+        "city_id": "31000US26420",
+        "city_name": "Houston-The Woodlands-Sugar Land, TX Metro Area",
+        "city_image": "https://c1.staticflickr.com/9/8132/8749445442_4f67cbdcb3_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US32420",
+        "city_name": "Mayagüez, PR",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US18880",
+        "city_name": "Crestview-Fort Walton Beach-Destin, FL",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US35840",
+        "city_name": "North Port-Sarasota-Bradenton, FL Metro Area",
+        "city_image": "https://c1.staticflickr.com/7/6012/5970094458_243194af98_b.jpg",
+        "image_description": "Roseate Spoonbill"
+    },
+    {
+        "city_id": "31000US36100",
+        "city_name": "Ocala, FL Metro Area",
+        "city_image": "https://c1.staticflickr.com/1/330/18726462731_61b5de1000_b.jpg",
+        "image_description": "Silver Springs, Florida"
+    },
+    {
+        "city_id": "31000US37860",
+        "city_name": "Pensacola-Ferry Pass-Brent, FL Metro Area",
+        "city_image": "https://c2.staticflickr.com/4/3337/3426107425_faeda18c3d_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US10500",
+        "city_name": "Albany, GA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US42340",
+        "city_name": "Savannah, GA Metro Area",
+        "city_image": "https://c2.staticflickr.com/2/1595/26330451402_0175386161_b.jpg",
+        "image_description": "Forsyth Park, Savannah, GA"
+    },
+    {
+        "city_id": "31000US29300",
+        "city_name": "LaGrange, GA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US40660",
+        "city_name": "Rome, GA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US23580",
+        "city_name": "Gainesville, GA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US47080",
+        "city_name": "Vidalia, GA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US17980",
+        "city_name": "Columbus, GA-AL",
+        "city_image": "https://c2.staticflickr.com/8/7194/6882798133_77d5c6a096_b.jpg",
+        "image_description": "River Walk, Columbus, GA"
+    },
+    {
+        "city_id": "31000US16860",
+        "city_name": "Chattanooga, TN-GA Metro Area",
+        "city_image": "https://c1.staticflickr.com/9/8240/8621847106_6199777d03_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US19140",
+        "city_name": "Dalton, GA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US47580",
+        "city_name": "Warner Robins, GA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US11140",
+        "city_name": "Americus, GA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US33300",
+        "city_name": "Milledgeville, GA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US44340",
+        "city_name": "Statesboro, GA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US12020",
+        "city_name": "Athens-Clarke County, GA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US31420",
+        "city_name": "Macon, GA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US12260",
+        "city_name": "Augusta-Richmond County, GA-SC Metro Area",
+        "city_image": "https://c2.staticflickr.com/2/1607/25710225166_852c912a77_b.jpg",
+        "image_description": "Downtown Augusta Skyline from the Walton Way Bridge over Sixth Street and the Augusta & Summerville Railroad."
+    },
+    {
+        "city_id": "31000US18460",
+        "city_name": "Cornelia, GA",
+        "city_image": "https://c1.staticflickr.com/7/6038/6334384968_14b7acd642_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US45620",
+        "city_name": "Thomasville, GA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US45740",
+        "city_name": "Toccoa, GA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US46660",
+        "city_name": "Valdosta, GA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US25900",
+        "city_name": "Hilo, HI",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US27980",
+        "city_name": "Kahului-Wailuku-Lahaina, HI Metro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US30300",
+        "city_name": "Lewiston, ID-WA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US39940",
+        "city_name": "Rexburg, ID",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US16660",
+        "city_name": "Charleston-Mattoon, IL",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US37900",
+        "city_name": "Peoria, IL Metro Area",
+        "city_image": "https://c1.staticflickr.com/9/8450/8033709903_23dd8a7297_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US16580",
+        "city_name": "Champaign-Urbana, IL",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US14010",
+        "city_name": "Bloomington, IL Metro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US27300",
+        "city_name": "Jacksonville, IL",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US23660",
+        "city_name": "Galesburg, IL",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US19500",
+        "city_name": "Decatur, IL",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US28100",
+        "city_name": "Kankakee, IL Metro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US39500",
+        "city_name": "Quincy, IL-MO",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US40420",
+        "city_name": "Rockford, IL Metro Area",
+        "city_image": "https://c1.staticflickr.com/3/2046/5784688737_c76e8e3960_b.jpg",
+        "image_description": "Apple River, Freeport, IL"
+    },
+    {
+        "city_id": "31000US44100",
+        "city_name": "Springfield, IL",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US16060",
+        "city_name": "Carbondale-Marion, IL Metro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US31380",
+        "city_name": "Macomb, IL",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US34620",
+        "city_name": "Muncie, IN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US43780",
+        "city_name": "South Bend-Mishawaka, IN-MI Metro Area",
+        "city_image": "https://c1.staticflickr.com/3/2269/2251890074_6912ec9100_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US21780",
+        "city_name": "Evansville, IN-KY",
+        "city_image": "https://c1.staticflickr.com/1/287/18874667110_d4d110785d_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US21140",
+        "city_name": "Elkhart-Goshen, IN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US47700",
+        "city_name": "Warsaw, IN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US31500",
+        "city_name": "Madison, IN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US26540",
+        "city_name": "Huntington, IN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US45460",
+        "city_name": "Terre Haute, IN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US29020",
+        "city_name": "Kokomo, IN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US14020",
+        "city_name": "Bloomington, IN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US47340",
+        "city_name": "Wabash, IN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US31980",
+        "city_name": "Marion, IN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US33140",
+        "city_name": "Michigan City-La Porte, IN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US11420",
+        "city_name": "Angola, IN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US43580",
+        "city_name": "Sioux City, IA-NE-SD",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US44740",
+        "city_name": "Storm Lake, IA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US20220",
+        "city_name": "Dubuque, IA",
+        "city_image": "https://c2.staticflickr.com/2/1166/528852232_2b0a9a1d82_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US16300",
+        "city_name": "Cedar Rapids, IA",
+        "city_image": "https://c2.staticflickr.com/8/7528/15807228305_c7a1635025_b.jpg",
+        "image_description": "Cedar River, Marion, IA"
+    },
+    {
+        "city_id": "31000US19780",
+        "city_name": "Des Moines-West Des Moines, IA Metro Area",
+        "city_image": "https://c1.staticflickr.com/9/8076/8411366443_b5cea2b5b7_b.jpg",
+        "image_description": "Des Moines skyline shot from East Fort Des Moines"
+    },
+    {
+        "city_id": "31000US32380",
+        "city_name": "Mason City, IA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US11180",
+        "city_name": "Ames, IA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US26980",
+        "city_name": "Iowa City, IA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US21840",
+        "city_name": "Fairfield, IA Micro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US17540",
+        "city_name": "Clinton, IA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US36820",
+        "city_name": "Oskaloosa, IA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US31740",
+        "city_name": "Manhattan, KS",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US29940",
+        "city_name": "Lawrence, KS",
+        "city_image": "https://c2.staticflickr.com/4/3911/15142236182_926a69e342_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US11860",
+        "city_name": "Atchison, KS",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US32700",
+        "city_name": "McPherson, KS",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US21380",
+        "city_name": "Emporia, KS",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US41460",
+        "city_name": "Salina, KS",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US36840",
+        "city_name": "Ottawa, KS Micro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US38260",
+        "city_name": "Pittsburg, KS",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US11680",
+        "city_name": "Arkansas City-Winfield, KS Micro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US45820",
+        "city_name": "Topeka, KS",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US30460",
+        "city_name": "Lexington-Fayette, KY Metro Area",
+        "city_image": "https://c2.staticflickr.com/8/7340/9278929355_5f9c0ec540_b.jpg",
+        "image_description": "Bluegrass Fair in Lexington, KY"
+    },
+    {
+        "city_id": "31000US36980",
+        "city_name": "Owensboro, KY",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US15820",
+        "city_name": "Campbellsville, KY",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US19220",
+        "city_name": "Danville, KY",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US30940",
+        "city_name": "London, KY",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US23180",
+        "city_name": "Frankfort, KY",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US34660",
+        "city_name": "Murray, KY",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US17140",
+        "city_name": "Cincinnati, OH-KY-IN Metro Area",
+        "city_image": "https://c1.staticflickr.com/9/8261/8761252582_cc81f5f5a7_b.jpg",
+        "image_description": "The Robeling Bridge in Cincinnati, Ohio"
+    },
+    {
+        "city_id": "31000US14540",
+        "city_name": "Bowling Green, KY",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US43340",
+        "city_name": "Shreveport-Bossier City, LA Metro Area",
+        "city_image": "https://c1.staticflickr.com/1/716/23824394161_e1905aff23_b.jpg",
+        "image_description": "Long Allen Bridge"
+    },
+    {
+        "city_id": "31000US35380",
+        "city_name": "New Orleans-Metairie, LA Metro Area",
+        "city_image": "https://c1.staticflickr.com/3/2231/2474270499_3373f21592_b.jpg",
+        "image_description": "Garden District in New Orleans"
+    },
+    {
+        "city_id": "31000US40820",
+        "city_name": "Ruston, LA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US29340",
+        "city_name": "Lake Charles, LA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US26380",
+        "city_name": "Houma-Thibodaux, LA Metro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US33740",
+        "city_name": "Monroe, LA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US35060",
+        "city_name": "Natchitoches, LA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US25220",
+        "city_name": "Hammond, LA Metro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US29180",
+        "city_name": "Lafayette, LA Metro Area",
+        "city_image": "https://c2.staticflickr.com/2/1662/26264696346_2b95b94a8b_b.jpg",
+        "image_description": "Photo taken at the University of Louisiana at Lafayette campus."
+    },
+    {
+        "city_id": "31000US30340",
+        "city_name": "Lewiston-Auburn, ME",
+        "city_image": "https://c2.staticflickr.com/4/3119/2908248262_f8e43c9aa1_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US38860",
+        "city_name": "Portland-South Portland, ME Metro Area",
+        "city_image": "https://c1.staticflickr.com/1/225/518745423_00d8477d97_b.jpg",
+        "image_description": "Old Orchard Beach pier"
+    },
+    {
+        "city_id": "31000US12300",
+        "city_name": "Augusta-Waterville, ME",
+        "city_image": "https://c2.staticflickr.com/4/3285/2766227381_4dbb800d19_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US12620",
+        "city_name": "Bangor, ME",
+        "city_image": "https://c2.staticflickr.com/4/3472/3897337786_ac6223106c_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US12580",
+        "city_name": "Baltimore-Columbia-Towson, MD Metro Area",
+        "city_image": "https://c1.staticflickr.com/3/2447/3863018470_0a9da154b5_b.jpg",
+        "image_description": "Rooftop deck view of Baltimore City"
+    },
+    {
+        "city_id": "31000US19060",
+        "city_name": "Cumberland, MD-WV",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US41540",
+        "city_name": "Salisbury, MD-DE Metro Area",
+        "city_image": "https://c1.staticflickr.com/3/2842/10495158364_7443d0788e_b.jpg",
+        "image_description": "Sussex County Courthouse, Georgetown, DE"
+    },
+    {
+        "city_id": "31000US15680",
+        "city_name": "California-Lexington Park, MD Metro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US44140",
+        "city_name": "Springfield, MA Metro Area",
+        "city_image": "https://c2.staticflickr.com/6/5782/21899718373_04901f7f31_b.jpg",
+        "image_description": "Union Station, Springfield, MA"
+    },
+    {
+        "city_id": "31000US12700",
+        "city_name": "Barnstable Town, MA",
+        "city_image": "https://c2.staticflickr.com/8/7084/7109527677_a1cd32cc23_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US38340",
+        "city_name": "Pittsfield, MA",
+        "city_image": "https://c1.staticflickr.com/7/6044/5897467216_87bdb81cda_b.jpg",
+        "image_description": "Looking southwest from Mount Hunger Road in Monterey MA, across Lake Garfield to the Berkshire Mountains."
+    },
+    {
+        "city_id": "31000US39300",
+        "city_name": "Providence-Warwick, RI-MA Metro Area",
+        "city_image": "https://c2.staticflickr.com/4/3835/15215172716_9dae30c43c_b.jpg",
+        "image_description": "Providence, RI at Sunset"
+    },
+    {
+        "city_id": "31000US10300",
+        "city_name": "Adrian, MI",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US12980",
+        "city_name": "Battle Creek, MI",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US10940",
+        "city_name": "Alma, MI",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US35660",
+        "city_name": "Niles-Benton Harbor, MI",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US24340",
+        "city_name": "Grand Rapids-Wyoming, MI Metro Area",
+        "city_image": "https://c2.staticflickr.com/6/5753/22793909062_7c0083482c_b.jpg",
+        "image_description": "The spectacular skyline of Grand Rapids, Michigan sits right on the Grand River."
+    },
+    {
+        "city_id": "31000US22420",
+        "city_name": "Flint, MI Metro Area",
+        "city_image": "https://c1.staticflickr.com/3/2852/9547514449_f597c1a1c6_b.jpg",
+        "image_description": "Downtown Flint, MI"
+    },
+    {
+        "city_id": "31000US34380",
+        "city_name": "Mount Pleasant, MI",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US11460",
+        "city_name": "Ann Arbor, MI Metro Area",
+        "city_image": "https://c1.staticflickr.com/3/2270/13116542353_e30389c4be_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US13660",
+        "city_name": "Big Rapids, MI",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US28020",
+        "city_name": "Kalamazoo-Portage, MI Metro Area",
+        "city_image": "https://c2.staticflickr.com/6/5487/14311262206_e7c085a6d5_b.jpg",
+        "image_description": "Asylum Lake, Kalamazoo, MI"
+    },
+    {
+        "city_id": "31000US42300",
+        "city_name": "Sault Ste. Marie, MI",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US29620",
+        "city_name": "Lansing-East Lansing, MI Metro Area",
+        "city_image": "https://c2.staticflickr.com/4/3058/2645846963_caedcd9a0b_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US26340",
+        "city_name": "Houghton, MI",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US32100",
+        "city_name": "Marquette, MI",
+        "city_image": "https://c1.staticflickr.com/7/6008/5920719620_5975017fdf_b.jpg",
+        "image_description": "Bass Lake near New Swanzy, Michigan"
+    },
+    {
+        "city_id": "31000US13020",
+        "city_name": "Bay City, MI",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US27100",
+        "city_name": "Jackson, MI",
+        "city_image": "https://c2.staticflickr.com/6/5604/15622779166_42a3a30031_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US13420",
+        "city_name": "Bemidji, MN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US31860",
+        "city_name": "Mankato-North Mankato, MN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US22060",
+        "city_name": "Faribault-Northfield, MN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US22020",
+        "city_name": "Fargo, ND-MN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US35580",
+        "city_name": "New Ulm, MN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US24220",
+        "city_name": "Grand Forks, ND-MN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US20260",
+        "city_name": "Duluth, MN-WI",
+        "city_image": "https://c2.staticflickr.com/4/3884/14254406538_cf9216172a_b.jpg",
+        "image_description": "Duluth, MN, from Observation Hill"
+    },
+    {
+        "city_id": "31000US49100",
+        "city_name": "Winona, MN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US32140",
+        "city_name": "Marshall, MN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US46980",
+        "city_name": "Vicksburg, MS",
+        "city_image": "https://c1.staticflickr.com/5/4028/4616930720_01cd2b10af_b.jpg",
+        "image_description": "Yazoo River confluence from Vicksburg, MS"
+    },
+    {
+        "city_id": "31000US27140",
+        "city_name": "Jackson, MS Metro Area",
+        "city_image": "https://c1.staticflickr.com/3/2895/14397597274_4ddc446df0_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US17380",
+        "city_name": "Cleveland, MS",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US37060",
+        "city_name": "Oxford, MS",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US18060",
+        "city_name": "Columbus, MS",
+        "city_image": "https://c1.staticflickr.com/7/6041/6281798424_a848be4e25_b.jpg",
+        "image_description": "Somewhere a few miles southeast of Golden Triangle Regional Airport near Columbus, Mississippi."
+    },
+    {
+        "city_id": "31000US24900",
+        "city_name": "Greenwood, MS",
+        "city_image": "https://c1.staticflickr.com/3/2602/3757215026_8b110c331a_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US44260",
+        "city_name": "Starkville, MS",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US32820",
+        "city_name": "Memphis, TN-MS-AR Metro Area",
+        "city_image": "https://c1.staticflickr.com/3/2874/9302783327_3f3d780072_b.jpg",
+        "image_description": "The Memphis Arches, the Hernando DeSoto Bridge over the Mississippi River at sunset, looking west toward Arkansas."
+    },
+    {
+        "city_id": "31000US25620",
+        "city_name": "Hattiesburg, MS",
+        "city_image": "https://c2.staticflickr.com/2/1703/24053699804_1f42954ecf_b.jpg",
+        "image_description": "The University of Southern Mississippi, aka Southern Miss, is a public research university located in Hattiesburg, Mississippi."
+    },
+    {
+        "city_id": "31000US47660",
+        "city_name": "Warrensburg, MO",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US17860",
+        "city_name": "Columbia, MO",
+        "city_image": "https://c1.staticflickr.com/9/8478/8264882747_0d6511a14e_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US44180",
+        "city_name": "Springfield, MO Metro Area",
+        "city_image": "https://c2.staticflickr.com/4/3173/3282256331_63df232fac_b.jpg",
+        "image_description": "2760 S. Glenstone Ave. Springfield, MO"
+    },
+    {
+        "city_id": "31000US25300",
+        "city_name": "Hannibal, MO",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US27620",
+        "city_name": "Jefferson City, MO",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US27900",
+        "city_name": "Joplin, MO",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US32180",
+        "city_name": "Marshall, MO",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US41140",
+        "city_name": "St. Joseph, MO-KS",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US40620",
+        "city_name": "Rolla, MO",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US28860",
+        "city_name": "Kirksville, MO",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US32340",
+        "city_name": "Maryville, MO",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US14700",
+        "city_name": "Branson, MO",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US16020",
+        "city_name": "Cape Girardeau, MO-IL Metro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US25740",
+        "city_name": "Helena, MT",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US13740",
+        "city_name": "Billings, MT",
+        "city_image": "https://c1.staticflickr.com/9/8579/16014295259_e4f258fdab_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US24500",
+        "city_name": "Great Falls, MT",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US15580",
+        "city_name": "Butte-Silver Bow, MT",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US14580",
+        "city_name": "Bozeman, MT",
+        "city_image": "https://c2.staticflickr.com/4/3676/9488451040_6e7ca3b199_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US33540",
+        "city_name": "Missoula, MT",
+        "city_image": "https://c1.staticflickr.com/3/2858/9577159351_b61dc6560c_b.jpg",
+        "image_description": "Sunset picnic overlooking the Clark Fork River, Missoula MT"
+    },
+    {
+        "city_id": "31000US36540",
+        "city_name": "Omaha-Council Bluffs, NE-IA Metro Area",
+        "city_image": "https://c2.staticflickr.com/6/5485/10118492016_99f0da543e_b.jpg",
+        "image_description": "Heartland of America Park, Omaha, NE"
+    },
+    {
+        "city_id": "31000US30700",
+        "city_name": "Lincoln, NE",
+        "city_image": "https://c2.staticflickr.com/4/3437/3854865350_5206b8a4a5_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US25580",
+        "city_name": "Hastings, NE",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US28260",
+        "city_name": "Kearney, NE",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US23340",
+        "city_name": "Fremont, NE",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US39900",
+        "city_name": "Reno, NV Metro Area",
+        "city_image": "https://c1.staticflickr.com/3/2934/14076167294_152c0e0568_b.jpg",
+        "image_description": "Reno, NV"
+    },
+    {
+        "city_id": "31000US21220",
+        "city_name": "Elko, NV",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US17200",
+        "city_name": "Claremont-Lebanon, NH-VT Micro Area",
+        "city_image": "https://c2.staticflickr.com/6/5299/5419512717_f00760b377_b.jpg",
+        "image_description": "The Stark Covered Bridge in Stark, New Hampshire"
+    },
+    {
+        "city_id": "31000US28300",
+        "city_name": "Keene, NH",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US10900",
+        "city_name": "Allentown-Bethlehem-Easton, PA-NJ Metro Area",
+        "city_image": "https://c1.staticflickr.com/1/162/434400267_5c6d6e054a_o.jpg",
+        "image_description": "Tannery, Moravian Historical Buildings, Bethlehem, PA"
+    },
+    {
+        "city_id": "31000US45940",
+        "city_name": "Trenton, NJ Metro Area",
+        "city_image": "https://c1.staticflickr.com/9/8222/8374983594_7d729d082d_b.jpg",
+        "image_description": "New Jersey State Capitol Rotunda, Trenton, NJ"
+    },
+    {
+        "city_id": "31000US12100",
+        "city_name": "Atlantic City-Hammonton, NJ",
+        "city_image": "https://c1.staticflickr.com/9/8210/8259311581_c0ef199b15_b.jpg",
+        "image_description": "Atlantic City, NJ"
+    },
+    {
+        "city_id": "31000US38780",
+        "city_name": "Portales, NM",
+        "city_image": "https://c2.staticflickr.com/8/7061/7077875635_a79d22b544_b.jpg",
+        "image_description": "Lesser prairie chicken survey site near Milnesand, NM"
+    },
+    {
+        "city_id": "31000US29780",
+        "city_name": "Las Vegas, NM",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US29740",
+        "city_name": "Las Cruces, NM",
+        "city_image": "https://c1.staticflickr.com/3/2069/2245231559_a85bd80585_b.jpg",
+        "image_description": "Moon-rise over the Organ Mountains just outside Las Cruces, New Mexico."
+    },
+    {
+        "city_id": "31000US21580",
+        "city_name": "Espanola, NM Micro Area",
+        "city_image": "https://c2.staticflickr.com/4/3070/2679968607_bb193abc5d_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US42140",
+        "city_name": "Santa Fe, NM",
+        "city_image": "https://c2.staticflickr.com/6/5499/10595904504_b44c9f5cc9_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US26020",
+        "city_name": "Hobbs, NM",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US43500",
+        "city_name": "Silver City, NM",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US15380",
+        "city_name": "Buffalo-Cheektowaga-Niagara Falls, NY Metro Area",
+        "city_image": "https://c1.staticflickr.com/7/6067/6126640758_d5656d65d1_b.jpg",
+        "image_description": "The two American falls in Niagara Falls, New York"
+    },
+    {
+        "city_id": "31000US45060",
+        "city_name": "Syracuse, NY Metro Area",
+        "city_image": "https://c2.staticflickr.com/8/7214/7347381642_a9ee88e5e2_b.jpg",
+        "image_description": "Crouse College, Syracuse University, Syracuse, NY"
+    },
+    {
+        "city_id": "31000US36300",
+        "city_name": "Ogdensburg-Massena, NY",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US31660",
+        "city_name": "Malone, NY",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US36460",
+        "city_name": "Olean, NY",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US13780",
+        "city_name": "Binghamton, NY",
+        "city_image": "https://c1.staticflickr.com/9/8568/15881430544_9d88d161f6_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US18660",
+        "city_name": "Cortland, NY",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US27460",
+        "city_name": "Jamestown-Dunkirk-Fredonia, NY",
+        "city_image": "https://c1.staticflickr.com/3/2937/14604319095_5255d96ece_b.jpg",
+        "image_description": "Plum Bush Inn in Chautauqua NY"
+    },
+    {
+        "city_id": "31000US28740",
+        "city_name": "Kingston, NY",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US38460",
+        "city_name": "Plattsburgh, NY",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US22180",
+        "city_name": "Fayetteville, NC Metro Area",
+        "city_image": "https://c1.staticflickr.com/9/8522/8563685754_d8817c490b_b.jpg",
+        "image_description": "First Presbyterian Church of Fayetteville, Fayetteville, NC"
+    },
+    {
+        "city_id": "31000US12180",
+        "city_name": "Auburn, NY",
+        "city_image": "https://c2.staticflickr.com/4/3089/2799217150_1986e28cea_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US14380",
+        "city_name": "Boone, NC",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US48980",
+        "city_name": "Wilson, NC",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US24660",
+        "city_name": "Greensboro-High Point, NC Metro Area",
+        "city_image": "https://c1.staticflickr.com/3/2736/4474454061_b65ca98db3_b.jpg",
+        "image_description": "High Point, NC"
+    },
+    {
+        "city_id": "31000US14820",
+        "city_name": "Brevard, NC",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US20380",
+        "city_name": "Dunn, NC",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US20500",
+        "city_name": "Durham-Chapel Hill, NC Metro Area",
+        "city_image": "https://c2.staticflickr.com/4/3364/3471736069_810fa85252_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US24780",
+        "city_name": "Greenville, NC",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US21020",
+        "city_name": "Elizabeth City, NC",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US15500",
+        "city_name": "Burlington, NC",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US43140",
+        "city_name": "Shelby, NC",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US25860",
+        "city_name": "Hickory-Lenoir-Morganton, NC Metro Area",
+        "city_image": "https://c2.staticflickr.com/6/5091/5472023693_90ae47444a_b.jpg",
+        "image_description": "Wisemans View, NC"
+    },
+    {
+        "city_id": "31000US11700",
+        "city_name": "Asheville, NC Metro Area",
+        "city_image": "https://c1.staticflickr.com/1/164/336232767_ba459c2d8a_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US39580",
+        "city_name": "Raleigh, NC Metro Area",
+        "city_image": "https://c2.staticflickr.com/8/7268/7450836526_cdffc08258_b.jpg",
+        "image_description": "Crabtree Creek Greenway, Raleigh, NC"
+    },
+    {
+        "city_id": "31000US48900",
+        "city_name": "Wilmington, NC",
+        "city_image": "https://c2.staticflickr.com/2/1447/24656136772_80b53e605a_b.jpg",
+        "image_description": "Market Street in Wilmington, North Carolina in New Hanover County."
+    },
+    {
+        "city_id": "31000US24140",
+        "city_name": "Goldsboro, NC",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US40580",
+        "city_name": "Rocky Mount, NC",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US31300",
+        "city_name": "Lumberton, NC",
+        "city_image": "https://c2.staticflickr.com/4/3669/11559397674_0201ee4949_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US10620",
+        "city_name": "Albemarle, NC",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US29900",
+        "city_name": "Laurinburg, NC",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US49180",
+        "city_name": "Winston-Salem, NC Metro Area",
+        "city_image": "https://c1.staticflickr.com/3/2865/11762300374_5af64f80fa_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US19000",
+        "city_name": "Cullowhee, NC Micro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US19860",
+        "city_name": "Dickinson, ND",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US33500",
+        "city_name": "Minot, ND",
+        "city_image": "https://c1.staticflickr.com/1/628/20682993722_ea4a23f8af_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US10420",
+        "city_name": "Akron, OH Metro Area",
+        "city_image": "https://c2.staticflickr.com/6/5834/21075775408_1244df8a08_b.jpg",
+        "image_description": "Greater Akron and Northeast Ohio area"
+    },
+    {
+        "city_id": "31000US11740",
+        "city_name": "Ashland, OH",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US17460",
+        "city_name": "Cleveland-Elyria, OH Metro Area",
+        "city_image": "https://c2.staticflickr.com/4/3857/14599294133_2178df5e9d_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US30620",
+        "city_name": "Lima, OH",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US18140",
+        "city_name": "Columbus, OH Metro Area",
+        "city_image": "https://c1.staticflickr.com/7/6239/6876825196_e92d865056_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US19380",
+        "city_name": "Dayton, OH Metro Area",
+        "city_image": "https://c1.staticflickr.com/9/8524/8528344803_44e878a37c_b.jpg",
+        "image_description": "Dayton, OH"
+    },
+    {
+        "city_id": "31000US19580",
+        "city_name": "Defiance, OH",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US22300",
+        "city_name": "Findlay, OH",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US41400",
+        "city_name": "Salem, OH Micro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US34540",
+        "city_name": "Mount Vernon, OH",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US15940",
+        "city_name": "Canton-Massillon, OH Metro Area",
+        "city_image": "https://c2.staticflickr.com/6/5232/7391085514_c7100d45dc_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US31930",
+        "city_name": "Marietta, OH Micro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US49780",
+        "city_name": "Zanesville, OH",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US17060",
+        "city_name": "Chillicothe, OH",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US11900",
+        "city_name": "Athens, OH",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US38580",
+        "city_name": "Point Pleasant, WV-OH",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US39020",
+        "city_name": "Portsmouth, OH",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US46500",
+        "city_name": "Urbana, OH",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US48940",
+        "city_name": "Wilmington, OH",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US44220",
+        "city_name": "Springfield, OH",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US49300",
+        "city_name": "Wooster, OH",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US49660",
+        "city_name": "Youngstown-Warren-Boardman, OH-PA Metro Area",
+        "city_image": "https://c1.staticflickr.com/9/8335/8093467332_a627915d88_b.jpg",
+        "image_description": "Mill Creek Park's \"Cinderella\" iron link bridge"
+    },
+    {
+        "city_id": "31000US34780",
+        "city_name": "Muskogee, OK",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US12780",
+        "city_name": "Bartlesville, OK",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US30020",
+        "city_name": "Lawton, OK",
+        "city_image": "https://c2.staticflickr.com/8/7173/6415729053_11c64613f2_b.jpg",
+        "image_description": "Indiahoma Wye, Oklahoma"
+    },
+    {
+        "city_id": "31000US10220",
+        "city_name": "Ada, OK",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US46140",
+        "city_name": "Tulsa, OK Metro Area",
+        "city_image": "https://c2.staticflickr.com/6/5704/22571927483_d7e7b6fa41_b.jpg",
+        "image_description": "The Arkansas River in Tulsa"
+    },
+    {
+        "city_id": "31000US45140",
+        "city_name": "Tahlequah, OK",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US25100",
+        "city_name": "Guymon, OK",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US44660",
+        "city_name": "Stillwater, OK",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US43060",
+        "city_name": "Shawnee, OK",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US20460",
+        "city_name": "Durant, OK",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US48220",
+        "city_name": "Weatherford, OK",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US29260",
+        "city_name": "La Grande, OR",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US21660",
+        "city_name": "Eugene, OR Metro Area",
+        "city_image": "https://c1.staticflickr.com/5/4120/4749169769_05504509c8_b.jpg",
+        "image_description": "View from Spencer's Butte, OR"
+    },
+    {
+        "city_id": "31000US28900",
+        "city_name": "Klamath Falls, OR",
+        "city_image": "https://c2.staticflickr.com/6/5760/22617519801_4f4ee77c8d_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US18700",
+        "city_name": "Corvallis, OR",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US32780",
+        "city_name": "Medford, OR",
+        "city_image": "https://c2.staticflickr.com/6/5713/21475923143_3ba74d3853_b.jpg",
+        "image_description": "Autumn morning in Ashland, OR."
+    },
+    {
+        "city_id": "31000US41420",
+        "city_name": "Salem, OR Metro Area",
+        "city_image": "https://c2.staticflickr.com/8/7098/7378185378_0734c0c763_b.jpg",
+        "image_description": "Oregon State Capitol, Salem, OR"
+    },
+    {
+        "city_id": "31000US39740",
+        "city_name": "Reading, PA Metro Area",
+        "city_image": "https://c1.staticflickr.com/3/2294/2169846145_0f7c3fb905_b.jpg",
+        "image_description": "The Pagoda, Reading, PA"
+    },
+    {
+        "city_id": "31000US32740",
+        "city_name": "Meadville, PA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US38300",
+        "city_name": "Pittsburgh, PA Metro Area",
+        "city_image": "https://c1.staticflickr.com/5/4005/4548757180_9410859122_b.jpg",
+        "image_description": "Downtown Pittsburgh at Night from the Duqeusne Incline"
+    },
+    {
+        "city_id": "31000US42540",
+        "city_name": "Scranton--Wilkes-Barre--Hazleton, PA Metro Area",
+        "city_image": "https://c1.staticflickr.com/3/2712/4111289959_61c1e070e9_b.jpg",
+        "image_description": "Downtown Scranton"
+    },
+    {
+        "city_id": "31000US14100",
+        "city_name": "Bloomsburg-Berwick, PA Metro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US30260",
+        "city_name": "Lewisburg, PA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US25420",
+        "city_name": "Harrisburg-Carlisle, PA Metro Area",
+        "city_image": "https://c2.staticflickr.com/4/3688/11659048794_77d27d98dc_b.jpg",
+        "image_description": "Pennsylvania capitol building Fox Ridge Court, Harrisburg"
+    },
+    {
+        "city_id": "31000US20700",
+        "city_name": "East Stroudsburg, PA Metro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US29540",
+        "city_name": "Lancaster, PA Metro Area",
+        "city_image": "https://c2.staticflickr.com/6/5463/8999801664_9e86d96f26_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US23900",
+        "city_name": "Gettysburg, PA Metro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US26860",
+        "city_name": "Indiana, PA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US26500",
+        "city_name": "Huntingdon, PA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US30140",
+        "city_name": "Lebanon, PA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US30820",
+        "city_name": "Lock Haven, PA",
+        "city_image": "https://c2.staticflickr.com/2/1439/1172937286_fe18b048a0_b.jpg",
+        "image_description": "Looking northwest from Hyner View State Park, Clinton County."
+    },
+    {
+        "city_id": "31000US48700",
+        "city_name": "Williamsport, PA",
+        "city_image": "https://c2.staticflickr.com/4/3670/11142087665_3f6cd57f27_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US27780",
+        "city_name": "Johnstown, PA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US11020",
+        "city_name": "Altoona, PA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US20180",
+        "city_name": "DuBois, PA",
+        "city_image": "https://c2.staticflickr.com/4/3769/13208146884_7e06c78c36_b.jpg",
+        "image_description": "Parker Dam State Park, Clearfield County."
+    },
+    {
+        "city_id": "31000US44300",
+        "city_name": "State College, PA",
+        "city_image": "https://c2.staticflickr.com/4/3305/3436292645_3ef9485f97_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US16540",
+        "city_name": "Chambersburg-Waynesboro, PA Metro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US35140",
+        "city_name": "Newberry, SC",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US39060",
+        "city_name": "Pottsville, PA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US49620",
+        "city_name": "York-Hanover, PA Metro Area",
+        "city_image": "https://c2.staticflickr.com/8/7208/6848328766_2d700c91b0_b.jpg",
+        "image_description": "Mason-Dixon Trail, York County, York, PA"
+    },
+    {
+        "city_id": "31000US14620",
+        "city_name": "Bradford, PA",
+        "city_image": "https://c1.staticflickr.com/1/202/489253069_1fb8c44fed_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US42780",
+        "city_name": "Selinsgrove, PA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US35260",
+        "city_name": "New Castle, PA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US24860",
+        "city_name": "Greenville-Anderson-Mauldin, SC Metro Area",
+        "city_image": "https://c1.staticflickr.com/1/724/23663143005_7bd4a72722_b.jpg",
+        "image_description": "Bell Tower  at Furman University in Greenville, SC"
+    },
+    {
+        "city_id": "31000US17900",
+        "city_name": "Columbia, SC Metro Area",
+        "city_image": "https://c1.staticflickr.com/9/8451/7917237188_550229faf7_b.jpg",
+        "image_description": "State Capitol Grounds, Columbia, SC"
+    },
+    {
+        "city_id": "31000US16700",
+        "city_name": "Charleston-North Charleston, SC Metro Area",
+        "city_image": "https://c2.staticflickr.com/4/3879/14625768044_9e0a2193da_b.jpg",
+        "image_description": "The City of North Charleston held its Fourth of July Festival at Riverfront Park on Friday, July 4, 2014, an all-day event featuring live music, family-friendly activities, and local food vendors."
+    },
+    {
+        "city_id": "31000US36700",
+        "city_name": "Orangeburg, SC",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US22500",
+        "city_name": "Florence, SC",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US43900",
+        "city_name": "Spartanburg, SC",
+        "city_image": "https://c1.staticflickr.com/3/2916/14072603348_128a733509_b.jpg",
+        "image_description": "One Morgan Square in Downtown Spartanburg"
+    },
+    {
+        "city_id": "31000US24940",
+        "city_name": "Greenwood, SC",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US23500",
+        "city_name": "Gaffney, SC",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US44940",
+        "city_name": "Sumter, SC",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US25940",
+        "city_name": "Hilton Head Island-Bluffton-Beaufort, SC Metro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US34820",
+        "city_name": "Myrtle Beach-Conway-North Myrtle Beach, SC-NC Metro Area",
+        "city_image": "https://c2.staticflickr.com/6/5073/5876324763_eb04ca288e_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US43620",
+        "city_name": "Sioux Falls, SD",
+        "city_image": "https://c1.staticflickr.com/7/6053/6866221320_0b8d39b136_b.jpg",
+        "image_description": "Train crossing over Sioux Falls in South Dakota"
+    },
+    {
+        "city_id": "31000US43940",
+        "city_name": "Spearfish, SD",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US33580",
+        "city_name": "Mitchell, SD",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US10100",
+        "city_name": "Aberdeen, SD",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US15100",
+        "city_name": "Brookings, SD",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US46820",
+        "city_name": "Vermillion, SD",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US17300",
+        "city_name": "Clarksville, TN-KY",
+        "city_image": "https://c1.staticflickr.com/5/4081/4926190924_8baa6608ab_b.jpg",
+        "image_description": "Clarksville, TN"
+    },
+    {
+        "city_id": "31000US19420",
+        "city_name": "Dayton, TN Micro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US34100",
+        "city_name": "Morristown, TN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US27740",
+        "city_name": "Johnson City, TN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US28940",
+        "city_name": "Knoxville, TN Metro Area",
+        "city_image": "https://c2.staticflickr.com/4/3923/14948570796_d52588ae06_b.jpg",
+        "image_description": "World's Fair Park Bridge, Knoxville, TN"
+    },
+    {
+        "city_id": "31000US28700",
+        "city_name": "Kingsport-Bristol-Bristol, TN-VA",
+        "city_image": "https://c2.staticflickr.com/6/5047/5300129680_bb22f1f714_b.jpg",
+        "image_description": "Beartown, Kingsport, TN"
+    },
+    {
+        "city_id": "31000US17420",
+        "city_name": "Cleveland, TN",
+        "city_image": "https://c2.staticflickr.com/4/3326/3626081416_f70b9920e7_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US46100",
+        "city_name": "Tullahoma-Manchester, TN Micro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US11940",
+        "city_name": "Athens, TN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US32280",
+        "city_name": "Martin, TN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US18260",
+        "city_name": "Cookeville, TN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US24620",
+        "city_name": "Greeneville, TN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US10180",
+        "city_name": "Abilene, TX",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US41660",
+        "city_name": "San Angelo, TX",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US43300",
+        "city_name": "Sherman-Denison, TX",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US18580",
+        "city_name": "Corpus Christi, TX Metro Area",
+        "city_image": "https://c1.staticflickr.com/3/2056/2241649030_a822c996fb_b.jpg",
+        "image_description": "Corpus Christi, TX"
+    },
+    {
+        "city_id": "31000US19100",
+        "city_name": "Dallas-Fort Worth-Arlington, TX Metro Area",
+        "city_image": "https://c1.staticflickr.com/9/8356/8368787559_e3f2db940d_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US32220",
+        "city_name": "Marshall, TX",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US45500",
+        "city_name": "Texarkana, TX-AR Metro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US47020",
+        "city_name": "Victoria, TX",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US15220",
+        "city_name": "Brownwood, TX",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US41700",
+        "city_name": "San Antonio-New Braunfels, TX Metro Area",
+        "city_image": "https://c1.staticflickr.com/1/423/19053973003_5edb2f54a0_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US13140",
+        "city_name": "Beaumont-Port Arthur, TX Metro Area",
+        "city_image": "https://c2.staticflickr.com/8/7220/7300194952_ab675e2eb5_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US29700",
+        "city_name": "Laredo, TX",
+        "city_image": "https://c2.staticflickr.com/4/3024/2587826931_25200876f3_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US30980",
+        "city_name": "Longview, TX",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US31180",
+        "city_name": "Lubbock, TX",
+        "city_image": "https://c2.staticflickr.com/4/3490/3954965105_1242af7e7c_b.jpg",
+        "image_description": "South Plains Fairgrounds, Lubbock, TX"
+    },
+    {
+        "city_id": "31000US28660",
+        "city_name": "Killeen-Temple, TX Metro Area",
+        "city_image": "https://c2.staticflickr.com/2/1307/4684845076_f8ae857d30_b.jpg",
+        "image_description": "Bell, TX"
+    },
+    {
+        "city_id": "31000US33260",
+        "city_name": "Midland, TX",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US48660",
+        "city_name": "Wichita Falls, TX",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US32580",
+        "city_name": "McAllen-Edinburg-Mission, TX Metro Area",
+        "city_image": "https://c1.staticflickr.com/5/4154/5010031637_e68dca964c_b.jpg",
+        "image_description": "Alamo, TX"
+    },
+    {
+        "city_id": "31000US15180",
+        "city_name": "Brownsville-Harlingen, TX Metro Area",
+        "city_image": "https://c1.staticflickr.com/1/767/23114862794_28eef64cc1_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US26660",
+        "city_name": "Huntsville, TX",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US28500",
+        "city_name": "Kerrville, TX",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US34860",
+        "city_name": "Nacogdoches, TX",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US44500",
+        "city_name": "Stephenville, TX",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US28780",
+        "city_name": "Kingsville, TX",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US17780",
+        "city_name": "College Station-Bryan, TX",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US21340",
+        "city_name": "El Paso, TX Metro Area",
+        "city_image": "https://c2.staticflickr.com/4/3575/3841024076_c79706dd8d_b.jpg",
+        "image_description": "El Paso, TX"
+    },
+    {
+        "city_id": "31000US46340",
+        "city_name": "Tyler, TX",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US36220",
+        "city_name": "Odessa, TX",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US38380",
+        "city_name": "Plainview, TX",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US11100",
+        "city_name": "Amarillo, TX",
+        "city_image": "https://c1.staticflickr.com/7/6231/6219270202_73d8419fed_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US39340",
+        "city_name": "Provo-Orem, UT Metro Area",
+        "city_image": "https://c2.staticflickr.com/6/5585/14801908234_778c8bcd67_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US41100",
+        "city_name": "St. George, UT",
+        "city_image": "https://c2.staticflickr.com/6/5647/22781290176_a0a8ddc80d_b.jpg",
+        "image_description": "Cathedral of Color in Bryce Canyon, Utah"
+    },
+    {
+        "city_id": "31000US16260",
+        "city_name": "Cedar City, UT",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US36260",
+        "city_name": "Ogden-Clearfield, UT Metro Area",
+        "city_image": "https://c1.staticflickr.com/3/2749/4480528476_f92a248d3e_b.jpg",
+        "image_description": "Olympus Heights in Ogden, Utah"
+    },
+    {
+        "city_id": "31000US30860",
+        "city_name": "Logan, UT-ID",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US13540",
+        "city_name": "Bennington, VT",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US40860",
+        "city_name": "Rutland, VT",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US15540",
+        "city_name": "Burlington-South Burlington, VT",
+        "city_image": "https://c1.staticflickr.com/3/2347/2457660531_e5e4b398a7_b.jpg",
+        "image_description": "Burlington, waterfront, champlain"
+    },
+    {
+        "city_id": "31000US12740",
+        "city_name": "Barre, VT",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US19260",
+        "city_name": "Danville, VA Micro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US25500",
+        "city_name": "Harrisonburg, VA",
+        "city_image": "https://c1.staticflickr.com/5/4152/5001618779_16568a2680_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US31340",
+        "city_name": "Lynchburg, VA",
+        "city_image": "https://c1.staticflickr.com/3/2676/5749851798_f834c23ae5_b.jpg",
+        "image_description": "Lynchburg, VA"
+    },
+    {
+        "city_id": "31000US44420",
+        "city_name": "Staunton-Waynesboro, VA Metro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US13980",
+        "city_name": "Blacksburg-Christiansburg-Radford, VA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US49020",
+        "city_name": "Winchester, VA-WV",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US13720",
+        "city_name": "Big Stone Gap, VA Micro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US16820",
+        "city_name": "Charlottesville, VA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US42660",
+        "city_name": "Seattle-Tacoma-Bellevue, WA Metro Area",
+        "city_image": "https://c1.staticflickr.com/9/8784/18172653976_67aeb8f7c5_b.jpg",
+        "image_description": "Pioneer Square in Seattle with a view of the Seattle Great Wheel"
+    },
+    {
+        "city_id": "31000US38420",
+        "city_name": "Platteville, WI",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US21260",
+        "city_name": "Ellensburg, WA",
+        "city_image": "https://c1.staticflickr.com/3/2027/4514619162_da662fc03a_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US44060",
+        "city_name": "Spokane-Spokane Valley, WA Metro Area",
+        "city_image": "https://c2.staticflickr.com/8/7404/12369917523_3091aca308_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US36500",
+        "city_name": "Olympia-Tumwater, WA Metro Area",
+        "city_image": "https://c2.staticflickr.com/8/7040/7066221311_6390c83105_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US49420",
+        "city_name": "Yakima, WA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US47460",
+        "city_name": "Walla Walla, WA Metro Area",
+        "city_image": "https://c1.staticflickr.com/5/4029/4697930477_b94738a7ff_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US39420",
+        "city_name": "Pullman, WA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US13380",
+        "city_name": "Bellingham, WA",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US21180",
+        "city_name": "Elkins, WV Micro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US21900",
+        "city_name": "Fairmont, WV",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US26580",
+        "city_name": "Huntington-Ashland, WV-KY-OH Metro Area",
+        "city_image": "https://c1.staticflickr.com/3/2894/9290140144_7a3a4b4bba_b.jpg",
+        "image_description": "Ironton, OH"
+    },
+    {
+        "city_id": "31000US37620",
+        "city_name": "Parkersburg-Vienna, WV Metro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US17220",
+        "city_name": "Clarksburg, WV",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US48540",
+        "city_name": "Wheeling, WV-OH",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US13220",
+        "city_name": "Beckley, WV Metro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US34060",
+        "city_name": "Morgantown, WV",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US33340",
+        "city_name": "Milwaukee-Waukesha-West Allis, WI Metro Area",
+        "city_image": "https://c2.staticflickr.com/4/3161/2970949840_5c93bdbbe5_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US27500",
+        "city_name": "Janesville-Beloit, WI Metro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US31540",
+        "city_name": "Madison, WI Metro Area",
+        "city_image": "https://c2.staticflickr.com/8/7276/7820709538_f04e9367a7_b.jpg",
+        "image_description": "Madison, WI"
+    },
+    {
+        "city_id": "31000US43100",
+        "city_name": "Sheboygan, WI",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US11540",
+        "city_name": "Appleton, WI",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US48020",
+        "city_name": "Watertown-Fort Atkinson, WI",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US22540",
+        "city_name": "Fond du Lac, WI",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US31820",
+        "city_name": "Manitowoc, WI",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US36780",
+        "city_name": "Oshkosh-Neenah, WI",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US32860",
+        "city_name": "Menomonie, WI",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US44620",
+        "city_name": "Stevens Point, WI",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US29660",
+        "city_name": "Laramie, WY",
+        "city_image": "https://c1.staticflickr.com/5/4173/33708329383_10b8502779_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US11640",
+        "city_name": "Arecibo, PR Metro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US38660",
+        "city_name": "Ponce, PR Metro Area",
+        "city_image": "https://c2.staticflickr.com/6/5264/5597233919_01cd89b28b_b.jpg",
+        "image_description": "Early Morning Ponce, PR"
+    },
+    {
+        "city_id": "31000US10380",
+        "city_name": "Aguadilla-Isabela, PR Metro Area",
+        "city_image": "https://c2.staticflickr.com/4/3463/3832103573_59ee8325b4_b.jpg",
+        "image_description": "Aguadilla, PR"
+    },
+    {
+        "city_id": "31000US41900",
+        "city_name": "San German, PR Metro Area",
+        "city_image": "https://c1.staticflickr.com/5/4201/34104138374_c01636b6af_b.jpg",
+        "image_description": "Los Morrillos Lighthouse in Boquerón Nature Preserve, Cabo Rojo PR"
+    },
+    {
+        "city_id": "31000US25020",
+        "city_name": "Guayama, PR",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US29200",
+        "city_name": "Lafayette-West Lafayette, IN Metro Area",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US34940",
+        "city_name": "Naples-Immokalee-Marco Island, FL Metro Area",
+        "city_image": "https://c1.staticflickr.com/1/267/19419411732_b570c516f9_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US15980",
+        "city_name": "Cape Coral-Fort Myers, FL Metro Area",
+        "city_image": "https://c2.staticflickr.com/8/7721/17126758338_705390ea06_b.jpg",
+        "image_description": "Roseate Spoonbills at Sunset at Ding Darling National Wildlife Refuge, Sanibel Island, Florida"
+    },
+    {
+        "city_id": "31000US32900",
+        "city_name": "Merced, CA",
+        "city_image": "https://c2.staticflickr.com/8/7181/6952037298_e8d14583f5_b.jpg",
+        "image_description": "Merced Wildlife Refuge"
+    },
+    {
+        "city_id": "31000US40340",
+        "city_name": "Rochester, MN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US19300",
+        "city_name": "Daphne-Fairhope-Foley, AL Metro Area",
+        "city_image": "https://c1.staticflickr.com/5/4016/4244605518_3ddc2da3ef_b.jpg",
+        "image_description": "Daphne, AL"
+    },
+    {
+        "city_id": "31000US16940",
+        "city_name": "Cheyenne, WY",
+        "city_image": "https://c2.staticflickr.com/6/5633/21338522779_98496ac77f_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US48140",
+        "city_name": "Wausau, WI",
+        "city_image": "https://c1.staticflickr.com/1/311/19048453941_ea15f28304_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US26820",
+        "city_name": "Idaho Falls, ID",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US21300",
+        "city_name": "Elmira, NY",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US45980",
+        "city_name": "Troy, AL",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US27420",
+        "city_name": "Jamestown, ND",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US46220",
+        "city_name": "Tuscaloosa, AL",
+        "city_image": "https://c2.staticflickr.com/6/5574/15184993006_3053684b36_b.jpg",
+        "image_description": "Lake Harris Spillway"
+    },
+    {
+        "city_id": "31000US45180",
+        "city_name": "Talladega-Sylacauga, AL",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US27860",
+        "city_name": "Jonesboro, AR",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US40780",
+        "city_name": "Russellville, AR",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US31620",
+        "city_name": "Magnolia, AR",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US18820",
+        "city_name": "Crawfordsville, IN",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US42820",
+        "city_name": "Selma, AL",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US38940",
+        "city_name": "Port St. Lucie, FL Metro Area",
+        "city_image": "https://c2.staticflickr.com/8/7283/16170352187_d2276ba3c4_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US19180",
+        "city_name": "Danville, IL",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US30660",
+        "city_name": "Lincoln, IL",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US33180",
+        "city_name": "Middlesborough, KY",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US29860",
+        "city_name": "Laurel, MS",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US33620",
+        "city_name": "Moberly, MO",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US31900",
+        "city_name": "Mansfield, OH",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US32020",
+        "city_name": "Marion, OH",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US27380",
+        "city_name": "Jacksonville, TX",
+        "city_image": null,
+        "image_description": null
+    },
+    {
+        "city_id": "31000US14740",
+        "city_name": "Bremerton-Silverdale, WA",
+        "city_image": "https://c1.staticflickr.com/9/8669/16097044647_4146afc282_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US39540",
+        "city_name": "Racine, WI",
+        "city_image": "https://c1.staticflickr.com/1/419/20183930485_68e23a19e1_b.jpg",
+        "image_description": null
+    },
+    {
+        "city_id": "31000US20060",
+        "city_name": "Douglas, GA",
+        "city_image": null,
+        "image_description": null
+    }
+]

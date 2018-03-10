@@ -1,0 +1,27 @@
+{
+    "website": String
+    "survey_year": int,
+    "oos_tuition": int,
+    "name": String,
+    "demographics_asian": double,
+    "demographics_black": double,
+    "enrolled_women": double,
+    "state_tuition": int,
+    "demographics_white": double,
+    "longitude": double,
+    "city_id": String,
+    "state": String,
+    "demographics_other": double,
+    "enrolled_men": double,
+    "county_id": String,
+    "latitude": double,
+    "top_grad_majors": {
+        "Course_id (4 digit cip)": int (number of graduates),
+        "Course_id (4 digit cip)": int (number of graduates),
+        "Course_id (4 digit cip)": int (number of graduates),
+        "Course_id (4 digit cip)": int (number of graduates),
+        "Course_id (4 digit cip)": int (number of graduates),
+    },
+    "demographics_hispanic": double,
+    "university_id": String
+}
