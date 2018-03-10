@@ -1,11 +1,19 @@
+"""
+    The keys file is not added to this public repo.
+    Please add this file to run this scraper.
+"""
 import requests
 import json
 import math
 import keys
 
-
 universities_list = []
 
+"""
+    Gets basic University data.
+    Name, Website, County_id, state_id, latitude, longitude, university_id,
+    city_id.
+"""
 def get_university_stat():
     url_basic_uni_info = 'http://api.datausa.io/attrs/university'
 
@@ -48,6 +56,10 @@ def get_university_stat():
     with open('university.json', 'w') as f:
         json.dump(universities_list, f)
 
+"""
+    Adds tuition data.
+    Out of state tuition, In state tuition, and survey_year.
+"""
 def add_tuition_stat():
 
     temp_dict = {}
@@ -89,6 +101,11 @@ def add_tuition_stat():
     with open('university.json', 'w') as fi:
          json.dump(uni_total_data, fi)
 
+
+"""
+    Scrapes race demographics of universities.
+    Source - https://api.data.gov/ed/collegescorecard/
+"""
 def scrape_race_stat():
 
     url_get_race = ('https://api.data.gov/ed/collegescorecard/v1/schools?fields=school.name'+
@@ -122,6 +139,7 @@ def scrape_race_stat():
     with open('temp_race_data.json', 'w') as f:
         json.dump(results, f)
 
+""" Adds race demographics of universities to university data. """
 def add_race_stat():
     temp_dict = {}
     with open('university.json', 'r') as f:
@@ -191,6 +209,10 @@ def add_race_stat():
     with open('university.json', 'w') as fi:
          json.dump(uni_total_data, fi)
 
+"""
+    Adds gender demographics of universities.
+    Source - https://api.data.gov/ed/collegescorecard/
+"""
 def add_gender_stat():
     temp_dict = {}
 
@@ -233,6 +255,10 @@ def add_gender_stat():
     with open('university.json', 'w') as fi:
          json.dump(uni_total_data, fi)
 
+"""
+    Adds the top 5 majors of a university based on the number of graduates.
+    Source - https://api.data.gov/ed/collegescorecard/
+"""
 def add_top_majors():
 
     with open('university.json', 'r') as f:
@@ -270,11 +296,42 @@ def add_top_majors():
     with open('university.json', 'w') as fi:
         json.dump(uni_total_data, fi)
 
+""" Remove universities with null values. """
+def remove_null_values():
+    with open('university.json', 'r') as f:
+         uni_total_data = json.load(f)
+
+    count = 0
+    for uni_data in uni_total_data:
+        for key in uni_data:
+            if uni_data[key] is None:
+                count += 1
+                print(str(count) + " removed " + uni_data["name"])
+                uni_total_data.remove(uni_data)
+                break
+
+    with open('university.json', 'w') as fi:
+        json.dump(uni_total_data, fi)
+
+""" Count the number of universities. """
+def count_universities():
+    with open('university.json', 'r') as f:
+         uni_total_data = json.load(f)
+
+    count = 0
+
+    for uni_data in uni_total_data:
+        count += 1
+
+    print(count)
+
 
 if __name__ == '__main__':
-    #get_university_stat()
-    #add_tuition_stat()
-    #scrape_race_stat()
-    #add_race_stat()
-    #add_gender_stat()
+    get_university_stat()
+    add_tuition_stat()
+    scrape_race_stat()
+    add_race_stat()
+    add_gender_stat()
     add_top_majors()
+    remove_null_values()
+    count_universities()
