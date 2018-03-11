@@ -3,6 +3,7 @@ import {Image, Grid, Row, Col, Thumbnail} from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 import Card from './Card.js';
 import collegeData from '../scrapers/university.json'
+import '../css/Flex.css';
 
 
 {/* Use following url for default image: http://bit.ly/2CYI94d */}
@@ -18,7 +19,7 @@ class Colleges extends Component {
     for (var i = 0; i < collegeData.length; i++) {
         colleges.push(<Card name={collegeData[i].name} model='colleges' domain={collegeData[i].website}> </Card>);
     }
-    return <Grid>{colleges}</Grid>;
+    return <Grid><Row className="flex-row">{colleges}</Row></Grid>;
 }
  
 
