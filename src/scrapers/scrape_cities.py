@@ -19,7 +19,6 @@ AIzaSyCGo3hE9YIt8nXVFYZ1P8qc9CXANXV4n-s
     high_school_graduation rate
     some_college # percentage of the population ages 25-44 with some post-secondary education
     primary_care_physicians # ratio of the population to total primary care physicians
-    uninsured
     violent_crime # number of reported violent crime offenses per 100,000 population
     motor_vehicle_crash_deaths # motor vehicle crash deaths per 100,000 population
 
@@ -29,6 +28,7 @@ http://api.datausa.io/api/?show=cip&sumlevel=4&year=latest&geo=05000US48453
 cities_list = []
 number_of_images_failed_flicker = 0
 number_of_images_failed_bing = 0
+failed_county_data = 0
 
 def cities_basic_info():
     added_cities = set()
@@ -183,11 +183,77 @@ def scrape_city_pic_bing(city_name, county_name):
     print("*** failed " + city_name )
     return None
 
-    with open('a.json', 'w') as fi:
-        json.dump(search_results, fi)
+def scrape_county_health_stat():
+    data_dict = {}
+    with open('cities.json', 'r') as f:
+         city_data = json.load(f)
+
+    county_info_url = ("http://api.datausa.io/api/?show=geo&sumlevel=county&year=latest" +
+    "&required=primary_care_physicians,motor_vehicle_crash_deaths,violent_crime," +
+    "high_school_graduation,some_college,unemployment,population_estimate,median_household_income")
+
+    response = requests.get(county_info_url)
+    county_data = json.loads(response.text)
+
+    data_list = county_data["data"]
+
+    for data in data_list:
+        temp_dict = {}
+        temp_dict["survey_year"] = data[0]
+        temp_dict["population"] = data[8]
+        temp_dict["unemployment"] = data[7]
+        temp_dict["median_household_income"] = data[9]
+        temp_dict["primary_care_physicians"] = data[2]
+        temp_dict["violent_crime"] = data[4]
+        temp_dict["motor_vehicle_crash_deaths"] = data[3]
+        temp_dict["high_school_graduation_rate"] = data[5]
+        temp_dict["people_with_college_education"] = data[6]
+        data_dict[data[1]] = temp_dict
+
+    with open('temp_county_health_data.json', 'w') as fi:
+        json.dump(data_dict, fi)
+
+def add_county_health_stat():
+    global failed_county_data
+    with open('temp_county_health_data.json', 'r') as fi:
+         temp_county_data = json.load(fi)
+
+    with open('cities.json', 'r') as f:
+         city_data = json.load(f)
+
+    for city in city_data:
+        id = city["county_id"]
+
+        try:
+            data = temp_county_data[id]
+
+            for key in data:
+                city[key+"_in_county"] = data[key]
+
+        except Exception as e:
+            failed_county_data += 1
+            city["survey_year_in_county"]= None
+            city["median_household_income_in_county"]= None
+            city["violent_crime_in_county"]= None
+            city["people_with_college_education_in_county"]= None
+            city["unemployment_in_county"]= None
+            city["motor_vehicle_crash_deaths_in_county"]= None
+            city["primary_care_physicians_in_county"]= None
+            city["high_school_graduation_rate_in_county"]= None
+            city["population_in_county"]= None
+            pass
+
+    print("Failed = " + str(failed_county_data))
+    with open('cities.json', 'w') as fi:
+        json.dump(city_data, fi)
+
+
+
 
 
 if __name__ == "__main__":
     #cities_basic_info()
     #print("number_of_images_failed_flicker = " + str(number_of_images_failed_flicker))
-    add_city_images_from_bing()
+    #add_city_images_from_bing()
+    #scrape_county_health_stat()
+    add_county_health_stat()
