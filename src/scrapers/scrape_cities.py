@@ -247,6 +247,41 @@ def add_county_health_stat():
     with open('cities.json', 'w') as fi:
         json.dump(city_data, fi)
 
+def add_top_majors_in_county():
+
+    with open('cities.json', 'r') as f:
+         cities_total_data = json.load(f)
+
+    year = 0
+    temp_dict = {} # key = cip -- value = number of graduates
+
+    url_get_major_data = 'http://api.datausa.io/api/?show=cip&sumlevel=4&year=latest&required=grads_total&geo='
+
+    county_count = 0
+    for city_data in cities_total_data:
+        id = city_data["county_id"]
+        response = requests.get(url_get_major_data + id)
+        major_data = json.loads(response.text)
+        data = major_data['data']
+        for city in data:
+            year = city[0]
+            temp_dict[city[2]] = city[3]
+
+        county_count += 1
+        print("\n\n************" + str(county_count) + "***************\n\n")
+        major_dict = {}
+        top_five = 0
+        for key, value in sorted(temp_dict.iteritems(), key=lambda (k,v): (v,k), reverse = True):
+            major_dict["data_year"] = year
+            major_dict[key] = value
+            top_five += 1
+            if top_five == 5:
+                break
+
+        city_data["top_grad_majors"] = major_dict
+
+    with open('cities.json', 'w') as fi:
+        json.dump(cities_total_data, fi)
 
 
 
@@ -256,4 +291,5 @@ if __name__ == "__main__":
     #print("number_of_images_failed_flicker = " + str(number_of_images_failed_flicker))
     #add_city_images_from_bing()
     #scrape_county_health_stat()
-    add_county_health_stat()
+    #add_county_health_stat()
+    add_top_majors_in_county()
