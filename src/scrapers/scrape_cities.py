@@ -3,8 +3,10 @@ import urllib2
 import requests
 import json
 import math
+from keys import bing_key
 
 """
+AIzaSyCGo3hE9YIt8nXVFYZ1P8qc9CXANXV4n-s
 {
     city_id
     city_name
@@ -25,7 +27,8 @@ import math
 http://api.datausa.io/api/?show=cip&sumlevel=4&year=latest&geo=05000US48453
 """
 cities_list = []
-c = 0
+number_of_images_failed_flicker = 0
+number_of_images_failed_bing = 0
 
 def cities_basic_info():
     added_cities = set()
@@ -39,6 +42,18 @@ def cities_basic_info():
         city_id = uni_data["city_id"]
         county_id = uni_data["county_id"]
 
+        county_url = "http://api.datausa.io/attrs/geo/" + county_id
+        response2 = requests.get(county_url)
+        data2 = json.loads(response2.text)
+
+        if (data2 is not None) and ("data" in data2):
+            county_data = data2["data"][0]
+            city_dict["county_id"] = county_id
+            city_dict["county_name"] = county_data[8]
+        else:
+            city_dict["county_id"] = None
+            city_dict["county_name"] = None
+
         if city_id not in added_cities:
             city_url = "http://api.datausa.io/attrs/geo/" + city_id
             response = requests.get(city_url)
@@ -51,10 +66,6 @@ def cities_basic_info():
                 try:
                     print("&&& Using county instead &&&&")
                     failed += 1
-                    county_url = "http://api.datausa.io/attrs/geo/" + county_id
-                    response2 = requests.get(county_url)
-                    data2 = json.loads(response2.text)
-                    county_data = data2["data"][0]
                     city_dict["city_name"] = county_data[2]
                     if county_data[3] == None:
                         city_dict["city_image"] = None
@@ -70,10 +81,6 @@ def cities_basic_info():
             else:
                 city_dict["city_name"] = city_data[2]
                 if city_data[3] == None:
-                    county_url = "http://api.datausa.io/attrs/geo/" + county_id
-                    response2 = requests.get(county_url)
-                    data2 = json.loads(response2.text)
-                    county_data = data2["data"][0]
                     if county_data[3] == None:
                         city_dict["city_image"] = None
                     else:
@@ -95,8 +102,7 @@ def cities_basic_info():
             else:
                 print(str(count) + " **** " + uni_data["county_id"])
 
-
-    print("********************************* failed " + str(failed) + " count " + str(count))
+    print("************ failed " + str(failed) + " count " + str(count))
 
     with open('cities.json', 'w') as fi:
         json.dump(cities_list, fi)
@@ -133,9 +139,55 @@ def flicker_pic_url(url):
     if len(images) > 0:
         return images[0]
     else:
-        c += 1
+        number_of_images_failed_flicker+= 1
         return None
 
+
+def add_city_images_from_bing():
+    global number_of_images_failed_bing
+    with open('cities.json', 'r') as f:
+         city_data = json.load(f)
+
+    for city_dict in city_data:
+        city_name = city_dict["city_name"]
+        county_name = city_dict["county_name"]
+        if city_dict["city_image"] is None:
+            city_dict["city_image"] = scrape_city_pic_bing(city_name, county_name)
+            city_dict["image_description"] = "Downtown " + city_name
+
+        if city_dict["image_description"] is None:
+            city_dict["image_description"] = "Image taken in " + city_name
+
+    print(number_of_images_failed_bing)
+    with open('cities.json', 'w') as fi:
+        json.dump(city_data, fi)
+
+def scrape_city_pic_bing(city_name, county_name):
+    global number_of_images_failed_bing
+    query = ["Downtown " + city_name , "Downtown " + county_name]
+    for q in query:
+        search_query = q + " flicker"
+        search_url = "https://api.cognitive.microsoft.com/bing/v7.0/images/search"
+        headers = {"Ocp-Apim-Subscription-Key" : bing_key}
+        params  = {"q": search_query, "safeSearch": "Strict", "imageType": "photo"}
+        response = requests.get(search_url, headers=headers, params=params)
+        response.raise_for_status()
+        search_results = response.json()
+
+        if "value" in search_results:
+            if (len(search_results["value"]) > 0) and ("contentUrl" in search_results["value"][0]):
+                print("success " + city_name + " " + search_results["value"][0]["contentUrl"])
+                return search_results["value"][0]["contentUrl"]
+
+    number_of_images_failed_bing += 1
+    print("*** failed " + city_name )
+    return None
+
+    with open('a.json', 'w') as fi:
+        json.dump(search_results, fi)
+
+
 if __name__ == "__main__":
-    cities_basic_info()
-    print("c = " + str(c))
+    #cities_basic_info()
+    #print("number_of_images_failed_flicker = " + str(number_of_images_failed_flicker))
+    add_city_images_from_bing()
