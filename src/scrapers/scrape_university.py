@@ -265,7 +265,7 @@ def add_top_majors():
          uni_total_data = json.load(f)
 
     year = 0
-    temp_dict = {} # key = cip -- key = number of graduates
+    temp_dict = {} # key = cip -- value = number of graduates
 
     url_get_major_data = 'http://api.datausa.io/api/?show=cip&sumlevel=4&required=university,grads_total&university='
 
@@ -292,6 +292,35 @@ def add_top_majors():
 
 
         uni_data["top_grad_majors"] = major_dict
+
+    with open('university.json', 'w') as fi:
+        json.dump(uni_total_data, fi)
+
+""" Add univiersity type and number of students """
+def add_university_type():
+    temp_dict = {}
+    with open('university.json', 'r') as f:
+         uni_total_data = json.load(f)
+
+    url_get_all_universities = 'http://api.datausa.io/attrs/university'
+    response = requests.get(url_get_all_universities)
+    all_uni_data = json.loads(response.text)
+    all_uni_data = all_uni_data["data"]
+
+    for university in all_uni_data:
+        temp_dict[university[8]] = university[0]
+
+    for uni_data in uni_total_data:
+        uid = uni_data["university_id"]
+        uni_type = temp_dict[uid]
+
+        if uni_type == "1":
+            uni_data["type"] = "public 4 year"
+        elif uni_type == "2":
+            uni_data["type"] = "private, 4 year, and non profit"
+        elif uni_type == "3":
+            uni_data["type"] = "private, 4 year, and for profit"
+
 
     with open('university.json', 'w') as fi:
         json.dump(uni_total_data, fi)
@@ -325,7 +354,6 @@ def count_universities():
 
     print(count)
 
-
 if __name__ == '__main__':
     get_university_stat()
     add_tuition_stat()
@@ -335,3 +363,4 @@ if __name__ == '__main__':
     add_top_majors()
     remove_null_values()
     count_universities()
+    add_university_type()
