@@ -1,0 +1,2210 @@
+[
+    {
+        "image_link": "https://c1.staticflickr.com/3/2874/9655353982_05bea72a19_b.jpg",
+        "major_id": "0100",
+        "name": "General Agriculture",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "0101",
+        "name": "Agriculture Business & Management",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "0102",
+        "name": "Agricultural Mechanization",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "0103",
+        "name": "Agricultural Production Operations",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "0104",
+        "name": "Agricultural & Food Products Processing",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/4/3606/3384868234_768b5cc391_b.jpg",
+        "major_id": "0105",
+        "name": "Agricultural & Domestic Animal Services",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "0106",
+        "name": "Applied Horticulture & Horticulture Business Services",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "0107",
+        "name": "International Agriculture",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "0108",
+        "name": "Agricultural Public Services",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/4/3606/3384868234_768b5cc391_b.jpg",
+        "major_id": "0109",
+        "name": "Animal Sciences",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "0110",
+        "name": "Food Science & Technology",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "0111",
+        "name": "Plant Sciences",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "0112",
+        "name": "Soil Sciences",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "0199",
+        "name": "Other Agriculture Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "0301",
+        "name": "Natural Resource Conservation & Research",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "0302",
+        "name": "Natural Resource Management & Policy",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "0303",
+        "name": "Fishing & Fisheries",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "0305",
+        "name": "Forestry",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "0306",
+        "name": "Wildlife & Wildlands",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "0399",
+        "name": "Other Natural Resource & Conservation Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "0402",
+        "name": "Architecture",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/3/2648/3780761537_b737afd30e_b.jpg",
+        "major_id": "0403",
+        "name": "Urban Planning",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/7/6014/5922912229_f00a59498a_b.jpg",
+        "major_id": "0404",
+        "name": "Environmental Design",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "0405",
+        "name": "Interior Architecture",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "0406",
+        "name": "Landscape Architecture",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "0408",
+        "name": "Architectural History & Criticism",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "0409",
+        "name": "Architectural Sciences & Technology",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "0410",
+        "name": "Real Estate Development",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "0499",
+        "name": "Other Architecture Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "0501",
+        "name": "Area Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/6/5608/15520351226_3f906740f3_b.jpg",
+        "major_id": "0502",
+        "name": "Ethnic, Cultural, & Gender Group Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "0901",
+        "name": "Communication and Media Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/4/3747/10030588973_a4bf618be6_b.jpg",
+        "major_id": "0904",
+        "name": "Journalism",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "0907",
+        "name": "Radio, Television, & Digital Communication",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "0909",
+        "name": "Public Relations, Advertising, & Applied Communication",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "0910",
+        "name": "Publishing",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "0999",
+        "name": "Other Communication Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/8/7346/12645047085_cf5c796182_b.jpg",
+        "major_id": "1001",
+        "name": "Communication Technology",
+        "is_stem": 1
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/1/722/21717757992_196e4f751f_b.jpg",
+        "major_id": "1002",
+        "name": "Audiovisual Communications Technology",
+        "is_stem": 1
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/8/7046/6936208501_1c319e609d_b.jpg",
+        "major_id": "1003",
+        "name": "Graphic Communications",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1099",
+        "name": "Other Communication Technology Studies",
+        "is_stem": 1
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/1/348/18533612826_f79e56792c_b.jpg",
+        "major_id": "1101",
+        "name": "General Computer & Information Sciences",
+        "is_stem": 1
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/1/563/20607701226_e0b1226cd2_b.jpg",
+        "major_id": "1102",
+        "name": "Computer Programming",
+        "is_stem": 1
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/5/4060/4671578001_98025ec7d7_b.jpg",
+        "major_id": "1103",
+        "name": "Data Processing",
+        "is_stem": 2
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/8/7211/7211176930_a133ea7da1_b.jpg",
+        "major_id": "1104",
+        "name": "Information Sciences",
+        "is_stem": 2
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/9/8464/8106200690_231e5d271a_b.jpg",
+        "major_id": "1105",
+        "name": "Computer Systems Analysis",
+        "is_stem": 2
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/8/7045/7048321621_d07579c9af_b.jpg",
+        "major_id": "1106",
+        "name": "Data Entry Applications",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/4/3482/3199198129_57ac9eee34_b.jpg",
+        "major_id": "1107",
+        "name": "Computer Science",
+        "is_stem": 2
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/8/7483/15844528691_1fb308dd5d_b.jpg",
+        "major_id": "1108",
+        "name": "Computer Software & Media Applications",
+        "is_stem": 1
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/3/2632/4020643940_2f929975cf_b.jpg",
+        "major_id": "1109",
+        "name": "Networking & Telecommunication Systems",
+        "is_stem": 2
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/4/3437/3236782236_0e0ee5e6e5_b.jpg",
+        "major_id": "1110",
+        "name": "Computer Technology Administration & Management",
+        "is_stem": 1
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/5/4057/4714238826_bfb0be9da3_b.jpg",
+        "major_id": "1199",
+        "name": "Other Computer Service Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/4/3557/3525960755_2128e52b1b_b.jpg",
+        "major_id": "1203",
+        "name": "Funeral Service & Mortuary Science",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/3/2888/9973787805_14ecdeee82_b.jpg",
+        "major_id": "1204",
+        "name": "Cosmetology & Personal Grooming Services",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/8/7373/8950597233_a20a804419_b.jpg",
+        "major_id": "1205",
+        "name": "Culinary Arts & Related Services",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/4/3450/3881397682_c9b3a15c45_b.jpg",
+        "major_id": "1299",
+        "name": "Other Personal & Culinary Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/4/3550/3382665453_4f23360244_b.jpg",
+        "major_id": "1301",
+        "name": "General Education",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "1302",
+        "name": "Multilingual & Multicultural Education",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "1303",
+        "name": "Curriculum & Instruction",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "1304",
+        "name": "Educational Administration & Support",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "1305",
+        "name": "Educational Media Design",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1306",
+        "name": "Educational Assessment & Evaluation",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1307",
+        "name": "International & Comparative Education",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "1309",
+        "name": "Social & Philisophical Foundations of Education",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "1310",
+        "name": "Special Education",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "1311",
+        "name": "Student Counseling",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "1312",
+        "name": "Teacher Education at Specific Levels & Methods",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "1313",
+        "name": "Teacher Education for Specific Subject Areas",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "1314",
+        "name": "Teaching English or French as a Foreign Language",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "1315",
+        "name": "Teaching Assistants & Aides",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "1399",
+        "name": "Other Education Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "1401",
+        "name": "General Engineering",
+        "is_stem": 2
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/2/1391/5350433303_db734549d4_b.jpg",
+        "major_id": "1402",
+        "name": "Aerospace, Aeronautical & Astronautical Engineering",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1403",
+        "name": "Agricultural Engineering",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1404",
+        "name": "Architectural Engineering",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1405",
+        "name": "Biomedical Engineering",
+        "is_stem": 2
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/2/1313/753721023_3785056879_b.jpg",
+        "major_id": "1406",
+        "name": "Ceramic Engineering",
+        "is_stem": 2
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/9/8105/8595078081_fc4e900f8a_b.jpg",
+        "major_id": "1407",
+        "name": "Chemical Engineering",
+        "is_stem": 1
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/7/6230/6235110515_8b5f17391f_b.jpg",
+        "major_id": "1408",
+        "name": "Civil Engineering",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "1409",
+        "name": "Computer Engineering",
+        "is_stem": 1
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/8/7241/6903717850_91e20d7680_b.jpg",
+        "major_id": "1410",
+        "name": "Electrical Engineering",
+        "is_stem": 1
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/5/4140/4794388559_d011c1963c_b.jpg",
+        "major_id": "1411",
+        "name": "Engineering Mechanics",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1412",
+        "name": "Engineering Physics",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1413",
+        "name": "Engineering Science",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1414",
+        "name": "Environmental Engineering",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1418",
+        "name": "Materials Engineering",
+        "is_stem": 2
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/4/3427/3388785592_9a0f46530e_b.jpg",
+        "major_id": "1419",
+        "name": "Mechanical Engineering",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1420",
+        "name": "Metallurgical Engineering",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1421",
+        "name": "Mining & Mineral Engineering",
+        "is_stem": 2
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/6/5615/15826619591_9d8cf53fd4_b.jpg",
+        "major_id": "1422",
+        "name": "Marine Engineering & Architecture",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1423",
+        "name": "Nuclear Engineering",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1424",
+        "name": "Ocean Engineering",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1425",
+        "name": "Petroleum Engineering",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1427",
+        "name": "Systems Engineering",
+        "is_stem": 2
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/3/2477/3545919603_e4cc0ab810_b.jpg",
+        "major_id": "1428",
+        "name": "Textile Sciences & Engineering",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1432",
+        "name": "Polymer & Plastics Engineering",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1433",
+        "name": "Construction Engineering",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1434",
+        "name": "Forest Engineering",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1435",
+        "name": "Industrial Engineering",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1436",
+        "name": "Manufacturing Engineering",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1437",
+        "name": "Operations Research",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1438",
+        "name": "Surveying Engineering",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1439",
+        "name": "Geological & Geophysical Engineering",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1440",
+        "name": "Paper Science & Engineering",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1441",
+        "name": "Electromechanical Engineering",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1442",
+        "name": "Robotics & Automation Engineering",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1443",
+        "name": "Biochemical Engineering",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1444",
+        "name": "Engineering Chemistry",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1445",
+        "name": "Biological & Biosystems Engineering",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1499",
+        "name": "Other Engineering Studies",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1500",
+        "name": "General Engineering Technologies",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1501",
+        "name": "Architectural Engineering Technologies",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1502",
+        "name": "Civil Engineering Technologies",
+        "is_stem": 2
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/8/7306/13472499003_dd40f7a300_b.jpg",
+        "major_id": "1503",
+        "name": "Electrical Engineering Technologies",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "1504",
+        "name": "Electromechanical Instrumentation & Maintenance Technologies",
+        "is_stem": 1
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/9/8558/8767882443_909cd11b9b_b.jpg",
+        "major_id": "1505",
+        "name": "Environmental Control Technologies",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "1506",
+        "name": "Industrial Production Technologies",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "1507",
+        "name": "Quality Control & Safety Technologies",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "1508",
+        "name": "Mechanical Engineering Technologies",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "1509",
+        "name": "Mining & Petroleum Technologies",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "1510",
+        "name": "Construction Engineering Technologies",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1511",
+        "name": "Engineering-Related Technologies",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "1512",
+        "name": "Computer Engineering Technologies",
+        "is_stem": 1
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/4/3911/14184697490_50277ece50_b.jpg",
+        "major_id": "1513",
+        "name": "Drafting & Design Engineering Technologies",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "1514",
+        "name": "Nuclear Engineering Technologies",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1515",
+        "name": "Engineering-Related Fields",
+        "is_stem": 1
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/4/3125/3191719900_665f6c8c93_b.jpg",
+        "major_id": "1516",
+        "name": "Nanotechnology",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "1599",
+        "name": "Other Engineering Technology Studies",
+        "is_stem": 2
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/9/8048/8359298228_1514fb3753_b.jpg",
+        "major_id": "1601",
+        "name": "Linguistic, Comparative, & Related Language Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/9/8048/8359298228_1514fb3753_b.jpg",
+        "major_id": "1602",
+        "name": "African Languages, Literatures, & Linguistics",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/9/8048/8359298228_1514fb3753_b.jpg",
+        "major_id": "1603",
+        "name": "East Asian Languages, Literatures, & Linguistics",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/9/8048/8359298228_1514fb3753_b.jpg",
+        "major_id": "1604",
+        "name": "Slavic, Baltic, & Albanian Languages, Literatures, & Linguistics",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/9/8048/8359298228_1514fb3753_b.jpg",
+        "major_id": "1605",
+        "name": "Germanic Languages, Literatures, & Linguistics",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/9/8048/8359298228_1514fb3753_b.jpg",
+        "major_id": "1606",
+        "name": "Modern Greek Languages & Literature",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/9/8048/8359298228_1514fb3753_b.jpg",
+        "major_id": "1607",
+        "name": "South Asian Languages, Literatures, & Linguistics",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/9/8048/8359298228_1514fb3753_b.jpg",
+        "major_id": "1608",
+        "name": "Iranian or Persian Languages, Literatures, & Linguistics",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/9/8048/8359298228_1514fb3753_b.jpg",
+        "major_id": "1609",
+        "name": "Romance Languages, Literatures, & Linguistics",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "1610",
+        "name": "Native American Languages, Literature, & Linguistics",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "1611",
+        "name": "Middle Eastern & Semitic Languages, Literatures, & Linguistics",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "1612",
+        "name": "Classical Languages, Literatures, & Linguistics",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "1613",
+        "name": "Celtic Languages, Literatures, & Linguistics",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "1614",
+        "name": "Southeast Asian & Australian/Pacific Languages, Literatures, & Linguistics",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "1615",
+        "name": "Turkic, Uralic-Altaic, Caucasian, & Central Asian Languages, Literatures, & Linguistics",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/6/5569/14539449085_02e493f578_b.jpg",
+        "major_id": "1616",
+        "name": "American Sign Language",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/9/8048/8359298228_1514fb3753_b.jpg",
+        "major_id": "1699",
+        "name": "Other Foreign Languages, Literature, & Linguistic Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "1900",
+        "name": "Work & Family Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "1901",
+        "name": "General Family & Consumer Sciences",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "1902",
+        "name": "Family & Consumer Science Business Services",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "1904",
+        "name": "Family & Consumer Economics Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "1905",
+        "name": "Foods, Nutrition, & Related Services",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "1906",
+        "name": "Housing & Human Environments",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/6/5009/5266440761_a3396bd691_b.jpg",
+        "major_id": "1907",
+        "name": "Human Development & Family Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/3/2477/3545919603_e4cc0ab810_b.jpg",
+        "major_id": "1909",
+        "name": "Apparel & Textiles",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "1999",
+        "name": "Other Family & Consumer Sciences Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "2200",
+        "name": "Undergraduate Non-Professional General Legal Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/5/4055/4703735977_dcb6ee8ac6_b.jpg",
+        "major_id": "2201",
+        "name": "Law",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "2202",
+        "name": "Legal Research & Advanced Professional Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/5/4039/4312159033_6b1c4ce360_b.jpg",
+        "major_id": "2203",
+        "name": "Legal Support Services",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "2299",
+        "name": "Other Legal Professional Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/8/7453/16438065636_6a14a51f38_b.jpg",
+        "major_id": "2301",
+        "name": "General English Language & Literature",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/6/5550/9355090806_80b6faabc7_b.jpg",
+        "major_id": "2313",
+        "name": "Rhetoric & Composition",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "2314",
+        "name": "Literature",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "2399",
+        "name": "Other English Language & Literature",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/6/5571/15069962356_99fcd893c8_b.jpg",
+        "major_id": "2401",
+        "name": "Liberal Arts & Sciences",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "2501",
+        "name": "Library Science & Administration",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "2503",
+        "name": "Library & Archives Assisting",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "2599",
+        "name": "Other Library Science Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/3/2603/4009837528_c2a5e727b0_b.jpg",
+        "major_id": "2601",
+        "name": "General Biology",
+        "is_stem": 2
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/2/1339/633638998_7ad18977ce_b.jpg",
+        "major_id": "2602",
+        "name": "Biochemistry, Biophysics, & Molecular Biology",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "2603",
+        "name": "Plant Biology",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "2604",
+        "name": "Cellular Biology & Anatomical Sciences",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "2605",
+        "name": "Microbiological Sciences & Immunology",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "2607",
+        "name": "Animal Biology",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "2608",
+        "name": "Genetics",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "2609",
+        "name": "Physiology & Pathology",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "2610",
+        "name": "Pharmacology & Toxicology",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "2611",
+        "name": "Biomathematics, Bioinformatics, & Computational Biology",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "2612",
+        "name": "Biotechnology",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "2613",
+        "name": "Ecology, Evolution, Systematics, & Population Biology",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "2614",
+        "name": "Molecular Medicine",
+        "is_stem": 2
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/4/3792/10799674936_5901488c03_b.jpg",
+        "major_id": "2615",
+        "name": "Neurobiology & Neurosciences",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "2699",
+        "name": "Other Biological & Biomedical Science Studies",
+        "is_stem": 2
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/3/2693/4362414729_3a544f36c6_b.jpg",
+        "major_id": "2701",
+        "name": "Mathematics",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "2703",
+        "name": "Applied Mathematics",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "2705",
+        "name": "Statistics",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "2799",
+        "name": "Other Mathematics Studies",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "2902",
+        "name": "Intelligence, Command Control, & Information Operations",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "2903",
+        "name": "Military Applied Sciences",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "2904",
+        "name": "Military Systems & Mainenance Technology",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "2999",
+        "name": "Other Military Technology & Applied Science Studies",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "3000",
+        "name": "General Interdisciplinary Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/7/6073/6103809965_98ab670317_b.jpg",
+        "major_id": "3001",
+        "name": "Biological & Physical Sciences",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "3005",
+        "name": "Peace Studies & Conflict Resolution",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "3006",
+        "name": "Systems Science & Theory",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "3008",
+        "name": "Mathematics & Computer Science",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "3010",
+        "name": "Biopsychology",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "3011",
+        "name": "Gerontology",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "3012",
+        "name": "Historic Preservation & Conservation",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "3013",
+        "name": "Medieval & Renaissance Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "3014",
+        "name": "Museum Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "3015",
+        "name": "Science, Technology, & Society",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "3016",
+        "name": "Accounting & Computer Science",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "3017",
+        "name": "Behavioral Sciences",
+        "is_stem": 2
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/4/3064/2943987950_270ecdee90_b.jpg",
+        "major_id": "3018",
+        "name": "Natural Sciences",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "3019",
+        "name": "Nutrition Sciences",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "3020",
+        "name": "International Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "3021",
+        "name": "Holocaust Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "3022",
+        "name": "Classical & Ancient Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "3023",
+        "name": "Multicultural & Diversity Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "3025",
+        "name": "Cognitive Science",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "3026",
+        "name": "Critical Theory & Analysis of Cultural Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "3027",
+        "name": "Human Biology",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "3028",
+        "name": "Dispute Resolution",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "3029",
+        "name": "Maritime Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "3030",
+        "name": "Computational Science",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "3031",
+        "name": "Human Computer Interaction",
+        "is_stem": 2
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/6/5615/15826619591_9d8cf53fd4_b.jpg",
+        "major_id": "3032",
+        "name": "Marine Sciences",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "3033",
+        "name": "Sustainability Studies",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "3099",
+        "name": "Other Interdisciplinary Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "3101",
+        "name": "Parks, Recreation, & Leisure Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "3103",
+        "name": "Parks, Recreation, & Leisure Facilities Management",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/4/3676/9215433640_c3e212b24e_b.jpg",
+        "major_id": "3105",
+        "name": "Health & Physical Education",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "3106",
+        "name": "Outdoor Education",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "3199",
+        "name": "Other Parks, Recreation, Leisure, & Fitness Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "3800",
+        "name": "General Philosophy & Religious Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/6/5294/5398744463_dc62d36455_b.jpg",
+        "major_id": "3801",
+        "name": "Philosophy",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "3802",
+        "name": "Religious Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "3899",
+        "name": "Other Philosophy & Religious Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "3902",
+        "name": "Biblical Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "3903",
+        "name": "Missionary Studies & Missiology",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "3904",
+        "name": "Religious Education",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/1/6/10287884_b4649224d3_b.jpg",
+        "major_id": "3905",
+        "name": "Religious & Sacred Music",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/5/4055/5124899914_41f5a699f7_b.jpg",
+        "major_id": "3906",
+        "name": "Theological & Ministerial Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "3907",
+        "name": "Pastoral Counseling & Specialized Ministries",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "3999",
+        "name": "Other Theology & Religious Vocations",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4001",
+        "name": "Physical Sciences",
+        "is_stem": 2
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/6/5573/14775084560_c718151f0b_b.jpg",
+        "major_id": "4002",
+        "name": "Astronomy & Astrophysics",
+        "is_stem": 1
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/6/5586/14721969260_3361274dea_b.jpg",
+        "major_id": "4004",
+        "name": "Atmospheric Sciences & Meteorology",
+        "is_stem": 1
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/9/8105/8595078081_fc4e900f8a_b.jpg",
+        "major_id": "4005",
+        "name": "Chemistry",
+        "is_stem": 1
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/4/3850/14592426527_411ec40ba5_b.jpg",
+        "major_id": "4006",
+        "name": "Geological & Earth Sciences",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "4008",
+        "name": "Physics",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "4010",
+        "name": "Materials Sciences",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "4099",
+        "name": "Other Physical Sciences",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "4100",
+        "name": "General Science Technologies",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "4101",
+        "name": "Biology & Laboratory Technology",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "4102",
+        "name": "Nuclear & Industrial Radiologic Technologies",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "4103",
+        "name": "Physical Science Technologies",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "4199",
+        "name": "Other Science Technologies",
+        "is_stem": 2
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/2/1173/1457916047_ec9f89bb35_b.jpg",
+        "major_id": "4201",
+        "name": "General Psychology",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4227",
+        "name": "Research & Experimental Psychology",
+        "is_stem": 1
+    },
+    {
+        "image_link": null,
+        "major_id": "4228",
+        "name": "Clinical, Counseling, & Applied Psychology",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4299",
+        "name": "Other Psychology Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/9/8384/8619251251_8c6c65f486_b.jpg",
+        "major_id": "4301",
+        "name": "Criminal Justice & Corrections",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "4302",
+        "name": "Fire Protection",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4303",
+        "name": "Homeland Security",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4399",
+        "name": "Homeland Security, Law Enforcement, Firefighting, & Related Protective Services",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4400",
+        "name": "General Human Services",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4402",
+        "name": "Community Organization & Advocacy",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4404",
+        "name": "Public Administration",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4405",
+        "name": "Public Work Analysis",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/4/3930/15422497462_bbfac54bf8_b.jpg",
+        "major_id": "4407",
+        "name": "Social Work",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4499",
+        "name": "Other Public Administration & Social Services",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/8/7405/11144838125_d83494c556_b.jpg",
+        "major_id": "4501",
+        "name": "General Social Sciences",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4502",
+        "name": "Anthropology",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4503",
+        "name": "Archeology",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "4504",
+        "name": "Crminology",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4505",
+        "name": "Demography & Population Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/1/229/479370088_2e7091fc6e_b.jpg",
+        "major_id": "4506",
+        "name": "Economics",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "4507",
+        "name": "Geography & Cartography",
+        "is_stem": 2
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/3/2063/1795084139_0a18aafe6c_b.jpg",
+        "major_id": "4509",
+        "name": "International Relations & National Security Studies",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/9/8029/7974657777_16899dbf5b_b.jpg",
+        "major_id": "4510",
+        "name": "Political Science & Government",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4511",
+        "name": "Sociology",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4512",
+        "name": "Urban Affairs",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4513",
+        "name": "Sociology & Anthropology",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4514",
+        "name": "Rural Sociology",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4599",
+        "name": "Other Social Sciences",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4600",
+        "name": "General Construction Trades",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4601",
+        "name": "Masonry",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4602",
+        "name": "Carpenters",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/1/682/21474844054_9ea790b98f_b.jpg",
+        "major_id": "4603",
+        "name": "Electrical & Power Transmission Installers",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4604",
+        "name": "Construction Finishing, Management, & Inspection",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4605",
+        "name": "Plumbing & Related Water Supply Services",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4699",
+        "name": "Other Construction Trades",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4700",
+        "name": "General Mechanics & Repairers",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4701",
+        "name": "Electrical Maintenance & Repair Technology",
+        "is_stem": 1
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/9/8558/8767882443_909cd11b9b_b.jpg",
+        "major_id": "4702",
+        "name": "HVAC & Refrigeration Maintenance",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4703",
+        "name": "Industrial Equipment Maintenance Technologies",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4704",
+        "name": "Precision Systems Maintenance & Repair Technologies",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/8/7266/7744321194_2c0364c8ac_b.jpg",
+        "major_id": "4706",
+        "name": "Vehicle Maintenance & Repair Technologies",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4799",
+        "name": "Other Mechanic & Repair Technologies",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4800",
+        "name": "General Precision Production Trades",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4803",
+        "name": "Leatherworking & Upholstery",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/7/6036/6220466929_143b2b15b4_b.jpg",
+        "major_id": "4805",
+        "name": "Precision Metal Working",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4807",
+        "name": "Woodworking",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4808",
+        "name": "Boilermaking",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4899",
+        "name": "Other Precision Production",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4901",
+        "name": "Air Transportation",
+        "is_stem": 2
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/3/2221/2574955346_3fc96dac8c_b.jpg",
+        "major_id": "4902",
+        "name": "Ground Transportation",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/6/5615/15826619591_9d8cf53fd4_b.jpg",
+        "major_id": "4903",
+        "name": "Marine Transportation",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "4999",
+        "name": "Other Transportation & Materials Moving",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "5001",
+        "name": "General Visual & Performaing Arts",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/1/226/497869984_44ba35398a_b.jpg",
+        "major_id": "5002",
+        "name": "Craft Design, Folk Art, & Artisanry",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/6/5045/5315075458_ccbed8b54a_b.jpg",
+        "major_id": "5003",
+        "name": "Dance",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/9/8382/8631106691_b8c2ab7f5b_b.jpg",
+        "major_id": "5004",
+        "name": "Design & Applied Arts",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/1/382/19001997850_e463ede862_b.jpg",
+        "major_id": "5005",
+        "name": "Theater Arts & Stagecraft",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/1/204/456852642_ded5531a3b_b.jpg",
+        "major_id": "5006",
+        "name": "Video & Photographic Arts",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/4/3317/13073175563_17fcc706fe_b.jpg",
+        "major_id": "5007",
+        "name": "Fine & Studio Arts",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/4/3209/2839965900_c23f818c97_b.jpg",
+        "major_id": "5009",
+        "name": "Music",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "5010",
+        "name": "Arts, Entertainment, & Media Management",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "5099",
+        "name": "Other Visual & Performing Arts",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/8/7369/9773250026_90b38be3b4_b.jpg",
+        "major_id": "5100",
+        "name": "General Allied Health & Health Sciences",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "5101",
+        "name": "Chiropractic",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/6/5580/15075617729_0f477ec447_b.jpg",
+        "major_id": "5102",
+        "name": "Communication Disorders Sciences & Services",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "5104",
+        "name": "Dentistry",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "5105",
+        "name": "Graduate Dentistry & Oral Sciences",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/7/6177/6152923548_2e835dcdbc_b.jpg",
+        "major_id": "5106",
+        "name": "Dental Support Services",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/9/8050/8116027525_b98ce26f4f_b.jpg",
+        "major_id": "5107",
+        "name": "Health & Medical Administrative Services",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/9/8050/8116027525_b98ce26f4f_b.jpg",
+        "major_id": "5108",
+        "name": "Allied Health & Medical Assisting Services",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/9/8050/8116027525_b98ce26f4f_b.jpg",
+        "major_id": "5109",
+        "name": "Allied Diagnostic, Intervention, & Treatment Professions",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/4/3804/9955408003_59cf69ab8c_b.jpg",
+        "major_id": "5110",
+        "name": "Medical Laboratory Research & Allied Professions",
+        "is_stem": 2
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/9/8050/8116027525_b98ce26f4f_b.jpg",
+        "major_id": "5111",
+        "name": "Medical Preparatory Programs",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/5/4076/4854327672_ee05e427f1_b.jpg",
+        "major_id": "5112",
+        "name": "Medicine",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "5114",
+        "name": "Medical Clinical Sciences & Graduate Medical Studies",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "5115",
+        "name": "Mental & Social Health Services & Allied Professions",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "5117",
+        "name": "Optometry",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "5118",
+        "name": "Ophthalmic & Optometric Support Services",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "5119",
+        "name": "Osteopathic Medicine",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "5120",
+        "name": "Pharmaceutical Sciences & Administration",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "5121",
+        "name": "Podiatric Medicine",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "5122",
+        "name": "Public Health",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "5123",
+        "name": "Rehabilitation & Therapeutic Professions",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/4/3478/3462596443_e4f097f059_b.jpg",
+        "major_id": "5124",
+        "name": "Veterinary Medicine",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "5125",
+        "name": "Veterinary Biomedical & Clinical Sciences",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "5126",
+        "name": "Health Aides, Attendants, & Orderlies",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "5127",
+        "name": "Medical Illustration & Informatics",
+        "is_stem": 2
+    },
+    {
+        "image_link": null,
+        "major_id": "5131",
+        "name": "Dietetics & Clinical Nutrition Services",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "5132",
+        "name": "Medical Ethics & Bioethics",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "5133",
+        "name": "Alternative & Complementary Medicine",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "5134",
+        "name": "Alternative & Complementary Medical Support Services",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "5135",
+        "name": "Somatic Bodywork & Related Therapeutic Services",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "5136",
+        "name": "Movement & Mind-Body Therapies",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "5137",
+        "name": "Energy & Biologically Based Therapies",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/9/8050/8116027525_b98ce26f4f_b.jpg",
+        "major_id": "5138",
+        "name": "Registered Nursing, Nursing Administration, & Nursing Research",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/9/8050/8116027525_b98ce26f4f_b.jpg",
+        "major_id": "5139",
+        "name": "Practical Nursing, Vocational Nursing, & Nursing Assistants",
+        "is_stem": 0
+    },
+    {
+        "image_link": null,
+        "major_id": "5199",
+        "name": "Other Health Professions & Related Clinical Sciences",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/5/4049/4303414729_b0e31c70bd_b.jpg",
+        "major_id": "5201",
+        "name": "General Business & Commerce",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/5/4049/4303414729_b0e31c70bd_b.jpg",
+        "major_id": "5202",
+        "name": "Business Administration, Management, & Operations",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/6/5275/5913069484_bba50ff98e_b.jpg",
+        "major_id": "5203",
+        "name": "Accounting",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/6/5495/14282446279_c0a280668a_b.jpg",
+        "major_id": "5204",
+        "name": "Business Operations Support Services",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/9/8569/15674026177_c9262273d2_b.jpg",
+        "major_id": "5205",
+        "name": "Business Communications",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/5/4237/35078658785_fedfdd3bdd_b.jpg",
+        "major_id": "5206",
+        "name": "Managerial Economics",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/9/8811/16854679270_6ab553e095_b.jpg",
+        "major_id": "5207",
+        "name": "Entrepreneurial & Small Business Operations",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/6/5275/5913069484_bba50ff98e_b.jpg",
+        "major_id": "5208",
+        "name": "Financial Management Services",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/8/7359/11929391836_9558c901b1_b.jpg",
+        "major_id": "5209",
+        "name": "Hospitality Management",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/6/5254/5498329705_3a3059b478_b.jpg",
+        "major_id": "5210",
+        "name": "Human Resource Management & Services",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/1/229/479370088_2e7091fc6e_b.jpg",
+        "major_id": "5211",
+        "name": "International Business",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/8/7408/10865462556_f00e047a8e_b.jpg",
+        "major_id": "5212",
+        "name": "Management Information Systems & Services",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/9/8875/17991316314_7039143a51_b.jpg",
+        "major_id": "5213",
+        "name": "Management Sciences & Quantitative Methods",
+        "is_stem": 1
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/1/229/479370088_2e7091fc6e_b.jpg",
+        "major_id": "5214",
+        "name": "Marketing",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/1/229/479370088_2e7091fc6e_b.jpg",
+        "major_id": "5215",
+        "name": "Real Estate",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/6/5275/5913069484_bba50ff98e_b.jpg",
+        "major_id": "5216",
+        "name": "Taxation",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c2.staticflickr.com/8/7089/7174852466_31bd491cb5_b.jpg",
+        "major_id": "5217",
+        "name": "Insurance",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/1/229/479370088_2e7091fc6e_b.jpg",
+        "major_id": "5218",
+        "name": "General Sales, Merchandising, & Marketing Operations",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/1/229/479370088_2e7091fc6e_b.jpg",
+        "major_id": "5219",
+        "name": "Specialized Sales, Merchandising, & Marketing Operations",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/3/2887/13213329923_f2cb76ef12_b.jpg",
+        "major_id": "5220",
+        "name": "Construction Management",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/1/124/318622997_407407d29c_b.jpg",
+        "major_id": "5221",
+        "name": "Telecommunications Management",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/1/229/479370088_2e7091fc6e_b.jpg",
+        "major_id": "5299",
+        "name": "Other Business, Management, Marketing, & Related Services",
+        "is_stem": 0
+    },
+    {
+        "image_link": "https://c1.staticflickr.com/3/2479/3650358036_e96f44c3c2_b.jpg",
+        "major_id": "5401",
+        "name": "History",
+        "is_stem": 0
+    }
+]
