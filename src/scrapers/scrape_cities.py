@@ -262,7 +262,8 @@ def add_top_majors_in_county():
         print("\n\n************" + str(county_count) + "***************\n\n")
         major_dict = {}
         top_five = 0
-        for key, value in sorted(temp_dict.iteritems(), key=lambda (k, v): (v, k), reverse=True):
+        for key in sorted(temp_dict, key=temp_dict.get, reverse=True):
+            value = temp_dict[key]
             major_dict["data_year"] = year
             major_dict[key] = value
             top_five += 1

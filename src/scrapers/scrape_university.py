@@ -296,7 +296,8 @@ def add_top_majors():
         print("\n\n************" + str(countt) + "***************\n\n")
         major_dict = {}
         count = 0
-        for key, value in sorted(temp_dict.iteritems(), key=lambda (k, v): (v, k), reverse=True):
+        for key in sorted(temp_dict, key=temp_dict.get, reverse=True):
+            value = temp_dict[key]
             major_dict["data_year"] = year
             major_dict[key] = value
             count += 1
