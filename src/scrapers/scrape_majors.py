@@ -1,10 +1,13 @@
 import requests
 import json
 from BeautifulSoup import BeautifulSoup
+from keys import bing_key
 import urllib2
 
 majors_list = []
 image_failed_count = 0
+images_failed_bing = 0
+
 def majors_basic_info():
 
     global image_failed_count
@@ -55,6 +58,17 @@ def majors_basic_info():
     with open('majors.json', 'w') as fi:
         json.dump(majors_list, fi)
 
+def add_pictures_from_bing():
+    with open('majors.json', 'r') as f:
+        majors_data = json.load(f)
+
+    for major in majors_data:
+        if major["image_link"] is None:
+            major["image_link"] = scrape_city_pic_bing(major["name"])
+
+    with open('majors.json', 'w') as fi:
+        json.dump(majors_data, fi)
+
 def flicker_pic_url(url):
     global c
     html_page = urllib2.urlopen(url + "/sizes")
@@ -90,5 +104,27 @@ def flicker_pic_url(url):
         number_of_images_failed_flicker+= 1
         return None
 
+def scrape_city_pic_bing(major_name):
+    global mages_failed_bing
+    query = [major_name , major_name + " major", major_name + " major flicker"]
+    for q in query:
+        search_query = q
+        search_url = "https://api.cognitive.microsoft.com/bing/v7.0/images/search"
+        headers = {"Ocp-Apim-Subscription-Key" : bing_key}
+        params  = {"q": search_query, "safeSearch": "Strict", "imageType": "photo"}
+        response = requests.get(search_url, headers=headers, params=params)
+        response.raise_for_status()
+        search_results = response.json()
+
+        if "value" in search_results:
+            if (len(search_results["value"]) > 0) and ("contentUrl" in search_results["value"][0]):
+                print("success " + major_name + " " + search_results["value"][0]["contentUrl"])
+                return search_results["value"][0]["contentUrl"]
+
+    number_of_images_failed_bing += 1
+    print("*** failed " + city_name )
+    return None
+
 if __name__ == "__main__":
     majors_basic_info()
+    add_pictures_from_bing()

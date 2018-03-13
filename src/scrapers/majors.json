@@ -1,56 +1,14 @@
 [
     {
-        "image_link": "https://c1.staticflickr.com/3/2874/9655353982_05bea72a19_b.jpg",
-        "major_id": "0100",
-        "name": "General Agriculture",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
+        "image_link": "https://www.extension.umn.edu/agriculture/business/img/business-main.jpg",
         "major_id": "0101",
         "name": "Agriculture Business & Management",
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "http://www.sinoacm.com/upfile/agricultural%20mechanization583.jpg",
         "major_id": "0102",
         "name": "Agricultural Mechanization",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "0103",
-        "name": "Agricultural Production Operations",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "0104",
-        "name": "Agricultural & Food Products Processing",
-        "is_stem": 0
-    },
-    {
-        "image_link": "https://c2.staticflickr.com/4/3606/3384868234_768b5cc391_b.jpg",
-        "major_id": "0105",
-        "name": "Agricultural & Domestic Animal Services",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "0106",
-        "name": "Applied Horticulture & Horticulture Business Services",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "0107",
-        "name": "International Agriculture",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "0108",
-        "name": "Agricultural Public Services",
         "is_stem": 0
     },
     {
@@ -60,133 +18,31 @@
         "is_stem": 0
     },
     {
-        "image_link": null,
-        "major_id": "0110",
-        "name": "Food Science & Technology",
-        "is_stem": 1
-    },
-    {
-        "image_link": null,
-        "major_id": "0111",
-        "name": "Plant Sciences",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "0112",
-        "name": "Soil Sciences",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "0199",
-        "name": "Other Agriculture Studies",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
+        "image_link": "https://www.nal.usda.gov/sites/default/files/styles/info-center-subject-pages/public/field/image/pollution_350x218.jpg?itok=onoXHR8L",
         "major_id": "0301",
         "name": "Natural Resource Conservation & Research",
         "is_stem": 0
     },
     {
-        "image_link": null,
-        "major_id": "0302",
-        "name": "Natural Resource Management & Policy",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
+        "image_link": "https://beta.adn.com/resizer/RQJe9vGZUoT1Rg7o4TiwkxVgaDw=/1200x0/s3.amazonaws.com/arc-wordpress-client-uploads/adn/wp-content/uploads/2016/06/01142233/Sitka-herring-03.jpg?token=bar",
         "major_id": "0303",
         "name": "Fishing & Fisheries",
         "is_stem": 0
     },
     {
-        "image_link": null,
-        "major_id": "0305",
-        "name": "Forestry",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "0306",
-        "name": "Wildlife & Wildlands",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "0399",
-        "name": "Other Natural Resource & Conservation Studies",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
+        "image_link": "http://assets.dornob.com/wp-content/uploads/2016/02/heydar-alijev-centre.jpg",
         "major_id": "0402",
         "name": "Architecture",
         "is_stem": 0
     },
     {
-        "image_link": "https://c1.staticflickr.com/3/2648/3780761537_b737afd30e_b.jpg",
-        "major_id": "0403",
-        "name": "Urban Planning",
-        "is_stem": 0
-    },
-    {
-        "image_link": "https://c1.staticflickr.com/7/6014/5922912229_f00a59498a_b.jpg",
-        "major_id": "0404",
-        "name": "Environmental Design",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "0405",
-        "name": "Interior Architecture",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "0406",
-        "name": "Landscape Architecture",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "0408",
-        "name": "Architectural History & Criticism",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "0409",
-        "name": "Architectural Sciences & Technology",
-        "is_stem": 1
-    },
-    {
-        "image_link": null,
-        "major_id": "0410",
-        "name": "Real Estate Development",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "0499",
-        "name": "Other Architecture Studies",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
+        "image_link": "http://arabstudiesinstitute.org/event_assets/pictures/4/main_area_studies_and_political_science.jpg",
         "major_id": "0501",
         "name": "Area Studies",
         "is_stem": 0
     },
     {
-        "image_link": "https://c2.staticflickr.com/6/5608/15520351226_3f906740f3_b.jpg",
-        "major_id": "0502",
-        "name": "Ethnic, Cultural, & Gender Group Studies",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
+        "image_link": "http://oncommunicationmedia.com/assets/img/journal-covers/media/_200xAUTO_fit_center-center_100/MediaFrontCover.jpg",
         "major_id": "0901",
         "name": "Communication and Media Studies",
         "is_stem": 0
@@ -198,34 +54,28 @@
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Selbstfahrerstudio-modern.jpg/1200px-Selbstfahrerstudio-modern.jpg",
         "major_id": "0907",
         "name": "Radio, Television, & Digital Communication",
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "https://theyellowcoincommunication.files.wordpress.com/2015/08/advertising-vs-public-relations.png",
         "major_id": "0909",
         "name": "Public Relations, Advertising, & Applied Communication",
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "http://2.bp.blogspot.com/-4sL318pCc3A/T9Ykrz0OetI/AAAAAAAABp0/KONHXg2v0-Q/s1600/publishing.jpg",
         "major_id": "0910",
         "name": "Publishing",
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "http://d.gr-assets.com/books/1348577177l/984279.jpg",
         "major_id": "0999",
         "name": "Other Communication Studies",
         "is_stem": 0
-    },
-    {
-        "image_link": "https://c2.staticflickr.com/8/7346/12645047085_cf5c796182_b.jpg",
-        "major_id": "1001",
-        "name": "Communication Technology",
-        "is_stem": 1
     },
     {
         "image_link": "https://c1.staticflickr.com/1/722/21717757992_196e4f751f_b.jpg",
@@ -240,21 +90,9 @@
         "is_stem": 2
     },
     {
-        "image_link": null,
-        "major_id": "1099",
-        "name": "Other Communication Technology Studies",
-        "is_stem": 1
-    },
-    {
         "image_link": "https://c1.staticflickr.com/1/348/18533612826_f79e56792c_b.jpg",
         "major_id": "1101",
         "name": "General Computer & Information Sciences",
-        "is_stem": 1
-    },
-    {
-        "image_link": "https://c1.staticflickr.com/1/563/20607701226_e0b1226cd2_b.jpg",
-        "major_id": "1102",
-        "name": "Computer Programming",
         "is_stem": 1
     },
     {
@@ -274,12 +112,6 @@
         "major_id": "1105",
         "name": "Computer Systems Analysis",
         "is_stem": 2
-    },
-    {
-        "image_link": "https://c2.staticflickr.com/8/7045/7048321621_d07579c9af_b.jpg",
-        "major_id": "1106",
-        "name": "Data Entry Applications",
-        "is_stem": 0
     },
     {
         "image_link": "https://c2.staticflickr.com/4/3482/3199198129_57ac9eee34_b.jpg",
@@ -304,12 +136,6 @@
         "major_id": "1110",
         "name": "Computer Technology Administration & Management",
         "is_stem": 1
-    },
-    {
-        "image_link": "https://c1.staticflickr.com/5/4057/4714238826_bfb0be9da3_b.jpg",
-        "major_id": "1199",
-        "name": "Other Computer Service Studies",
-        "is_stem": 0
     },
     {
         "image_link": "https://c2.staticflickr.com/4/3557/3525960755_2128e52b1b_b.jpg",
@@ -342,94 +168,64 @@
         "is_stem": 0
     },
     {
-        "image_link": null,
-        "major_id": "1302",
-        "name": "Multilingual & Multicultural Education",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
+        "image_link": "http://p2cdn4static.sharpschool.com/UserFiles/Servers/Server_4531368/Image/Curriculum%20Shapes.png",
         "major_id": "1303",
         "name": "Curriculum & Instruction",
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "https://nufoundation.org/image/journal/article?img_id=1695035&t=1367349456471",
         "major_id": "1304",
         "name": "Educational Administration & Support",
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "http://www.rimkhobfabooks.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/9/7/978-974-03-3472-9_748x1024_.jpg",
         "major_id": "1305",
         "name": "Educational Media Design",
         "is_stem": 2
     },
     {
-        "image_link": null,
-        "major_id": "1306",
-        "name": "Educational Assessment & Evaluation",
-        "is_stem": 2
-    },
-    {
-        "image_link": null,
-        "major_id": "1307",
-        "name": "International & Comparative Education",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "1309",
-        "name": "Social & Philisophical Foundations of Education",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
+        "image_link": "http://www.kprschools.ca/content/kpr/en/our_schools/resources/specialed/specialeducationcontacts/_jcr_content/image.img.png/1448897107629.png",
         "major_id": "1310",
         "name": "Special Education",
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "https://mysteriesandmanners.files.wordpress.com/2015/06/student-teacher.jpg",
         "major_id": "1311",
         "name": "Student Counseling",
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "https://i2.wp.com/posemethod.com/wp-content/uploads/2016/11/pose-method-certification-seminar.jpg?ssl=1",
         "major_id": "1312",
         "name": "Teacher Education at Specific Levels & Methods",
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "http://images.wisegeek.com/teacher-in-white-shirt-standing-by-group-of-seated-students-at-a-desk.jpg",
         "major_id": "1313",
         "name": "Teacher Education for Specific Subject Areas",
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "http://ecx.images-amazon.com/images/I/51BKuK2Ek9L._SY344_BO1,204,203,200_.jpg",
         "major_id": "1314",
         "name": "Teaching English or French as a Foreign Language",
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "https://www.theeducator.com/blog/wp-content/uploads/2016/12/teaching-assistant.jpg",
         "major_id": "1315",
         "name": "Teaching Assistants & Aides",
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "http://www.uwtsd.ac.uk/media/uwtsd-website/content-assets/images/faculty-of-education-communities/Education-Studies---Contemporary-Learners-&-Learning.jpg",
         "major_id": "1399",
         "name": "Other Education Studies",
         "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "1401",
-        "name": "General Engineering",
-        "is_stem": 2
     },
     {
         "image_link": "https://c2.staticflickr.com/2/1391/5350433303_db734549d4_b.jpg",
@@ -438,27 +234,21 @@
         "is_stem": 2
     },
     {
-        "image_link": null,
+        "image_link": "http://cdn.wonderfulengineering.com/wp-content/uploads/2014/05/What-is-Agricultural-Engineering-2.jpg",
         "major_id": "1403",
         "name": "Agricultural Engineering",
         "is_stem": 2
     },
     {
-        "image_link": null,
+        "image_link": "http://www.archworld.net/wp-content/uploads/2013/12/engineering-architecture-drawings-1994275.jpg",
         "major_id": "1404",
         "name": "Architectural Engineering",
         "is_stem": 2
     },
     {
-        "image_link": null,
+        "image_link": "http://cdn.wonderfulengineering.com/wp-content/uploads/2014/05/What-is-Biomedical-Engineering-8.jpg",
         "major_id": "1405",
         "name": "Biomedical Engineering",
-        "is_stem": 2
-    },
-    {
-        "image_link": "https://c2.staticflickr.com/2/1313/753721023_3785056879_b.jpg",
-        "major_id": "1406",
-        "name": "Ceramic Engineering",
         "is_stem": 2
     },
     {
@@ -474,7 +264,7 @@
         "is_stem": 1
     },
     {
-        "image_link": null,
+        "image_link": "http://cdn.wonderfulengineering.com/wp-content/uploads/2014/06/What-is-Computer-engineering17.jpg",
         "major_id": "1409",
         "name": "Computer Engineering",
         "is_stem": 1
@@ -486,31 +276,13 @@
         "is_stem": 1
     },
     {
-        "image_link": "https://c1.staticflickr.com/5/4140/4794388559_d011c1963c_b.jpg",
-        "major_id": "1411",
-        "name": "Engineering Mechanics",
-        "is_stem": 2
-    },
-    {
-        "image_link": null,
-        "major_id": "1412",
-        "name": "Engineering Physics",
-        "is_stem": 2
-    },
-    {
-        "image_link": null,
-        "major_id": "1413",
-        "name": "Engineering Science",
-        "is_stem": 2
-    },
-    {
-        "image_link": null,
+        "image_link": "http://cdn.wonderfulengineering.com/wp-content/uploads/2014/05/What-is-Environmental-Engineering3.jpg",
         "major_id": "1414",
         "name": "Environmental Engineering",
         "is_stem": 2
     },
     {
-        "image_link": null,
+        "image_link": "http://cdn.wonderfulengineering.com/wp-content/uploads/2014/05/What-is-Materials-Engineering21.jpg",
         "major_id": "1418",
         "name": "Materials Engineering",
         "is_stem": 2
@@ -522,13 +294,13 @@
         "is_stem": 2
     },
     {
-        "image_link": null,
+        "image_link": "http://engineering.eletsonline.com/wp-content/uploads/2013/12/Metallurgical-Engineering-604x345.jpg",
         "major_id": "1420",
         "name": "Metallurgical Engineering",
         "is_stem": 2
     },
     {
-        "image_link": null,
+        "image_link": "http://blogs-images.forbes.com/jacquelynsmith/files/2011/08/0faY6nV9Zp33V_1346.jpg",
         "major_id": "1421",
         "name": "Mining & Mineral Engineering",
         "is_stem": 2
@@ -540,25 +312,25 @@
         "is_stem": 2
     },
     {
-        "image_link": null,
+        "image_link": "http://cdn.wonderfulengineering.com/wp-content/uploads/2014/05/What-is-Nuclear-Engineering-8.jpg",
         "major_id": "1423",
         "name": "Nuclear Engineering",
         "is_stem": 2
     },
     {
-        "image_link": null,
+        "image_link": "http://blogs.fit.edu/wp-content/uploads/2012/09/21.jpg",
         "major_id": "1424",
         "name": "Ocean Engineering",
         "is_stem": 2
     },
     {
-        "image_link": null,
+        "image_link": "http://cdn.wonderfulengineering.com/wp-content/uploads/2014/05/What-is-Petroleum-Engineering-7.jpg",
         "major_id": "1425",
         "name": "Petroleum Engineering",
         "is_stem": 2
     },
     {
-        "image_link": null,
+        "image_link": "https://www.aras.com/plm-images/aras-solutions/systems-engineering-1.jpg",
         "major_id": "1427",
         "name": "Systems Engineering",
         "is_stem": 2
@@ -570,111 +342,57 @@
         "is_stem": 2
     },
     {
-        "image_link": null,
+        "image_link": "https://www.nylacast.com/wp-content/uploads/2015/03/nylacast-engineering-plastics-triangle.jpg",
         "major_id": "1432",
         "name": "Polymer & Plastics Engineering",
         "is_stem": 2
     },
     {
-        "image_link": null,
+        "image_link": "http://1.bp.blogspot.com/-GBGSPlEHQhY/VpeJh-Z6WoI/AAAAAAAAAnQ/OEFrskRi-1Q/s1600/Construction%2BEngineering.jpg",
         "major_id": "1433",
         "name": "Construction Engineering",
         "is_stem": 2
     },
     {
-        "image_link": null,
-        "major_id": "1434",
-        "name": "Forest Engineering",
-        "is_stem": 2
-    },
-    {
-        "image_link": null,
+        "image_link": "http://cdn.wonderfulengineering.com/wp-content/uploads/2014/05/What-is-Industrial-Engineering-10.jpg",
         "major_id": "1435",
         "name": "Industrial Engineering",
         "is_stem": 2
     },
     {
-        "image_link": null,
+        "image_link": "http://www.valmet-automotive.com/automotive/images.nsf/files/1d25172fe41e356dc2257b210039ad38/$file/manufacturing%20engineering.jpg",
         "major_id": "1436",
         "name": "Manufacturing Engineering",
         "is_stem": 2
     },
     {
-        "image_link": null,
+        "image_link": "http://impact-hiv.irmacs.sfu.ca/sites/impact-hiv.irmacs.sfu.ca/files/Banner2.png",
         "major_id": "1437",
         "name": "Operations Research",
         "is_stem": 2
     },
     {
-        "image_link": null,
+        "image_link": "http://providenceeng.tiltlabs.com/images/page_images/_med/prv_surveying.jpg",
         "major_id": "1438",
         "name": "Surveying Engineering",
         "is_stem": 2
     },
     {
-        "image_link": null,
+        "image_link": "https://www.chegg.com/play/wp-content/uploads/sites/3/2015/07/shutterstock_210110272.jpg",
         "major_id": "1439",
         "name": "Geological & Geophysical Engineering",
         "is_stem": 2
     },
     {
-        "image_link": null,
-        "major_id": "1440",
-        "name": "Paper Science & Engineering",
-        "is_stem": 2
-    },
-    {
-        "image_link": null,
-        "major_id": "1441",
-        "name": "Electromechanical Engineering",
-        "is_stem": 2
-    },
-    {
-        "image_link": null,
-        "major_id": "1442",
-        "name": "Robotics & Automation Engineering",
-        "is_stem": 2
-    },
-    {
-        "image_link": null,
-        "major_id": "1443",
-        "name": "Biochemical Engineering",
-        "is_stem": 2
-    },
-    {
-        "image_link": null,
+        "image_link": "https://images.jet.com/md5/098097a8e9099bc3c6ad64a7570b0461.1500",
         "major_id": "1444",
         "name": "Engineering Chemistry",
         "is_stem": 2
     },
     {
-        "image_link": null,
-        "major_id": "1445",
-        "name": "Biological & Biosystems Engineering",
-        "is_stem": 2
-    },
-    {
-        "image_link": null,
-        "major_id": "1499",
-        "name": "Other Engineering Studies",
-        "is_stem": 2
-    },
-    {
-        "image_link": null,
+        "image_link": "https://online.odu.edu/uploads/content/_medium/electromechanical.jpg",
         "major_id": "1500",
         "name": "General Engineering Technologies",
-        "is_stem": 2
-    },
-    {
-        "image_link": null,
-        "major_id": "1501",
-        "name": "Architectural Engineering Technologies",
-        "is_stem": 2
-    },
-    {
-        "image_link": null,
-        "major_id": "1502",
-        "name": "Civil Engineering Technologies",
         "is_stem": 2
     },
     {
@@ -684,7 +402,7 @@
         "is_stem": 1
     },
     {
-        "image_link": null,
+        "image_link": "https://tcwww-rvteozjcxf.netdna-ssl.com/wp-content/uploads/2014/04/electech.jpg",
         "major_id": "1504",
         "name": "Electromechanical Instrumentation & Maintenance Technologies",
         "is_stem": 1
@@ -696,73 +414,55 @@
         "is_stem": 1
     },
     {
-        "image_link": null,
+        "image_link": "http://www.fci-tech.com/images/production/plant/plant-001.jpg",
         "major_id": "1506",
         "name": "Industrial Production Technologies",
         "is_stem": 1
     },
     {
-        "image_link": null,
+        "image_link": "https://www.theresonance.com/wp-content/uploads/2012/04/P32704221-1024x670.jpg",
         "major_id": "1507",
         "name": "Quality Control & Safety Technologies",
         "is_stem": 1
     },
     {
-        "image_link": null,
+        "image_link": "http://rdc.ab.ca/sites/default/files/uploads/gallery/48018/met004.jpg",
         "major_id": "1508",
         "name": "Mechanical Engineering Technologies",
         "is_stem": 1
     },
     {
-        "image_link": null,
+        "image_link": "http://www.civil.engineering.ualberta.ca/en/Undergraduate/~/media/civil/Research/Images/mining.jpg",
         "major_id": "1509",
         "name": "Mining & Petroleum Technologies",
         "is_stem": 1
     },
     {
-        "image_link": null,
+        "image_link": "https://www.deere.com/en_US/media/images/services_and_support/construction_technology_solutions/worksight-2-522x302.jpg",
         "major_id": "1510",
         "name": "Construction Engineering Technologies",
         "is_stem": 2
     },
     {
-        "image_link": null,
-        "major_id": "1511",
-        "name": "Engineering-Related Technologies",
-        "is_stem": 1
-    },
-    {
-        "image_link": null,
+        "image_link": "https://win10support.com/wp-content/uploads/2017/10/computer-engineering-technology.jpg",
         "major_id": "1512",
         "name": "Computer Engineering Technologies",
         "is_stem": 1
     },
     {
-        "image_link": "https://c2.staticflickr.com/4/3911/14184697490_50277ece50_b.jpg",
-        "major_id": "1513",
-        "name": "Drafting & Design Engineering Technologies",
-        "is_stem": 1
-    },
-    {
-        "image_link": null,
+        "image_link": "http://cdn.wonderfulengineering.com/wp-content/uploads/2014/05/What-is-Nuclear-Engineering-16-610x380.jpg",
         "major_id": "1514",
         "name": "Nuclear Engineering Technologies",
         "is_stem": 2
     },
     {
-        "image_link": null,
+        "image_link": "https://image.slidesharecdn.com/7uowhlv3r2qiewc06d4u-signature-e54dc48fc8dff231a3667ed370712382aa80c6605f7be8d156fba02fb451e6f5-poli-141027141818-conversion-gate01/95/2-ptk-2014-2015-engineering-related-to-marine-engineering-1-638.jpg?cb=1414419626",
         "major_id": "1515",
         "name": "Engineering-Related Fields",
         "is_stem": 1
     },
     {
-        "image_link": "https://c2.staticflickr.com/4/3125/3191719900_665f6c8c93_b.jpg",
-        "major_id": "1516",
-        "name": "Nanotechnology",
-        "is_stem": 2
-    },
-    {
-        "image_link": null,
+        "image_link": "http://redfame.com/journal/public/site/images/set/SET-webcover-new-.jpg",
         "major_id": "1599",
         "name": "Other Engineering Technology Studies",
         "is_stem": 2
@@ -774,133 +474,31 @@
         "is_stem": 0
     },
     {
-        "image_link": "https://c1.staticflickr.com/9/8048/8359298228_1514fb3753_b.jpg",
-        "major_id": "1602",
-        "name": "African Languages, Literatures, & Linguistics",
-        "is_stem": 0
-    },
-    {
-        "image_link": "https://c1.staticflickr.com/9/8048/8359298228_1514fb3753_b.jpg",
-        "major_id": "1603",
-        "name": "East Asian Languages, Literatures, & Linguistics",
-        "is_stem": 0
-    },
-    {
-        "image_link": "https://c1.staticflickr.com/9/8048/8359298228_1514fb3753_b.jpg",
-        "major_id": "1604",
-        "name": "Slavic, Baltic, & Albanian Languages, Literatures, & Linguistics",
-        "is_stem": 0
-    },
-    {
-        "image_link": "https://c1.staticflickr.com/9/8048/8359298228_1514fb3753_b.jpg",
-        "major_id": "1605",
-        "name": "Germanic Languages, Literatures, & Linguistics",
-        "is_stem": 0
-    },
-    {
-        "image_link": "https://c1.staticflickr.com/9/8048/8359298228_1514fb3753_b.jpg",
-        "major_id": "1606",
-        "name": "Modern Greek Languages & Literature",
-        "is_stem": 0
-    },
-    {
-        "image_link": "https://c1.staticflickr.com/9/8048/8359298228_1514fb3753_b.jpg",
-        "major_id": "1607",
-        "name": "South Asian Languages, Literatures, & Linguistics",
-        "is_stem": 0
-    },
-    {
-        "image_link": "https://c1.staticflickr.com/9/8048/8359298228_1514fb3753_b.jpg",
-        "major_id": "1608",
-        "name": "Iranian or Persian Languages, Literatures, & Linguistics",
-        "is_stem": 0
-    },
-    {
-        "image_link": "https://c1.staticflickr.com/9/8048/8359298228_1514fb3753_b.jpg",
-        "major_id": "1609",
-        "name": "Romance Languages, Literatures, & Linguistics",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "1610",
-        "name": "Native American Languages, Literature, & Linguistics",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "1611",
-        "name": "Middle Eastern & Semitic Languages, Literatures, & Linguistics",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "1612",
-        "name": "Classical Languages, Literatures, & Linguistics",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "1613",
-        "name": "Celtic Languages, Literatures, & Linguistics",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "1614",
-        "name": "Southeast Asian & Australian/Pacific Languages, Literatures, & Linguistics",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "1615",
-        "name": "Turkic, Uralic-Altaic, Caucasian, & Central Asian Languages, Literatures, & Linguistics",
-        "is_stem": 0
-    },
-    {
         "image_link": "https://c2.staticflickr.com/6/5569/14539449085_02e493f578_b.jpg",
         "major_id": "1616",
         "name": "American Sign Language",
         "is_stem": 0
     },
     {
-        "image_link": "https://c1.staticflickr.com/9/8048/8359298228_1514fb3753_b.jpg",
-        "major_id": "1699",
-        "name": "Other Foreign Languages, Literature, & Linguistic Studies",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "1900",
-        "name": "Work & Family Studies",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
+        "image_link": "https://www.nicholls.edu/psychology/files/2010/08/dsc00018.jpg",
         "major_id": "1901",
         "name": "General Family & Consumer Sciences",
         "is_stem": 0
     },
     {
-        "image_link": null,
-        "major_id": "1902",
-        "name": "Family & Consumer Science Business Services",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
+        "image_link": "https://image1.slideserve.com/1543053/family-and-consumer-sciences-n.jpg",
         "major_id": "1904",
         "name": "Family & Consumer Economics Studies",
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "http://www.rochestermidland.com/markets/images/foodservice.png",
         "major_id": "1905",
         "name": "Foods, Nutrition, & Related Services",
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "http://5themesandculturalnormsofvietnam.weebly.com/uploads/1/0/2/0/10200477/5455609.jpg?392",
         "major_id": "1906",
         "name": "Housing & Human Environments",
         "is_stem": 0
@@ -918,13 +516,7 @@
         "is_stem": 0
     },
     {
-        "image_link": null,
-        "major_id": "1999",
-        "name": "Other Family & Consumer Sciences Studies",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
+        "image_link": "http://drexel.edu/~/media/Images/law/Academics/MLS_Landing_Photo2.ashx?h=1000&w=1200&hash=50F3EA8AE1145EE028D76BDB86EED10C43C9BFEC",
         "major_id": "2200",
         "name": "Undergraduate Non-Professional General Legal Studies",
         "is_stem": 0
@@ -936,7 +528,7 @@
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "https://widget.campusexplorer.com/media/180x180/advanced-legal-research-studies-ll-m-m-c-l-m-l-i-m-s-l-j-s-d-s-j-d-schools-find-advanced-legal-research-studies-ll-m-m-c-l-m-l-i-m-s-l-j-s-d-s-j-d-degrees-colleges-and-programs-AF73EB72.jpg",
         "major_id": "2202",
         "name": "Legal Research & Advanced Professional Studies",
         "is_stem": 0
@@ -945,12 +537,6 @@
         "image_link": "https://c1.staticflickr.com/5/4039/4312159033_6b1c4ce360_b.jpg",
         "major_id": "2203",
         "name": "Legal Support Services",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "2299",
-        "name": "Other Legal Professional Studies",
         "is_stem": 0
     },
     {
@@ -966,15 +552,9 @@
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "http://www.aplithelp.com/wp-content/uploads/2015/02/classical_literature_Wallpaper_mtm4y.jpg",
         "major_id": "2314",
         "name": "Literature",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "2399",
-        "name": "Other English Language & Literature",
         "is_stem": 0
     },
     {
@@ -984,21 +564,9 @@
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "https://du1ux2871uqvu.cloudfront.net/sites/default/files/styles/large/public/page/Academics_libraryInformationScience_square_22.jpg?itok=qNzq0lwm",
         "major_id": "2501",
         "name": "Library Science & Administration",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "2503",
-        "name": "Library & Archives Assisting",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "2599",
-        "name": "Other Library Science Studies",
         "is_stem": 0
     },
     {
@@ -1014,67 +582,43 @@
         "is_stem": 1
     },
     {
-        "image_link": null,
-        "major_id": "2603",
-        "name": "Plant Biology",
-        "is_stem": 1
-    },
-    {
-        "image_link": null,
+        "image_link": "http://www.ucdenver.edu/academics/colleges/medicalschool/departments/CellDevelopmentalBiology/MSMHA/PublishingImages/MSMHA%20Website%20Logo.jpg",
         "major_id": "2604",
         "name": "Cellular Biology & Anatomical Sciences",
         "is_stem": 1
     },
     {
-        "image_link": null,
-        "major_id": "2605",
-        "name": "Microbiological Sciences & Immunology",
-        "is_stem": 1
-    },
-    {
-        "image_link": null,
+        "image_link": "https://orig00.deviantart.net/5317/f/2015/362/5/5/animal_biology_templates_and_background_by_kaceysmith-d9lr8gi.png",
         "major_id": "2607",
         "name": "Animal Biology",
         "is_stem": 1
     },
     {
-        "image_link": null,
+        "image_link": "http://www.bioethics.com/wp-content/uploads/2014/03/genetic-ethics1.jpg",
         "major_id": "2608",
         "name": "Genetics",
         "is_stem": 1
     },
     {
-        "image_link": null,
+        "image_link": "https://static.wixstatic.com/media/6f92ca_13ae283839414ce8a6e661bff97bb2e1.jpg/v1/fill/w_223,h_338,al_c,q_80,usm_0.66_1.00_0.01/6f92ca_13ae283839414ce8a6e661bff97bb2e1.webp",
         "major_id": "2609",
         "name": "Physiology & Pathology",
         "is_stem": 1
     },
     {
-        "image_link": null,
+        "image_link": "http://www.pharmtox.utoronto.ca/sites/default/files/02a%20-%20Drug%20Safety%20-%20Toxicity_0.png",
         "major_id": "2610",
         "name": "Pharmacology & Toxicology",
         "is_stem": 1
     },
     {
-        "image_link": null,
+        "image_link": "https://d20eq91zdmkqd.cloudfront.net/assets/images/book/large/9783/6421/9783642150593.jpg",
         "major_id": "2611",
         "name": "Biomathematics, Bioinformatics, & Computational Biology",
         "is_stem": 1
     },
     {
-        "image_link": null,
-        "major_id": "2612",
-        "name": "Biotechnology",
-        "is_stem": 2
-    },
-    {
-        "image_link": null,
-        "major_id": "2613",
-        "name": "Ecology, Evolution, Systematics, & Population Biology",
-        "is_stem": 1
-    },
-    {
-        "image_link": null,
+        "image_link": "http://witspress.co.za/wp-content/uploads/2011/04/Molecular-Medicine-cover.jpg",
         "major_id": "2614",
         "name": "Molecular Medicine",
         "is_stem": 2
@@ -1086,7 +630,7 @@
         "is_stem": 1
     },
     {
-        "image_link": null,
+        "image_link": "http://brookes.ac.uk/assets/0/1425/1426/2147484622/9b2311f4-4476-4775-aa8b-71e992a38d00.jpg",
         "major_id": "2699",
         "name": "Other Biological & Biomedical Science Studies",
         "is_stem": 2
@@ -1098,49 +642,25 @@
         "is_stem": 1
     },
     {
-        "image_link": null,
-        "major_id": "2703",
-        "name": "Applied Mathematics",
-        "is_stem": 1
-    },
-    {
-        "image_link": null,
+        "image_link": "https://2.bp.blogspot.com/-9gGCc5yh80M/Vtzm1qZ_qZI/AAAAAAAABgg/DyYbKAmBCLc/s1600/20160306-mys.png",
         "major_id": "2705",
         "name": "Statistics",
         "is_stem": 1
     },
     {
-        "image_link": null,
-        "major_id": "2799",
-        "name": "Other Mathematics Studies",
-        "is_stem": 2
-    },
-    {
-        "image_link": null,
-        "major_id": "2902",
-        "name": "Intelligence, Command Control, & Information Operations",
-        "is_stem": 1
-    },
-    {
-        "image_link": null,
+        "image_link": "https://btmedia.whsmith.co.uk/pws/client/images/catalogue/products/9780/27/5995355/xlarge/9780275995355_1.jpg",
         "major_id": "2903",
         "name": "Military Applied Sciences",
         "is_stem": 1
     },
     {
-        "image_link": null,
-        "major_id": "2904",
-        "name": "Military Systems & Mainenance Technology",
-        "is_stem": 1
-    },
-    {
-        "image_link": null,
+        "image_link": "https://images.jet.com/md5/4ab917fe588ea14aed7f1b7be991d646.1500",
         "major_id": "2999",
         "name": "Other Military Technology & Applied Science Studies",
         "is_stem": 2
     },
     {
-        "image_link": null,
+        "image_link": "http://www.sagu.edu/images/page-content/admissions/program-pages/general-studies/bachelors-degree-in-interdisciplinary-studies.jpg",
         "major_id": "3000",
         "name": "General Interdisciplinary Studies",
         "is_stem": 0
@@ -1152,67 +672,7 @@
         "is_stem": 2
     },
     {
-        "image_link": null,
-        "major_id": "3005",
-        "name": "Peace Studies & Conflict Resolution",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "3006",
-        "name": "Systems Science & Theory",
-        "is_stem": 2
-    },
-    {
-        "image_link": null,
-        "major_id": "3008",
-        "name": "Mathematics & Computer Science",
-        "is_stem": 2
-    },
-    {
-        "image_link": null,
-        "major_id": "3010",
-        "name": "Biopsychology",
-        "is_stem": 2
-    },
-    {
-        "image_link": null,
-        "major_id": "3011",
-        "name": "Gerontology",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "3012",
-        "name": "Historic Preservation & Conservation",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "3013",
-        "name": "Medieval & Renaissance Studies",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "3014",
-        "name": "Museum Studies",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "3015",
-        "name": "Science, Technology, & Society",
-        "is_stem": 1
-    },
-    {
-        "image_link": null,
-        "major_id": "3016",
-        "name": "Accounting & Computer Science",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
+        "image_link": "http://www.bgu.ac.il/~chermesh/jpgs/behav.jpg",
         "major_id": "3017",
         "name": "Behavioral Sciences",
         "is_stem": 2
@@ -1224,103 +684,37 @@
         "is_stem": 2
     },
     {
-        "image_link": null,
-        "major_id": "3019",
-        "name": "Nutrition Sciences",
-        "is_stem": 2
-    },
-    {
-        "image_link": null,
+        "image_link": "http://www.bridgeport.edu/wp-content/uploads/2016/04/UB-International-Studies-720x390.jpg",
         "major_id": "3020",
         "name": "International Studies",
         "is_stem": 0
     },
     {
-        "image_link": null,
-        "major_id": "3021",
-        "name": "Holocaust Studies",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "3022",
-        "name": "Classical & Ancient Studies",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "3023",
-        "name": "Multicultural & Diversity Studies",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "3025",
-        "name": "Cognitive Science",
-        "is_stem": 2
-    },
-    {
-        "image_link": null,
-        "major_id": "3026",
-        "name": "Critical Theory & Analysis of Cultural Studies",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
+        "image_link": "http://d4rri9bdfuube.cloudfront.net/assets/images/book/large/9780/5349/9780534997830.jpg",
         "major_id": "3027",
         "name": "Human Biology",
         "is_stem": 2
     },
     {
-        "image_link": null,
-        "major_id": "3028",
-        "name": "Dispute Resolution",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
+        "image_link": "http://maritimestudies.uconn.edu/wp-content/uploads/sites/708/2014/05/container-ship-1024x399.jpg",
         "major_id": "3029",
         "name": "Maritime Studies",
         "is_stem": 0
     },
     {
-        "image_link": null,
-        "major_id": "3030",
-        "name": "Computational Science",
-        "is_stem": 2
-    },
-    {
-        "image_link": null,
-        "major_id": "3031",
-        "name": "Human Computer Interaction",
-        "is_stem": 2
-    },
-    {
-        "image_link": "https://c2.staticflickr.com/6/5615/15826619591_9d8cf53fd4_b.jpg",
-        "major_id": "3032",
-        "name": "Marine Sciences",
-        "is_stem": 2
-    },
-    {
-        "image_link": null,
-        "major_id": "3033",
-        "name": "Sustainability Studies",
-        "is_stem": 2
-    },
-    {
-        "image_link": null,
+        "image_link": "https://www.wku.edu/online/images/bis_banner.jpg",
         "major_id": "3099",
         "name": "Other Interdisciplinary Studies",
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "http://ecx.images-amazon.com/images/I/41Se0cS-YmL._SY291_BO1,204,203,200_QL40_.jpg",
         "major_id": "3101",
         "name": "Parks, Recreation, & Leisure Studies",
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "http://img.valorebooks.com/FULL/97/9781/978157/9781571676412.jpg",
         "major_id": "3103",
         "name": "Parks, Recreation, & Leisure Facilities Management",
         "is_stem": 0
@@ -1332,63 +726,27 @@
         "is_stem": 0
     },
     {
-        "image_link": null,
-        "major_id": "3106",
-        "name": "Outdoor Education",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "3199",
-        "name": "Other Parks, Recreation, Leisure, & Fitness Studies",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "3800",
-        "name": "General Philosophy & Religious Studies",
-        "is_stem": 0
-    },
-    {
         "image_link": "https://c2.staticflickr.com/6/5294/5398744463_dc62d36455_b.jpg",
         "major_id": "3801",
         "name": "Philosophy",
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "http://moodle.bishopston.swansea.sch.uk/pluginfile.php/2/course/section/2/Religious%20Studies%20Bold.png",
         "major_id": "3802",
         "name": "Religious Studies",
         "is_stem": 0
     },
     {
-        "image_link": null,
-        "major_id": "3899",
-        "name": "Other Philosophy & Religious Studies",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
+        "image_link": "http://themoralchristian.org/wp-content/uploads/2015/03/bible-studies.jpg",
         "major_id": "3902",
         "name": "Biblical Studies",
         "is_stem": 0
     },
     {
-        "image_link": null,
-        "major_id": "3903",
-        "name": "Missionary Studies & Missiology",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
+        "image_link": "http://www.det.wa.edu.au/redirect/?oid=com.arsdigita.cms.ReusableImageAsset-id-16362374",
         "major_id": "3904",
         "name": "Religious Education",
-        "is_stem": 0
-    },
-    {
-        "image_link": "https://c1.staticflickr.com/1/6/10287884_b4649224d3_b.jpg",
-        "major_id": "3905",
-        "name": "Religious & Sacred Music",
         "is_stem": 0
     },
     {
@@ -1398,19 +756,7 @@
         "is_stem": 0
     },
     {
-        "image_link": null,
-        "major_id": "3907",
-        "name": "Pastoral Counseling & Specialized Ministries",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "3999",
-        "name": "Other Theology & Religious Vocations",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
+        "image_link": "http://fos.cmb.ac.lk/blog/wp-content/uploads/2017/01/physical-science-banner.jpg",
         "major_id": "4001",
         "name": "Physical Sciences",
         "is_stem": 2
@@ -1419,12 +765,6 @@
         "image_link": "https://c2.staticflickr.com/6/5573/14775084560_c718151f0b_b.jpg",
         "major_id": "4002",
         "name": "Astronomy & Astrophysics",
-        "is_stem": 1
-    },
-    {
-        "image_link": "https://c2.staticflickr.com/6/5586/14721969260_3361274dea_b.jpg",
-        "major_id": "4004",
-        "name": "Atmospheric Sciences & Meteorology",
         "is_stem": 1
     },
     {
@@ -1440,49 +780,25 @@
         "is_stem": 1
     },
     {
-        "image_link": null,
+        "image_link": "http://cdn.coresites.factorymedia.com/mpora_new/wp-content/uploads/2015/11/physics1.jpg",
         "major_id": "4008",
         "name": "Physics",
         "is_stem": 1
     },
     {
-        "image_link": null,
+        "image_link": "https://chemical-materials.elsevier.com/wp-content/uploads/2016/01/MatSC2.jpg",
         "major_id": "4010",
         "name": "Materials Sciences",
         "is_stem": 1
     },
     {
-        "image_link": null,
-        "major_id": "4099",
-        "name": "Other Physical Sciences",
-        "is_stem": 2
-    },
-    {
-        "image_link": null,
-        "major_id": "4100",
-        "name": "General Science Technologies",
-        "is_stem": 2
-    },
-    {
-        "image_link": null,
-        "major_id": "4101",
-        "name": "Biology & Laboratory Technology",
-        "is_stem": 2
-    },
-    {
-        "image_link": null,
-        "major_id": "4102",
-        "name": "Nuclear & Industrial Radiologic Technologies",
-        "is_stem": 1
-    },
-    {
-        "image_link": null,
+        "image_link": "http://ecx.images-amazon.com/images/I/61kvyfRiqFL._SL500_BO1,204,203,200_.jpg",
         "major_id": "4103",
         "name": "Physical Science Technologies",
         "is_stem": 1
     },
     {
-        "image_link": null,
+        "image_link": "https://images-na.ssl-images-amazon.com/images/I/51m4u6UyRDL._SY445_QL70_.jpg",
         "major_id": "4199",
         "name": "Other Science Technologies",
         "is_stem": 2
@@ -1494,19 +810,19 @@
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "https://us.hogrefe.com/fileadmin/user_upload/global/journals/Hogrefe_Publishing/Experimental_Psychology/ExPsy_web.png",
         "major_id": "4227",
         "name": "Research & Experimental Psychology",
         "is_stem": 1
     },
     {
-        "image_link": null,
+        "image_link": "http://thumbs.slideserve.com/1_5002661.jpg",
         "major_id": "4228",
         "name": "Clinical, Counseling, & Applied Psychology",
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "http://www.clemson.edu/cbshs/departments/psychology/files/images/banners/RobinKowalski.jpg",
         "major_id": "4299",
         "name": "Other Psychology Studies",
         "is_stem": 0
@@ -1518,43 +834,43 @@
         "is_stem": 2
     },
     {
-        "image_link": null,
+        "image_link": "http://kellersupply.com/uploads/division/image/fire-protection/fire_protection.jpg",
         "major_id": "4302",
         "name": "Fire Protection",
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "http://s3.amazonaws.com/main-newsbtc-images/2016/06/19065659/department-of-homeland-security.png",
         "major_id": "4303",
         "name": "Homeland Security",
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "http://static-41.sinclairstoryline.com/resources/media/218c1120-f686-4580-a39a-ed8d7b2e3430-large16x9_PKGCOPAPPRECIATION_frame_1464.jpg?1515554828059",
         "major_id": "4399",
         "name": "Homeland Security, Law Enforcement, Firefighting, & Related Protective Services",
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "http://234staffing.com/wp-content/uploads/2015/02/general-hr.jpg",
         "major_id": "4400",
         "name": "General Human Services",
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "https://media2.hoepli.it/hoepli/xxl/9780470343616/community-organizing-and-youth-advocacy-new-directions-for-youth-development-no-117.jpeg",
         "major_id": "4402",
         "name": "Community Organization & Advocacy",
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "https://aspanational.files.wordpress.com/2013/08/pacloud.jpg",
         "major_id": "4404",
         "name": "Public Administration",
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "http://fscomps.fotosearch.com/compc/AGE/AGE063/b20-1566485.jpg",
         "major_id": "4405",
         "name": "Public Work Analysis",
         "is_stem": 0
@@ -1566,39 +882,27 @@
         "is_stem": 0
     },
     {
-        "image_link": null,
-        "major_id": "4499",
-        "name": "Other Public Administration & Social Services",
-        "is_stem": 0
-    },
-    {
         "image_link": "https://c2.staticflickr.com/8/7405/11144838125_d83494c556_b.jpg",
         "major_id": "4501",
         "name": "General Social Sciences",
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "http://www.drew.edu/wp-content/uploads/sites/73/people.png",
         "major_id": "4502",
         "name": "Anthropology",
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "http://2.bp.blogspot.com/-O5ELeI0ugbc/UOYQxOj8LAI/AAAAAAAABks/VxIbFyaGuog/s1600/Archaeology-and-the-Bible.jpg",
         "major_id": "4503",
         "name": "Archeology",
         "is_stem": 2
     },
     {
-        "image_link": null,
+        "image_link": "http://fc01.deviantart.net/fs70/f/2010/290/5/d/criminology_by_enzocavalli-d30xeja.jpg",
         "major_id": "4504",
         "name": "Crminology",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "4505",
-        "name": "Demography & Population Studies",
         "is_stem": 0
     },
     {
@@ -1608,7 +912,7 @@
         "is_stem": 2
     },
     {
-        "image_link": null,
+        "image_link": "https://img0.etsystatic.com/130/0/11246694/il_fullxfull.891086938_cygs.jpg",
         "major_id": "4507",
         "name": "Geography & Cartography",
         "is_stem": 2
@@ -1626,51 +930,21 @@
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "http://freevideolectures.com/torrents/IntroductorySociology_1436265262.jpg",
         "major_id": "4511",
         "name": "Sociology",
         "is_stem": 0
     },
     {
-        "image_link": null,
-        "major_id": "4512",
-        "name": "Urban Affairs",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "4513",
-        "name": "Sociology & Anthropology",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "4514",
-        "name": "Rural Sociology",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
+        "image_link": "https://image.slidesharecdn.com/103109297-introduction-to-sociology-and-anthropology-140708184103-phpapp02/95/introductiontosociologyandanthropology-27-638.jpg?cb=1404844957",
         "major_id": "4599",
         "name": "Other Social Sciences",
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "https://ontarioconstructionreport.com/wp-content/uploads/2017/06/pbcto-page.jpg",
         "major_id": "4600",
         "name": "General Construction Trades",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "4601",
-        "name": "Masonry",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "4602",
-        "name": "Carpenters",
         "is_stem": 0
     },
     {
@@ -1680,34 +954,10 @@
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "http://easynirman.com/image/cache/data/Architecture/Service/479-1000x1000.jpg",
         "major_id": "4604",
         "name": "Construction Finishing, Management, & Inspection",
         "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "4605",
-        "name": "Plumbing & Related Water Supply Services",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "4699",
-        "name": "Other Construction Trades",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "4700",
-        "name": "General Mechanics & Repairers",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "4701",
-        "name": "Electrical Maintenance & Repair Technology",
-        "is_stem": 1
     },
     {
         "image_link": "https://c1.staticflickr.com/9/8558/8767882443_909cd11b9b_b.jpg",
@@ -1716,15 +966,9 @@
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "http://www.fabricatingandmetalworking.com/wp-content/uploads/2016/01/Fotosearch_k0811206_thumb.jpg",
         "major_id": "4703",
         "name": "Industrial Equipment Maintenance Technologies",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "4704",
-        "name": "Precision Systems Maintenance & Repair Technologies",
         "is_stem": 0
     },
     {
@@ -1734,49 +978,13 @@
         "is_stem": 0
     },
     {
-        "image_link": null,
-        "major_id": "4799",
-        "name": "Other Mechanic & Repair Technologies",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "4800",
-        "name": "General Precision Production Trades",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "4803",
-        "name": "Leatherworking & Upholstery",
-        "is_stem": 0
-    },
-    {
         "image_link": "https://c1.staticflickr.com/7/6036/6220466929_143b2b15b4_b.jpg",
         "major_id": "4805",
         "name": "Precision Metal Working",
         "is_stem": 0
     },
     {
-        "image_link": null,
-        "major_id": "4807",
-        "name": "Woodworking",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "4808",
-        "name": "Boilermaking",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "4899",
-        "name": "Other Precision Production",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
+        "image_link": "http://cdn.airplane-pictures.net/images/uploaded-images/2014/6/25/421552.jpg",
         "major_id": "4901",
         "name": "Air Transportation",
         "is_stem": 2
@@ -1794,21 +1002,9 @@
         "is_stem": 0
     },
     {
-        "image_link": null,
-        "major_id": "4999",
-        "name": "Other Transportation & Materials Moving",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
+        "image_link": "http://www.purdue.edu/uns/images/2011/ad-infinitum.jpg",
         "major_id": "5001",
         "name": "General Visual & Performaing Arts",
-        "is_stem": 0
-    },
-    {
-        "image_link": "https://c1.staticflickr.com/1/226/497869984_44ba35398a_b.jpg",
-        "major_id": "5002",
-        "name": "Craft Design, Folk Art, & Artisanry",
         "is_stem": 0
     },
     {
@@ -1848,15 +1044,9 @@
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "https://i.pinimg.com/originals/32/b9/3e/32b93ee40b9e4036fa0f8cb971d32a5e.jpg",
         "major_id": "5010",
         "name": "Arts, Entertainment, & Media Management",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "5099",
-        "name": "Other Visual & Performing Arts",
         "is_stem": 0
     },
     {
@@ -1866,7 +1056,7 @@
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "http://www.gilreathchiropractic.com/wp-content/uploads/2016/01/chirorockfoundation.jpg",
         "major_id": "5101",
         "name": "Chiropractic",
         "is_stem": 0
@@ -1878,15 +1068,9 @@
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "http://drjoh.com/wp-content/uploads/2012/03/dental-implants-dentures-clinton-twp-mi-2.jpg",
         "major_id": "5104",
         "name": "Dentistry",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
-        "major_id": "5105",
-        "name": "Graduate Dentistry & Oral Sciences",
         "is_stem": 0
     },
     {
@@ -1902,13 +1086,13 @@
         "is_stem": 0
     },
     {
-        "image_link": "https://c1.staticflickr.com/9/8050/8116027525_b98ce26f4f_b.jpg",
+        "image_link": "https://sites.google.com/a/ketteringschools.org/fhsctc/_/rsrc/1472875804953/home/allied-health/Allied%20Health.jpg?height=240&width=320",
         "major_id": "5108",
         "name": "Allied Health & Medical Assisting Services",
         "is_stem": 0
     },
     {
-        "image_link": "https://c1.staticflickr.com/9/8050/8116027525_b98ce26f4f_b.jpg",
+        "image_link": "https://cdn.paindoctor.com/wp-content/uploads/2016/11/interventional-pain-management.jpg",
         "major_id": "5109",
         "name": "Allied Diagnostic, Intervention, & Treatment Professions",
         "is_stem": 0
@@ -1920,7 +1104,7 @@
         "is_stem": 2
     },
     {
-        "image_link": "https://c1.staticflickr.com/9/8050/8116027525_b98ce26f4f_b.jpg",
+        "image_link": "https://www.garrettcollege.edu/images/academics/credit/headers/heading-radiology-tech.png",
         "major_id": "5111",
         "name": "Medical Preparatory Programs",
         "is_stem": 0
@@ -1932,55 +1116,37 @@
         "is_stem": 0
     },
     {
-        "image_link": null,
-        "major_id": "5114",
-        "name": "Medical Clinical Sciences & Graduate Medical Studies",
-        "is_stem": 2
-    },
-    {
-        "image_link": null,
+        "image_link": "http://www.sgh.com.sg/subsites/sgh-careers/allied-health-pharmacy/Career-Opportunities/PublishingImages/prof.jpg",
         "major_id": "5115",
         "name": "Mental & Social Health Services & Allied Professions",
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "https://www.centre.edu/wp-content/uploads/2013/11/optometry.jpg",
         "major_id": "5117",
         "name": "Optometry",
         "is_stem": 0
     },
     {
-        "image_link": null,
-        "major_id": "5118",
-        "name": "Ophthalmic & Optometric Support Services",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
+        "image_link": "http://www.osteopathic.org/inside-aoa/events/PublishingImages/do-stamp-profile-photo.jpg",
         "major_id": "5119",
         "name": "Osteopathic Medicine",
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "http://www.jiu.ac.jp/englishsite/u_program/img/f_pharmacy_01.jpg",
         "major_id": "5120",
         "name": "Pharmaceutical Sciences & Administration",
         "is_stem": 2
     },
     {
-        "image_link": null,
-        "major_id": "5121",
-        "name": "Podiatric Medicine",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
+        "image_link": "http://www.co.freeborn.mn.us/ImageRepository/Document?documentID=483",
         "major_id": "5122",
         "name": "Public Health",
         "is_stem": 2
     },
     {
-        "image_link": null,
+        "image_link": "http://mizzoumag.missouri.edu/wp-content/uploads/2013/05/Health-Professions.jpg",
         "major_id": "5123",
         "name": "Rehabilitation & Therapeutic Professions",
         "is_stem": 0
@@ -1992,67 +1158,37 @@
         "is_stem": 0
     },
     {
-        "image_link": null,
-        "major_id": "5125",
-        "name": "Veterinary Biomedical & Clinical Sciences",
-        "is_stem": 2
-    },
-    {
-        "image_link": null,
+        "image_link": "http://www.vtlmi.info/occvid/images/31-1012.00-2.jpg",
         "major_id": "5126",
         "name": "Health Aides, Attendants, & Orderlies",
         "is_stem": 0
     },
     {
-        "image_link": null,
-        "major_id": "5127",
-        "name": "Medical Illustration & Informatics",
-        "is_stem": 2
-    },
-    {
-        "image_link": null,
+        "image_link": "http://prodimage.images-bn.com/pimages/9781483417103_p0_v1_s1200x630.jpg",
         "major_id": "5131",
         "name": "Dietetics & Clinical Nutrition Services",
         "is_stem": 0
     },
     {
-        "image_link": null,
-        "major_id": "5132",
-        "name": "Medical Ethics & Bioethics",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
+        "image_link": "http://image.slidesharecdn.com/complementaryandalternativemedicine-110831050231-phpapp02/95/complementary-and-alternative-medicine-2-728.jpg?cb=1314767467",
         "major_id": "5133",
         "name": "Alternative & Complementary Medicine",
         "is_stem": 0
     },
     {
-        "image_link": null,
-        "major_id": "5134",
-        "name": "Alternative & Complementary Medical Support Services",
-        "is_stem": 0
-    },
-    {
-        "image_link": null,
+        "image_link": "http://www.integralsomaticbodywork.com/_/rsrc/1467126043832/handsback-medium.jpg",
         "major_id": "5135",
         "name": "Somatic Bodywork & Related Therapeutic Services",
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "http://i.dailymail.co.uk/i/pix/2014/11/17/1416186839746_wps_7_CREATIVE_MOVEMENT_OP_ED_j.jpg",
         "major_id": "5136",
         "name": "Movement & Mind-Body Therapies",
         "is_stem": 0
     },
     {
-        "image_link": null,
-        "major_id": "5137",
-        "name": "Energy & Biologically Based Therapies",
-        "is_stem": 0
-    },
-    {
-        "image_link": "https://c1.staticflickr.com/9/8050/8116027525_b98ce26f4f_b.jpg",
+        "image_link": "https://www.bls.gov/ooh/images/15435.jpg",
         "major_id": "5138",
         "name": "Registered Nursing, Nursing Administration, & Nursing Research",
         "is_stem": 0
@@ -2064,7 +1200,7 @@
         "is_stem": 0
     },
     {
-        "image_link": null,
+        "image_link": "https://s.thestreet.com/files/tsc/v2008/photos/contrib/uploads/health-professions-and-related-clinical-sciences.jpg",
         "major_id": "5199",
         "name": "Other Health Professions & Related Clinical Sciences",
         "is_stem": 0
@@ -2076,7 +1212,7 @@
         "is_stem": 0
     },
     {
-        "image_link": "https://c1.staticflickr.com/5/4049/4303414729_b0e31c70bd_b.jpg",
+        "image_link": "http://mycollegeguide.org/wp-content/uploads/2016/06/what-can-you-do-with-a-business-administration-degree.jpg",
         "major_id": "5202",
         "name": "Business Administration, Management, & Operations",
         "is_stem": 0
@@ -2130,7 +1266,7 @@
         "is_stem": 0
     },
     {
-        "image_link": "https://c1.staticflickr.com/1/229/479370088_2e7091fc6e_b.jpg",
+        "image_link": "http://www.uccs.edu/business/sites/business/files/business/Areas%2520of%2520Emphasis/International%2520Business%280%29.jpg",
         "major_id": "5211",
         "name": "International Business",
         "is_stem": 0
@@ -2148,13 +1284,13 @@
         "is_stem": 1
     },
     {
-        "image_link": "https://c1.staticflickr.com/1/229/479370088_2e7091fc6e_b.jpg",
+        "image_link": "https://southcoastherald.co.za/wp-content/uploads/sites/52/2017/08/marketing-Small.jpg",
         "major_id": "5214",
         "name": "Marketing",
         "is_stem": 0
     },
     {
-        "image_link": "https://c1.staticflickr.com/1/229/479370088_2e7091fc6e_b.jpg",
+        "image_link": "https://assets.entrepreneur.com/content/3x2/1300/20150622231001-for-sale-real-estate-home-house.jpeg?width=750&crop=16:9",
         "major_id": "5215",
         "name": "Real Estate",
         "is_stem": 0
@@ -2172,31 +1308,19 @@
         "is_stem": 0
     },
     {
-        "image_link": "https://c1.staticflickr.com/1/229/479370088_2e7091fc6e_b.jpg",
+        "image_link": "http://thenationalwealthcenterreview.com/wp-content/uploads/2018/01/sales.jpg",
         "major_id": "5218",
         "name": "General Sales, Merchandising, & Marketing Operations",
         "is_stem": 0
     },
     {
-        "image_link": "https://c1.staticflickr.com/1/229/479370088_2e7091fc6e_b.jpg",
+        "image_link": "http://www.synapsun.com/wp-content/uploads/2016/05/iStock_000062233330_Full.jpg",
         "major_id": "5219",
         "name": "Specialized Sales, Merchandising, & Marketing Operations",
         "is_stem": 0
     },
     {
-        "image_link": "https://c1.staticflickr.com/3/2887/13213329923_f2cb76ef12_b.jpg",
-        "major_id": "5220",
-        "name": "Construction Management",
-        "is_stem": 0
-    },
-    {
-        "image_link": "https://c1.staticflickr.com/1/124/318622997_407407d29c_b.jpg",
-        "major_id": "5221",
-        "name": "Telecommunications Management",
-        "is_stem": 0
-    },
-    {
-        "image_link": "https://c1.staticflickr.com/1/229/479370088_2e7091fc6e_b.jpg",
+        "image_link": "https://bsb.dominican.edu/wp-content/uploads/2016/12/bsb_ba_bk.jpg",
         "major_id": "5299",
         "name": "Other Business, Management, Marketing, & Related Services",
         "is_stem": 0

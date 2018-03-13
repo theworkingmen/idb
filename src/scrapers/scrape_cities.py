@@ -4,27 +4,6 @@ import requests
 import json
 import math
 from keys import bing_key
-
-"""
-AIzaSyCGo3hE9YIt8nXVFYZ1P8qc9CXANXV4n-s
-{
-    city_id
-    city_name
-    county_id
-    county_name
-    city_image_link
-    population_estimate
-    median_household_income
-    unemployment
-    high_school_graduation rate
-    some_college # percentage of the population ages 25-44 with some post-secondary education
-    primary_care_physicians # ratio of the population to total primary care physicians
-    violent_crime # number of reported violent crime offenses per 100,000 population
-    motor_vehicle_crash_deaths # motor vehicle crash deaths per 100,000 population
-
-}
-http://api.datausa.io/api/?show=cip&sumlevel=4&year=latest&geo=05000US48453
-"""
 cities_list = []
 number_of_images_failed_flicker = 0
 number_of_images_failed_bing = 0
@@ -283,13 +262,10 @@ def add_top_majors_in_county():
     with open('cities.json', 'w') as fi:
         json.dump(cities_total_data, fi)
 
-
-
-
 if __name__ == "__main__":
     #cities_basic_info()
     #print("number_of_images_failed_flicker = " + str(number_of_images_failed_flicker))
     #add_city_images_from_bing()
     #scrape_county_health_stat()
     #add_county_health_stat()
-    add_top_majors_in_county()
+    #add_top_majors_in_county()
