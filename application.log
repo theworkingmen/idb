@@ -1,0 +1,731 @@
+commit 94db68443abb5d81a23a19a8a5b54ffe55cd3c57
+Merge: 82a8e43 5330549
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Tue Mar 13 17:55:28 2018 -0500
+
+    Merge branch 'reactsite' of https://github.com/theworkingmen/majorpotential into reactsite
+
+commit 82a8e43d11c069e8c0c9d2d66b5fe7da6aa6ac28
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Tue Mar 13 17:55:19 2018 -0500
+
+    Added images for null values (Bing Image API) and filtered the majors
+
+commit 533054968d12d4708d671d802581e7ac1b694295
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Tue Mar 13 17:07:08 2018 -0500
+
+    Updated city population script to include new data.
+
+commit 73ae1e5fa776ead3346e3affa2849a737d837ebd
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Tue Mar 13 16:56:09 2018 -0500
+
+    populate_majors.py written with current available dat.
+
+commit 2d715fffed73905ce8f800ac3d33fdefcbda38c9
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Mon Mar 12 23:50:51 2018 -0500
+
+    Scraping - Start adding majors data
+
+commit ac0142565f09ad68a75a40a0700513c7bd2ac1c2
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Mon Mar 12 15:08:03 2018 -0500
+
+    Added the types of universities
+
+commit d2d829ab1468222069efbb99e93d63070ae23bcf
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Mon Mar 12 13:56:13 2018 -0500
+
+    Added top majors for cities.
+
+commit 52d3550a1400d7217b3676480deae32fdc2f811a
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Mon Mar 12 12:34:49 2018 -0500
+
+    Added county stats for the cities.
+
+commit fe2ba34f46288d673d6ea853516722d446da360c
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Sun Mar 11 20:02:42 2018 -0500
+
+    Scraping - Finished adding images for the cities by using Microsoft Azure image search API.
+
+commit cda68c2efbc87bc65c0ffe9b6297bff802047806
+Author: Christian Onuogu <chrisonuogu77@gmail.com>
+Date:   Sun Mar 11 16:46:05 2018 -0500
+
+    Attempt at standardizing card size
+
+commit b68c2ba5df0c110ce07d3ac63889fc021eaa2986
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Sun Mar 11 15:40:48 2018 -0500
+
+    Added populate_cities.py using all current .json values.
+
+commit f9403801d239bf8dcb9f7a59a88e520b97da3980
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Sun Mar 11 15:11:24 2018 -0500
+
+    Updated university population script to reflect changes and new values.
+
+commit ff536cae1c51fdd41d7b9b80e93bf3a65be3c4ec
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Sat Mar 10 17:10:50 2018 -0600
+
+    Start adding city data. Number of cities = 549
+
+commit 367f4476d4856ddc28f8fad79fb4fd5778e0a342
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Sat Mar 10 11:50:48 2018 -0600
+
+    Removed universities with null values. Current count of universities = 2481
+
+commit 75cc421d26be381c200d427e2fc2076bfcfa72a1
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Sat Mar 10 06:34:34 2018 -0600
+
+    Added top majors to the university data
+
+commit c8d0d843629b8478d60c04605593b3eafd0a8f24
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Fri Mar 9 15:38:41 2018 -0600
+
+    Adding the top 5 majors (interms of grads) works.
+
+commit fdc781a3dfb6cec345ce4c3f78bdc318c19d2258
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Fri Mar 9 13:39:30 2018 -0600
+
+    Start adding top 5 majors (top interms of number of graduates)
+
+commit 41b7839dee76ed281f8040b68a654c3b9d2cb972
+Author: Mitchell Traylor <traylor1@cs.utexas.edu>
+Date:   Thu Mar 8 16:28:54 2018 -0600
+
+    Created script to populate the university table, works for the most part but major flaws exist.
+
+commit 6d19261e61a030dcce7fe2c3b45baec3cda293fc
+Author: Mitchell Traylor <traylor1@cs.utexas.edu>
+Date:   Thu Mar 8 15:10:52 2018 -0600
+
+    Added script to add a demographics table entry
+
+commit 5323c99c42ed3fe2a1aeed8cf96b72302c93a003
+Author: Mitchell Traylor <traylor1@cs.utexas.edu>
+Date:   Thu Mar 8 14:39:46 2018 -0600
+
+    Added python scripts to alter database cells.
+
+commit dc16d22b9c270f3cc2a5add4e5c43be0230b0d6b
+Merge: 10ac32c 7f6810c
+Author: Mitchell Traylor <traylor1@cs.utexas.edu>
+Date:   Wed Mar 7 18:20:49 2018 -0600
+
+    Merge branch 'reactsite' of https://github.com/theworkingmen/idb into reactsite
+
+commit 10ac32c8038a3ea3007b2ebad14732db72a34c57
+Author: Mitchell Traylor <traylor1@cs.utexas.edu>
+Date:   Wed Mar 7 18:19:54 2018 -0600
+
+    Added / tested pymysql scripts to create university and city entries
+
+commit 7f6810ca32224d873b92f356ec967a963ac10bd5
+Author: Christian Onuogu <chrisonuogu77@gmail.com>
+Date:   Wed Mar 7 18:14:48 2018 -0600
+
+    Colleges page uses data from university scrape - cards not all same height
+
+commit 56a4b809578020ff1151349dfab688b9fb3ff64f
+Author: Sungsup <smcw66@gmail.com>
+Date:   Wed Mar 7 16:37:50 2018 -0600
+
+    addfakemajor.py tested
+
+commit 7b014f316c0a0936c494070754dad841a3796ebf
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Wed Mar 7 16:26:06 2018 -0600
+
+    Added python script to create a fake major entry.
+
+commit 9640dc388846c7a1feb2b420bc0a10bac7b827ff
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Wed Mar 7 16:19:03 2018 -0600
+
+    Added pymysql library files.
+
+commit 323c7a5a4f4275e20f08f7b5831b16b63747047f
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Tue Mar 6 23:06:09 2018 -0600
+
+    Scraping - Add gender data to universities
+
+commit 3768180f218ca388e06f396d8d351bd83c08d53b
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Tue Mar 6 20:46:00 2018 -0600
+
+    Add Univerisity json file. Data we have so far
+
+commit 8a9e56a109f21cbba064dfde4f61179311155b98
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Tue Mar 6 20:39:15 2018 -0600
+
+    Add race demographics to university data
+
+commit ed68ec1ea8a38a83e476209eb09dde7794b9c561
+Merge: 0de9258 a5585cf
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Tue Mar 6 17:09:35 2018 -0600
+
+    Merge branch 'reactsite' of https://github.com/theworkingmen/majorpotential into reactsite
+
+commit 0de9258025720d75127176f2ae680d75f89b6c32
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Tue Mar 6 17:09:15 2018 -0600
+
+    Scraping: add University tuition data
+
+commit a5585cf493feeb962620527a702e92601ab7377c
+Author: Christian Onuogu <chrisonuogu77@gmail.com>
+Date:   Tue Mar 6 15:18:29 2018 -0600
+
+    Added Google Maps to CityInstance
+
+commit 73b8aff0b88c3b5dcd4425c1acb5cd1d07eaa942
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Tue Mar 6 15:03:49 2018 -0600
+
+    Scraping - Add state name to University data.
+
+commit 16cfba78699ab1292bf7f26331da286b38d7b463
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Tue Mar 6 13:27:42 2018 -0600
+
+    Only add Universities with web links
+
+commit 545ca97fe90fc645bf8aab242f782e51e4c70eaa
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Tue Mar 6 13:09:46 2018 -0600
+
+    Start University data scraping code
+
+commit 86a141e91faff4efffdd62c9a80fbba845214d88
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Tue Mar 6 13:06:52 2018 -0600
+
+    Start scraping
+
+commit 1b9671a4267464da4cf22a5be927b7dad58dbdad
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Tue Mar 6 13:01:15 2018 -0600
+
+    Removed legacy code from reactsite branch
+
+commit e722ff556bc83e1666e45ff315e4b268455a31bf
+Author: Sungsup <smcw66@gmail.com>
+Date:   Mon Mar 5 18:04:49 2018 -0600
+
+    added ClearBit api img to colleges.js
+
+commit 115c35f400af6fd224537750b81466610ba7f3d4
+Author: Sungsup <smcw66@gmail.com>
+Date:   Mon Mar 5 17:33:54 2018 -0600
+
+    fixed css critical error with container
+
+commit 8f2c089acedae7aa170da8e5bf9727f120b4bdf8
+Author: Sungsup <smcw66@gmail.com>
+Date:   Mon Mar 5 17:29:36 2018 -0600
+
+    added default pie chart to college instance
+
+commit d334dba19748ba30e7f5c33310126a7a4fd91262
+Author: Sungsup <smcw66@gmail.com>
+Date:   Sun Mar 4 16:32:36 2018 -0600
+
+    cards are now clickable links to respective instance pages
+
+commit 790ad53762fba08ec69ce46cb3b8390c01c941af
+Merge: 94e3ed1 2c66f4a
+Author: Sungsup <smcw66@gmail.com>
+Date:   Sun Mar 4 16:10:11 2018 -0600
+
+    merge conflict at Spash.js resolved
+
+commit 94e3ed1d9d8f9fd05b8507aa4cca558df62e9ccb
+Author: Sungsup <smcw66@gmail.com>
+Date:   Sun Mar 4 15:57:07 2018 -0600
+
+    turned all js file to components. Also, renamed Main.js to Router.js
+
+commit 2c66f4a40d8c2207977bbf8c8725faf6582e45f2
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Sun Mar 4 15:56:02 2018 -0600
+
+    Fixed Splash page.
+
+commit 537a7ec341e822c091db5de0736ed22f6b4770e1
+Author: Sungsup <smcw66@gmail.com>
+Date:   Sun Mar 4 15:41:01 2018 -0600
+
+    card component added to cities.js and majors.js
+
+commit 2fcb538e177b72524c4f917d56d71b27a1f38167
+Author: Sungsup <smcw66@gmail.com>
+Date:   Sun Mar 4 15:18:37 2018 -0600
+
+    fixed critical syntax error on college.js
+
+commit b685e188d48e570c34bc5dc1e3c47ff844798cfb
+Author: Sungsup <smcw66@gmail.com>
+Date:   Sun Mar 4 15:17:19 2018 -0600
+
+    college.js updated using card components
+    
+    confirmed technique to use imgsrc url in props
+
+commit 35ae748a8ed7263b5d155a8fed22c09bc33c3cff
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Sun Mar 4 13:56:33 2018 -0600
+
+    Finish About.js - needs remodification later
+
+commit 68004d7fbcef28b61b23e11c613f5d9f0920aa65
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Sun Mar 4 13:23:23 2018 -0600
+
+    Added github stat to About.js
+
+commit 97e67995d4598ad0ca2425449d3274b0606f7983
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Sun Mar 4 12:09:14 2018 -0600
+
+    Start adding github stats
+
+commit 11f90ead045718260651d6b13873c58468984ad1
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Sun Mar 4 10:24:51 2018 -0600
+
+    More addition to About.js
+
+commit b1eae89b3f03b4bc43efe876e0494f851f1b9b96
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Sat Mar 3 19:33:42 2018 -0600
+
+    Start About.js
+
+commit 248fb377104e732d173c8b15318e639defbb7424
+Author: Christian Onuogu <chrisonuogu77@gmail.com>
+Date:   Fri Mar 2 15:59:50 2018 -0600
+
+    Created card compnent
+
+commit 33500baf0816cd3b4ef083fd222a6e593cf13a51
+Author: Christian Onuogu <chrisonuogu77@gmail.com>
+Date:   Fri Mar 2 15:04:01 2018 -0600
+
+    instance attributes updated
+
+commit 17c7732d7b4eef17bcea200571fec1f8da9b1680
+Author: Christian Onuogu <chrisonuogu77@gmail.com>
+Date:   Wed Feb 28 18:42:59 2018 -0600
+
+    Worked on MajorInstance
+
+commit 77e53858e57037a5dbc084f148abdee968f88ee8
+Author: Christian Onuogu <chrisonuogu77@gmail.com>
+Date:   Wed Feb 28 17:23:48 2018 -0600
+
+    style prototyping
+
+commit d963800e2da9ec8cfd29c8c6c48dce14d4585c30
+Author: Christian Onuogu <chrisonuogu77@gmail.com>
+Date:   Wed Feb 28 17:10:34 2018 -0600
+
+    MajorInstance component initiated
+
+commit 7f580a0e7824309e7fa1723d0022a84d2a5236d5
+Author: Christian Onuogu <chrisonuogu77@gmail.com>
+Date:   Wed Feb 28 16:12:45 2018 -0600
+
+    Reorganized and works
+
+commit 8b2e41f926a665843fc8c29be67b590bb26d6c96
+Author: Christian Onuogu <chrisonuogu77@gmail.com>
+Date:   Wed Feb 28 16:00:09 2018 -0600
+
+    Reorganized, but currently broken
+
+commit 9f725ca3477a08399a5691d38ee3ae75927b3bbf
+Author: Christian Onuogu <chrisonuogu77@gmail.com>
+Date:   Sun Feb 25 17:57:21 2018 -0600
+
+    Worked on model and about pages
+
+commit 401daf4d3507a19c2e3e88de4f879c735a295625
+Author: Christian Onuogu <chrisonuogu77@gmail.com>
+Date:   Sun Feb 25 02:04:08 2018 -0600
+
+    Added routing and placeholder model pages
+
+commit e4cae4c904c6a5219ad2f20f84bd30b7c7f6f265
+Author: Christian Onuogu <chrisonuogu77@gmail.com>
+Date:   Sat Feb 24 16:19:24 2018 -0600
+
+    Made navigation bar component and installed react-router
+
+commit 1b616e238853c0a738625ce3ec0ccd7fbbcb0f98
+Author: Christian Onuogu <chrisonuogu77@gmail.com>
+Date:   Thu Feb 22 22:07:50 2018 -0600
+
+    Recreated splash page with react
+
+commit 7915e2cda85a095ece2f44f70af5d6e4a51d1d60
+Author: Mitchell Traylor <traylor1@cs.utexas.edu>
+Date:   Thu Feb 15 14:37:56 2018 -0600
+
+    Fixed Austin city image (misspelled image name in instance page)
+
+commit 030caa0e5c5a7979726505db18a204105c7a38b7
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Thu Feb 15 12:44:38 2018 -0600
+
+    Re-styled major instances.
+
+commit 7c202f17a719f6401b5254af5293e563c831ea98
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Thu Feb 15 12:25:22 2018 -0600
+
+    Re-styled college instances similar to cities.
+
+commit 06f163fa20233f35b7cf43084994f010dd87f5dc
+Merge: 39c6acb 5786f42
+Author: Abel Tesfaye <abelhaddistt@gmail.com>
+Date:   Thu Feb 15 12:16:10 2018 -0600
+
+    Merge pull request #27 from theworkingmen/staticsite
+    
+    Staticsite
+
+commit 5786f42337713c2a754b54dca77c0f25e7b74172
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Thu Feb 15 12:11:07 2018 -0600
+
+    Added AWS elastic-beanstalk file for deployment
+
+commit 4cca0f1ff62199ba77a8f792b1e101a59f084d92
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Thu Feb 15 12:05:32 2018 -0600
+
+    Re-styled city instances.
+
+commit f8ef7bd321104a9c83bc2502b33381a25e3defd4
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Thu Feb 15 11:09:58 2018 -0600
+
+    Added Sources in about.html
+
+commit e728fc53f2bae246a73d6edf91fa5837f0ef1eb9
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Thu Feb 15 10:39:53 2018 -0600
+
+    Page refinements
+
+commit 338646d9792946e557200ba179ae309700f7e61e
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Thu Feb 15 08:19:31 2018 -0600
+
+    Updated about.html role, added personal bio, hid questionable trademark symbol within a comment.
+
+commit 8faf2bea176ae796329621abb747f555553cebf5
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Wed Feb 14 17:36:08 2018 -0600
+
+    Removed bootstrap cached files
+    
+    Bootstrap files are not necessary since they can be pulled dynamically from the web
+
+commit ebd9d0e34b848487c5d4becdf8608d4004733430
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Wed Feb 14 17:24:35 2018 -0600
+
+    adjusted image spacing in instance pages
+
+commit 18b1ede8d61ddf1bd4d112a223940678f8edc4b5
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Wed Feb 14 17:09:58 2018 -0600
+
+    Cleaned up model pages
+    
+    applied image scaling in "cards". Also centered the text and resized the sub-titles
+
+commit e8c6f897e61d073c557619125c40aab2a35cdf59
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Wed Feb 14 16:44:29 2018 -0600
+
+    Bootstrap Grid System applied to majors instances
+
+commit 16fed9545f9ca1ccf373f908380c26823247ca77
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Wed Feb 14 16:16:14 2018 -0600
+
+    Bootstrap Grid System applied to college instances
+
+commit 3088b47aee45544880387ef2fe9157fd11f781ae
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Wed Feb 14 15:37:48 2018 -0600
+
+    Bootstrap Grid System applied to City instances
+
+commit 7c5af0b75a0d845a59187b597c32838a2808712d
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Wed Feb 14 09:09:48 2018 -0600
+
+    Tried to make the webpages more appealing
+
+commit 7c322522b62ba13ba065a91f390bc5f7c61ee55c
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Tue Feb 13 14:04:13 2018 -0600
+
+    Fixed error in major-petroleumengineering.html image, added my (Mitchell's) photo for about page.
+
+commit 6d5b2136cb95ba3ba7e2dca3e04f447f89979c67
+Author: Mitchell Traylor <traylor1@cs.utexas.edu>
+Date:   Tue Feb 13 11:49:28 2018 -0600
+
+    About.html style updated, carousel fixed.
+
+commit 211029bc60ebd3094a6fa428acd0336dbb776aea
+Merge: a91f2e2 e7fba21
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Tue Feb 13 08:16:04 2018 -0600
+
+    Merge branch 'staticsite' of https://github.com/smcw66/majorpotential into staticsite
+
+commit a91f2e246622bc70bded6093d5db6e70c4266df2
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Tue Feb 13 08:15:30 2018 -0600
+
+    Links added to all instance pages.
+
+commit e7fba21a181b381f8fa4667e75e0f1b3b50f5fae
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Tue Feb 13 05:05:05 2018 -0600
+
+    Finish github integration for the about.html page
+
+commit 0cd638beb10b16e85dbad3c295ccf80fd00379c6
+Merge: 6a4ecb2 cbfc284
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Mon Feb 12 22:50:58 2018 -0600
+
+    Merge branch 'staticsite' of https://github.com/theworkingmen/majorpotential into staticsite
+
+commit 6a4ecb2f53b5f8e4d340681e8a9738e877b2f530
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Mon Feb 12 22:50:53 2018 -0600
+
+    navbars updated.
+    
+    navbars updated for following pages:
+    splash.html
+    collges.html
+    cities.html
+    majors.html
+
+commit cbfc28445ca42a4e08a41736fdee8d042a16558a
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Mon Feb 12 21:15:49 2018 -0600
+
+    Links added to all model pages.
+
+commit 82ffa51938d9330af72273e90ca907483c1f3182
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Mon Feb 12 19:57:09 2018 -0600
+
+    Majors.html updated
+
+commit 9969901b4e00d2c7ff2be00d2b792f816e30adef
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Mon Feb 12 19:46:53 2018 -0600
+
+    column added in about.html
+
+commit 9d3def4ec9a3fb295078b66060bb5fdf14779b78
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Mon Feb 12 19:38:17 2018 -0600
+
+    Updated application.py to include new instances.
+
+commit d526196c9286171cc1863cb3d7db9bed4d8b0571
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Mon Feb 12 19:28:39 2018 -0600
+
+    Added instance pages without links.
+
+commit 18272311ba9301c895c20b958ef64836fff3d816
+Author: Mitchell Traylor <traylor1@cs.utexas.edu>
+Date:   Mon Feb 12 16:16:49 2018 -0600
+
+    Fixed images on about page, updated our names.
+
+commit e2d22d9ee334812a248b28825bb4ba6dfbd6d79a
+Author: Mitchell Traylor <traylor1@cs.utexas.edu>
+Date:   Mon Feb 12 16:02:07 2018 -0600
+
+    Links updated for all pages so far except for about
+
+commit d7c3d2ed5a7db1af76621e65b3b31f63e9624bb8
+Author: Mitchell Traylor <traylor1@cs.utexas.edu>
+Date:   Mon Feb 12 15:47:55 2018 -0600
+
+    Images reorganized into subdirectory, links fixed in about.html
+
+commit 3fa72c8a05e053aebec5b2fdcf0e155c373558c5
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Mon Feb 12 00:57:43 2018 -0600
+
+    added dynamic scaling to profile images in about.html
+
+commit 82809dcfe6fdf8a8322ab87666f51b14697db1e3
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Sun Feb 11 23:34:29 2018 -0600
+
+    navbar links fixed
+    
+    links were broken.
+
+commit 0d014554009e146892e0659d4c257348026b554d
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Sun Feb 11 23:04:02 2018 -0600
+
+    images centered in about.html. Bootstrap 3.3.7 used for compatability
+    
+    some classes don't behave as they should in Bootstrap 4.0.
+
+commit 017b7567a0a829d1a3ca00a619a1425f5bff23de
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Sun Feb 11 22:55:05 2018 -0600
+
+    navbar added to about.html
+    
+    nav bar based off of Bootstrap isntalled.
+
+commit c35398310480a9838ecee4764fb51a107f1614f4
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Sun Feb 11 22:33:19 2018 -0600
+
+    Python 3.6 in travis.yml
+    
+    python version changed to 3.6 due to build failure
+
+commit d3f0a22af297de4c59f807267f5b18901cabfc37
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Sun Feb 11 22:31:09 2018 -0600
+
+    Merge conflict on travis.yml resolved
+    
+    python verseion reverted back to 2.7
+
+commit 88ebffba66a70700f52eaf4d5a571a4a1c6de340
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Sun Feb 11 22:27:30 2018 -0600
+
+    navbar added to about.html
+
+commit e0cf637ab36e476410e253f8d6253253e6564224
+Merge: 347f5fb dc647e3
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Sun Feb 11 21:32:53 2018 -0600
+
+    Merge branch 'staticsite' of https://github.com/theworkingmen/majorpotential into staticsite
+
+commit 347f5fbef0a965e43363db21c0923ba7dcd316a0
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Sun Feb 11 21:32:47 2018 -0600
+
+    made basic about.html with default profile pictures
+
+commit dc647e33b98594484d79116bd15590486dd832bf
+Author: Abel Tesfaye <abelhaddistt@gmail.com>
+Date:   Sun Feb 11 20:04:19 2018 -0600
+
+    Update travis.yml
+
+commit 86b5aa9b53457b7f34c85887e62bc272f9171065
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Sun Feb 11 19:57:52 2018 -0600
+
+    Bootstrap tools added
+    
+    compiled css and js files from bootstrap 4.0 is ready for use
+
+commit c5423d92de7ffba33ce417f3ed92bbcedddb7884
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Sat Feb 10 20:49:00 2018 -0600
+
+    Travis-CI integration
+
+commit 185f5adde44cdc9eee7e9f11bf51d43c7fa839dd
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Sat Feb 10 15:56:58 2018 -0600
+
+    removed unnecessary files
+
+commit d0c54c42b1a391f8b707d2bb154a6de48c8cca52
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Sat Feb 10 11:26:14 2018 -0600
+
+    Added a flask app that renders the html pages and queries github for commit information
+
+commit 792c195521a053443343823e7c5223bd3f7639c5
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Fri Feb 9 08:49:58 2018 -0600
+
+    Created model-major.html.
+
+commit 90ff123d4df639dc4786d1a1d7972ab36213fd75
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Fri Feb 9 07:11:22 2018 -0600
+
+    Created model page for cities.
+
+commit 1b7b68d23a6529a5ac7c04b9e72531bb7a44c861
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Fri Feb 9 06:50:59 2018 -0600
+
+    Dead links added to complete navbar, pages to be created later.
+
+commit 39c6acb94a9f408820ac2d0f70035866fcd458c2
+Author: NealFM <NealFM@users.noreply.github.com>
+Date:   Thu Feb 8 19:33:56 2018 -0600
+
+    Added group login information
+
+commit e06d298eaba932e1476ddbfff4113e38be52af0f
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Thu Feb 8 19:07:21 2018 -0600
+
+    Created model-college.html, navbar updated to link to it.
+
+commit ddc5e381408f6aa938e64ade34bb60fe31b2145c
+Author: Abel Tesfaye <abelhaddistt@gmail.com>
+Date:   Thu Feb 8 15:55:07 2018 -0600
+
+    Add Proposal.txt
+    
+    To check the GitHub API
+
+commit e1b367a7412eb6a63bda8938c307cece9dce20fa
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Thu Feb 8 15:00:44 2018 -0600
+
+    Created splash page for static site.
+
+commit 1df2285c1ceeee084ac52073ea3cb4025feb00bb
+Author: smcw66 <32080825+smcw66@users.noreply.github.com>
+Date:   Wed Feb 7 11:03:42 2018 -0600
+
+    Initial commit

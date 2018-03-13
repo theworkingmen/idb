@@ -4,15 +4,18 @@ import requests
 import json
 import math
 from keys import bing_key
+
+
 cities_list = []
 number_of_images_failed_flicker = 0
 number_of_images_failed_bing = 0
 failed_county_data = 0
 
+
 def cities_basic_info():
     added_cities = set()
     with open('university.json', 'r') as f:
-         uni_total_data = json.load(f)
+        uni_total_data = json.load(f)
 
     count = 0
     failed = 0
@@ -49,7 +52,8 @@ def cities_basic_info():
                     if county_data[3] == None:
                         city_dict["city_image"] = None
                     else:
-                        city_dict["city_image"] = flicker_pic_url(county_data[3])
+                        city_dict["city_image"] = flicker_pic_url(
+                            county_data[3])
                     city_dict["image_description"] = county_data[5]
 
                 except Exception as e2:
@@ -63,7 +67,8 @@ def cities_basic_info():
                     if county_data[3] == None:
                         city_dict["city_image"] = None
                     else:
-                        city_dict["city_image"] = flicker_pic_url(county_data[3])
+                        city_dict["city_image"] = flicker_pic_url(
+                            county_data[3])
                 else:
                     city_dict["city_image"] = flicker_pic_url(city_data[3])
 
@@ -86,10 +91,11 @@ def cities_basic_info():
     with open('cities.json', 'w') as fi:
         json.dump(cities_list, fi)
 
+
 def flicker_pic_url(url):
     global c
     html_page = urllib2.urlopen(url + "/sizes")
-    soup  = BeautifulSoup(html_page)
+    soup = BeautifulSoup(html_page)
 
     images = []
 
@@ -114,24 +120,24 @@ def flicker_pic_url(url):
         elif "_t.jpg" in x:
             images.append(x)
 
-
     if len(images) > 0:
         return images[0]
     else:
-        number_of_images_failed_flicker+= 1
+        number_of_images_failed_flicker += 1
         return None
 
 
 def add_city_images_from_bing():
     global number_of_images_failed_bing
     with open('cities.json', 'r') as f:
-         city_data = json.load(f)
+        city_data = json.load(f)
 
     for city_dict in city_data:
         city_name = city_dict["city_name"]
         county_name = city_dict["county_name"]
         if city_dict["city_image"] is None:
-            city_dict["city_image"] = scrape_city_pic_bing(city_name, county_name)
+            city_dict["city_image"] = scrape_city_pic_bing(
+                city_name, county_name)
             city_dict["image_description"] = "Downtown " + city_name
 
         if city_dict["image_description"] is None:
@@ -141,35 +147,39 @@ def add_city_images_from_bing():
     with open('cities.json', 'w') as fi:
         json.dump(city_data, fi)
 
+
 def scrape_city_pic_bing(city_name, county_name):
     global number_of_images_failed_bing
-    query = ["Downtown " + city_name , "Downtown " + county_name]
+    query = ["Downtown " + city_name, "Downtown " + county_name]
     for q in query:
         search_query = q + " flicker"
         search_url = "https://api.cognitive.microsoft.com/bing/v7.0/images/search"
-        headers = {"Ocp-Apim-Subscription-Key" : bing_key}
-        params  = {"q": search_query, "safeSearch": "Strict", "imageType": "photo"}
+        headers = {"Ocp-Apim-Subscription-Key": bing_key}
+        params = {"q": search_query,
+                  "safeSearch": "Strict", "imageType": "photo"}
         response = requests.get(search_url, headers=headers, params=params)
         response.raise_for_status()
         search_results = response.json()
 
         if "value" in search_results:
             if (len(search_results["value"]) > 0) and ("contentUrl" in search_results["value"][0]):
-                print("success " + city_name + " " + search_results["value"][0]["contentUrl"])
+                print("success " + city_name + " " +
+                      search_results["value"][0]["contentUrl"])
                 return search_results["value"][0]["contentUrl"]
 
     number_of_images_failed_bing += 1
-    print("*** failed " + city_name )
+    print("*** failed " + city_name)
     return None
+
 
 def scrape_county_health_stat():
     data_dict = {}
     with open('cities.json', 'r') as f:
-         city_data = json.load(f)
+        city_data = json.load(f)
 
     county_info_url = ("http://api.datausa.io/api/?show=geo&sumlevel=county&year=latest" +
-    "&required=primary_care_physicians,motor_vehicle_crash_deaths,violent_crime," +
-    "high_school_graduation,some_college,unemployment,population_estimate,median_household_income")
+                       "&required=primary_care_physicians,motor_vehicle_crash_deaths,violent_crime," +
+                       "high_school_graduation,some_college,unemployment,population_estimate,median_household_income")
 
     response = requests.get(county_info_url)
     county_data = json.loads(response.text)
@@ -192,13 +202,14 @@ def scrape_county_health_stat():
     with open('temp_county_health_data.json', 'w') as fi:
         json.dump(data_dict, fi)
 
+
 def add_county_health_stat():
     global failed_county_data
     with open('temp_county_health_data.json', 'r') as fi:
-         temp_county_data = json.load(fi)
+        temp_county_data = json.load(fi)
 
     with open('cities.json', 'r') as f:
-         city_data = json.load(f)
+        city_data = json.load(f)
 
     for city in city_data:
         id = city["county_id"]
@@ -211,28 +222,29 @@ def add_county_health_stat():
 
         except Exception as e:
             failed_county_data += 1
-            city["survey_year_in_county"]= None
-            city["median_household_income_in_county"]= None
-            city["violent_crime_in_county"]= None
-            city["people_with_college_education_in_county"]= None
-            city["unemployment_in_county"]= None
-            city["motor_vehicle_crash_deaths_in_county"]= None
-            city["primary_care_physicians_in_county"]= None
-            city["high_school_graduation_rate_in_county"]= None
-            city["population_in_county"]= None
+            city["survey_year_in_county"] = None
+            city["median_household_income_in_county"] = None
+            city["violent_crime_in_county"] = None
+            city["people_with_college_education_in_county"] = None
+            city["unemployment_in_county"] = None
+            city["motor_vehicle_crash_deaths_in_county"] = None
+            city["primary_care_physicians_in_county"] = None
+            city["high_school_graduation_rate_in_county"] = None
+            city["population_in_county"] = None
             pass
 
     print("Failed = " + str(failed_county_data))
     with open('cities.json', 'w') as fi:
         json.dump(city_data, fi)
 
+
 def add_top_majors_in_county():
 
     with open('cities.json', 'r') as f:
-         cities_total_data = json.load(f)
+        cities_total_data = json.load(f)
 
     year = 0
-    temp_dict = {} # key = cip -- value = number of graduates
+    temp_dict = {}  # key = cip -- value = number of graduates
 
     url_get_major_data = 'http://api.datausa.io/api/?show=cip&sumlevel=4&year=latest&required=grads_total&geo='
 
@@ -250,7 +262,7 @@ def add_top_majors_in_county():
         print("\n\n************" + str(county_count) + "***************\n\n")
         major_dict = {}
         top_five = 0
-        for key, value in sorted(temp_dict.iteritems(), key=lambda (k,v): (v,k), reverse = True):
+        for key, value in sorted(temp_dict.iteritems(), key=lambda (k, v): (v, k), reverse=True):
             major_dict["data_year"] = year
             major_dict[key] = value
             top_five += 1
@@ -262,10 +274,10 @@ def add_top_majors_in_county():
     with open('cities.json', 'w') as fi:
         json.dump(cities_total_data, fi)
 
+
 if __name__ == "__main__":
-    #cities_basic_info()
-    #print("number_of_images_failed_flicker = " + str(number_of_images_failed_flicker))
-    #add_city_images_from_bing()
-    #scrape_county_health_stat()
-    #add_county_health_stat()
-    #add_top_majors_in_county()
+    cities_basic_info()
+    add_city_images_from_bing()
+    scrape_county_health_stat()
+    add_county_health_stat()
+    add_top_majors_in_county()

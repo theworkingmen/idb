@@ -14,6 +14,8 @@ universities_list = []
     Name, Website, County_id, state_id, latitude, longitude, university_id,
     city_id.
 """
+
+
 def get_university_stat():
     url_basic_uni_info = 'http://api.datausa.io/attrs/university'
 
@@ -56,10 +58,13 @@ def get_university_stat():
     with open('university.json', 'w') as f:
         json.dump(universities_list, f)
 
+
 """
     Adds tuition data.
     Out of state tuition, In state tuition, and survey_year.
 """
+
+
 def add_tuition_stat():
 
     temp_dict = {}
@@ -74,15 +79,15 @@ def add_tuition_stat():
     for data in uni_data:
         if data is not None:
             tuition_list = [0, 0, 0]
-            tuition_list[0] = data[3] # oos
-            tuition_list[1] = data[4] # in state
-            tuition_list[2] = data[0] # survey_year
+            tuition_list[0] = data[3]  # oos
+            tuition_list[1] = data[4]  # in state
+            tuition_list[2] = data[0]  # survey_year
             temp_dict[data[2]] = tuition_list
         else:
             print("NULL")
 
     with open('university.json', 'r') as f:
-         uni_total_data = json.load(f)
+        uni_total_data = json.load(f)
 
     for data_curr in uni_total_data:
         try:
@@ -97,26 +102,27 @@ def add_tuition_stat():
             data_curr["survey_year"] = None
             pass
 
-
     with open('university.json', 'w') as fi:
-         json.dump(uni_total_data, fi)
+        json.dump(uni_total_data, fi)
 
 
 """
     Scrapes race demographics of universities.
     Source - https://api.data.gov/ed/collegescorecard/
 """
+
+
 def scrape_race_stat():
 
-    url_get_race = ('https://api.data.gov/ed/collegescorecard/v1/schools?fields=school.name'+
-    ',id,2015.student.demographics.race_ethnicity.white,2015.student.demographics.race_ethnicity.'+
-    'black,2015.student.demographics.race_ethnicity.hispanic,2015.student.demographics.race_ethnicity.'+
-    'asian,2015.student.demographics.race_ethnicity.aian,2015.student.demographics.race_ethnicity.nhpi,'+
-    '2015.student.demographics.race_ethnicity.two_or_more,2015.student.demographics.race_ethnicity.'+
-    'non_resident_alien,2015.student.demographics.race_ethnicity.unknown,2015.student.demographics.'+
-    'race_ethnicity.white_non_hispanic,2015.student.demographics.race_ethnicity.black_non_hispanic,2015'+
-    '.student.demographics.race_ethnicity.asian_pacific_islander&sort=2015.completion.rate_suppressed.'+
-    'overall:desc&page=')
+    url_get_race = ('https://api.data.gov/ed/collegescorecard/v1/schools?fields=school.name' +
+                    ',id,2015.student.demographics.race_ethnicity.white,2015.student.demographics.race_ethnicity.' +
+                    'black,2015.student.demographics.race_ethnicity.hispanic,2015.student.demographics.race_ethnicity.' +
+                    'asian,2015.student.demographics.race_ethnicity.aian,2015.student.demographics.race_ethnicity.nhpi,' +
+                    '2015.student.demographics.race_ethnicity.two_or_more,2015.student.demographics.race_ethnicity.' +
+                    'non_resident_alien,2015.student.demographics.race_ethnicity.unknown,2015.student.demographics.' +
+                    'race_ethnicity.white_non_hispanic,2015.student.demographics.race_ethnicity.black_non_hispanic,2015' +
+                    '.student.demographics.race_ethnicity.asian_pacific_islander&sort=2015.completion.rate_suppressed.' +
+                    'overall:desc&page=')
 
     key = keys.data_gov_key
     response = requests.get(url_get_race+str(0)+key)
@@ -128,25 +134,27 @@ def scrape_race_stat():
 
     results = []
 
-    for i in range (0, pages):
+    for i in range(0, pages):
         print("page " + str(i))
         page_url = url_get_race + str(i) + key
         response = requests.get(page_url)
         race_data = json.loads(response.text)
         results += race_data["results"]
 
-
     with open('temp_race_data.json', 'w') as f:
         json.dump(results, f)
 
+
 """ Adds race demographics of universities to university data. """
+
+
 def add_race_stat():
     temp_dict = {}
     with open('university.json', 'r') as f:
-         uni_total_data = json.load(f)
+        uni_total_data = json.load(f)
 
     with open('temp_race_data.json', 'r') as f:
-         race_data = json.load(f)
+        race_data = json.load(f)
 
     for uni in race_data:
         dic = {}
@@ -185,7 +193,6 @@ def add_race_stat():
         temp_dict[id] = dic
         print(dic)
 
-
     for data_curr in uni_total_data:
         try:
             race_dic = temp_dict[int(data_curr["university_id"])]
@@ -205,14 +212,16 @@ def add_race_stat():
             data_curr["demographics_hispanic"] = race_dic["hispanic"]
             data_curr["demographics_other"] = race_dic["other"]
 
-
     with open('university.json', 'w') as fi:
-         json.dump(uni_total_data, fi)
+        json.dump(uni_total_data, fi)
+
 
 """
     Adds gender demographics of universities.
     Source - https://api.data.gov/ed/collegescorecard/
 """
+
+
 def add_gender_stat():
     temp_dict = {}
 
@@ -226,22 +235,24 @@ def add_gender_stat():
     for data in uni_data:
         if data is not None:
             gender_list = [0, 0]
-            gender_list[0] = data[3] # men
-            gender_list[1] = data[4] # women
+            gender_list[0] = data[3]  # men
+            gender_list[1] = data[4]  # women
             temp_dict[data[2]] = gender_list
         else:
             print("NULL")
 
     with open('university.json', 'r') as f:
-         uni_total_data = json.load(f)
+        uni_total_data = json.load(f)
 
     for data_curr in uni_total_data:
         try:
             gender_list = temp_dict[data_curr["university_id"]]
             if (gender_list[0] is not None) and (gender_list[1] is not None):
                 total_enrollment = gender_list[0] + gender_list[1]
-                data_curr["enrolled_men"] = round(gender_list[0] / total_enrollment, 2)
-                data_curr["enrolled_women"] = round(gender_list[1] / total_enrollment, 2)
+                data_curr["enrolled_men"] = round(
+                    gender_list[0] / total_enrollment, 2)
+                data_curr["enrolled_women"] = round(
+                    gender_list[1] / total_enrollment, 2)
             else:
                 data_curr["enrolled_men"] = None
                 data_curr["enrolled_women"] = None
@@ -251,21 +262,23 @@ def add_gender_stat():
             data_curr["enrolled_women"] = None
             pass
 
-
     with open('university.json', 'w') as fi:
-         json.dump(uni_total_data, fi)
+        json.dump(uni_total_data, fi)
+
 
 """
     Adds the top 5 majors of a university based on the number of graduates.
     Source - https://api.data.gov/ed/collegescorecard/
 """
+
+
 def add_top_majors():
 
     with open('university.json', 'r') as f:
-         uni_total_data = json.load(f)
+        uni_total_data = json.load(f)
 
     year = 0
-    temp_dict = {} # key = cip -- value = number of graduates
+    temp_dict = {}  # key = cip -- value = number of graduates
 
     url_get_major_data = 'http://api.datausa.io/api/?show=cip&sumlevel=4&required=university,grads_total&university='
 
@@ -283,24 +296,26 @@ def add_top_majors():
         print("\n\n************" + str(countt) + "***************\n\n")
         major_dict = {}
         count = 0
-        for key, value in sorted(temp_dict.iteritems(), key=lambda (k,v): (v,k), reverse = True):
+        for key, value in sorted(temp_dict.iteritems(), key=lambda (k, v): (v, k), reverse=True):
             major_dict["data_year"] = year
             major_dict[key] = value
             count += 1
             if count == 5:
                 break
 
-
         uni_data["top_grad_majors"] = major_dict
 
     with open('university.json', 'w') as fi:
         json.dump(uni_total_data, fi)
 
+
 """ Add univiersity type and number of students """
+
+
 def add_university_type():
     temp_dict = {}
     with open('university.json', 'r') as f:
-         uni_total_data = json.load(f)
+        uni_total_data = json.load(f)
 
     url_get_all_universities = 'http://api.datausa.io/attrs/university'
     response = requests.get(url_get_all_universities)
@@ -321,14 +336,16 @@ def add_university_type():
         elif uni_type == "3":
             uni_data["type"] = "private, 4 year, and for profit"
 
-
     with open('university.json', 'w') as fi:
         json.dump(uni_total_data, fi)
 
+
 """ Remove universities with null values. """
+
+
 def remove_null_values():
     with open('university.json', 'r') as f:
-         uni_total_data = json.load(f)
+        uni_total_data = json.load(f)
 
     count = 0
     for uni_data in uni_total_data:
@@ -342,10 +359,13 @@ def remove_null_values():
     with open('university.json', 'w') as fi:
         json.dump(uni_total_data, fi)
 
+
 """ Count the number of universities. """
+
+
 def count_universities():
     with open('university.json', 'r') as f:
-         uni_total_data = json.load(f)
+        uni_total_data = json.load(f)
 
     count = 0
 
@@ -353,6 +373,7 @@ def count_universities():
         count += 1
 
     print(count)
+
 
 if __name__ == '__main__':
     get_university_stat()
