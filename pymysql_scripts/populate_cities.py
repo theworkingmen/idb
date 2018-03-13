@@ -4,8 +4,8 @@ import pymysql
 import json
 
 # Important note, do not run this yet! Our database does not support city names
-# as long as some .json entries are. This will be fixed later, then this script
-# should work fine.
+# (or county names) as long as some .json entries are. This will be fixed later,
+# then this script should work fine.
 
 # Passed a string containing the city's name and state separated by ", "
 # Returns a tuple of the form (city, state)
@@ -51,6 +51,9 @@ def __main__() :
         pk = ""
 				image = ""
 				image_desc = "" # As of now, there is no entry for this in our database, will not be added yet
+				county = ""
+				population = ""
+				top_majors = {}
         try :
             # get all data we need
             full_name = parse_city_state(instance["city_name"])
@@ -63,6 +66,10 @@ def __main__() :
 						if image_desc is None :
 						    image_desc = ""
             pk = instance["city_id"] + "" # Use city id as primary key
+						county = instance["county_name"]
+						population = instance["population_in_county"]
+						median_income = instance["median_household_income_in_county"]
+						top_majors = instance["top_grad_majors"]
         except KeyError :
             # something was missing from json file, move to next instance
             print("We are missing something from the json file for this instance")
@@ -76,9 +83,9 @@ def __main__() :
         print("Creating a city instance for " + name ", " + state +  ", ID " + pk)
         with conn.cursor() as cursor:
             # create new city - update this statement when new info added (including image_desc)
-            sql = "INSERT INTO cities (pk, name, state, image) \
-              VALUES (%s, %s, %s, %s)"
-            cursor.execute(sql, (pk, name, state, image))
+            sql = "INSERT INTO cities (pk, name, state, county, population, \
+						  median_income, image) VALUES (%s, %s, %s, %s, %s, %s, %s)"
+            cursor.execute(sql, (pk, name, state, county, population, median_income, image))
         conn.commit()
         print()
 
