@@ -3,13 +3,7 @@ import logging
 import pymysql  
 import json
 
-# Important note, do not run this yet! Our database does not support major names
-# as long as some .json entries are. This will be fixed later, then this script
-# should work fine.
-
 # Changes needed to table:
-# -lengthen name attribute
-# -add salary_growth, is_stem, total, total_2015, average_age
 # -create compatible secondary tables for universities_2015 and cities_2015 data
 
 
@@ -45,32 +39,32 @@ def __main__() :
 
     for instance in major_list :
         # Declare all variables we currently have - actually, is this necessary?
-				name = ""
+        name = ""
         pk = ""
-				image = ""
-				is_stem = "" # As of now, there is no entry for this in our database, will not be added yet
-				salary_growth = ""
-				salary = ""
-				universities_2015 = {}
-				cities_2015 = {}
-				total = ""
-				average_age = ""
-				total_2015 = ""
+        image = ""
+        is_stem = "" # As of now, there is no entry for this in our database, will not be added yet
+        salary_growth = ""
+        salary = ""
+        universities_2015 = {}
+        cities_2015 = {}
+        total = ""
+        average_age = ""
+        total_2015 = ""
         try :
             # get all data we need
             image = instance["image_link"]
-						if image is None :
-						    image = ""
-						pk = instance["major_id"] + "" # Use Major id as primary key
-						name = instance["name"] + ""
-						is_stem = instance["is_stem"] + ""
-						salary_growth = instance["wage_growth_rate"] + ""
-						salary = instance["average_wage"] + ""
-						universities_2015 = instance["universities_with_high_graduates_on_2015"]
-						cities_2015 = instance["cities_with_high_graduates_on_2015"]
-						total = instance["total_people_in_work_foce"] + ""
-						average_age = instance["average_age_work_force"] + ""
-						total_2015 = instance["total_degrees_awarded_in_2015"] + ""
+            if image is None :
+                image = ""
+            pk = instance["major_id"] + "" # Use Major id as primary key
+            name = instance["name"] + ""
+            is_stem = str(instance["is_stem"]) + ""
+            salary_growth = instance["wage_growth_rate"] + ""
+            salary = instance["average_wage"] + ""
+            universities_2015 = instance["universities_with_high_graduates_on_2015"]
+            cities_2015 = instance["cities_with_high_graduates_on_2015"]
+            total = instance["total_people_in_work_foce"] + ""
+            average_age = instance["average_age_work_force"] + ""
+            total_2015 = instance["total_degrees_awarded_in_2015"] + ""
         except KeyError :
             # something was missing from json file, move to next instance
             print("We are missing something from the json file for this instance")
@@ -84,11 +78,13 @@ def __main__() :
         print("Creating a major instance for " + name +  ", ID " + pk)
         with conn.cursor() as cursor:
             # create new major - update this statement when new info added (including is_stem)
-            sql = "INSERT INTO majors (pk, name, salary, image) \
-              VALUES (%s, %s, %s, %s)"
-            cursor.execute(sql, (pk, name, salary, image))
+            sql = "INSERT INTO majors (pk, name, salary, image, salary_growth, is_stem, total_workers, total_grads_2015, average_age) \
+              VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"
+            cursor.execute(sql, (pk, name, salary, image, salary_growth, is_stem, total, total_2015, average_age))
         conn.commit()
         print()
+        print("Test good.")
+        return
 
 
     conn.close()
