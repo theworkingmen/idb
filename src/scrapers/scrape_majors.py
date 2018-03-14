@@ -131,7 +131,179 @@ def scrape_city_pic_bing(major_name):
     print("*** failed " + city_name)
     return None
 
+def scrape_detail_info_major():
+    majors_dict = {}
+    with open('majors.json', 'r') as fff:
+        major_data = json.load(fff)
+
+    for major in major_data:
+        curr_major_dict = {}
+        id = major["major_id"]
+        try:
+            url = "https://datausa.io//profile/stat/?sort=desc&sumlevel=all&cip=" + id + "&limit=1&year=all&show=cip&order=year&required=grads_total%2Cgrads_rank%2Cyear&col=grads_total&rank=1&dataset=False"
+            response = requests.get(url)
+            data = json.loads(response.text)
+            total_degrees_awarded = data["value"]
+            curr_major_dict["total_degrees_awarded_in_2015"] = total_degrees_awarded
+            print("Added " + major["name"])
+
+        except Exception as e:
+            print("Failed total_degrees_awarded")
+
+        try:
+            url = "https://datausa.io/profile/stat/?sort=desc&sumlevel=all&cip=" + id + "&limit=1&year=all&show=cip&order=year&required=year%2Cavg_wage%2Cavg_wage_moe%2Cavg_wage_rank%2Cnum_ppl%2Cnum_ppl_moe&col=num_ppl&rank=1&dataset=False"
+            response = requests.get(url)
+            data = json.loads(response.text)
+            total_work_force = data["value"]
+            curr_major_dict["total_people_in_work_foce"] = total_work_force
+
+        except Exception as e:
+            print("Failed total_people_in_work_force")
+
+        try:
+            url = ("https://datausa.io//profile/stat/?sort=desc&sumlevel=all&cip=" + 
+            id + "&limit=2&year=all&show=cip&order=year&required=year%2Cavg_wage%2C" +
+            "avg_wage_moe%2Cavg_wage_rank%2Cnum_ppl%2Cnum_ppl_moe&col=avg_wage&rank=1&dataset=False")
+            response = requests.get(url)
+            data = json.loads(response.text)
+            wage_data = data["value"]
+            wage_list = wage_data.split(" and ", 2)
+            curr_major_dict["average_wage"] = wage_list[0]
+            wage_list[0] = wage_list[0].replace("$", "")
+            wage_list[0] = wage_list[0].replace(",", "")
+            wage_list[1] = wage_list[1].replace("$", "")
+            wage_list[1] = wage_list[1].replace(",", "")
+            #print(wage_list)
+            wage_growth = round(((float(wage_list[0]) - float(wage_list[1])) / float(wage_list[1])) * 100, 2)
+            curr_major_dict["wage_growth_rate"] = str(wage_growth) + "%"
+
+        except Exception as e:
+            print("Failed average_wage")
+
+        try:
+            url = ("https://datausa.io/profile/stat/?sort=desc&show=cip&required=year%2Cavg_age%2Cavg_age_moe" +
+            "&sumlevel=all&cip=" + id + "&limit=1&year=all&order=year&col=avg_age&rank=1&dataset=pums")
+            response = requests.get(url)
+            data = json.loads(response.text)
+            average_age = data["value"]
+            curr_major_dict["average_age_work_force"] = average_age
+
+        except Exception as e:
+            print("Failed average_age")
+
+        print("Added " + major["name"] + " job growth rate " + str(wage_growth) + "%")
+        majors_dict[id] = curr_major_dict
+
+
+    with open('add_majors.json', 'w') as ffff:
+        json.dump(majors_dict, ffff)
+
+def add_detail_info_major():
+    with open('majors.json', 'r') as fff:
+        major_data = json.load(fff)
+
+    with open('add_majors.json', 'r') as fff:
+        add_major_data = json.load(fff)
+
+    for major in major_data:
+        add_major = add_major_data[major["major_id"]]
+        major["average_wage"] = add_major["average_wage"]
+        major["total_degrees_awarded_in_2015"] = add_major["total_degrees_awarded_in_2015"]
+        major["wage_growth_rate"]= add_major["wage_growth_rate"]
+        major["average_age_work_force"] = add_major["average_age_work_force"]
+        major["total_people_in_work_foce"] = add_major["total_people_in_work_foce"]
+
+    with open('majors.json', 'w') as filee:
+        json.dump(major_data, filee)
+
+def add_cities_top_grads_for_major():
+    with open('majors.json', 'r') as fff:
+        majors_data = json.load(fff)
+
+    with open('cities.json', 'r') as fi:
+        cities_data = json.load(fi)
+
+    allowed_cities = set()
+    for city in cities_data:
+        allowed_cities.add(city["city_id"])
+
+    for major in majors_data:
+        url = "http://api.datausa.io/api/?show=geo&sumlevel=msa&year=latest&required=grads_total&cip="
+        id = major["major_id"]
+        url = url + id
+        response = requests.get(url)
+        data_json = json.loads(response.text)
+        cities_list = data_json["data"]
+
+        temp_dict = {}
+        year = 0
+        for city in cities_list:
+            temp_dict[city[1]] = city[3]
+            year = city[0]
+
+        count = 0
+        cities_dict = {}
+        for key in sorted(temp_dict, key=temp_dict.get, reverse=True):
+            if key in allowed_cities:
+                cities_dict[key] = temp_dict[key]
+                count += 1
+
+                if count == 5:
+                    major["cities_with_high_graduates_on_" + str(year)] = cities_dict
+                    break
+
+        print("** Added " + major["name"] )
+
+
+        with open('majors.json', 'w') as filee:
+            json.dump(majors_data, filee)
+
+def add_universities_top_grads_for_major():
+    with open('majors.json', 'r') as fff:
+        majors_data = json.load(fff)
+
+    with open('university.json', 'r') as fi:
+        uni_data = json.load(fi)
+
+    allowed_universities = set()
+    for uni in uni_data:
+        allowed_universities.add(uni["university_id"])
+
+    for major in majors_data:
+        url = "http://api.datausa.io/api/?show=university&sumlevel=all&year=latest&required=grads_total&cip="
+        id = major["major_id"]
+        url = url + id
+        response = requests.get(url)
+        data_json = json.loads(response.text)
+        uni_list = data_json["data"]
+
+        temp_dict = {}
+        year = 0
+        for university in uni_list:
+            temp_dict[university[2]] = university[3]
+            year = university[0]
+
+        count = 0
+        uni_dict = {}
+        for key in sorted(temp_dict, key=temp_dict.get, reverse=True):
+            if key in allowed_universities:
+                uni_dict[key] = temp_dict[key]
+                count += 1
+
+                if count == 5:
+                    major["universities_with_high_graduates_on_" + str(year)] = uni_dict
+                    break
+
+        print("** Added " + major["name"] )
+
+
+        with open('majors.json', 'w') as filee:
+            json.dump(majors_data, filee)
 
 if __name__ == "__main__":
     majors_basic_info()
     add_pictures_from_bing()
+    scrape_detail_info_major()
+    add_detail_info_major()
+    add_cities_top_grads_for_major()
+    add_universities_top_grads_for_major()
