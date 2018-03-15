@@ -47169,7 +47169,7 @@
         "enrolled_men": 0.42,
         "county_id": "05000US66010",
         "latitude": 13.432726,
-        "state_id": "04000US66",
+        "state": "Guam - territory",
         "top_grad_majors": {
             "2200": 157,
             "5112": 153,
@@ -47198,7 +47198,7 @@
         "enrolled_men": 0.4,
         "county_id": "05000US69110",
         "latitude": 15.152247,
-        "state_id": "04000US69",
+        "state": "Northern Mariana Islands",
         "top_grad_majors": {
             "1405": 134,
             "2200": 157,
@@ -48242,7 +48242,7 @@
         "enrolled_men": 0.31,
         "county_id": "05000US78030",
         "latitude": 18.344193,
-        "state_id": "04000US78",
+        "state": "United States Virgin Islands",
         "top_grad_majors": {
             "2201": 168,
             "4504": 190,
@@ -68426,7 +68426,7 @@
         "enrolled_men": 0.53,
         "county_id": "05000US66010",
         "latitude": 13.43689,
-        "state_id": "04000US66",
+        "state": "Guam - territory",
         "top_grad_majors": {
             "1205": 286,
             "1507": 1617,
