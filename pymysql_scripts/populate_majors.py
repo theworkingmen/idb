@@ -83,8 +83,6 @@ def __main__() :
             cursor.execute(sql, (pk, name, salary, image, salary_growth, is_stem, total, total_2015, average_age))
         conn.commit()
         print()
-        print("Test good.")
-        return
 
 
     conn.close()
