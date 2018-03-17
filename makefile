@@ -1,11 +1,13 @@
 .DEFAULT_GOAL := all
 
 FILES :=                         \
-    src                          \
-	src/js                    	 \
-	src/images                   \
-	src/scrapers                 \
-	src/css                      \
+    app/frontend/src             \
+	app/frontend/src/js          \
+	app/frontend/src/images      \
+	app/frontend/src/scrapers    \
+	app/frontend/src/css         \
+	app/backend/Database/        \
+	app/backend/scrapers/        \
 	application.log 			 \
     .travis.yml
 
@@ -13,7 +15,7 @@ FILES :=                         \
 	pylint --disable=locally-disabled --reports=no --generate-rcfile > $@
 
 doc:
-	
+
 log:
 	git log > application.log
 
@@ -53,14 +55,14 @@ config:
 	git config -l
 
 format:
-	autopep8 -i "src/scrapers/scrape_cities.py"
-	autopep8 -i "src/scrapers/scrape_majors.py"
-	autopep8 -i "src/scrapers/scrape_university.py"
+	autopep8 -i "app/backend/scrapers/scrape_cities.py"
+	autopep8 -i "app/backend/scrapers/scrape_majors.py"
+	autopep8 -i "app/backend/scrapers/scrape_university.py"
 
 compile:
-	python -m py_compile "src/scrapers/scrape_cities.py"
-	python -m py_compile "src/scrapers/scrape_majors.py"
-	python -m py_compile "src/scrapers/scrape_university.py"
+	python -m py_compile "app/backend/scrapers/scrape_cities.py"
+	python -m py_compile "app/backend/scrapers/scrape_majors.py"
+	python -m py_compile "app/backend/scrapers/scrape_university.py"
 
 scrub:
 	make clean

@@ -1,3 +1,95 @@
+commit d670b4befff3b20ae2a6ddc8de5cd02679a2abd7
+Merge: c963d82 0a78e82
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Fri Mar 16 15:31:33 2018 -0500
+
+    Merge branch 'reactsite' of https://github.com/theworkingmen/idb into reactsite
+
+commit c963d8278aa9b49ca1c0a762903c7da0e2af2727
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Fri Mar 16 15:30:47 2018 -0500
+
+    Selenium tests added.
+
+commit 0a78e82079460b2358161ca988939cd52483e559
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Thu Mar 15 06:06:39 2018 -0500
+
+    Add Readme for the alternative database
+
+commit f66e873098122ade04b8e30bf7412f23277d5199
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Thu Mar 15 06:06:00 2018 -0500
+
+    Added all files for the alternative database
+
+commit b1305e83f2a3041e2b9336575b8b2de02412f364
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Thu Mar 15 06:03:48 2018 -0500
+
+    More files for the alternative database model.
+
+commit afe6a4bc448fbe08190cf55afe47a0e1c479fcb3
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Thu Mar 15 05:59:18 2018 -0500
+
+    Add alternative Database model using SQLAlchemy
+
+commit 783f01652bfffff38fe55eb1b22ed677c4385bf4
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Thu Mar 15 05:57:53 2018 -0500
+
+    Fix a small bug in university.json
+
+commit a13d91ac9cbfb7bffc0cd37b3badf5c5e1c1678f
+Merge: 16a64cb 5962c2d
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Wed Mar 14 20:31:46 2018 -0500
+
+    Merge branch 'reactsite' of https://github.com/theworkingmen/idb into reactsite
+
+commit 16a64cb174a47fbd9d6c0e8b3cbd296e13f8a642
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Wed Mar 14 20:31:06 2018 -0500
+
+    Cities table populated, along with auxilary table linked to top majors.
+
+commit 5962c2dc9b91f753e6448b16fe39bf18d33db9b2
+Author: Neal F <nfriesenhahn@utexas.edu>
+Date:   Wed Mar 14 19:48:25 2018 -0500
+
+    Added API, written in SQLAlchemy
+
+commit 6dd9d048e27d1ec1038d1c2e4a73ac2496ef970e
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Wed Mar 14 16:50:36 2018 -0500
+
+    populate_majors.py debugged and working, running now (ignore the early return, that was for testing and will be removed)
+
+commit f0cbed175b3372127e92f97dcc161fd70847976f
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Wed Mar 14 09:29:14 2018 -0500
+
+    Updated populate_majors.py to include new data.
+
+commit 081cf7b0273a00328cfdd33bb74ed5bd3e60dcd4
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Wed Mar 14 05:13:05 2018 -0500
+
+    Added more info for majors. Finished Scraping
+
+commit b042a159049ff0a8ac9a072b1e608ff6c4f2fd6b
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Tue Mar 13 18:46:26 2018 -0500
+
+    Fix travis. Previous commit failed
+
+commit 53816b80e6b66c8afb35ef73c7f24188011c58e7
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Tue Mar 13 18:32:41 2018 -0500
+
+    Fix Travis
+
 commit 94db68443abb5d81a23a19a8a5b54ffe55cd3c57
 Merge: 82a8e43 5330549
 Author: abelhtt <abelhaddistt@gmail.com>
