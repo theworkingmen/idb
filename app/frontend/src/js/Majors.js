@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {Image, Grid, Row, Col, Thumbnail} from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 import Card from './Card.js';
+import majorData from '../scrapers/majors.json'
+import '../css/Flex.css';
 
 {/* Use following url for default image: http://bit.ly/2CYI94d */}
 {/* Grid automatically creates new rows for additional card components. */}
@@ -12,23 +14,11 @@ class Majors extends Component {
   }
 
   render() {
-    return (
-      <Grid>
-        <Card name='Computer Science' model='majors' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='Nursing' model='majors' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='Petroleum Engineering' model='majors' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default major' model='majors' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default major' model='majors' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default major' model='majors' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default major' model='majors' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default major' model='majors' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default major' model='majors' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default major' model='majors' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default major' model='majors' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default major' model='majors' imgsrc='http://bit.ly/2CYI94d'/>
-        <Card name='default major' model='majors' imgsrc='http://bit.ly/2CYI94d'/>
-      </Grid>
-    )
+    let majors = [];
+    for (var i = 0; i < majorData.length; i++) {
+        majors.push(<Card name={majorData[i].name} model='majors' domain={majorData[i].image_link}> </Card>);
+    }
+    return <Grid><Row className="flex-row">{majors}</Row></Grid>;
   }
 }
 
