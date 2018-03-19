@@ -239,7 +239,6 @@ def add_county_health_stat():
 
 
 def add_top_majors_in_county():
-
     with open('cities.json', 'r') as f:
         cities_total_data = json.load(f)
 
@@ -276,9 +275,50 @@ def add_top_majors_in_county():
         json.dump(cities_total_data, fi)
 
 
+def filter_majors():
+    sett = set()
+    with open('university.json', 'r') as f:
+        university_data = json.load(f)
+
+    with open('cities.json', 'r') as ff:
+        city_data = json.load(ff)
+
+    with open('majors.json', 'r') as fff:
+        major_data = json.load(fff)
+
+    for uni in university_data:
+        d = uni["top_grad_majors"]
+        for key in d:
+            sett.add(key)
+
+    for city in city_data:
+        dd = city["top_grad_majors"]
+        for keyy in dd:
+            sett.add(keyy)
+
+    count = 0
+    dict2 = {}
+    for major in major_data:
+        if ("Other " in major["name"]) and (major["major_id"] not in sett):
+            print("found")
+            del(major_data[count])
+        elif (major["major_id"] not in sett):
+            dict2[major["major_id"]] = major["name"]
+        count += 1
+
+    for major in major_data:
+        if major["major_id"] in dict2:
+            del(major_data[count])
+            print("found")
+
+    with open('majors.json', 'w') as fff:
+        json.dump(major_data, fff)
+
+
 if __name__ == "__main__":
     cities_basic_info()
     add_city_images_from_bing()
     scrape_county_health_stat()
     add_county_health_stat()
     add_top_majors_in_county()
+    filter_majors()

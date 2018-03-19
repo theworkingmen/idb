@@ -131,6 +131,7 @@ def scrape_city_pic_bing(major_name):
     print("*** failed " + city_name)
     return None
 
+
 def scrape_detail_info_major():
     majors_dict = {}
     with open('majors.json', 'r') as fff:
@@ -140,7 +141,8 @@ def scrape_detail_info_major():
         curr_major_dict = {}
         id = major["major_id"]
         try:
-            url = "https://datausa.io//profile/stat/?sort=desc&sumlevel=all&cip=" + id + "&limit=1&year=all&show=cip&order=year&required=grads_total%2Cgrads_rank%2Cyear&col=grads_total&rank=1&dataset=False"
+            url = "https://datausa.io//profile/stat/?sort=desc&sumlevel=all&cip=" + id + \
+                "&limit=1&year=all&show=cip&order=year&required=grads_total%2Cgrads_rank%2Cyear&col=grads_total&rank=1&dataset=False"
             response = requests.get(url)
             data = json.loads(response.text)
             total_degrees_awarded = data["value"]
@@ -151,7 +153,8 @@ def scrape_detail_info_major():
             print("Failed total_degrees_awarded")
 
         try:
-            url = "https://datausa.io/profile/stat/?sort=desc&sumlevel=all&cip=" + id + "&limit=1&year=all&show=cip&order=year&required=year%2Cavg_wage%2Cavg_wage_moe%2Cavg_wage_rank%2Cnum_ppl%2Cnum_ppl_moe&col=num_ppl&rank=1&dataset=False"
+            url = "https://datausa.io/profile/stat/?sort=desc&sumlevel=all&cip=" + id + \
+                "&limit=1&year=all&show=cip&order=year&required=year%2Cavg_wage%2Cavg_wage_moe%2Cavg_wage_rank%2Cnum_ppl%2Cnum_ppl_moe&col=num_ppl&rank=1&dataset=False"
             response = requests.get(url)
             data = json.loads(response.text)
             total_work_force = data["value"]
@@ -161,9 +164,9 @@ def scrape_detail_info_major():
             print("Failed total_people_in_work_force")
 
         try:
-            url = ("https://datausa.io//profile/stat/?sort=desc&sumlevel=all&cip=" + 
-            id + "&limit=2&year=all&show=cip&order=year&required=year%2Cavg_wage%2C" +
-            "avg_wage_moe%2Cavg_wage_rank%2Cnum_ppl%2Cnum_ppl_moe&col=avg_wage&rank=1&dataset=False")
+            url = ("https://datausa.io//profile/stat/?sort=desc&sumlevel=all&cip=" +
+                   id + "&limit=2&year=all&show=cip&order=year&required=year%2Cavg_wage%2C" +
+                   "avg_wage_moe%2Cavg_wage_rank%2Cnum_ppl%2Cnum_ppl_moe&col=avg_wage&rank=1&dataset=False")
             response = requests.get(url)
             data = json.loads(response.text)
             wage_data = data["value"]
@@ -173,8 +176,9 @@ def scrape_detail_info_major():
             wage_list[0] = wage_list[0].replace(",", "")
             wage_list[1] = wage_list[1].replace("$", "")
             wage_list[1] = wage_list[1].replace(",", "")
-            #print(wage_list)
-            wage_growth = round(((float(wage_list[0]) - float(wage_list[1])) / float(wage_list[1])) * 100, 2)
+            # print(wage_list)
+            wage_growth = round(
+                ((float(wage_list[0]) - float(wage_list[1])) / float(wage_list[1])) * 100, 2)
             curr_major_dict["wage_growth_rate"] = str(wage_growth) + "%"
 
         except Exception as e:
@@ -182,7 +186,7 @@ def scrape_detail_info_major():
 
         try:
             url = ("https://datausa.io/profile/stat/?sort=desc&show=cip&required=year%2Cavg_age%2Cavg_age_moe" +
-            "&sumlevel=all&cip=" + id + "&limit=1&year=all&order=year&col=avg_age&rank=1&dataset=pums")
+                   "&sumlevel=all&cip=" + id + "&limit=1&year=all&order=year&col=avg_age&rank=1&dataset=pums")
             response = requests.get(url)
             data = json.loads(response.text)
             average_age = data["value"]
@@ -191,12 +195,13 @@ def scrape_detail_info_major():
         except Exception as e:
             print("Failed average_age")
 
-        print("Added " + major["name"] + " job growth rate " + str(wage_growth) + "%")
+        print("Added " + major["name"] +
+              " job growth rate " + str(wage_growth) + "%")
         majors_dict[id] = curr_major_dict
-
 
     with open('add_majors.json', 'w') as ffff:
         json.dump(majors_dict, ffff)
+
 
 def add_detail_info_major():
     with open('majors.json', 'r') as fff:
@@ -209,12 +214,13 @@ def add_detail_info_major():
         add_major = add_major_data[major["major_id"]]
         major["average_wage"] = add_major["average_wage"]
         major["total_degrees_awarded_in_2015"] = add_major["total_degrees_awarded_in_2015"]
-        major["wage_growth_rate"]= add_major["wage_growth_rate"]
+        major["wage_growth_rate"] = add_major["wage_growth_rate"]
         major["average_age_work_force"] = add_major["average_age_work_force"]
         major["total_people_in_work_foce"] = add_major["total_people_in_work_foce"]
 
     with open('majors.json', 'w') as filee:
         json.dump(major_data, filee)
+
 
 def add_cities_top_grads_for_major():
     with open('majors.json', 'r') as fff:
@@ -249,14 +255,15 @@ def add_cities_top_grads_for_major():
                 count += 1
 
                 if count == 5:
-                    major["cities_with_high_graduates_on_" + str(year)] = cities_dict
+                    major["cities_with_high_graduates_on_" +
+                          str(year)] = cities_dict
                     break
 
-        print("** Added " + major["name"] )
-
+        print("** Added " + major["name"])
 
         with open('majors.json', 'w') as filee:
             json.dump(majors_data, filee)
+
 
 def add_universities_top_grads_for_major():
     with open('majors.json', 'r') as fff:
@@ -291,14 +298,15 @@ def add_universities_top_grads_for_major():
                 count += 1
 
                 if count == 5:
-                    major["universities_with_high_graduates_on_" + str(year)] = uni_dict
+                    major["universities_with_high_graduates_on_" +
+                          str(year)] = uni_dict
                     break
 
-        print("** Added " + major["name"] )
-
+        print("** Added " + major["name"])
 
         with open('majors.json', 'w') as filee:
             json.dump(majors_data, filee)
+
 
 if __name__ == "__main__":
     majors_basic_info()

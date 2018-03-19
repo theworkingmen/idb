@@ -6,8 +6,11 @@ import requests
 import json
 import math
 import keys
+from keys import bing_key
+
 
 universities_list = []
+images_failed_bing = 0
 
 """
     Gets basic University data.
@@ -310,7 +313,7 @@ def add_top_majors():
         json.dump(uni_total_data, fi)
 
 
-""" Add univiersity type and number of students """
+""" Add univiersity type  """
 
 
 def add_university_type():
@@ -360,6 +363,46 @@ def remove_null_values():
     with open('university.json', 'w') as fi:
         json.dump(uni_total_data, fi)
 
+""" Add image urls """
+def add_image_links():
+    temp_dict = {}
+    with open('university.json', 'r') as f:
+        uni_total_data = json.load(f)
+
+    for uni_data in uni_total_data:
+        uni_data["image_link"] = scrape_university_logo_bing(uni_data["name"])
+        print("added " + uni_data["name"])
+
+    print(images_failed_bing)
+
+    with open('university.json', 'w') as fi:
+        json.dump(uni_total_data, fi)
+
+""" get university logos from bing """
+
+def scrape_university_logo_bing(uni_name):
+    global images_failed_bing
+    query = [uni_name + " official logo"]
+
+    for q in query:
+        search_query = q
+        search_url = "https://api.cognitive.microsoft.com/bing/v7.0/images/search"
+        headers = {"Ocp-Apim-Subscription-Key": bing_key}
+        params = {"q": search_query,
+                  "safeSearch": "Strict", "imageType": "photo"}
+        response = requests.get(search_url, headers=headers, params=params)
+        response.raise_for_status()
+        search_results = response.json()
+
+        if "value" in search_results:
+            if (len(search_results["value"]) > 0) and ("contentUrl" in search_results["value"][0]):
+                print("success " + uni_name + " " +
+                      search_results["value"][0]["contentUrl"])
+                return search_results["value"][0]["contentUrl"]
+
+    images_failed_bing += 1
+    print("*** failed " + uni_name)
+    return None
 
 """ Count the number of universities. """
 
@@ -373,7 +416,7 @@ def count_universities():
     for uni_data in uni_total_data:
         count += 1
 
-    print(count)
+    print("There are " + str(count) + " universities.")
 
 
 if __name__ == '__main__':
