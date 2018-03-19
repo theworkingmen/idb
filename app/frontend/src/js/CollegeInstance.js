@@ -3,11 +3,13 @@ import { Link } from 'react-router-dom'
 import InstanceTitle from './InstanceTitle.js';
 import Chart from './Chart.js';
 import {Jumbotron, Row, Col } from 'react-bootstrap';
+import Map from './Map.js';
 import '../css/App.css';
+
 
 class CollegeInstance extends Component {
 
-	constructor(){
+  constructor(){
     super();
     this.state = {
       chartData:{}
@@ -31,46 +33,54 @@ class CollegeInstance extends Component {
               181045,
               153060,
               106519,
-              105162,
-              95072
+              105162
             ],
             backgroundColor:[
               'rgba(255, 99, 132, 0.6)',
               'rgba(54, 162, 235, 0.6)',
               'rgba(255, 206, 86, 0.6)',
               'rgba(75, 192, 192, 0.6)',
-              'rgba(153, 102, 255, 0.6)',
-              'rgba(255, 159, 64, 0.6)'
+              'rgba(153, 102, 255, 0.6)'
             ]
           }
         ]
       }
     });
   }
-	
-	render() {
-		return (
-	    <div className="container" style={{background:'white'}}>
-		    	
-				<center><InstanceTitle name={this.props.match.params.name}/></center>
+  
+  render() {
+    return (
 
-				<Col md={6}>
-					<p id="summary"> Summary: insert api call here </p>
-					<p id="city"> City: insert api call here  </p>
-					<p id="state"> State: insert api call here  </p>
-					<p id="social_media"> Social Media: insert api call here  </p>
-					<p id="resturants"> Number of Resturants: insert api call here  </p>
-					<p id="ranking"> National Ranking: insert api call here  </p>
-					<p id="acceptance"> Acceptance Rate: insert api call here  </p>
-					<p id="tuition_in"> Tuition(in-state): insert api call here  </p>
-					<p id="tuition_out"> Tuition(out-of-state): insert api call here  </p>
-				</Col>
-				<Col md={6}>
-		    	<Chart chartData={this.state.chartData} titleText="University Demographic" legendPosition="right"/>
-				</Col>
-	    </div>
-		);
-	}
+      <div className="container" style={{background: "white"}}>
+       
+        {/* Name of University */} 
+        <div className="container">
+        </div>  
+
+        {/*city, state, website link*/} 
+        <div className="container">
+        </div>
+
+        {/* Top 5 Majors */} 
+        <div className="container">
+        </div>
+        
+        {/* Demographics and Gender Ratio (Doughnut Charts) */} 
+        <div className="container">
+        </div>
+
+        {/* Univ. Type, Tuitions */} 
+        <div className="container">
+        </div>
+
+        {/* GMap */} 
+        <div className="container">
+          <center style={{padding:"2em"}}><Map center={[30.2672, -97.7431]} zoom={11} /></center>
+        </div>
+        
+      </div>
+    );
+  }
 }
 
 export default CollegeInstance;
