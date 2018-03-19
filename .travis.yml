@@ -18,6 +18,7 @@ install:
     - pip install numpy
     - pip install flask
     - pip install request
+    - pip install -U selenium
     - pip install requests
     - pip list
 
@@ -39,3 +40,4 @@ before_script:
 
 script:
     - make travis
+    - python tests/sele_tests.py
