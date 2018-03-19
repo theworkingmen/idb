@@ -16,7 +16,7 @@ class Card extends Component {
 		return (
 			
 		    <Col xs={12} sm={4} md={4}>
-				<Thumbnail>
+				<Thumbnail style={{height:"24em"}}>
 					{/* img src needs to have a {local path} or {url}. DB needs to provide url of img. */}
 					<center>
 					{this.props.model==="colleges" ? 
