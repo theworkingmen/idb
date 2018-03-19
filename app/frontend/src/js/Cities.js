@@ -16,7 +16,7 @@ class Cities extends Component {
   render() {
     let cities = [];
     for (var i = 0; i < cityData.length; i++) {
-        cities.push(<Card name={cityData[i].city_name} model='cities' domain={cityData[i].city_image}> </Card>);
+        cities.push(<Card name={cityData[i].city_name} model='cities' domain={cityData[i].city_image} index={i}> </Card>);
     }
     return <Grid><Row className="flex-row">{cities}</Row></Grid>;
   }
