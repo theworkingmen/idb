@@ -23,6 +23,7 @@ class University(Base):
     survey_year = Column(Integer)
     oos_tuition = Column(Integer)
     state_tuition = Column(Integer)
+    image_link = Column(String)
     name = Column(String)
     demographics_asian = Column(Float)
     demographics_black = Column(Float)
@@ -48,6 +49,9 @@ class University(Base):
         self.demographics_hispanic = hispanic
         self.demographics_black = black
         self.demographics_asian = asian
+
+    def set_image_link(self, image_link):
+        self.image_link = image_link
 
     def set_enrollment(self, men, women):
         self.enrolled_men = men

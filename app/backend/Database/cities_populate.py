@@ -52,10 +52,11 @@ def print_cities():
     session = Session()
     cities = session.query(City).all()
 
+
     print('\n### All Cities')
     for city in cities:
-        print(f'{city.city_name} has id {city.id} and top_major {city.top_grad_majors[0].id}')
-    print('')
+        universities = session.query(University).filter(University.city == city).all()
+        print(str(city.city_name) + " has id "  + city.id + " and universities " + universities[0].name)
     session.commit()
     session.close()
 

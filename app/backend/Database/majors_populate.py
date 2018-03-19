@@ -73,7 +73,8 @@ def print_majors():
     print('\n### All Majors')
     for major in majors:
         try:
-            print(f'{major.name} has id {major.id} top_city {major.cities_high_graduates_2015[0].id} top_uni = {major.universities_high_graduates_2015[0].id}')
+            #print(f'{major.name} has id {major.id} top_city {major.cities_high_graduates_2015[0].id} top_uni = {major.universities_high_graduates_2015[0].id}')
+            print("one")
         except Exception as e:
             pass
     print('')

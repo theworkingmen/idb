@@ -25,6 +25,19 @@ def university_basic_populate():
         session.commit()
         session.close()
 
+def add_university_image_link():
+    with open('../scrapers/university.json', 'r') as f:
+        university_data = json.load(f)
+
+    for uni in university_data:
+        session = Session()
+        university = session.query(University).filter(University.id == uni["university_id"]).first()
+        university.set_image_link(uni["image_link"])
+        session.add(university)
+        session.commit()
+        print(university.image_link)
+        session.close()
+
 def add_city_relationship():
     with open('../scrapers/university.json', 'r') as f:
         university_data = json.load(f)
@@ -70,12 +83,24 @@ def print_university():
 
     print('\n### All Universities')
     for uni in universities:
-        print(f'{uni.name} has id {uni.id} and major {uni.majors[0].id}. Located in {uni.city.city_name} ')
-    print('')
+        print(str(uni.name) + " has id "  + uni.id + " and major " + uni.majors[0].id + " and is located in " + uni.city.city_name + " Image " + uni.image_link)
+    print('all')
 
     session.commit()
     session.close()
 
+def get_university():
+    all_uni = []
+    session = Session()
+    universities = session.query(University).all()#.delete()
+
+    print('\n### All Universities')
+    for uni in universities:
+        print(str(uni.name) + " has id ") # + {uni.id} + " and major " + uni.majors[0].id + " and is located in " + uni.city.city_name + " Image " + uni.image_link)
+    print('all')
+
+    session.commit()
+    session.close()
 
 if __name__ == "__main__":
     print_university()

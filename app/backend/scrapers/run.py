@@ -1,8 +1,10 @@
 import scrape_university, scrape_majors, scrape_cities
 
 if __name__ == '__main__':
+
     # Add university data
     scrape_university.get_university_stat()
+    scrape_university.add_image_links()
     scrape_university.add_tuition_stat()
     scrape_university.scrape_race_stat()
     scrape_university.add_race_stat()
