@@ -7,7 +7,7 @@ import json
 def get_major():
     all_majors =[]
     session = Session()
-    majors = session.query(Major).limit(25).all()
+    majors = session.query(Major).all()
 
     print('\n### All Majors')
     for m in majors :

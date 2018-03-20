@@ -9,6 +9,8 @@ before_install:
     - cat .travis.yml
     - pip install --upgrade pip
     - pip --version
+    - sudo apt-get install nodejs
+    - sudo apt-get install npm
 
 install:
     - pip install autopep8
@@ -19,7 +21,9 @@ install:
     - pip install flask
     - pip install request
     - pip install requests
+    - pip install -U selenium
     - pip list
+    - npm install newman
 
 
 before_script:
@@ -39,3 +43,6 @@ before_script:
 
 script:
     - make travis
+    - node_modules/.bin/newman run tests/bitcoinz.postman_collection.json
+    - python tests/sele_tests.py
+    - python tests/backend_tests.py
