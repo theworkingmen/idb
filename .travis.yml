@@ -1,61 +1,48 @@
 sudo: false
 
-matrix:
-  include:
-    language: python
+language: python
 
-    python:
-       - "3.6"
+python:
+   - "3.6"
 
-    env:
-        - NODE_VERSION="0.12"
+before_install:
+    - cat .travis.yml
+    - pip install --upgrade pip
+    - pip --version
+    - sudo apt-get install nodejs
+    - sudo apt-get install npm
 
-    before_install:
-        - cat .travis.yml
-        - pip install --upgrade pip
-        - pip --version
-        - nvm install $NODE_VERSION
-
-    install:
-        - pip install autopep8
-        - pip install coverage
-        - pip install mypy
-        - pip install pylint
-        - pip install numpy
-        - pip install flask
-        - pip install request
-        - pip install requests
-        - pip list
-        - npm install newman
+install:
+    - pip install autopep8
+    - pip install coverage
+    - pip install mypy
+    - pip install pylint
+    - pip install numpy
+    - pip install flask
+    - pip install request
+    - pip install requests
+    - pip install -U selenium
+    - pip list
+    - npm install newman
 
 
-    before_script:
-        - date
-        - uname -a
-        - printenv | sort
-        - autopep8  --version
-        - coverage  --version
-        - git       --version
-        - make      --version
-        - mypy      --version
-        - pydoc     --version
-        - pylint    --version
-        - python3.6 --version
-        - ls -al
-        - cat makefile
+before_script:
+    - date
+    - uname -a
+    - printenv | sort
+    - autopep8  --version
+    - coverage  --version
+    - git       --version
+    - make      --version
+    - mypy      --version
+    - pydoc     --version
+    - pylint    --version
+    - python3.6 --version
+    - ls -al
+    - cat makefile
 
-    script:
-        - make travis
-
-    language: node_js
-
-    node_js:
-        - "8.2.1"
-    install:
-        - npm install newman
-    before_script:
-        - node --version
-        - npm --version
-        - node_modules/.bin/newman --version
-    script:
-        - node_modules/.bin/newman run tests/bitcoinz.postman_collection.json
+script:
+    - make travis
+    - node_modules/.bin/newman run tests/bitcoinz.postman_collection.json
+    - python tests/sele_tests.py
+    - python tests/backend_tests.py

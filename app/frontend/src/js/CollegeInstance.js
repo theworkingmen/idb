@@ -16,45 +16,47 @@ class CollegeInstance extends Component {
       <div className="container" style={{background: "white"}}>
        
         {/* Name of University */} 
-        <div className="container" style={{width:"95%"}}>
+        <div className="container">
           <Jumbotron> <center>
-            <h2> University of Texas at Austin </h2>
+            <h2> {this.props.match.params.name} </h2>
           </center></Jumbotron>
         </div>  
 
         {/*city, state, website link*/} 
-        <div className="container" style={{width:"85%", padding:"1em"}}>
+        <div className="container" style={{width:"85%"}}>
           <center>
           <Col sm={4}> 
-            <Thumbnail style={{background:"light-blue", height:"7em"}}>
+            <Thumbnail className="thumbnail">
               <p> City </p>
-              <h2> Austin </h2>
+              <h3> Austin </h3>
             </Thumbnail>
           </Col>
           <Col sm={4}> 
-            <Thumbnail style={{background:"light-blue", height:"7em"}}>
+            <Thumbnail className="thumbnail">
               <p> State </p>
-              <h2> Texas </h2>
+              <h3> Texas </h3>
             </Thumbnail>
           </Col>
           <Col sm={4}> 
-            <Thumbnail style={{background:"light-blue", height:"7em"}}>
+            <Thumbnail className="thumbnail">
               <p> Website </p>
-              <h2> <Button bsStyle="link" > link </Button> </h2>
+              <h3> <Button bsStyle="link" > link </Button> </h3>
             </Thumbnail>
           </Col>
           </center>
         </div>
 
         {/* Top 5 Majors */} 
-        <div className="container" style={{width:"95%", padding:"1em"}}>
+        <div className="container" >
           <center>
+            <h3> Top 5 Majors </h3>
             <Top5 A={"major 1"} B={"major 2"} C={"major 3"} D={"major 4"} E={"major 5"}  />
           </center>
         </div>
         
         {/* Demographics and Gender Ratio (Doughnut Charts) */} 
-        <div className="container" style={{width:"95%", padding:"1em"}}>
+        <div className="container" >
+          <Row>
           <Col sm={1}></Col>
           <Col sm={5}>
           <Chart  chartData=
@@ -104,34 +106,36 @@ class CollegeInstance extends Component {
                   titleText="Gender Ratio"
                   displayLegend={false} />
           </Col>
+          </Row>
+          <p></p>
         </div>
 
         {/* Univ. Type, Tuitions */} 
-        <div className="container" style={{width:"85%", padding:"1em"}}>
+        <div className="container" style={{width:"85%"}}>
           <center>
           <Col sm={4}> 
-            <Thumbnail style={{background:"light-blue", height:"7em"}}>
+            <Thumbnail className="thumbnail">
               <p> University Type </p>
-              <h2> 4 year public </h2>
+              <h3> 4 year public </h3>
             </Thumbnail>
           </Col>
           <Col sm={4}> 
-            <Thumbnail style={{background:"light-blue", height:"7em"}}>
+            <Thumbnail className="thumbnail">
               <p> In-State Tuition </p>
-              <h2> $9,873 </h2>
+              <h3> $9,873 </h3>
             </Thumbnail>
           </Col>
           <Col sm={4}> 
-            <Thumbnail style={{background:"light-blue", height:"7em"}}>
+            <Thumbnail className="thumbnail">
               <p> Out-of-State Tuition </p>
-              <h2> $34,676 </h2>
+              <h3> $34,676 </h3>
             </Thumbnail>
           </Col>
           </center>
         </div>
 
         {/* GMap */} 
-        <div className="container" style={{width:"95%", padding:"1em"}}>
+        <div className="container" >
           <center><Map center={[30.2672, -97.7431]} zoom={11} /></center>
         </div>
         

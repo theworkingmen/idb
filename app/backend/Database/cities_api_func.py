@@ -7,7 +7,7 @@ import json
 def get_city():
     all_cities =[]
     session = Session()
-    cities = session.query(City).limit(25).all()
+    cities = session.query(City).all()
 
     print('\n### All Cities')
     for c in cities :
