@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {Image, Grid, Row, Col, Thumbnail} from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 import Card from './Card.js';
-import cityData from '../scrapers/cities.json'
 import '../css/Flex.css';
 
 {/* Use following url for default image: http://bit.ly/2CYI94d */}

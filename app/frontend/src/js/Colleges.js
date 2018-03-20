@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {Image, Grid, Row, Col, Thumbnail} from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 import Card from './Card.js';
-import collegeData from '../scrapers/university.json'
 import '../css/Flex.css';
 
 
@@ -10,21 +9,28 @@ import '../css/Flex.css';
 {/* Grid automatically creates new rows for additional card components. */}
 
 class Colleges extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
+    this.state = {
+		colleges: [],
+	};
   }
-  render() {
-	  
-	let colleges = [];
-    for (var i = 0; i < collegeData.length; i++) {
-        colleges.push(<Card name={collegeData[i].name} 
-                            model='colleges' 
-                            domain={collegeData[i].image_link}> </Card>);
-    }
-    return <Grid><Row className="flex-row">{colleges}</Row></Grid>;
-}
- 
+  
+  componentDidMount() {
+	  fetch('http://api.majorpotential.me/universities_limited')
+	  .then(results => {
+		  return results.json();
+		}).then(data => {
+			let colleges = data.records.map((college) => {
+				return(<Card name={college.name} model='majors' domain={college.image_link} id={college.id}>  </Card>)
+			})
+			this.setState({colleges: colleges});
+		})
+  }
 
+  render() {
+    return <Grid><Row className="flex-row">{this.state.colleges}</Row></Grid>;
+  }
 }
 
 export default Colleges;
