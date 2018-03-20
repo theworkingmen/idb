@@ -1,3 +1,264 @@
+commit 6cd4d2800b9b10601320b1d6126a4201b36ec81e
+Merge: ab645d9 baa0dc4
+Author: Neal F <nfriesenhahn@utexas.edu>
+Date:   Tue Mar 20 18:08:25 2018 -0500
+
+    Merge branch 'reactsite' of https://github.com/theworkingmen/idb into reactsite
+
+commit ab645d9085fae20798b45a3c1a18389715c8bda6
+Author: Neal F <nfriesenhahn@utexas.edu>
+Date:   Tue Mar 20 18:08:11 2018 -0500
+
+    CORS Enabled the GET requests
+
+commit baa0dc45bf364cdda15ab5268fe7bb0e1a6cdb02
+Merge: 0d56edd 3972dc5
+Author: Sungsup <smcw66@gmail.com>
+Date:   Tue Mar 20 18:03:19 2018 -0500
+
+    Merge branch 'reactsite' of https://github.com/theworkingmen/idb into reactsite
+
+commit 0d56eddb6d28a079c3fbb867bba76942a7243f66
+Author: Sungsup <smcw66@gmail.com>
+Date:   Tue Mar 20 18:02:57 2018 -0500
+
+    css styling additions to instance pages
+
+commit 3972dc5e4ea2c53236bbd326af77da12155b35ce
+Author: Neal F <nfriesenhahn@utexas.edu>
+Date:   Tue Mar 20 17:23:56 2018 -0500
+
+    Removed limits from cities and majors
+
+commit 6a6fd0e7042e7cbdf781a452e7e9bcec6b0a3016
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Tue Mar 20 14:30:11 2018 -0500
+
+    Added selenium and backend tests to travis.
+
+commit e5cdaec2722a8c9e1ae9238849fe941a163b00c5
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Tue Mar 20 14:28:19 2018 -0500
+
+    Remove unnessary file node_module in tests/
+
+commit b0d92797916e58eb56763a69241b9fc129308207
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Tue Mar 20 13:45:29 2018 -0500
+
+    Travis works with Postman API tests.
+
+commit 93add3c74c0ebb6d5353ff710752d3b309657271
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Tue Mar 20 13:07:19 2018 -0500
+
+    Still working on API-tests and travis:
+
+commit 8bcf79922158b125ac6e0b9a37e96c8ff838a27a
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Tue Mar 20 13:05:11 2018 -0500
+
+    Still working on API-tests and travis:
+
+commit b2ea976d13e2f8d1b3077ebe0b1edda7251c2b16
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Tue Mar 20 12:48:03 2018 -0500
+
+    Trying to make API tests work
+
+commit 0322455e46496fefbc90b4363b7145ea79fb3185
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Tue Mar 20 12:28:05 2018 -0500
+
+    Trying out API tests
+
+commit 430b2d42adef198cc479aa3f53d9a87df9ee8afd
+Merge: d9ff61f 898e30d
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Tue Mar 20 12:12:28 2018 -0500
+
+    Merge branch 'reactsite' of https://github.com/theworkingmen/idb into reactsite
+
+commit d9ff61ff613bd4ad422b43e9de5c96034c691827
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Tue Mar 20 12:12:24 2018 -0500
+
+    Trying API Tests with Postman
+
+commit 898e30d6ea0d7c132ee0d193837467fb5dc230b8
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Tue Mar 20 11:31:25 2018 -0500
+
+    Wrote backend unit tests for our API function.
+
+commit a60150e87f3432e86b953b8cb6f81935f9f58fc8
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Tue Mar 20 10:29:53 2018 -0500
+
+    Remove the word Metro Areas from cities name
+
+commit d580629e93280695698d5cd22dfcb0ba84573634
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Tue Mar 20 09:45:06 2018 -0500
+
+    Database code cleanup
+
+commit 594f6d713b3b85b8a1a7b8ea8281f73060e19258
+Merge: 213949d 3e9aba7
+Author: Sungsup <smcw66@gmail.com>
+Date:   Mon Mar 19 21:23:54 2018 -0500
+
+    Merge branch 'reactsite' of https://github.com/theworkingmen/idb into reactsite
+
+commit 213949d76f2710d80e860dc2908eaa1ad3e70d50
+Author: Sungsup <smcw66@gmail.com>
+Date:   Mon Mar 19 21:22:47 2018 -0500
+
+    instance templates complete
+    
+    need to input database calls. also need to add more color to the instance pages
+
+commit 3e9aba751deecdc9603fa2c0904b03ef630238b9
+Merge: 07d540b 7c4877b
+Author: Neal F <nfriesenhahn@utexas.edu>
+Date:   Mon Mar 19 20:05:03 2018 -0500
+
+    Merge branch 'reactsite' of https://github.com/theworkingmen/idb into reactsite
+
+commit 07d540b1f2df63d352cfcf87ffa178615a06f3de
+Author: Neal F <nfriesenhahn@utexas.edu>
+Date:   Mon Mar 19 20:04:32 2018 -0500
+
+    API working
+
+commit 7c4877b494f2d283a72386d3625d545c2316db1d
+Author: Sungsup <smcw66@gmail.com>
+Date:   Mon Mar 19 19:19:09 2018 -0500
+
+    College instance basic template complete
+
+commit 224c07e7485531109006da9faf3f5b8a084e07a1
+Author: Sungsup <smcw66@gmail.com>
+Date:   Mon Mar 19 18:59:55 2018 -0500
+
+    college instance template version 0.1
+
+commit 2fd068bd60423596e8719cf1c99e9defbf38221a
+Author: Sungsup <smcw66@gmail.com>
+Date:   Mon Mar 19 18:13:07 2018 -0500
+
+    college instance GMap adjusted
+
+commit ef994ccdda0a3b3dd3a360b207058ffc43c8592c
+Author: unknown <mitch.traylor@utexas.edu>
+Date:   Mon Mar 19 17:52:52 2018 -0500
+
+    Added UML diagram in .pdf format.
+
+commit 7e13c684b2f2f49f6fb207fe456aabe2529c3c73
+Merge: a18f6f0 9a1b363
+Author: Mitchell Traylor <traylor1@cs.utexas.edu>
+Date:   Mon Mar 19 16:39:42 2018 -0500
+
+    Merge branch 'reactsite' of https://github.com/theworkingmen/idb into reactsite
+
+commit a18f6f00df5dfdb64d88cce953105d04791e789f
+Author: Mitchell Traylor <traylor1@cs.utexas.edu>
+Date:   Mon Mar 19 16:39:32 2018 -0500
+
+    Reverted Travis-Selenium update, sele_tests.py updated.
+
+commit 9a1b363249a079dfe591fccac542d14e2214b89d
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Mon Mar 19 16:39:10 2018 -0500
+
+    Add requirments.txt
+
+commit b8ee87ac3b4136faaa6f5019f05c83c2b562f350
+Merge: b87a3e1 abd66bb
+Author: Mitchell Traylor <traylor1@cs.utexas.edu>
+Date:   Mon Mar 19 16:30:30 2018 -0500
+
+    Merge branch 'reactsite' of https://github.com/theworkingmen/idb into reactsite
+
+commit b87a3e1d13704cb2973a4949f65ce9affa1db11d
+Author: Mitchell Traylor <traylor1@cs.utexas.edu>
+Date:   Mon Mar 19 16:30:24 2018 -0500
+
+    Updated .travis.yml to run selenium tests.
+
+commit abd66bb31be0deeeb732f2e461fc74fe17788c1d
+Author: Christian Onuogu <chrisonuogu77@gmail.com>
+Date:   Mon Mar 19 16:27:22 2018 -0500
+
+    added image to city instance
+
+commit b305640839c4d68a8fa6fd32da750b4c759c6705
+Author: Christian Onuogu <chrisonuogu77@gmail.com>
+Date:   Mon Mar 19 15:59:33 2018 -0500
+
+    used json data to populate city instances
+
+commit d2039d55f490ce73e2d0f49f260f8188ea7fd0ec
+Author: Sungsup <smcw66@gmail.com>
+Date:   Mon Mar 19 14:46:31 2018 -0500
+
+    Card thumbnail height normalized
+
+commit a406bd8faf40e8ce7d89194e47b64d0e414133c3
+Author: Sungsup <smcw66@gmail.com>
+Date:   Mon Mar 19 14:44:09 2018 -0500
+
+    default image logic  added for Card.js
+
+commit 56b8228c2b121b3bb264782a61e9f2938117fdf1
+Author: Sungsup <smcw66@gmail.com>
+Date:   Mon Mar 19 14:22:26 2018 -0500
+
+    adjusted default image size for null images in Card.js
+
+commit 0985890c784ec37d010d9a03ba0e7fe4309876f2
+Author: Christian Onuogu <chrisonuogu77@gmail.com>
+Date:   Mon Mar 19 14:10:30 2018 -0500
+
+    fixed card sizes
+
+commit f2743755d12fe9cbfe6fa8871daf9576f7d371d7
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Mon Mar 19 08:36:11 2018 -0500
+
+    Replicate the scrapers file in the react src file for now
+
+commit e70557b233c26f729a5ffd872cd294c35498ec78
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Mon Mar 19 08:33:47 2018 -0500
+
+    Fixed university images that do not render using clearbit API. Universities now have an attribute called image_link
+
+commit ea9d06d4ff4cd566ec539620e464b2ac56ecd60d
+Author: Christian Onuogu <chrisonuogu77@gmail.com>
+Date:   Sun Mar 18 04:15:46 2018 -0500
+
+    Used scraped data for city and major model pages
+
+commit 5f3a2067d8387a8c852125ebe843c6988447a457
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Sat Mar 17 01:32:32 2018 -0500
+
+    Fix readme
+
+commit 0d217b6cb45a80608b34aca395c1c2e7fa786d71
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Sat Mar 17 01:30:47 2018 -0500
+
+    Fix readme
+
+commit 517306242a138e7e534cf21d17c1e3e1a85ac590
+Author: abelhtt <abelhaddistt@gmail.com>
+Date:   Sat Mar 17 01:26:29 2018 -0500
+
+    Organize files on the repo
+
 commit d670b4befff3b20ae2a6ddc8de5cd02679a2abd7
 Merge: c963d82 0a78e82
 Author: unknown <mitch.traylor@utexas.edu>

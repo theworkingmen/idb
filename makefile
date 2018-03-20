@@ -74,6 +74,9 @@ status:
 	git branch
 	git status
 
+tes:
+	python tests/backend_tests.py
+	python tests/sele_tests.py
 travis:
 	make clean
 	ls -al
