@@ -25,7 +25,9 @@ class Chart extends Component{
             title:{
               display:this.props.displayTitle,
               text:this.props.titleText,
-              fontSize:25
+              fontSize:23,
+              fontFamily:"'Comfortaa'",
+              fontStyle:300
             },
             legend:{
               display:this.props.displayLegend,
