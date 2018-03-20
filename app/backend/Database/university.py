@@ -63,11 +63,12 @@ class University(Base):
         self.county_id = county_id
         self.state = state
 
-    def set_extra_info(self, uni_type, website, oos_tuition, state_tuition):
-        self.uni_type
-        self.website
-        self.oos_tuition
-        self.state_tuition
+    def set_extra_info(self, uni_type, website, oos_tuition, state_tuition, survey_year):
+        self.uni_type = uni_type
+        self.website = website
+        self.oos_tuition = oos_tuition
+        self.state_tuition = state_tuition
+        self.survey_year = survey_year
 
     def set_city(self, city):
         self.city = city
