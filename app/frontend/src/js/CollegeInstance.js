@@ -4,55 +4,16 @@ import InstanceTitle from './InstanceTitle.js';
 import Chart from './Chart.js';
 import {Jumbotron, Row, Col, Thumbnail, Button } from 'react-bootstrap';
 import Map from './Map.js';
-import '../css/App.css';
+import '../css/instance.css';
 import Top5 from './Top5.js';
 
 
-class CollegeInstance extends Component {
-
-  constructor(){
-    super();
-    this.state = {
-      chartData:{}
-    }
-  }
-
-  componentWillMount(){
-    this.getChartData();
-  }
-
-  getChartData(){
-    // Ajax calls here
-    this.setState({
-      chartData:{
-        labels: ['White', 'Asian', 'Hispanic', 'African American', 'Other'],
-        datasets:[
-          {
-            label:'Population',
-            data:[
-              617594,
-              181045,
-              153060,
-              106519,
-              105162
-            ],
-            backgroundColor:[
-              'rgba(255, 99, 132, 0.6)',
-              'rgba(54, 162, 235, 0.6)',
-              'rgba(255, 206, 86, 0.6)',
-              'rgba(75, 192, 192, 0.6)',
-              'rgba(153, 102, 255, 0.6)'
-            ]
-          }
-        ]
-      }
-    });
-  }
+class CollegeInstance extends Component { 
   
   render() {
     return (
 
-      <div className="container" style={{background: "white", padding: "1em"}}>
+      <div className="container" style={{background: "white"}}>
        
         {/* Name of University */} 
         <div className="container" style={{width:"95%"}}>
@@ -67,16 +28,19 @@ class CollegeInstance extends Component {
           <Col sm={4}> 
             <Thumbnail style={{background:"light-blue", height:"7em"}}>
               <p> City </p>
+              <h2> Austin </h2>
             </Thumbnail>
           </Col>
           <Col sm={4}> 
             <Thumbnail style={{background:"light-blue", height:"7em"}}>
               <p> State </p>
+              <h2> Texas </h2>
             </Thumbnail>
           </Col>
           <Col sm={4}> 
             <Thumbnail style={{background:"light-blue", height:"7em"}}>
-              <Button> Website </Button>
+              <p> Website </p>
+              <h2> <Button bsStyle="link" > link </Button> </h2>
             </Thumbnail>
           </Col>
           </center>
@@ -93,7 +57,29 @@ class CollegeInstance extends Component {
         <div className="container" style={{width:"95%", padding:"1em"}}>
           <Col sm={1}></Col>
           <Col sm={5}>
-          <Chart  chartData={this.state.chartData} 
+          <Chart  chartData=
+                      { {
+                        labels: ['White', 'Asian', 'Hispanic', 'African American', 'Other'],
+                        datasets:[
+                          {
+                            label:'Population',
+                            data:[
+                              617594,
+                              181045,
+                              153060,
+                              106519,
+                              105162
+                            ],
+                            backgroundColor:[
+                              'rgba(255, 99, 132, 0.6)',
+                              'rgba(54, 162, 235, 0.6)',
+                              'rgba(255, 206, 86, 0.6)',
+                              'rgba(75, 192, 192, 0.6)',
+                              'rgba(153, 102, 255, 0.6)'
+                            ]
+                          }
+                        ]
+                      } } 
                   titleText="Demographics" 
                   legendPosition="right"/>
           </Col>
@@ -126,16 +112,19 @@ class CollegeInstance extends Component {
           <Col sm={4}> 
             <Thumbnail style={{background:"light-blue", height:"7em"}}>
               <p> University Type </p>
+              <h2> 4 year public </h2>
             </Thumbnail>
           </Col>
           <Col sm={4}> 
             <Thumbnail style={{background:"light-blue", height:"7em"}}>
               <p> In-State Tuition </p>
+              <h2> $9,873 </h2>
             </Thumbnail>
           </Col>
           <Col sm={4}> 
             <Thumbnail style={{background:"light-blue", height:"7em"}}>
               <p> Out-of-State Tuition </p>
+              <h2> $34,676 </h2>
             </Thumbnail>
           </Col>
           </center>

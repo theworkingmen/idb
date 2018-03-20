@@ -17,7 +17,7 @@ class Colleges extends Component {
 	  
 	let colleges = [];
     for (var i = 0; i < collegeData.length; i++) {
-        colleges.push(<Card name={collegeData[i].name} model='colleges' domain={collegeData[i].website}> </Card>);
+        colleges.push(<Card name={collegeData[i].name} model='colleges' domain={collegeData[i].image_link}> </Card>);
     }
     return <Grid><Row className="flex-row">{colleges}</Row></Grid>;
 }

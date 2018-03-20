@@ -19,9 +19,7 @@ class Card extends Component {
 				<Thumbnail style={{height:"24em"}}>
 					{/* img src needs to have a {local path} or {url}. DB needs to provide url of img. */}
 					<center>
-					{this.props.model==="colleges" ? 
-						(<Image src={`https://logo-core.clearbit.com/${this.props.domain}?size=500`} style={{width:"18em", height:"19em"}} onError={(e)=>{e.target.src="https://goo.gl/NvPJj6"}}/>) 
-						: (<Image src={this.props.domain} style={{width:"18em", height:"19em"}} onError={(e)=>{e.target.src="https://goo.gl/NvPJj6"}}/>)}
+						<Image src={this.props.domain} style={{width:"18em", height:"19em"}} onError={(e)=>{e.target.src="https://goo.gl/NvPJj6"}}/>
 					</center>
 					{/*<Image src={`${this.props.imgsrc}`} style={{width:"100%", height:"100%"}}/>*/}
 					<h4><center><Link to={`/${this.props.model}/${this.props.index}`}>{this.props.name}</Link></center></h4>
