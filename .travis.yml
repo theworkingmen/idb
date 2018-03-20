@@ -43,4 +43,4 @@ before_script:
 
 script:
     - make travis
-    - node_modules/.bin/newman run tests/bitcoinz.postman_collection.json
+    - node_modules/.bin/newman run tests/Postman.json
