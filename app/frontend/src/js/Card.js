@@ -24,7 +24,8 @@ class Card extends Component {
 								onError={(e)=>{e.target.src="https://goo.gl/NvPJj6"}}/>
 					</center>
 					{/*<Image src={`${this.props.imgsrc}`} style={{width:"100%", height:"100%"}}/>*/}
-					<h4><center><Link to={`/${this.props.model}/${this.props.name}`}>{this.props.name}</Link></center></h4>
+					<h4><center><Link to={`/${this.props.model}/${this.props.id}`}>{this.props.name}</Link></center></h4>
+
 					{/* Insert component with list of attributes of the model here */}
 				</Thumbnail>
 			</Col>
