@@ -22,7 +22,7 @@ class Card extends Component {
 						<Image src={this.props.domain} style={{width:"18em", height:"19em"}} onError={(e)=>{e.target.src="https://goo.gl/NvPJj6"}}/>
 					</center>
 					{/*<Image src={`${this.props.imgsrc}`} style={{width:"100%", height:"100%"}}/>*/}
-					<h4><center><Link to={`/${this.props.model}/${this.props.index}`}>{this.props.name}</Link></center></h4>
+					<h4><center><Link to={`/${this.props.model}/${this.props.id}`}>{this.props.name}</Link></center></h4>
 					{/* Insert component with list of attributes of the model here */}
 				</Thumbnail>
 			</Col>
