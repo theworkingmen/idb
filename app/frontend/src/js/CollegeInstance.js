@@ -90,15 +90,59 @@ class CollegeInstance extends Component {
         </div>
         
         {/* Demographics and Gender Ratio (Doughnut Charts) */} 
-        <div className="container">
+        <div className="container" style={{width:"95%", padding:"1em"}}>
+          <Col sm={1}></Col>
+          <Col sm={5}>
+          <Chart  chartData={this.state.chartData} 
+                  titleText="Demographics" 
+                  legendPosition="right"/>
+          </Col>
+          <Col sm={5}>
+          <Chart  chartData=
+                      { {
+                        labels: ['Female', 'Male'],
+                        datasets:[
+                          {
+                            label:'Gender Ratio',
+                            data:[
+                              33,
+                              67
+                            ],
+                            backgroundColor:[
+                              'rgba(255, 99, 132, 0.6)',
+                              'rgba(54, 162, 235, 0.6)',
+                            ]
+                          }
+                        ]
+                      } } 
+                  titleText="Gender Ratio"
+                  displayLegend={false} />
+          </Col>
         </div>
 
         {/* Univ. Type, Tuitions */} 
-        <div className="container">
+        <div className="container" style={{width:"85%", padding:"1em"}}>
+          <center>
+          <Col sm={4}> 
+            <Thumbnail style={{background:"light-blue", height:"7em"}}>
+              <p> University Type </p>
+            </Thumbnail>
+          </Col>
+          <Col sm={4}> 
+            <Thumbnail style={{background:"light-blue", height:"7em"}}>
+              <p> In-State Tuition </p>
+            </Thumbnail>
+          </Col>
+          <Col sm={4}> 
+            <Thumbnail style={{background:"light-blue", height:"7em"}}>
+              <p> Out-of-State Tuition </p>
+            </Thumbnail>
+          </Col>
+          </center>
         </div>
 
         {/* GMap */} 
-        <div className="container" style={{width:"95%"}}>
+        <div className="container" style={{width:"95%", padding:"1em"}}>
           <center><Map center={[30.2672, -97.7431]} zoom={11} /></center>
         </div>
         
