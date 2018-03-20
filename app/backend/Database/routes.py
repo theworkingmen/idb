@@ -5,6 +5,7 @@ from major_api_func import *
 from cities_api_func import *
 from flask import Flask, request, jsonify, Response, json
 
+
 @application.route('/')
 def home():
     return "hello world"
@@ -24,7 +25,7 @@ def get_Universities ():
     payload = {'totalCount': totalCount, 'records': allUni}
     response = Response(json.dumps(payload), mimetype='application/json')
     response.status_code = 200
-
+    response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
 @application.route('/universities/<id>', methods = ['GET'])
@@ -34,6 +35,7 @@ def get_Single_Uni(id):
         response = "Server Error 500: Invalid university_id"
     else :
         response = Response(json.dumps(u), mimetype='application/json')
+    response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
 @application.route('/universities_limited', methods = ['GET'])
@@ -43,7 +45,7 @@ def get_Universities_Limited ():
     payload = {'totalCount': totalCount, 'records': allUni}
     response = Response(json.dumps(payload), mimetype='application/json')
     response.status_code = 200
-
+    response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
 @application.route('/majors', methods = ['GET'])
@@ -53,7 +55,7 @@ def get_Majors ():
     payload = {'totalCount': totalCount, 'records': allMajor}
     response = Response(json.dumps(payload), mimetype='application/json')
     response.status_code = 200
-
+    response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
 @application.route('/majors/<id>', methods = ['GET'])
@@ -63,6 +65,7 @@ def get_Single_Major(id):
         response = "Server Error 500: Invalid major_id"
     else :
         response = Response(json.dumps(u), mimetype='application/json')
+    response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
 @application.route('/majors_limited', methods = ['GET'])
@@ -72,7 +75,7 @@ def get_Majors_Limited ():
     payload = {'totalCount': totalCount, 'records': allMajor}
     response = Response(json.dumps(payload), mimetype='application/json')
     response.status_code = 200
-
+    response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
 @application.route('/cities', methods = ['GET'])
@@ -82,7 +85,7 @@ def get_Cities ():
     payload = {'totalCount': totalCount, 'records': allCity}
     response = Response(json.dumps(payload), mimetype='application/json')
     response.status_code = 200
-
+    response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
 @application.route('/cities/<id>', methods = ['GET'])
@@ -92,6 +95,8 @@ def get_Single_City(id):
         response = "Server Error 500: Invalid city_id"
     else :
         response = Response(json.dumps(u), mimetype='application/json')
+
+    response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
 @application.route('/cities_limited', methods = ['GET'])
@@ -101,5 +106,5 @@ def get_Cities_Limited ():
     payload = {'totalCount': totalCount, 'records': allCity}
     response = Response(json.dumps(payload), mimetype='application/json')
     response.status_code = 200
-
+    response.headers.add('Access-Control-Allow-Origin', '*')
     return response
