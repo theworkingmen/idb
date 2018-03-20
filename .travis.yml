@@ -4,17 +4,12 @@ matrix:
   include:
     language: python
 
-    python:
-       - "3.6"
-
-    env:
-        - NODE_VERSION="0.12"
+    python: 3.6
 
     before_install:
         - cat .travis.yml
         - pip install --upgrade pip
         - pip --version
-        - nvm install $NODE_VERSION
 
     install:
         - pip install autopep8
@@ -26,7 +21,6 @@ matrix:
         - pip install request
         - pip install requests
         - pip list
-        - npm install newman
 
 
     before_script:
