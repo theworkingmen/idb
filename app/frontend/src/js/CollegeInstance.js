@@ -68,53 +68,54 @@ class CollegeInstance extends Component {
     let gender_chart = null;
     let gmap = null;
     if (this.state.ready) {
-      demographics_chart = 
-          <Chart  chartData=
-                { {
-                  labels: ['White', 'Asian', 'Black', 'Hispanic', 'Other'],
-                  datasets:[
-                    {
-                      label:'Demographics',
-                      data:[
-                        this.state.demo_4,
-                        this.state.demo_0,
-                        this.state.demo_1,
-                        this.state.demo_2,
-                        this.state.demo_3,
-                      ],
-                      backgroundColor:[
-                        'rgba(255, 99, 132, 0.6)',
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(255, 206, 86, 0.6)',
-                        'rgba(75, 192, 192, 0.6)',
-                        'rgba(153, 102, 255, 0.6)'
+        demographics_chart = 
+              <Chart  data=
+                    { {
+                      labels: ['White', 'Asian', 'Black', 'Hispanic', 'Other'],
+                      datasets:[
+                        {
+                          label:'Demographics',
+                          data:[
+                            this.state.demo_4,
+                            this.state.demo_0,
+                            this.state.demo_1,
+                            this.state.demo_2,
+                            this.state.demo_3
+                          ],
+                          backgroundColor:[
+                            'rgba(255, 99, 132, 0.6)',
+                            'rgba(54, 162, 235, 0.6)',
+                            'rgba(255, 206, 86, 0.6)',
+                            'rgba(75, 192, 192, 0.6)',
+                            'rgba(153, 102, 255, 0.6)'
+                          ]
+                        }
                       ]
-                    }
-                  ]
-                } } 
-            titleText="Demographics" 
-            legendPosition="right"
-            redraw />;
-      gender_chart =
-          <Chart  chartData=
-              { {
-                labels: ['Female', 'Male'],
-                datasets:[
-                  {
-                    label:'Gender Ratio',
-                    data:[
-                      40,
-                      60
-                    ],
-                    backgroundColor:[
-                      'rgba(255, 99, 132, 0.6)',
-                      'rgba(54, 162, 235, 0.6)',
-                    ]
-                  }
-                ]
-              } } 
-          titleText="Gender Ratio"
-          displayLegend={false} />;
+                    } }
+                titleText="Demographics" 
+                displayLegend={false}
+                />;
+      gender_chart = 
+              <Chart  data=
+                    { {
+                      labels: ['Female', 'Male'],
+                      datasets:[
+                        {
+                          label:'Gender Ratio',
+                          data:[
+                            this.state.gender,
+                            1-this.state.gender
+                          ],
+                          backgroundColor:[
+                            'rgba(255, 99, 132, 0.6)',
+                            'rgba(54, 162, 235, 0.6)',
+                          ]
+                        }
+                      ]                          
+                    } } 
+                titleText="Gender Ratio"
+                displayLegend={false} 
+                />;          
       gmap = <Map center={[this.state.latitude, this.state.longitude]} zoom={11} />;
     }
 
@@ -177,7 +178,11 @@ class CollegeInstance extends Component {
             {gender_chart}
           </Col>
           </Row>
-          <p></p>
+          <Row>
+          <p> </p>
+          <p> </p>
+          <p> </p>
+          </Row>
         </div>
 
         {/* Univ. Type, Tuitions */} 
