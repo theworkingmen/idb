@@ -2,7 +2,7 @@ import sys
 import os
 import unittest
 try:
-    sys.path.insert(1, '../app/backend/database/')
+    sys.path.insert(0, '../app/backend/database/')
     from city import City
     from major import Major
     from university import University
@@ -10,7 +10,7 @@ try:
     from major_api_func import *
     from cities_api_func import *
 except:
-    sys.path.insert(1, os.path.abspath('app/backend/database/'))
+    sys.path.insert(0, os.path.abspath('./app/backend/database/'))
     print(sys.path)
     from city import City
     from major import Major
