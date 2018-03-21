@@ -36,6 +36,11 @@ class majorInstance extends Component {
           univ2_img: data.universities_high_graduates_2015[2].image_link,
           univ3_img: data.universities_high_graduates_2015[3].image_link,
           univ4_img: data.universities_high_graduates_2015[4].image_link,
+          univ0_id: data.universities_high_graduates_2015[0].id,
+          univ1_id: data.universities_high_graduates_2015[1].id,
+          univ2_id: data.universities_high_graduates_2015[2].id,
+          univ3_id: data.universities_high_graduates_2015[3].id,
+          univ4_id: data.universities_high_graduates_2015[4].id,
           city0_name: data.cities_high_graduates_2015[0].city_name,
           city1_name: data.cities_high_graduates_2015[1].city_name,
           city2_name: data.cities_high_graduates_2015[2].city_name,
@@ -46,6 +51,12 @@ class majorInstance extends Component {
           city2_img: data.cities_high_graduates_2015[2].city_image_link,
           city3_img: data.cities_high_graduates_2015[3].city_image_link,
           city4_img: data.cities_high_graduates_2015[4].city_image_link,
+          city0_id: data.cities_high_graduates_2015[0].id,
+          city1_id: data.cities_high_graduates_2015[1].id,
+          city2_id: data.cities_high_graduates_2015[2].id,
+          city3_id: data.cities_high_graduates_2015[3].id,
+          city4_id: data.cities_high_graduates_2015[4].id,
+          univ_id: data.universities_high_graduates_2015[4].id,
           wage: data.average_wage,
           workforce_age: data.average_age_work_force,
           wage_growth: data.wage_growth_rate,
@@ -84,11 +95,12 @@ class majorInstance extends Component {
             <div className="container" >
               <center>
                 <h3> Top 5 Universities </h3>
-                <Top5 A_name={this.state.univ0_name} A_img={this.state.univ0_img} A={this.state.univ0}
-                      B_name={this.state.univ1_name} B_img={this.state.univ1_img}
-                      C_name={this.state.univ2_name} C_img={this.state.univ2_img}
-                      D_name={this.state.univ3_name} D_img={this.state.univ3_img}
-                      E_name={this.state.univ4_name} E_img={this.state.univ4_img} />
+                <Top5 A_name={this.state.univ0_name} A_img={this.state.univ0_img} A_id={this.state.univ0_id} A={this.state.univ0}
+                      B_name={this.state.univ1_name} B_img={this.state.univ1_img} B_id={this.state.univ1_id}
+                      C_name={this.state.univ2_name} C_img={this.state.univ2_img} C_id={this.state.univ2_id}
+                      D_name={this.state.univ3_name} D_img={this.state.univ3_img} D_id={this.state.univ3_id}
+                      E_name={this.state.univ4_name} E_img={this.state.univ4_img} E_id={this.state.univ4_id}
+                      model="colleges"/>
               </center>
             </div>
 
@@ -96,11 +108,12 @@ class majorInstance extends Component {
             <div className="container" >
               <center>
                 <h3> Top 5 Cities </h3>
-                <Top5 A_name={this.state.city0_name} A_img={this.state.city0_img}
-                      B_name={this.state.city1_name} B_img={this.state.city1_img}
-                      C_name={this.state.city2_name} C_img={this.state.city2_img}
-                      D_name={this.state.city3_name} D_img={this.state.city3_img}
-                      E_name={this.state.city4_name} E_img={this.state.city4_img} />
+                <Top5 A_name={this.state.city0_name} A_img={this.state.city0_img} A_id={this.state.city0_id}
+                      B_name={this.state.city1_name} B_img={this.state.city1_img} B_id={this.state.city1_id}
+                      C_name={this.state.city2_name} C_img={this.state.city2_img} C_id={this.state.city2_id}
+                      D_name={this.state.city3_name} D_img={this.state.city3_img} D_id={this.state.city3_id}
+                      E_name={this.state.city4_name} E_img={this.state.city4_img} E_id={this.state.city4_id} 
+                      model="cities"/>
               </center>
             </div>
 
