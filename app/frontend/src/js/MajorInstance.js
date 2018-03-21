@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import {Jumbotron, Row, Col, Thumbnail} from 'react-bootstrap';
 import InstanceTitle from './InstanceTitle.js';
-import '../css/instance.css';
 import Chart from './Chart.js';
 import Top5 from './Top5.js';
 
@@ -117,7 +116,7 @@ class majorInstance extends Component {
               <Col sm={4}> 
                 <Thumbnail className="thumbnail">
                   <p> Wage Growth </p>
-                  <h3> {this.state.wage_growth}% </h3>
+                  <h3> {this.state.wage_growth} </h3>
                 </Thumbnail>
               </Col>
               </center>
