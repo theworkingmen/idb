@@ -16,6 +16,7 @@ export default class MembersCard extends Component {
       <p>Bio - {this.props.members_info[item]["bio"]}</p>
       <p>Number of Commits: {this.props.members_info[item]["commits"]}</p>
       <p>Number of Issues: {this.props.members_info[item]["issues"]}</p>
+      <p>Number of unit tests: {this.props.members_info[item]["number_tests"]}</p>
     </Thumbnail>
     </Col>
     )

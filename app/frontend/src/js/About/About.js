@@ -41,7 +41,8 @@ export default class About extends Component {
         "bio": "Computer Science third-year, with special focus on cybersecurity.",
         "photo": mitchell_pic,
         "commits": 0,
-        "issues": 0
+        "issues": 0,
+        "number_tests": 0
       }
       members_data['smcw66'] = {
         "name": "Sungsup Lee",
@@ -49,7 +50,8 @@ export default class About extends Component {
         "bio": "Studies Computer Science at UT Austin.",
         "photo": sungsup_pic,
         "commits": 0,
-        "issues": 0
+        "issues": 0,
+        "number_tests": 0
       }
       members_data['abelhtt'] = {
         "name": "Abel Tesfaye",
@@ -57,7 +59,8 @@ export default class About extends Component {
         "bio": "I am a junior Computer Science major studying at UT Austin.",
         "photo": abel_pic,
         "commits": 0,
-        "issues": 0
+        "issues": 0,
+        "number_tests": 0
       }
       members_data['NealFM'] = {
         "name": "Neal Friesenhahn",
@@ -65,7 +68,8 @@ export default class About extends Component {
         "photo": neal_pic,
         "bio": "I am a junior Computer Science major.",
         "commits": 0,
-        "issues": 0
+        "issues": 0,
+        "number_tests": 0
       }
       members_data['christian-onuogu'] = {
         "name": "Christian Onuogu",
@@ -73,7 +77,8 @@ export default class About extends Component {
         "bio": "I am a junior Computer Science major.",
         "photo": christian_pic,
         "commits": 0,
-        "issues": 0
+        "issues": 0,
+        "number_tests": 0
       }
 
       let commitJSON = JSON.parse(body)
@@ -84,6 +89,8 @@ export default class About extends Component {
         members_data[String(commitJSON[i]['author']['login'])]["commits"] = curUserCount
         totalCommits += curUserCount
       }
+
+
 
       this.setState({
         total_commits: totalCommits
@@ -176,7 +183,10 @@ export default class About extends Component {
       <block_small> <p> </p> <center> Sources </center> <p></p></block_small>
         <a href="https://www.bls.gov/developers/api_signature_v2.html" class="list-group-item active">Bureau of Labor Statistics</a>
         <a href="https://www.census.gov/data/developers/data-sets/cbp-nonemp-zbp/cbp-api.html" class="list-group-item">United States Census Bureau</a>
-        <a href="https://api.data.gov/docs/ed/" class="list-group-item">Department of Education</a>
+        <a href="https://api.data.gov/docs/ed/" class="list-group-item active">Department of Education</a>
+        <a href="https://nces.ed.gov/ipeds/" class="list-group-item">The Integrated Postsecondary Education Data System</a>
+        <a href="https://datausa.io/about/datasets/" class="list-group-item active">Data USA API</a>
+        <a href="https://developers.google.com/maps/" class="list-group-item ">Google Maps API</a>
     </div>
 
     <div>
@@ -189,28 +199,37 @@ export default class About extends Component {
             </th>
           </tr>
           <tr>
-            <th>Amazon Beanstalk</th>
+            <th>Amazon Beanstalk -  backend/frontend hosting</th>
           </tr>
           <tr>
-            <th>Amazon S3</th>
+            <th>Amazon RDS -    database hosting</th>
           </tr>
           <tr>
-            <th>Slack</th>
+            <th>Amazon S3 -     website and database hosting</th>
           </tr>
           <tr>
-            <th>React</th>
+            <th>Slack -     communication</th>
           </tr>
           <tr>
-            <th>React Bootstrap</th>
+            <th>React -     frontend javascript</th>
           </tr>
           <tr>
-            <th>Flask</th>
+            <th>React Bootstrap -   frontend styling</th>
           </tr>
           <tr>
-            <th>Travis-CI</th>
+            <th>Flask -     backend API</th>
           </tr>
           <tr>
-            <th>Github</th>
+            <th>Sqlalchemy -    backend database design</th>
+          </tr>
+          <tr>
+            <th>Travis-CI -     continuous integration</th>
+          </tr>
+          <tr>
+            <th>Github -    version control</th>
+          </tr>
+          <tr>
+            <th>Postman -   API desing and testin</th>
           </tr>
         </Table>
         </Col>
