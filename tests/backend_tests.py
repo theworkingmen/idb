@@ -11,6 +11,7 @@ try:
     from cities_api_func import *
 except:
     sys.path.insert(1, os.path.abspath('app/backend/database/'))
+    print(sys.path)
     from city import City
     from major import Major
     from university import University
