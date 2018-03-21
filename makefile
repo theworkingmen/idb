@@ -74,11 +74,12 @@ status:
 	git branch
 	git status
 
-tes:
+tests_run:
 	python tests/backend_tests.py
-	python tests/sele_tests.py
+	#python tests/sele_tests.py
 travis:
 	make clean
 	ls -al
 	make all
+	make tests_run
 	make -r check

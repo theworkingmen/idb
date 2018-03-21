@@ -1,19 +1,27 @@
 import sys
 import unittest
-sys.path.insert(1, '../app/backend/database/')
-
-from city import City
-from major import Major
-from university import University
-from uni_api_func import *
-from major_api_func import *
-from cities_api_func import *
+try:
+    sys.path.insert(1, '../app/backend/database/')
+    from city import City
+    from major import Major
+    from university import University
+    from uni_api_func import *
+    from major_api_func import *
+    from cities_api_func import *
+except:
+    sys.path.insert(1, 'app/backend/database/')
+    from city import City
+    from major import Major
+    from university import University
+    from uni_api_func import *
+    from major_api_func import *
+    from cities_api_func import *
 
 import json
 
 
 class APITests(unittest.TestCase):
-    
+
     def test_all_uni(self) :
         print("Testing all uni")
         uni_list = get_uni()
@@ -23,7 +31,7 @@ class APITests(unittest.TestCase):
             uni2 = uni_list[i]
             self.assertFalse(uni['id'] == uni2['id'])
         print("Done")
-    
+
     def test_all_uni_limited(self) :
         print("Testing limited uni")
         uni_list = get_uni_limited()
@@ -38,7 +46,7 @@ class APITests(unittest.TestCase):
         except :
             pass
         print("Done")
-    
+
     def test_single_uni(self) :
         print("Testing one uni")
         ut_id = "228778"
@@ -51,8 +59,8 @@ class APITests(unittest.TestCase):
         bad_uni = single_uni(bad_id)
         self.assertTrue(len(bad_uni) == 0)
         print("Done")
-    
-    
+
+
     def test_all_city(self) :
         print("Testing all city")
         city_list = get_city_limited()
@@ -62,7 +70,7 @@ class APITests(unittest.TestCase):
                 if city is not city2 :
                     self.assertFalse(city['id'] == city2['id'])
         print("Done")
-    
+
     def test_all_city_limited(self) :
         print("Testing limited city")
         city_list = get_city_limited()
@@ -77,7 +85,7 @@ class APITests(unittest.TestCase):
             except :
                 pass
         print("Done")
-    
+
     def test_single_city(self) :
         print("Testing one city")
         austin_id = "31000US12420"
@@ -90,7 +98,7 @@ class APITests(unittest.TestCase):
         bad_city = single_city(bad_id)
         self.assertTrue(len(bad_city) == 0)
         print("Done")
-    
+
     def test_all_major(self) :
         print("Testing all major")
         maj_list = get_major()
@@ -100,7 +108,7 @@ class APITests(unittest.TestCase):
                 if maj is not maj2 :
                     self.assertFalse(maj['id'] == maj2['id'])
         print("Done")
-    
+
     def test_all_major_limited(self) :
         print("Testing limited major")
         maj_list = get_major_limited()
@@ -115,8 +123,8 @@ class APITests(unittest.TestCase):
             except :
                 pass
         print("Done")
-    
-    
+
+
     def test_single_major(self) :
         print("Testing one major")
         animal_id = "0109"
@@ -129,7 +137,7 @@ class APITests(unittest.TestCase):
         bad_maj = single_major(bad_id)
         self.assertTrue(len(bad_maj) == 0)
         print("Done")
-    
+
 
 if __name__ == "__main__":
     unittest.main()

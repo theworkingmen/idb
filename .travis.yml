@@ -5,6 +5,10 @@ language: python
 python:
    - "3.6"
 
+ env:
+   - user_name = theworkingmen
+   - password = cs373downing
+   
 before_install:
     - cat .travis.yml
     - pip install --upgrade pip
