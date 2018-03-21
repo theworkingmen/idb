@@ -4,12 +4,11 @@ import InstanceTitle from './InstanceTitle.js';
 import Chart from './Chart.js';
 import {Jumbotron, Row, Col, Thumbnail, Button } from 'react-bootstrap';
 import Map from './Map.js';
-import '../css/instance.css';
 import Top5 from './Top5.js';
 
 
 class CollegeInstance extends Component { 
-    constructor() {
+  constructor() {
     super();
     
     this.state = {
@@ -70,7 +69,7 @@ class CollegeInstance extends Component {
                   labels: ['White', 'Asian', 'Black', 'Hispanic', 'Other'],
                   datasets:[
                     {
-                      label:'Population',
+                      label:'Demographics',
                       data:[
                         this.state.demo_4,
                         this.state.demo_0,
@@ -89,7 +88,8 @@ class CollegeInstance extends Component {
                   ]
                 } } 
             titleText="Demographics" 
-            legendPosition="right"/>;
+            legendPosition="right"
+            redraw />;
       gender_chart =
           <Chart  chartData=
               { {
@@ -98,8 +98,8 @@ class CollegeInstance extends Component {
                   {
                     label:'Gender Ratio',
                     data:[
-                      this.state.gender,
-                      1 - this.state.gender
+                      40,
+                      60
                     ],
                     backgroundColor:[
                       'rgba(255, 99, 132, 0.6)',

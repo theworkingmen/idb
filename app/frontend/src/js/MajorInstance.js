@@ -25,6 +25,7 @@ class majorInstance extends Component {
     }).then(data => {
        this.setState({
           name: data.name,
+          univ0: data.universities_high_graduates_2015[0],
           univ0_name: data.universities_high_graduates_2015[0].name,
           univ1_name: data.universities_high_graduates_2015[1].name,
           univ2_name: data.universities_high_graduates_2015[2].name,
@@ -83,7 +84,7 @@ class majorInstance extends Component {
             <div className="container" >
               <center>
                 <h3> Top 5 Universities </h3>
-                <Top5 A_name={this.state.univ0_name} A_img={this.state.univ0_img}
+                <Top5 A_name={this.state.univ0_name} A_img={this.state.univ0_img} A={this.state.univ0}
                       B_name={this.state.univ1_name} B_img={this.state.univ1_img}
                       C_name={this.state.univ2_name} C_img={this.state.univ2_img}
                       D_name={this.state.univ3_name} D_img={this.state.univ3_img}

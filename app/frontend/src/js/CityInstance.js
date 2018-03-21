@@ -4,7 +4,6 @@ import InstanceTitle from './InstanceTitle.js';
 import Chart from './Chart.js';
 import {Jumbotron, Row, Col, Thumbnail, Button } from 'react-bootstrap';
 import Map from './Map.js';
-import '../css/instance.css';
 import Top5 from './Top5.js';
 
 
@@ -17,8 +16,6 @@ class CityInstance extends Component {
     };
 
   }
-
-
 
   componentWillMount() {
     var api = "http://api.majorpotential.me/cities/";
@@ -151,7 +148,6 @@ class CityInstance extends Component {
         </div>
         
         {/* College Education and High School Graduation */} 
-        if ({this.state.ready})
         <div className="container" >
           <Row>
             <Col sm={1}></Col>
