@@ -16,11 +16,11 @@ class Router extends Component {
         <Switch>
           <Route exact path='/' component={Splash}/>
           <Route exact path='/colleges' component={Colleges}/>
-          <Route exact path='/colleges/:name' component={CollegeInstance}/>
+          <Route exact path='/colleges/:id' component={CollegeInstance}/>
           <Route exact path='/cities' component={Cities}/>
           <Route exact path='/cities/:id' component={CityInstance}/>
           <Route exact path='/majors' component={Majors}/>
-          <Route exact path='/majors/:name' component={MajorInstance}/>
+          <Route exact path='/majors/:id' component={MajorInstance}/>
           <Route path='/about' component={About}/>
         </Switch>
       </main>

@@ -22,7 +22,7 @@ class Colleges extends Component {
 		  return results.json();
 		}).then(data => {
 			let colleges = data.records.map((college) => {
-				return(<Card name={college.name} model='majors' domain={college.image_link} id={college.id}>  </Card>)
+				return(<Card name={college.name} model='colleges' domain={college.image_link} id={college.id}>  </Card>)
 			})
 			this.setState({colleges: colleges});
 		})

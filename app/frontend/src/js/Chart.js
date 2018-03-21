@@ -5,7 +5,7 @@ class Chart extends Component{
   constructor(props){
     super(props);
     this.state = {
-      chartData:props.chartData
+      chartData:props.data
     }
   }
 
@@ -34,6 +34,7 @@ class Chart extends Component{
               position:this.props.legendPosition
             }
           }}
+          redraw
         />
       </div>
     )
