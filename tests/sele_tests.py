@@ -9,11 +9,14 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
+
+
 class SeleTests():
 
     # Create and initialize a Google Chrome webdriver to run the tests.
     def initialize(self):
-        self.driver = webdriver.Chrome(executable_path='chrome_driver/chromedriver.exe')
+        #self.driver = webdriver.Chrome(executable_path='chrome_driver/chromedriver.exe')
+        self.driver = webdriver.Chrome('/chrome_driver.exe')
         driver = self.driver
         driver.get("http://majorpotential.me")
 
@@ -74,6 +77,6 @@ def main() :
     tester.test_navbar_about()
     tester.terminate()
     print("All tests passed.")
-    
+
 if __name__ == "__main__" :
     main()

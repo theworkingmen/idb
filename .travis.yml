@@ -8,7 +8,7 @@ python:
  env:
    - user_name = theworkingmen
    - password = cs373downing
-   
+
 before_install:
     - cat .travis.yml
     - pip install --upgrade pip
@@ -47,4 +47,5 @@ before_script:
 
 script:
     - make travis
+    - xvfb-run python tests/sele_tests.py
     - node_modules/.bin/newman run tests/Postman.json
