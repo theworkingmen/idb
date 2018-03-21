@@ -39,6 +39,11 @@ class CollegeInstance extends Component {
           major2_img: data.majors[2].image_link,
           major3_img: data.majors[3].image_link,
           major4_img: data.majors[4].image_link,
+          major0_id: data.majors[0].id,
+          major1_id: data.majors[1].id,
+          major2_id: data.majors[2].id,
+          major3_id: data.majors[3].id,
+          major4_id: data.majors[4].id,
           demo_0: data.demographics_asian,
           demo_1: data.demographics_black,
           demo_2: data.demographics_hispanic,
@@ -152,11 +157,12 @@ class CollegeInstance extends Component {
         <div className="container" >
           <center>
             <h3> Top 5 Majors </h3>
-            <Top5 A_name={this.state.major0_name} A_img={this.state.major0_img}
-                  B_name={this.state.major1_name} B_img={this.state.major1_img}
-                  C_name={this.state.major2_name} C_img={this.state.major2_img}
-                  D_name={this.state.major3_name} D_img={this.state.major3_img}
-                  E_name={this.state.major4_name} E_img={this.state.major4_img} />
+            <Top5 A_name={this.state.major0_name} A_img={this.state.major0_img} A_id={this.state.major0_id}
+                  B_name={this.state.major1_name} B_img={this.state.major1_img} B_id={this.state.major1_id}
+                  C_name={this.state.major2_name} C_img={this.state.major2_img} C_id={this.state.major2_id}
+                  D_name={this.state.major3_name} D_img={this.state.major3_img} D_id={this.state.major3_id}
+                  E_name={this.state.major4_name} E_img={this.state.major4_img} E_id={this.state.major4_id}
+                  model="majors"/>
           </center>
         </div>
         
