@@ -4,7 +4,6 @@ FILES :=                         \
     app/frontend/src             \
 	app/frontend/src/js          \
 	app/frontend/src/images      \
-	app/frontend/src/scrapers    \
 	app/frontend/src/css         \
 	app/backend/Database/        \
 	app/backend/scrapers/        \
@@ -76,10 +75,8 @@ status:
 
 tests_run:
 	python tests/backend_tests.py
-	#python tests/sele_tests.py
 travis:
 	make clean
 	ls -al
 	make all
-	make tests_run
 	make -r check

@@ -7,10 +7,10 @@ import Map from './Map.js';
 import Top5 from './Top5.js';
 
 
-class CollegeInstance extends Component { 
+class CollegeInstance extends Component {
   constructor() {
     super();
-    
+
     this.state = {
       ready: false
     };
@@ -26,10 +26,11 @@ class CollegeInstance extends Component {
     }).then(data => {
        this.setState({
           name: data.name,
-          city: data.city,
+          city: data.city.split(",")[0],
+          city_id: data.city_id,
           state: data.state,
-          website: data.website,
-          major0_name: data.majors[0].name, 
+          website: "http://" + data.website,
+          major0_name: data.majors[0].name,
           major1_name: data.majors[1].name,
           major2_name: data.majors[2].name,
           major3_name: data.majors[3].name,
@@ -56,7 +57,7 @@ class CollegeInstance extends Component {
           longitude: data.longitude,
           latitude: data.latitude,
           ready: true
-        })  
+        })
     })
 
   }
@@ -68,7 +69,7 @@ class CollegeInstance extends Component {
     let gender_chart = null;
     let gmap = null;
     if (this.state.ready) {
-        demographics_chart = 
+        demographics_chart =
               <Chart  data=
                     { {
                       labels: ['White', 'Asian', 'Black', 'Hispanic', 'Other'],
@@ -92,10 +93,10 @@ class CollegeInstance extends Component {
                         }
                       ]
                     } }
-                titleText="Demographics" 
-                displayLegend={false}
+                titleText="Demographics"
+                legendPosition="right"
                 />;
-      gender_chart = 
+      gender_chart =
               <Chart  data=
                     { {
                       labels: ['Female', 'Male'],
@@ -111,50 +112,50 @@ class CollegeInstance extends Component {
                             'rgba(54, 162, 235, 0.6)',
                           ]
                         }
-                      ]                          
-                    } } 
+                      ]
+                    } }
                 titleText="Gender Ratio"
-                displayLegend={false} 
-                />;          
+                legendPosition="right"
+                />;
       gmap = <Map center={[this.state.latitude, this.state.longitude]} zoom={11} />;
     }
 
     return (
 
       <div className="container" style={{background: "white"}}>
-       
-        {/* Name of University */} 
+
+        {/* Name of University */}
         <div className="container">
           <Jumbotron> <center>
             <h2> {this.state.name} </h2>
           </center></Jumbotron>
-        </div>  
+        </div>
 
-        {/*city, state, website link*/} 
+        {/*city, state, website link*/}
         <div className="container" style={{width:"85%"}}>
           <center>
-          <Col sm={4}> 
+          <Col sm={4}>
             <Thumbnail className="thumbnail">
               <p> City </p>
-              <h3> {this.state.city} </h3>
+              <h3> <a href={ `/cities/${this.state.city_id}`}> {this.state.city} </a> </h3>
             </Thumbnail>
           </Col>
-          <Col sm={4}> 
+          <Col sm={4}>
             <Thumbnail className="thumbnail">
               <p> State </p>
               <h3> {this.state.state} </h3>
             </Thumbnail>
           </Col>
-          <Col sm={4}> 
+          <Col sm={4}>
             <Thumbnail className="thumbnail">
               <p> Website </p>
-              <h3> <Button bsStyle="link" href={this.state.website}> link </Button> </h3>
+              <h3> <a href= {this.state.website} > link </a> </h3>
             </Thumbnail>
           </Col>
           </center>
         </div>
 
-        {/* Top 5 Majors */} 
+        {/* Top 5 Majors */}
         <div className="container" >
           <center>
             <h3> Top 5 Majors </h3>
@@ -166,8 +167,8 @@ class CollegeInstance extends Component {
                   model="majors"/>
           </center>
         </div>
-        
-        {/* Demographics and Gender Ratio (Doughnut Charts) */} 
+
+        {/* Demographics and Gender Ratio (Doughnut Charts) */}
         <div className="container" >
           <Row>
           <Col sm={1}></Col>
@@ -185,22 +186,22 @@ class CollegeInstance extends Component {
           </Row>
         </div>
 
-        {/* Univ. Type, Tuitions */} 
+        {/* Univ. Type, Tuitions */}
         <div className="container" style={{width:"85%"}}>
           <center>
-          <Col sm={4}> 
+          <Col sm={4}>
             <Thumbnail className="thumbnail">
               <p> University Type </p>
               <h3> {this.state.univ_type} </h3>
             </Thumbnail>
           </Col>
-          <Col sm={4}> 
+          <Col sm={4}>
             <Thumbnail className="thumbnail">
               <p> In-State Tuition </p>
               <h3> ${this.state.tuition_in} </h3>
             </Thumbnail>
           </Col>
-          <Col sm={4}> 
+          <Col sm={4}>
             <Thumbnail className="thumbnail">
               <p> Out-of-State Tuition </p>
               <h3> ${this.state.tuition_out} </h3>
@@ -209,11 +210,11 @@ class CollegeInstance extends Component {
           </center>
         </div>
 
-        {/* GMap */} 
+        {/* GMap */}
         <div className="container" >
           <center>{gmap}</center>
         </div>
-        
+
       </div>
     );
   }

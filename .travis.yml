@@ -43,5 +43,4 @@ before_script:
 
 script:
     - make travis
-    - xvfb-run python tests/sele_tests.py
     - node_modules/.bin/newman run tests/Postman.json

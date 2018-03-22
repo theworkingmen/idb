@@ -7,10 +7,10 @@ import Map from './Map.js';
 import Top5 from './Top5.js';
 
 
-class CityInstance extends Component { 
+class CityInstance extends Component {
   constructor() {
     super();
-    
+
     this.state = {
       ready: false
     };
@@ -29,7 +29,7 @@ class CityInstance extends Component {
           population: data.population_in_county,
           income: data.median_household_income_in_county,
           unemployment: data.unemployment_in_county*100,
-          major0_name: data.top_grad_majors[0].name, 
+          major0_name: data.top_grad_majors[0].name,
           major1_name: data.top_grad_majors[1].name,
           major2_name: data.top_grad_majors[2].name,
           major3_name: data.top_grad_majors[3].name,
@@ -50,7 +50,7 @@ class CityInstance extends Component {
           crime: data.violent_crime_in_county,
           motor: data.motor_vehicle_crash_deaths_in_county,
           ready: true
-        })  
+        })
     })
 
   }
@@ -59,7 +59,7 @@ class CityInstance extends Component {
     let college_chart = null;
     let high_school_chart = null;
     if (this.state.ready) {
-      college_chart = 
+      college_chart =
               <Chart  data=
                     { {
                       labels: ['College Educated', 'Not College Educated'],
@@ -69,7 +69,7 @@ class CityInstance extends Component {
                           data:[
                             this.state.college_ed,
                             1-this.state.college_ed,
-                            
+
                           ],
                           backgroundColor:[
                             'rgba(255, 206, 86, 0.6)',
@@ -78,10 +78,10 @@ class CityInstance extends Component {
                         }
                       ]
                     } }
-                titleText="College Education" 
-                displayLegend={false}
+                titleText="College Education"
+                legendPosition="right"
                 />;
-      high_school_chart = 
+      high_school_chart =
               <Chart  data=
                     { {
                       labels: ['High School Educated', 'Not High School Educated'],
@@ -97,49 +97,49 @@ class CityInstance extends Component {
                             'rgba(54, 162, 235, 0.6)',
                           ]
                         }
-                      ]                          
-                    } } 
+                      ]
+                    } }
                 titleText="High School Education"
-                displayLegend={false} 
-                />;          
+                legendPosition="right"
+                />;
     }
 
     return (
 
       <div className="container" style={{background: "white"}}>
-       
-        {/* Name of City */} 
+
+        {/* Name of City */}
         <div className="container">
           <Jumbotron> <center>
             <h2> {this.state.name} </h2>
           </center></Jumbotron>
-        </div>  
+        </div>
 
-        {/* population, income, unemployment rate */} 
+        {/* population, income, unemployment rate */}
         <div className="container" style={{width:"85%"}}>
           <center>
-          <Col sm={4}> 
+          <Col sm={4}>
             <Thumbnail className="thumbnail">
               <p> Population </p>
               <h3> {this.state.population} </h3>
             </Thumbnail>
           </Col>
-          <Col sm={4}> 
+          <Col sm={4}>
             <Thumbnail className="thumbnail">
               <p> Income </p>
               <h3> ${this.state.income} </h3>
             </Thumbnail>
           </Col>
-          <Col sm={4}> 
+          <Col sm={4}>
             <Thumbnail className="thumbnail">
-              <p> unemployment rate </p> 
+              <p> unemployment rate </p>
               <h3> {this.state.unemployment}% </h3>
             </Thumbnail>
           </Col>
           </center>
         </div>
 
-        {/* Top 5 Majors */} 
+        {/* Top 5 Majors */}
         <div className="container">
           <center>
             <h3> Top 5 Majors </h3>
@@ -151,8 +151,8 @@ class CityInstance extends Component {
                   model="majors"/>
           </center>
         </div>
-        
-        {/* College Education and High School Graduation */} 
+
+        {/* College Education and High School Graduation */}
         <div className="container" >
           <Row>
             <Col sm={1}></Col>
@@ -166,22 +166,22 @@ class CityInstance extends Component {
           <p></p>
         </div>
 
-        {/* Primary Care Physician, Crime Rate, Motor Vehicle Death */} 
+        {/* Primary Care Physician, Crime Rate, Motor Vehicle Death */}
         <div className="container" style={{width:"85%"}}>
           <center>
-          <Col sm={4}> 
+          <Col sm={4}>
             <Thumbnail className="thumbnail">
               <p> Physician to Population </p>
               <h3> 1 : {this.state.physician} </h3>
             </Thumbnail>
           </Col>
-          <Col sm={4}> 
+          <Col sm={4}>
             <Thumbnail className="thumbnail">
               <p> Crime Offense to Population </p>
               <h3> {this.state.crime} : 100k </h3>
             </Thumbnail>
           </Col>
-          <Col sm={4}> 
+          <Col sm={4}>
             <Thumbnail className="thumbnail">
               <p> Motor Vehicle Death per year</p>
               <h3> {this.state.motor} </h3>
@@ -189,7 +189,7 @@ class CityInstance extends Component {
           </Col>
           </center>
         </div>
-        
+
       </div>
     );
   }
