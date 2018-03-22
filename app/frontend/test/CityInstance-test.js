@@ -8,8 +8,8 @@ import CityInstance from '../src/js/CityInstance'
 
 describe('(Component) CityInstance', () => {
   it('renders...', () => {
-	const someData = {params:'test'};
-	const wrapper = shallow(<MemoryRouter><CityInstance match={someData}/></MemoryRouter>);
+	const someData = {params:{id:'31000US38540'}};
+	const wrapper = shallow(<CityInstance match={{params:{id:'31000US38540'}}}/>);
     expect(wrapper).to.have.length(1);
   });
 });
