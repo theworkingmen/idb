@@ -15,13 +15,13 @@ class Card extends Component {
 	render() {
 		return (
 			
-		    <Col xs={12} sm={4} md={4}>
+		    <Col xs={12} sm={3} md={3} lg={3}>
 		    	<Link to={`/${this.props.model}/${this.props.id}`}>
-				<Thumbnail style={{height:"24em"}}>
+				<Thumbnail style={{height:"19em"}}>
 					{/* img src needs to have a {local path} or {url}. DB needs to provide url of img. */}
 					<center>
 						<Image 	src={this.props.domain} 
-								style={{width:"18em", height:"19em"}} 
+								style={{width:"14em", height:"14em"}} 
 								onError={(e)=>{e.target.src="https://goo.gl/NvPJj6"}}/>
 					</center>
 					{/*<Image src={`${this.props.imgsrc}`} style={{width:"100%", height:"100%"}}/>*/}

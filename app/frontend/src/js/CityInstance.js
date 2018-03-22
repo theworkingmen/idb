@@ -152,18 +152,25 @@ class CityInstance extends Component {
           </center>
         </div>
 
+        {/* Universities in City */}
+        <div className="container">
+          <center>
+          <h3> Universities </h3>
+          
+          </center>
+        </div>
+
         {/* College Education and High School Graduation */}
-        <div className="container" >
+        <div className="container">
           <Row>
             <Col sm={1}></Col>
             <Col sm={5}>
-            {college_chart}
+              {college_chart}
             </Col>
             <Col sm={5}>
-            {high_school_chart}
+              {high_school_chart}
             </Col>
           </Row>
-          <p></p>
         </div>
 
         {/* Primary Care Physician, Crime Rate, Motor Vehicle Death */}
