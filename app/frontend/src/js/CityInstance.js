@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import InstanceTitle from './InstanceTitle.js';
 import Chart from './Chart.js';
-import {Jumbotron, Row, Col, Thumbnail, Button } from 'react-bootstrap';
+import {Jumbotron, Row, Col, Thumbnail, Button, Image, OverlayTrigger, Tooltip, Grid } from 'react-bootstrap';
 import Map from './Map.js';
 import Top5 from './Top5.js';
 
@@ -24,33 +24,46 @@ class CityInstance extends Component {
     .then(results => {
       return results.json();
     }).then(data => {
-       this.setState({
-          name: data.city_name,
-          population: data.population_in_county,
-          income: data.median_household_income_in_county,
-          unemployment: data.unemployment_in_county*100,
-          major0_name: data.top_grad_majors[0].name,
-          major1_name: data.top_grad_majors[1].name,
-          major2_name: data.top_grad_majors[2].name,
-          major3_name: data.top_grad_majors[3].name,
-          major4_name: data.top_grad_majors[4].name,
-          major0_img: data.top_grad_majors[0].image_link,
-          major1_img: data.top_grad_majors[1].image_link,
-          major2_img: data.top_grad_majors[2].image_link,
-          major3_img: data.top_grad_majors[3].image_link,
-          major4_img: data.top_grad_majors[4].image_link,
-          major0_id: data.top_grad_majors[0].id,
-          major1_id: data.top_grad_majors[1].id,
-          major2_id: data.top_grad_majors[2].id,
-          major3_id: data.top_grad_majors[3].id,
-          major4_id: data.top_grad_majors[4].id,
-          college_ed: data.people_with_college_education_in_county,
-          high_ed: data.high_school_graduation_rate_in_county,
-          physician: data.primary_care_physicians_in_county,
-          crime: data.violent_crime_in_county,
-          motor: data.motor_vehicle_crash_deaths_in_county,
-          ready: true
-        })
+      let universities = data.universities_in_city.map((college) => {
+        return(
+          <Col sm={3}> 
+            <Link to={`/colleges/${college.id}`}>
+              <OverlayTrigger placement="bottom" overlay={<Tooltip>{college.name}</Tooltip>}>
+                <Image  className="top5" src={college.image_link} thumbnail />
+              </OverlayTrigger>
+            </Link>
+          </Col>
+        )
+      })
+
+      this.setState({
+        name: data.city_name,
+        population: data.population_in_county,
+        income: data.median_household_income_in_county,
+        unemployment: data.unemployment_in_county*100,
+        universities:universities,
+        major0_name: data.top_grad_majors[0].name,
+        major1_name: data.top_grad_majors[1].name,
+        major2_name: data.top_grad_majors[2].name,
+        major3_name: data.top_grad_majors[3].name,
+        major4_name: data.top_grad_majors[4].name,
+        major0_img: data.top_grad_majors[0].image_link,
+        major1_img: data.top_grad_majors[1].image_link,
+        major2_img: data.top_grad_majors[2].image_link,
+        major3_img: data.top_grad_majors[3].image_link,
+        major4_img: data.top_grad_majors[4].image_link,
+        major0_id: data.top_grad_majors[0].id,
+        major1_id: data.top_grad_majors[1].id,
+        major2_id: data.top_grad_majors[2].id,
+        major3_id: data.top_grad_majors[3].id,
+        major4_id: data.top_grad_majors[4].id,
+        college_ed: data.people_with_college_education_in_county,
+        high_ed: data.high_school_graduation_rate_in_county,
+        physician: data.primary_care_physicians_in_county,
+        crime: data.violent_crime_in_county,
+        motor: data.motor_vehicle_crash_deaths_in_county,
+        ready: true
+      })
     })
 
   }
@@ -133,7 +146,7 @@ class CityInstance extends Component {
           <Col sm={4}>
             <Thumbnail className="thumbnail">
               <p> unemployment rate </p>
-              <h3> {this.state.unemployment}% </h3>
+              <h3> {Number(this.state.unemployment).toFixed(1)}% </h3>
             </Thumbnail>
           </Col>
           </center>
@@ -152,18 +165,31 @@ class CityInstance extends Component {
           </center>
         </div>
 
+        {/* Universities in City */}
+        <div className="container">
+          <center>
+            <h3> Universities </h3>
+            <Row className="flex-row">
+              <Col sm={1}></Col>
+              <Col sm={10}>
+                <Grid>{this.state.universities}</Grid>
+              </Col>
+            </Row>
+            
+          </center>
+        </div>
+
         {/* College Education and High School Graduation */}
-        <div className="container" >
+        <div className="container">
           <Row>
             <Col sm={1}></Col>
             <Col sm={5}>
-            {college_chart}
+              {college_chart}
             </Col>
             <Col sm={5}>
-            {high_school_chart}
+              {high_school_chart}
             </Col>
           </Row>
-          <p></p>
         </div>
 
         {/* Primary Care Physician, Crime Rate, Motor Vehicle Death */}
