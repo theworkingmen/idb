@@ -6,6 +6,12 @@
   margin: 20px;
   padding: 20px;
 }
+
+.InstanceContainer {
+	padding-top: 4em;
+	
+}
+
 .InstanceTitle p{
 	font-family: 'Oswald';
 	font-size: 4em;

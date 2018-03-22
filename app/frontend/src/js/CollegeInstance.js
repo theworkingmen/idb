@@ -157,6 +157,7 @@ class CollegeInstance extends Component {
 
         {/* Top 5 Majors */}
         <div className="container" >
+          <div className="InstanceContainer">
           <center>
             <h3> Top 5 Majors </h3>
             <Top5 A_name={this.state.major0_name} A_img={this.state.major0_img} A_id={this.state.major0_id}
@@ -166,10 +167,12 @@ class CollegeInstance extends Component {
                   E_name={this.state.major4_name} E_img={this.state.major4_img} E_id={this.state.major4_id}
                   model="majors"/>
           </center>
+          </div>
         </div>
 
         {/* Demographics and Gender Ratio (Doughnut Charts) */}
         <div className="container" >
+          <div className="InstanceContainer">
           <Row>
           <Col sm={1}></Col>
           <Col sm={5}>
@@ -184,10 +187,12 @@ class CollegeInstance extends Component {
           <p> </p>
           <p> </p>
           </Row>
+          </div>
         </div>
 
         {/* Univ. Type, Tuitions */}
         <div className="container" style={{width:"85%"}}>
+          <div className="InstanceContainer">
           <center>
           <Col sm={4}>
             <Thumbnail className="thumbnail">
@@ -208,11 +213,14 @@ class CollegeInstance extends Component {
             </Thumbnail>
           </Col>
           </center>
+          </div>
         </div>
 
         {/* GMap */}
         <div className="container" >
+          <div className="InstanceContainer">
           <center>{gmap}</center>
+          </div>
         </div>
 
       </div>

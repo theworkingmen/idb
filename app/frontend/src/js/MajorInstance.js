@@ -106,6 +106,7 @@ class majorInstance extends Component {
 
             {/* Top 5 Cities */} 
             <div className="container" >
+              <div className="InstanceContainer">
               <center>
                 <h3> Top 5 Cities </h3>
                 <Top5 A_name={this.state.city0_name} A_img={this.state.city0_img} A_id={this.state.city0_id}
@@ -115,10 +116,12 @@ class majorInstance extends Component {
                       E_name={this.state.city4_name} E_img={this.state.city4_img} E_id={this.state.city4_id} 
                       model="cities"/>
               </center>
+              </div>
             </div>
 
             {/* Average Wage, Wage Growth */} 
             <div className="container" style={{width:"85%"}}>
+              <div className="InstanceContainer">
               <center>
               <Col sm={2}></Col>
               <Col sm={4}> 
@@ -134,11 +137,13 @@ class majorInstance extends Component {
                 </Thumbnail>
               </Col>
               </center>
+              </div>
             </div>
 
 
             {/* Total Degrees, Workforce, STEM */} 
             <div className="container" style={{width:"85%"}}>
+              
               <center>
               <Col sm={4}> 
                 <Thumbnail className="thumbnail">
@@ -159,6 +164,7 @@ class majorInstance extends Component {
                 </Thumbnail>
               </Col>
               </center>
+              
             </div>
 
           </div>

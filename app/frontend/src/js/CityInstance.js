@@ -154,6 +154,7 @@ class CityInstance extends Component {
 
         {/* Top 5 Majors */}
         <div className="container">
+          <div className="InstanceContainer">
           <center>
             <h3> Top 5 Majors </h3>
             <Top5 A_name={this.state.major0_name} A_img={this.state.major0_img} A_id={this.state.major0_id}
@@ -163,25 +164,29 @@ class CityInstance extends Component {
                   E_name={this.state.major4_name} E_img={this.state.major4_img} E_id={this.state.major4_id}
                   model="majors"/>
           </center>
+          </div>
         </div>
 
         {/* Universities in City */}
         <div className="container">
+          <div className="InstanceContainer">
           <center>
             <h3> Universities </h3>
-            <Row className="flex-row">
+            
               <Col sm={1}></Col>
               <Col sm={10}>
                 <Grid>{this.state.universities}</Grid>
               </Col>
-            </Row>
+            
             
           </center>
+          </div>
         </div>
 
         {/* College Education and High School Graduation */}
         <div className="container">
-          <Row>
+          <div className="InstanceContainer">
+          
             <Col sm={1}></Col>
             <Col sm={5}>
               {college_chart}
@@ -189,11 +194,13 @@ class CityInstance extends Component {
             <Col sm={5}>
               {high_school_chart}
             </Col>
-          </Row>
+          
+          </div>
         </div>
 
         {/* Primary Care Physician, Crime Rate, Motor Vehicle Death */}
         <div className="container" style={{width:"85%"}}>
+          <div className="InstanceContainer">
           <center>
           <Col sm={4}>
             <Thumbnail className="thumbnail">
@@ -214,8 +221,8 @@ class CityInstance extends Component {
             </Thumbnail>
           </Col>
           </center>
+          </div>
         </div>
-
       </div>
     );
   }
