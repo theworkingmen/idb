@@ -23,7 +23,7 @@ export default class Top5 extends Component {
         <Col sm={2}> 
           
           <Link to={`/${this.props.model}/${this.props.A_id}`}>
-            <OverlayTrigger placement="bottom" overlay={<Tooltip>{this.props.A_name}</Tooltip>}>
+            <OverlayTrigger placement="bottom" overlay={<Tooltip id="A name">{this.props.A_name}</Tooltip>}>
               <Image  className="top5" src={this.props.A_img} thumbnail />
             </OverlayTrigger>
           </Link>
@@ -32,7 +32,7 @@ export default class Top5 extends Component {
         <Col sm={2}> 
           
           <Link to={`/${this.props.model}/${this.props.B_id}`}>
-            <OverlayTrigger placement="bottom" overlay={<Tooltip>{this.props.B_name}</Tooltip>}>
+            <OverlayTrigger placement="bottom" overlay={<Tooltip id="B name">{this.props.B_name}</Tooltip>}>
               <Image className="top5" src={this.props.B_img} thumbnail />
             </OverlayTrigger>
           </Link>
@@ -41,7 +41,7 @@ export default class Top5 extends Component {
         <Col sm={2}> 
           
           <Link to={`/${this.props.model}/${this.props.C_id}`}>
-            <OverlayTrigger placement="bottom" overlay={<Tooltip>{this.props.C_name}</Tooltip>}>
+            <OverlayTrigger placement="bottom" overlay={<Tooltip id="C name">{this.props.C_name}</Tooltip>}>
               <Image className="top5" src={this.props.C_img} thumbnail />
             </OverlayTrigger>
           </Link>
@@ -50,7 +50,7 @@ export default class Top5 extends Component {
         <Col sm={2}> 
           
           <Link to={`/${this.props.model}/${this.props.D_id}`}>
-            <OverlayTrigger placement="bottom" overlay={<Tooltip>{this.props.D_name}</Tooltip>}>
+            <OverlayTrigger placement="bottom" overlay={<Tooltip id="D name">{this.props.D_name}</Tooltip>}>
               <Image className="top5" src={this.props.D_img} thumbnail />
             </OverlayTrigger>
           </Link>
@@ -59,7 +59,7 @@ export default class Top5 extends Component {
         <Col sm={2}> 
           
           <Link to={`/${this.props.model}/${this.props.E_id}`}>
-            <OverlayTrigger placement="bottom" overlay={<Tooltip>{this.props.E_name}</Tooltip>}>
+            <OverlayTrigger placement="bottom" overlay={<Tooltip id="E name">{this.props.E_name}</Tooltip>}>
               <Image className="top5" src={this.props.E_img} thumbnail />
             </OverlayTrigger>
           </Link>

@@ -2,13 +2,13 @@ import React from 'react'
 import { MemoryRouter } from 'react-router-dom'
 import { shallow, mount } from 'enzyme'
 import { expect } from 'chai'
-import App from '../src/js/App'
+import Majors from '../src/js/Majors'
 
 
 
-describe('(Component) App', () => {
+describe('(Component) Majors', () => {
   it('renders...', () => {
-	const wrapper = shallow(<App />);
+	const wrapper = shallow(<Majors />);
     expect(wrapper).to.have.length(1);
   });
 });
