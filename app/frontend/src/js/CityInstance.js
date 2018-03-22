@@ -146,7 +146,7 @@ class CityInstance extends Component {
           <Col sm={4}>
             <Thumbnail className="thumbnail">
               <p> unemployment rate </p>
-              <h3> {this.state.unemployment}% </h3>
+              <h3> {Number(this.state.unemployment).toFixed(1)}% </h3>
             </Thumbnail>
           </Col>
           </center>
