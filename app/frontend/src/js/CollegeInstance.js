@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import InstanceTitle from './InstanceTitle.js';
 import Chart from './Chart.js';
 import {Jumbotron, Row, Col, Thumbnail, Button } from 'react-bootstrap';
+import notFound from './error404.js';
 import Map from './Map.js';
 import Top5 from './Top5.js';
 
@@ -10,9 +11,9 @@ import Top5 from './Top5.js';
 class CollegeInstance extends Component {
   constructor() {
     super();
-
+    let valid = true;
     this.state = {
-      ready: false
+      ready: false,
     };
 
   }
@@ -22,6 +23,9 @@ class CollegeInstance extends Component {
     api += this.props.match.params.id;
     fetch(api)
     .then(results => {
+      if (!results.ok) {
+            throw Error(results.statusText);
+        }
       return results.json();
     }).then(data => {
        this.setState({
@@ -59,11 +63,20 @@ class CollegeInstance extends Component {
           ready: true
         })
     })
+  }
 
+  componentDidCatch() {
+    this.setState({
+      valid:false
+    })
   }
 
 
   render() {
+
+    if (this.state.valid === false) {
+      return {notFound};
+    }
 
     let demographics_chart = null;
     let gender_chart = null;

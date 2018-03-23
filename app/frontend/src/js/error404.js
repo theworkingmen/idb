@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import Chart from './Chart.js';
 import {Jumbotron, Row, Col, Thumbnail, Button } from 'react-bootstrap';
 
-  export default class error404 extends Component {
+  export default class notFound extends Component {
 
 
     render() {

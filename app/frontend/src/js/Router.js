@@ -11,7 +11,13 @@ import CollegeInstance from './CollegeInstance.js';
 import notFound from './error404.js';
 
 class Router extends Component {
+
+
+
+
+
   render() {
+
     return (
       <main>
         <Switch>
