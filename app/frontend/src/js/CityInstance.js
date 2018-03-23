@@ -28,7 +28,7 @@ class CityInstance extends Component {
         return(
           <Col sm={3}> 
             <Link to={`/colleges/${college.id}`}>
-              <OverlayTrigger placement="bottom" overlay={<Tooltip>{college.name}</Tooltip>}>
+              <OverlayTrigger placement="bottom" overlay={<Tooltip id ="name">{college.name}</Tooltip>}>
                 <Image  className="top5" src={college.image_link} thumbnail />
               </OverlayTrigger>
             </Link>
@@ -154,7 +154,6 @@ class CityInstance extends Component {
 
         {/* Top 5 Majors */}
         <div className="container">
-          <div className="InstanceContainer">
           <center>
             <h3> Top 5 Majors </h3>
             <Top5 A_name={this.state.major0_name} A_img={this.state.major0_img} A_id={this.state.major0_id}
@@ -164,29 +163,25 @@ class CityInstance extends Component {
                   E_name={this.state.major4_name} E_img={this.state.major4_img} E_id={this.state.major4_id}
                   model="majors"/>
           </center>
-          </div>
         </div>
 
         {/* Universities in City */}
         <div className="container">
-          <div className="InstanceContainer">
           <center>
             <h3> Universities </h3>
-            
+            <Row className="flex-row">
               <Col sm={1}></Col>
               <Col sm={10}>
                 <Grid>{this.state.universities}</Grid>
               </Col>
-            
+            </Row>
             
           </center>
-          </div>
         </div>
 
         {/* College Education and High School Graduation */}
         <div className="container">
-          <div className="InstanceContainer">
-          
+          <Row>
             <Col sm={1}></Col>
             <Col sm={5}>
               {college_chart}
@@ -194,15 +189,12 @@ class CityInstance extends Component {
             <Col sm={5}>
               {high_school_chart}
             </Col>
-          
-          </div>
+          </Row>
         </div>
 
         {/* Primary Care Physician, Crime Rate, Motor Vehicle Death */}
         <div className="container" style={{width:"85%"}}>
-          <div className="InstanceContainer">
           <center>
-          <h3> Other Information </h3>
           <Col sm={4}>
             <Thumbnail className="thumbnail">
               <p> Physician to Population </p>
@@ -212,7 +204,7 @@ class CityInstance extends Component {
           <Col sm={4}>
             <Thumbnail className="thumbnail">
               <p> Crime Offense to Population </p>
-              <h3> {Number(this.state.crime).toFixed(0)} : 100k </h3>
+              <h3> {this.state.crime} : 100k </h3>
             </Thumbnail>
           </Col>
           <Col sm={4}>
@@ -222,8 +214,8 @@ class CityInstance extends Component {
             </Thumbnail>
           </Col>
           </center>
-          </div>
         </div>
+
       </div>
     );
   }
