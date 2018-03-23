@@ -202,6 +202,7 @@ class CityInstance extends Component {
         <div className="container" style={{width:"85%"}}>
           <div className="InstanceContainer">
           <center>
+          <h3> Other Information </h3>
           <Col sm={4}>
             <Thumbnail className="thumbnail">
               <p> Physician to Population </p>
@@ -211,7 +212,7 @@ class CityInstance extends Component {
           <Col sm={4}>
             <Thumbnail className="thumbnail">
               <p> Crime Offense to Population </p>
-              <h3> {this.state.crime} : 100k </h3>
+              <h3> {Number(this.state.crime).toFixed(0)} : 100k </h3>
             </Thumbnail>
           </Col>
           <Col sm={4}>

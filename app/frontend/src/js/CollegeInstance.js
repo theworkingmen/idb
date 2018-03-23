@@ -173,7 +173,6 @@ class CollegeInstance extends Component {
         {/* Demographics and Gender Ratio (Doughnut Charts) */}
         <div className="container" >
           <div className="InstanceContainer">
-          <Row>
           <Col sm={1}></Col>
           <Col sm={5}>
             {demographics_chart}
@@ -181,12 +180,6 @@ class CollegeInstance extends Component {
           <Col sm={5}>
             {gender_chart}
           </Col>
-          </Row>
-          <Row>
-          <p> </p>
-          <p> </p>
-          <p> </p>
-          </Row>
           </div>
         </div>
 
@@ -194,6 +187,7 @@ class CollegeInstance extends Component {
         <div className="container" style={{width:"85%"}}>
           <div className="InstanceContainer">
           <center>
+          <h3> Other Information </h3>
           <Col sm={4}>
             <Thumbnail className="thumbnail">
               <p> University Type </p>

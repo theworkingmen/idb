@@ -123,19 +123,20 @@ class majorInstance extends Component {
             <div className="container" style={{width:"85%"}}>
               <div className="InstanceContainer">
               <center>
-              <Col sm={2}></Col>
-              <Col sm={4}> 
-                <Thumbnail className="thumbnail">
-                  <p> Average Wage </p>
-                  <h3> {this.state.wage} </h3>
-                </Thumbnail>
-              </Col>
-              <Col sm={4}> 
-                <Thumbnail className="thumbnail">
-                  <p> Wage Growth </p>
-                  <h3> {this.state.wage_growth} </h3>
-                </Thumbnail>
-              </Col>
+                <h3> Other Information </h3>
+                <Col sm={2}></Col>
+                <Col sm={4}> 
+                  <Thumbnail className="thumbnail">
+                    <p> Average Wage </p>
+                    <h3> {this.state.wage} </h3>
+                  </Thumbnail>
+                </Col>
+                <Col sm={4}> 
+                  <Thumbnail className="thumbnail">
+                    <p> Wage Growth </p>
+                    <h3> {this.state.wage_growth} </h3>
+                  </Thumbnail>
+                </Col>
               </center>
               </div>
             </div>
