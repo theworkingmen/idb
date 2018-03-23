@@ -3,18 +3,12 @@ import os
 import unittest
 try:
     sys.path.insert(0, '../app/backend/database/')
-    from city import City
-    from major import Major
-    from university import University
     from uni_api_func import *
     from major_api_func import *
     from cities_api_func import *
 except:
     sys.path.insert(0, os.path.abspath('./app/backend/database/'))
     print(sys.path)
-    from city import City
-    from major import Major
-    from university import University
     from uni_api_func import *
     from major_api_func import *
     from cities_api_func import *
@@ -65,7 +59,7 @@ class APITests(unittest.TestCase):
 
     def test_all_city(self) :
         print("Testing all city")
-        city_list = get_city_limited()
+        city_list = get_city()
         self.assertTrue(len(city_list) > 1)
         for city in city_list :
             for city2 in city_list :

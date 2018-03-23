@@ -42,7 +42,7 @@ export default class About extends Component {
         "photo": mitchell_pic,
         "commits": 0,
         "issues": 0,
-        "number_tests": 0
+        "number_tests": 13
       }
       members_data['smcw66'] = {
         "name": "Sungsup Lee",
@@ -60,7 +60,7 @@ export default class About extends Component {
         "photo": abel_pic,
         "commits": 0,
         "issues": 0,
-        "number_tests": 0
+        "number_tests": 13
       }
       members_data['NealFM'] = {
         "name": "Neal Friesenhahn",
@@ -78,7 +78,7 @@ export default class About extends Component {
         "photo": christian_pic,
         "commits": 0,
         "issues": 0,
-        "number_tests": 0
+        "number_tests": 19
       }
 
       let commitJSON = JSON.parse(body)
@@ -172,7 +172,7 @@ export default class About extends Component {
         </tr>
         <tr>
           <th>Number of Unit Tests:</th>
-          <th> 0 </th>
+          <th> 45 </th>
         </tr>
       </Table>
       </Col>
