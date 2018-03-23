@@ -121,7 +121,7 @@
 			"response": []
 		},
 		{
-			"name": "Test single university api call",
+			"name": "Test single university api call Success",
 			"event": [
 				{
 					"listen": "test",
@@ -212,6 +212,51 @@
 					"path": [
 						"universities",
 						"482228"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Test single university api failure",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "33a94548-02f7-4dad-bbd9-d0b08ce0886e",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Error Status code is not 200\"] = responseCode.code !== 200;",
+							"",
+							"",
+							"",
+							"",
+							"",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/universities/2",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"universities",
+						"2"
 					]
 				},
 				"description": ""
@@ -456,7 +501,109 @@
 			"response": []
 		},
 		{
-			"name": "Test single city api call",
+			"name": "Test single city api call Success",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d85ca25e-46e2-4d18-8ae3-254222766a82",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var first_city = response;",
+							"",
+							"// ensure the city data contains name",
+							"tests[\"city data contains name\"] = first_city.city_name !== null;",
+							"",
+							"// ensure the city data contains city",
+							"tests[\"city data contains city\"] = first_city.city_name !== null;",
+							"",
+							"// ensure the city data contains image_link",
+							"tests[\"city data contains image_link\"] = first_city.city_image_link !== null;",
+							"",
+							"// ensure the city data contains city_id",
+							"tests[\"city data contains city_id\"] = first_city.id !== null;",
+							"",
+							"// ensure the city data contains county_id",
+							"tests[\"city data contains county_id\"] = first_city.county_id !== null;",
+							"",
+							"// ensure the city data contains enrolled_men",
+							"tests[\"city data contains high_school_graduation_rate_in_county\"] = first_city.high_school_graduation_rate_in_county !== null;",
+							"",
+							"// ensure the city data contains motor_vehicle_crash_deaths_in_county",
+							"tests[\"city data contains motor_vehicle_crash_deaths_in_county\"] = first_city.motor_vehicle_crash_deaths_in_county !== null;",
+							"",
+							"// ensure the city data contains people_with_college_education_in_county",
+							"tests[\"city data contains people_with_college_education_in_county\"] = first_city.people_with_college_education_in_county !== null;",
+							"",
+							"// ensure the city data contains population_in_county",
+							"tests[\"city data contains population_in_county\"] = first_city.population_in_county !== null;",
+							"",
+							"// ensure the city data contains city_type",
+							"tests[\"city data contains city_type\"] = first_city.city_type !== null;",
+							"",
+							"// ensure the city data contains primary_care_physicians_in_county",
+							"tests[\"city data contains primary_care_physicians_in_county\"] = first_city.primary_care_physicians_in_county !== null;",
+							"",
+							"// ensure the city data contains county_name",
+							"tests[\"city data contains county_name\"] = first_city.county_name !== null;",
+							"",
+							"// ensure the city data contains violent_crime_in_county",
+							"tests[\"city data contains violent_crime_in_county\"] = first_city.violent_crime_in_county !== null;",
+							"",
+							"// ensure the city data contains median_household_income_in_county",
+							"tests[\"city data contains median_household_income_in_county\"] = first_city.median_household_income_in_county !== null;",
+							"",
+							"// ensure the city data contains survey_year_in_county",
+							"tests[\"city data contains survey_year_in_county\"] = first_city.survey_year_in_county!== null;",
+							"",
+							"// ensure the city data contains top_majors",
+							"tests[\"city data contains top_majors\"] = first_city.top_grad_majors !== null;",
+							"majors = first_city.top_grad_majors;",
+							"tests[\"city data contains 5 top_majors\"] = majors.length === 5;",
+							"",
+							"// ensure the city data contains top universities",
+							"tests[\"city data contains top_majors\"] = first_city.top_grad_majors !== null;",
+							"majors = first_city.top_grad_majors;",
+							"tests[\"city data contains 5 top_majors\"] = Object.keys(majors).length === 5;",
+							"",
+							"",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/cities/31000US38540",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"cities",
+						"31000US38540"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Test single city api failure",
 			"event": [
 				{
 					"listen": "test",
@@ -716,7 +863,179 @@
 			"response": []
 		},
 		{
-			"name": "Test single major api call",
+			"name": "Test single major api call Success",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "68879db1-4c75-46db-a2f5-4fa0c5cd08a6",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var first_major = response;",
+							"",
+							"// ensure the major data contains name",
+							"tests[\"major data contains average_age_work_force\"] = first_major.average_age_work_force !== null;",
+							"",
+							"// ensure the major data contains average_wage",
+							"tests[\"major data contains average_wage\"] = first_major.average_wage !== null;",
+							"",
+							"// ensure the major data contains image_link",
+							"tests[\"major data contains image_link\"] = first_major.major_image_link !== null;",
+							"",
+							"// ensure the major data contains id",
+							"tests[\"major data contains major_id\"] = first_major.id !== null;",
+							"",
+							"// ensure the major data contains is_stem",
+							"tests[\"major data contains is_stem\"] = first_major.is_stem !== null;",
+							"",
+							"// ensure the major data contains name",
+							"tests[\"major data contains name\"] = first_major.name !== null;",
+							"",
+							"// ensure the major data contains total_degrees_awarded_in_2015",
+							"tests[\"major data contains total_degrees_awarded_in_2015\"] = first_major.total_degrees_awarded_in_2015 !== null;",
+							"",
+							"// ensure the major data contains total_people_in_work_foce",
+							"tests[\"major data contains total_people_in_work_foce\"] = first_major.total_people_in_work_foce !== null;",
+							"",
+							"// ensure the major data contains wage_growth_rate",
+							"tests[\"major data contains wage_growth_rate\"] = first_major.wage_growth_rate !== null;",
+							"",
+							"// ensure the major data contains cities",
+							"tests[\"major data contains cities_high_graduates_2015\"] = first_major.cities_high_graduates_2015 !== null;",
+							"cities = first_major.cities_high_graduates_2015;",
+							"",
+							"tests[\"major data contains atleast one major\"] = cities.length === 5;",
+							"",
+							"// ensure the major data contains universities_high_graduates_2015",
+							"tests[\"major data contains universities_high_graduates_2015\"] = first_major.universities_high_graduates_2015 !== null;",
+							"unis = first_major.universities_high_graduates_2015;",
+							"",
+							"tests[\"major data contains atleast one major\"] = unis.length === 5;",
+							"",
+							"",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/majors/0101",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"majors",
+						"0101"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Test single major api failure",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "68879db1-4c75-46db-a2f5-4fa0c5cd08a6",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var first_major = response;",
+							"",
+							"// ensure the major data contains name",
+							"tests[\"major data contains average_age_work_force\"] = first_major.average_age_work_force !== null;",
+							"",
+							"// ensure the major data contains average_wage",
+							"tests[\"major data contains average_wage\"] = first_major.average_wage !== null;",
+							"",
+							"// ensure the major data contains image_link",
+							"tests[\"major data contains image_link\"] = first_major.major_image_link !== null;",
+							"",
+							"// ensure the major data contains id",
+							"tests[\"major data contains major_id\"] = first_major.id !== null;",
+							"",
+							"// ensure the major data contains is_stem",
+							"tests[\"major data contains is_stem\"] = first_major.is_stem !== null;",
+							"",
+							"// ensure the major data contains name",
+							"tests[\"major data contains name\"] = first_major.name !== null;",
+							"",
+							"// ensure the major data contains total_degrees_awarded_in_2015",
+							"tests[\"major data contains total_degrees_awarded_in_2015\"] = first_major.total_degrees_awarded_in_2015 !== null;",
+							"",
+							"// ensure the major data contains total_people_in_work_foce",
+							"tests[\"major data contains total_people_in_work_foce\"] = first_major.total_people_in_work_foce !== null;",
+							"",
+							"// ensure the major data contains wage_growth_rate",
+							"tests[\"major data contains wage_growth_rate\"] = first_major.wage_growth_rate !== null;",
+							"",
+							"// ensure the major data contains cities",
+							"tests[\"major data contains cities_high_graduates_2015\"] = first_major.cities_high_graduates_2015 !== null;",
+							"cities = first_major.cities_high_graduates_2015;",
+							"",
+							"tests[\"major data contains atleast one major\"] = cities.length === 5;",
+							"",
+							"// ensure the major data contains universities_high_graduates_2015",
+							"tests[\"major data contains universities_high_graduates_2015\"] = first_major.universities_high_graduates_2015 !== null;",
+							"unis = first_major.universities_high_graduates_2015;",
+							"",
+							"tests[\"major data contains atleast one major\"] = unis.length === 5;",
+							"",
+							"",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/majors/0101",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"majors",
+						"0101"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Test error - unknown model",
 			"event": [
 				{
 					"listen": "test",
