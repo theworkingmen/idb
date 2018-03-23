@@ -18,7 +18,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "mocha --require ./testSetup.js --require isomorphic-fetch --compilers babel-core/register ./test/*test.js",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
