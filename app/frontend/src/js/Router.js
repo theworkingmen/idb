@@ -8,6 +8,7 @@ import About from './About/About.js';
 import MajorInstance from './MajorInstance.js';
 import CityInstance from './CityInstance.js';
 import CollegeInstance from './CollegeInstance.js';
+import notFound from './error404.js';
 
 class Router extends Component {
   render() {
@@ -21,7 +22,8 @@ class Router extends Component {
           <Route exact path='/cities/:id' component={CityInstance}/>
           <Route exact path='/majors' component={Majors}/>
           <Route exact path='/majors/:id' component={MajorInstance}/>
-          <Route path='/about' component={About}/>
+          <Route exact path='/about' component={About}/>
+          <Route exact path='/*' component={notFound}/>
         </Switch>
       </main>
     )
