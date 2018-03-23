@@ -1,1 +1,1 @@
-/u/nealmf/Documents/IMDB/imdgit/idb/tests/backend_tests.py
+../../tests/backend_tests.py
