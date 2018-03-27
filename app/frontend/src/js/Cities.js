@@ -12,6 +12,7 @@ class Cities extends Component {
     super();
     this.state = {
 		cities: [],
+		page: 0
 	};
   }
   
@@ -28,7 +29,11 @@ class Cities extends Component {
   }
 
   render() {
-    return <Grid><Row className="flex-row">{this.state.cities}</Row></Grid>;
+	let display = []
+	for (let i = 0; i < 20; i++) {
+		display[i] = this.state.cities[(this.state.page * 20) + i]
+	}
+    return <Grid><Row className="flex-row">{display}</Row></Grid>;
   }
 }
 
