@@ -3,6 +3,8 @@ from sqlalchemy.orm import relationship
 
 from base import Base
 
+import re
+
 
 top_majors_in_city = Table(
     'city_top_major', Base.metadata,
@@ -15,6 +17,7 @@ class City(Base):
 
     id = Column(String, primary_key=True)
     city_name = Column(String)
+		city_state = Column(String)
 
     city_image_link = Column(String)
     image_description = Column(String)
@@ -35,6 +38,8 @@ class City(Base):
     def __init__(self, id, city_name):
         self.id = id
         self.city_name = city_name
+				re_state = re.search(".+[,]\s([A-Z]{2})", city_name)
+				self.city_state = re_state.group(1)
 
     def add_basic_city_data(self, image_desc, city_image_link, county_id, county_name):
         self.city_image_link = city_image_link
