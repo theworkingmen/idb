@@ -3,11 +3,26 @@ from city import City
 from major import Major
 from university import University
 import json
+import re
 
-def get_city():
+def get_city(sort_name, sort_pop, state):
     all_cities =[]
     session = Session()
-    cities = session.query(City).all()
+    cities = session.query(City)
+
+    print("Sort by name " + sort_name + "\nSort by population " + sort_pop + "\nFilter by state " + state)
+
+    if state != 'None' and len(state) == 2 :
+        state = state.upper()
+        #cities = cities.filter(City.city_name.match(state))
+        cities = cities.filter(City.city_name.op('~')(", " + state + "|-" + state))
+
+    if sort_name != 'None':
+        cities = cities.order_by(City.city_name).all()
+
+    if sort_pop != 'None':
+        cities = cities.order_by(City.population_in_county).all()
+
 
     print('\n### All Cities')
     for c in cities :
@@ -106,10 +121,23 @@ def single_city (city_id) :
     session.close()
     return u
 
-def get_city_limited():
+def get_city_limited(sort_name, sort_pop, state):
     all_cities =[]
     session = Session()
-    cities = session.query(City).all()
+    cities = session.query(City)
+    
+    print("Sort by name " + sort_name + "\nSort by population " + sort_pop + "\nFilter by state " + state)
+
+    if state != 'None' and len(state) == 2 :
+        state = state.upper()
+        #cities = cities.filter(City.city_name.match(state))
+        cities = cities.filter(City.city_name.op('~')(", " + state + "|-" + state))
+
+    if sort_name != 'None':
+        cities = cities.order_by(City.city_name).all()
+
+    if sort_pop != 'None':
+        cities = cities.order_by(City.population_in_county).all()
 
     print('\n### All Cities')
     for c in cities :
