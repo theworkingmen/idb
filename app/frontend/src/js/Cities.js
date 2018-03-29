@@ -21,11 +21,53 @@ class Cities extends Component {
   changePage(num) {
 	  let active = num;
 	  let items = [];
-	  for (let number = 1; number <= Math.ceil(this.state.cities.length/20); number++) {
+	  items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
+	  if (num > 1) {
+		items.push(<Pagination.Prev onClick={this.changePage.bind(this, num - 1)}/>);
+	  }
+	  else {
+		  items.push(<Pagination.Prev disabled/>);
+	  }
+	  if (Math.ceil(this.state.cities.length/20) < 10) {
+		for (let number = 1; number <= Math.ceil(this.state.cities.length/20); number++) {
+			items.push(
+				<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
+			);
+		}
+	  }
+	  else if ((num - 5) < 1) {
+		for (let number = 1; number <= 10; number++) {
+			items.push(
+			<	Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
+			);
+		}
+	  }
+	  else if ((num + 5) > Math.ceil(this.state.cities.length/20)) {
+		for (let number = Math.ceil(this.state.cities.length/20) - 9; number <= Math.ceil(this.state.cities.length/20); number++) {
+			items.push(
+			<	Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
+			);
+		}
+	  }
+	  else  {
+		for (let number = num - 5; number < num + 5; number++) {
+			items.push(
+			<	Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
+			);
+		}
+	  }
+	  if (num < Math.ceil(this.state.cities.length/20)) {
+		items.push(<Pagination.Next onClick={this.changePage.bind(this, num + 1)}/>);
+	  }
+	  else {
+		  items.push(<Pagination.Next disabled/>);
+	  }
+	  items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(this.state.cities.length/20))}/>);
+	  /*for (let number = 1; number <= Math.ceil(this.state.cities.length/20); number++) {
 		items.push(
 			<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
 		);
-	  }
+	  }*/
 	  this.setState({page: num,
 					 pages: items});
 			
@@ -41,11 +83,17 @@ class Cities extends Component {
 			})
 			let active = 1;
 			let items = [];
-			for (let number = 1; number <= Math.ceil(cities.length/20); number++) {
-				items.push(
-					<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
-				);
-			}
+			if (Math.ceil(cities.length/20) > 1) {
+				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
+				items.push(<Pagination.Prev disabled/>);
+				for (let number = 1; number <= Math.min(10, Math.ceil(cities.length/20)); number++) {
+					items.push(
+						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
+					);
+				}
+				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}/>);
+				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(cities.length/20))}/>);
+			}	
 			this.setState({pages: items});
 			this.setState({cities: cities});
 		})
