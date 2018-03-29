@@ -4,11 +4,28 @@ from major import Major
 from university import University
 import json
 
-def get_uni():
+def get_uni(sort_tut, sort_name, order, f_type, state):
     all_uni =[]
     session = Session()
-    #universities = session.query(University).limit(25).offset(0).all()
-    universities = session.query(University).all()
+    universities = session.query(University)
+
+    print("Sort tution: " + sort_tut + "\nSort name: " + sort_name + "\nOrder: " + order + "\nFilter uni type: " + f_type + "\nState: " + state)
+    #match is the way to go, don't use .like() for postgres
+    if f_type != 'None':
+        universities = universities.filter(University.uni_type.match(f_type))
+
+    if state != 'None':
+        universities = universities.filter(University.state == state)
+
+    if sort_tut != 'None':
+        universities = universities.order_by(University.state_tuition).all()
+
+    if sort_name != 'None':
+        universities = universities.order_by(University.name).all()
+
+    #add in ordering later
+
+    #universities = session.query(University).all()
     print('\n### All Universities')
     for uni in universities :
         top_majors = []

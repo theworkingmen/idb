@@ -4,10 +4,36 @@ from major import Major
 from university import University
 import json
 
-def get_major():
+def get_major(sort_wage, sort_work, order, stem):
     all_majors =[]
     session = Session()
-    majors = session.query(Major).all()
+    majors = session.query(Major)
+
+    if stem != 'None':
+        majors = session.query(Major).filter_by(is_stem = 1)
+
+    print("Sort wage:", sort_wage, "Sort_work:", sort_work, "Order:", order, "is stem", stem)
+    #Note, for now you can only call one sort function, wage or work, and can
+    #choose the ordering.
+    cast = majors.all()
+
+    if sort_wage != 'None':
+        if order == "asc":
+            majors = majors.order_by(Major.average_wage).all()
+        elif order == "desc":
+            majors = majors.order_by(Major.average_wage.desc()).all()
+        else :
+            majors = majors.all()
+
+    if sort_work != 'None':
+        if order == "asc":
+            majors = majors.order_by(Major.total_people_in_work_foce).all()
+        elif order == "desc":
+            majors = majors.order_by(Major.total_people_in_work_foce.desc()).all()
+        else :
+            majors = majors.all()    
+
+
 
     print('\n### All Majors')
     for m in majors :
