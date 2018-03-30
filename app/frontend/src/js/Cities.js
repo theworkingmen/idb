@@ -3,6 +3,7 @@ import {Image, Grid, Row, Col, Thumbnail, Pagination} from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 import Card from './Card.js';
 import '../css/Flex.css';
+import { RingLoader } from 'react-spinners';
 
 {/* Use following url for default image: http://bit.ly/2CYI94d */}
 {/* Grid automatically creates new rows for additional card components. */}
@@ -13,11 +14,12 @@ class Cities extends Component {
     this.state = {
 		cities: [],
 		pages: [],
-		page: 1
+		page: 1,
+        loading: true
 	};
 	this.changePage = this.changePage.bind(this);
   }
-  
+
   changePage(num) {
 	  let active = num;
 	  let items = [];
@@ -70,9 +72,9 @@ class Cities extends Component {
 	  }*/
 	  this.setState({page: num,
 					 pages: items});
-			
+
   }
-  
+
   componentDidMount() {
 	  fetch('http://api.majorpotential.me/cities_limited')
 	  .then(results => {
@@ -93,20 +95,31 @@ class Cities extends Component {
 				}
 				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}/>);
 				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(cities.length/20))}/>);
-			}	
+			}
 			this.setState({pages: items});
 			this.setState({cities: cities});
+            this.setState({loading: false});
 		})
-		
+
 
   }
 
   render() {
+
+  if (this.state.loading == true){
+     return <Grid><Row className="spin"><RingLoader
+         color={'#123abc'}
+         loading={this.state.loading}
+         size="100"
+
+       /> </Row></Grid>;
+   }
+
 	let display = []
 	for (let i = 0; i < 20; i++) {
 		display[i] = this.state.cities[((this.state.page - 1) * 20) + i]
 	}
-	
+
     return (
 		<div>
 		<Grid><Row className="flex-row">{display}</Row></Grid>

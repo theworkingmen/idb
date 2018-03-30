@@ -11,12 +11,14 @@ class NavigationBar extends Component {
 	render() {
 		return (
 		    <div className="NavigationBar">
-		        <Navbar inverse>
+		        <Navbar inverse collapseOnSelect>
 					<Navbar.Header>
 						<Navbar.Brand>
 							<Link to='/'>Major Potential</Link>
 						</Navbar.Brand>
+					 <Navbar.Toggle />
 					</Navbar.Header>
+					<Navbar.Collapse>
 					<Nav activeKey={this.state.highlight}>
 						<NavItem eventKey={1} href="/colleges">
 							Colleges
@@ -31,6 +33,7 @@ class NavigationBar extends Component {
 							About
 						</NavItem>
 					</Nav>
+					</Navbar.Collapse>
 				</Navbar>
 		    </div>
 		);

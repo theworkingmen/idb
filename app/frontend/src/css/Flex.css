@@ -6,7 +6,13 @@
   display: flex;
   flex-direction: column;
 }
-.flex-row.row:after, 
+.flex-row.row:after,
 .flex-row.row:before {
   display: flex;
+}
+
+.spin{
+    margin-left: 400px;
+    margin-top: 450px;
+    margin-bottom: 20px;
 }
