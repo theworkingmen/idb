@@ -60,7 +60,7 @@ def get_Single_Uni(id):
 def get_Universities_Limited ():
 
     sort_tut = request.args.get('sort_tut', 'None').encode('utf-8')
-    sort_name = request.args.get('sort_name', 'None').encode('utf-8')
+    sort_name = request.args.get('sort_name', 'Asc').encode('utf-8')
     order = request.args.get('sort_by', 'default').encode('utf-8')
     #Filter by type of universitiy (public or private)
     f_type = request.args.get('type', 'None').encode('utf-8')

@@ -17,10 +17,18 @@ def get_uni(sort_tut, sort_name, order, f_type, state):
     if state != 'None':
         universities = universities.filter(University.state == state)
 
-    if sort_tut != 'None':
-        universities = universities.order_by(University.state_tuition).all()
-
-    if sort_name != 'None':
+    if sort_name == 'Desc':
+        # Sort by name, descending
+        universities = universities.order_by(University.name.desc()).all()
+    elif sort_tut == 'Asc' or sort_tut == 'Desc' :
+        if sort_tut == 'Asc' :
+            # Sort by in-state tuition, ascending
+            universities = universities.order_by(University.state_tuition).all()
+        else :
+            # Sort by in-state tuition, descending
+            universities = universities.order_by(University.state_tuition.desc()).all()
+    else :
+        # Sort by name, ascending (default)
         universities = universities.order_by(University.name).all()
 
     #add in ordering later
@@ -129,11 +137,20 @@ def get_uni_limited(sort_tut, sort_name, order, f_type, state):
     if state != 'None':
         universities = universities.filter(University.state == state)
 
-    if sort_tut != 'None':
-        universities = universities.order_by(University.state_tuition).all()
-
-    if sort_name != 'None':
+    if sort_name == 'Desc':
+        # Sort by name, descending
+        universities = universities.order_by(University.name.desc()).all()
+    elif sort_tut == 'Asc' or sort_tut == 'Desc' :
+        if sort_tut == 'Asc' :
+            # Sort by in-state tuition, ascending
+            universities = universities.order_by(University.state_tuition).all()
+        else :
+            # Sort by in-state tuition, descending
+            universities = universities.order_by(University.state_tuition.desc()).all()
+    else :
+        # Sort by name, ascending (default)
         universities = universities.order_by(University.name).all()
+
     print('\n### All Universities')
     for uni in universities :
         u = {
