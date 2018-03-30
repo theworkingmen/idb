@@ -17,11 +17,26 @@ def get_city(sort_name, sort_pop, state):
         #cities = cities.filter(City.city_name.match(state))
         cities = cities.filter(City.city_name.op('~')(", " + state + "|-" + state))
 
+    """ Original, incomplete code. New code consistent with university API
     if sort_name != 'None':
         cities = cities.order_by(City.city_name).all()
 
     if sort_pop != 'None':
         cities = cities.order_by(City.population_in_county).all()
+    """
+    if sort_name == 'Desc':
+        # Sort by name, descending
+        cities = cities.order_by(City.city_name.desc()).all()
+    elif sort_pop == 'Asc' or sort_pop == 'Desc' :
+        if sort_pop == 'Asc' :
+            # Sort by population, ascending
+            cities = cities.order_by(City.population_in_county).all()
+        else :
+            # Sort by population, descending
+            cities = cities.order_by(City.population_in_county.desc()).all()
+    else :
+        # Sort by name, ascending (default)
+        cities = cities.order_by(City.city_name).all()
 
 
     print('\n### All Cities')
@@ -133,11 +148,27 @@ def get_city_limited(sort_name, sort_pop, state):
         #cities = cities.filter(City.city_name.match(state))
         cities = cities.filter(City.city_name.op('~')(", " + state + "|-" + state))
 
+    """ Original, incomplete code. New code consistent with university API
     if sort_name != 'None':
         cities = cities.order_by(City.city_name).all()
 
     if sort_pop != 'None':
         cities = cities.order_by(City.population_in_county).all()
+    """
+    if sort_name == 'Desc':
+        # Sort by name, descending
+        cities = cities.order_by(City.city_name.desc()).all()
+    elif sort_pop == 'Asc' or sort_pop == 'Desc' :
+        if sort_pop == 'Asc' :
+            # Sort by population, ascending
+            cities = cities.order_by(City.population_in_county).all()
+        else :
+            # Sort by population, descending
+            cities = cities.order_by(City.population_in_county.desc()).all()
+    else :
+        # Sort by name, ascending (default)
+        cities = cities.order_by(City.city_name).all()
+
 
     print('\n### All Cities')
     for c in cities :

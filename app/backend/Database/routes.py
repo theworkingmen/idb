@@ -129,7 +129,7 @@ def get_Majors_Limited ():
 
 @application.route('/cities', methods = ['GET'])
 def get_Cities ():
-    sort_name = request.args.get('sort_name', 'None').encode('utf-8')
+    sort_name = request.args.get('sort_name', 'Asc').encode('utf-8')
     sort_pop = request.args.get('sort_pop', 'None').encode('utf-8')
     state = request.args.get('state', 'None').encode('utf-8')
     allCity = get_city(sort_name, sort_pop, state)
@@ -153,7 +153,7 @@ def get_Single_City(id):
 
 @application.route('/cities_limited', methods = ['GET'])
 def get_Cities_Limited ():
-    sort_name = request.args.get('sort_name', 'None').encode('utf-8')
+    sort_name = request.args.get('sort_name', 'Asc').encode('utf-8')
     sort_pop = request.args.get('sort_pop', 'None').encode('utf-8')
     state = request.args.get('state', 'None').encode('utf-8')
     allCity = get_city_limited(sort_name, sort_pop, state)
