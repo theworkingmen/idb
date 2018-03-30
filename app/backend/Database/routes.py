@@ -60,7 +60,7 @@ def get_Single_Uni(id):
 def get_Universities_Limited ():
 
     sort_tut = request.args.get('sort_tut', 'None').encode('utf-8')
-    sort_name = request.args.get('sort_name', 'None').encode('utf-8')
+    sort_name = request.args.get('sort_name', 'Asc').encode('utf-8')
     order = request.args.get('sort_by', 'default').encode('utf-8')
     #Filter by type of universitiy (public or private)
     f_type = request.args.get('type', 'None').encode('utf-8')
@@ -76,17 +76,19 @@ def get_Universities_Limited ():
 
 @application.route('/majors', methods = ['GET'])
 def get_Majors ():
+    #sort by major name
+    sort_name = request.args.get('sort_name', 'None').encode('utf-8')
     #sort by average wage major makes
-    sort_wage = request.args.get('wage', 'None').encode('utf-8')
+    sort_wage = request.args.get('sort_wage', 'None').encode('utf-8')
     #sort by number in workforce for major
-    sort_work = request.args.get('work', 'None').encode('utf-8')
+    sort_work = request.args.get('sort_work', 'None').encode('utf-8')
     #order by ascending (asc) or descending (desc)
     order = request.args.get('sort_by', 'default').encode('utf-8')
     #filter by if the major is in STEM field
     stem = request.args.get('is_stem', 'None').encode('utf-8')
     #range filtering, set thresholds for filtering
 
-    allMajor = get_major(sort_wage, sort_work, order, stem)
+    allMajor = get_major(sort_name, sort_wage, sort_work, order, stem)
     totalCount = len(allMajor)
     payload = {'totalCount': totalCount, 'records': allMajor}
     response = Response(json.dumps(payload), mimetype='application/json')
@@ -106,16 +108,18 @@ def get_Single_Major(id):
 
 @application.route('/majors_limited', methods = ['GET'])
 def get_Majors_Limited ():
+    #sort by major names
+    sort_name = request.args.get('sort_name', 'None').encode('utf-8')
     #sort by average wage major makes
-    sort_wage = request.args.get('wage', 'None').encode('utf-8')
+    sort_wage = request.args.get('sort_wage', 'None').encode('utf-8')
     #sort by number in workforce for major
-    sort_work = request.args.get('work', 'None').encode('utf-8')
+    sort_work = request.args.get('sort_work', 'None').encode('utf-8')
     #order by ascending (asc) or descending (desc)
     order = request.args.get('sort_by', 'default').encode('utf-8')
     #filter by if the major is in STEM field
     stem = request.args.get('is_stem', 'None').encode('utf-8')
     #range filtering, set thresholds for filtering
-    allMajor = get_major_limited(sort_wage, sort_work, order, stem)
+    allMajor = get_major_limited(sort_name, sort_wage, sort_work, order, stem)
     totalCount = len(allMajor)
     payload = {'totalCount': totalCount, 'records': allMajor}
     response = Response(json.dumps(payload), mimetype='application/json')
@@ -125,7 +129,7 @@ def get_Majors_Limited ():
 
 @application.route('/cities', methods = ['GET'])
 def get_Cities ():
-    sort_name = request.args.get('sort_name', 'None').encode('utf-8')
+    sort_name = request.args.get('sort_name', 'Asc').encode('utf-8')
     sort_pop = request.args.get('sort_pop', 'None').encode('utf-8')
     state = request.args.get('state', 'None').encode('utf-8')
     allCity = get_city(sort_name, sort_pop, state)
@@ -149,7 +153,7 @@ def get_Single_City(id):
 
 @application.route('/cities_limited', methods = ['GET'])
 def get_Cities_Limited ():
-    sort_name = request.args.get('sort_name', 'None').encode('utf-8')
+    sort_name = request.args.get('sort_name', 'Asc').encode('utf-8')
     sort_pop = request.args.get('sort_pop', 'None').encode('utf-8')
     state = request.args.get('state', 'None').encode('utf-8')
     allCity = get_city_limited(sort_name, sort_pop, state)

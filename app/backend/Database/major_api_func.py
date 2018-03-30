@@ -4,18 +4,28 @@ from major import Major
 from university import University
 import json
 
-def get_major(sort_wage, sort_work, order, stem):
+def get_major(sort_name, sort_wage, sort_work, order, stem):
     all_majors =[]
     session = Session()
     majors = session.query(Major)
 
-    if stem != 'None':
-        majors = session.query(Major).filter_by(is_stem = 1)
+    if stem == 'yes' :
+        majors = session.query(Major).filter(Major.is_stem != 0)
+    elif stem == 'no' :
+        majors = session.query(Major).filter(Major.is_stem == 0)
 
-    print("Sort wage: "+ sort_wage + "\nSort_work: " + sort_work + "\nOrder: " + order + "\nis stem" + stem)
+    print("Sort name: " + sort_name + "\nSort wage: "+ sort_wage + "\nSort_work: " + sort_work + "\nOrder: " + order + "\nis stem: " + stem)
     #Note, for now you can only call one sort function, wage or work, and can
     #choose the ordering.
     cast = majors.all()
+
+    if sort_name != 'None':
+        if order == "asc":
+            majors = majors.order_by(Major.name).all()
+        elif order == "desc":
+            majors = majors.order_by(Major.name.desc()).all()
+        else :
+            majors = majors.all()
 
     if sort_wage != 'None':
         if order == "asc":
@@ -104,18 +114,28 @@ def single_major (major_id) :
     session.close()
     return u
 
-def get_major_limited(sort_wage, sort_work, order, stem):
+def get_major_limited(sort_name, sort_wage, sort_work, order, stem):
     all_majors =[]
     session = Session()
     majors = session.query(Major)
 
-    if stem != 'None':
-        majors = session.query(Major).filter_by(is_stem = 1)
+    if stem == 'yes' :
+        majors = session.query(Major).filter(Major.is_stem != 0)
+    elif stem == 'no' :
+        majors = session.query(Major).filter(Major.is_stem == 0)
 
-    print("Sort wage: "+ sort_wage + "\nSort_work: " + sort_work + "\nOrder: " + order + "\nis stem" + stem)
+    print("Sort name: " + sort_name + "\nSort wage: "+ sort_wage + "\nSort_work: " + sort_work + "\nOrder: " + order + "\nis stem: " + stem)
     #Note, for now you can only call one sort function, wage or work, and can
     #choose the ordering.
     cast = majors.all()
+
+    if sort_name != 'None':
+        if order == "asc":
+            majors = majors.order_by(Major.name).all()
+        elif order == "desc":
+            majors = majors.order_by(Major.name.desc()).all()
+        else :
+            majors = majors.all()
 
     if sort_wage != 'None':
         if order == "asc":
