@@ -8,7 +8,17 @@ from flask import Flask, request, jsonify, Response, json
 
 @application.route('/')
 def home():
-    return "hello world"
+
+    ret = ('<!DOCTYPE html><html><body><h2>Welcome to the majorpotential API'+
+    '</h2><a href="https://theworkingmen.gitbooks.io/api/">Here is our API Doc</a></html>')
+    return ret
+
+@application.errorhandler(404)
+def server_error(e):
+    logging.exception('An error occurred during a request.')
+    return """
+    The resource requested is not found.
+    """.format(e), 404
 
 @application.errorhandler(500)
 def server_error(e):
@@ -24,7 +34,7 @@ def get_Universities ():
     sort_tut = request.args.get('sort_tut', 'None').encode('utf-8')
     sort_name = request.args.get('sort_name', 'None').encode('utf-8')
     order = request.args.get('sort_by', 'default').encode('utf-8')
-    #Filter by type of universitiy (public or private) 
+    #Filter by type of universitiy (public or private)
     f_type = request.args.get('type', 'None').encode('utf-8')
     state = request.args.get('state', 'None').encode('utf-8')
 
@@ -52,7 +62,7 @@ def get_Universities_Limited ():
     sort_tut = request.args.get('sort_tut', 'None').encode('utf-8')
     sort_name = request.args.get('sort_name', 'None').encode('utf-8')
     order = request.args.get('sort_by', 'default').encode('utf-8')
-    #Filter by type of universitiy (public or private) 
+    #Filter by type of universitiy (public or private)
     f_type = request.args.get('type', 'None').encode('utf-8')
     state = request.args.get('state', 'None').encode('utf-8')
 
@@ -74,7 +84,7 @@ def get_Majors ():
     order = request.args.get('sort_by', 'default').encode('utf-8')
     #filter by if the major is in STEM field
     stem = request.args.get('is_stem', 'None').encode('utf-8')
-    #range filtering, set thresholds for filtering 
+    #range filtering, set thresholds for filtering
 
     allMajor = get_major(sort_wage, sort_work, order, stem)
     totalCount = len(allMajor)
@@ -104,7 +114,7 @@ def get_Majors_Limited ():
     order = request.args.get('sort_by', 'default').encode('utf-8')
     #filter by if the major is in STEM field
     stem = request.args.get('is_stem', 'None').encode('utf-8')
-    #range filtering, set thresholds for filtering 
+    #range filtering, set thresholds for filtering
     allMajor = get_major_limited(sort_wage, sort_work, order, stem)
     totalCount = len(allMajor)
     payload = {'totalCount': totalCount, 'records': allMajor}
