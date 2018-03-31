@@ -3,7 +3,8 @@ import logging
 from uni_api_func import *
 from major_api_func import *
 from cities_api_func import *
-from flask import Flask, request, jsonify, Response, json
+from exception import NotFoundException
+from flask import Flask, request, jsonify, Response, json, render_template
 
 
 @application.route('/')
@@ -16,17 +17,17 @@ def home():
 @application.errorhandler(404)
 def server_error(e):
     logging.exception('An error occurred during a request.')
-    return """
-    The resource requested is not found.
-    """.format(e), 404
+    return render_template('404.html'), 404
 
 @application.errorhandler(500)
 def server_error(e):
     logging.exception('An error occurred during a request.')
-    return """
-    An internal error occurred: <pre>{}</pre>
-    See logs for full stacktrace.
-    """.format(e), 500
+    return render_template('500.html'), 500
+
+@application.errorhandler(NotFoundException)
+def server_error(e):
+    logging.exception(e.message)
+    return render_template('404.html'), 404
 
 @application.route('/universities', methods = ['GET'])
 def get_Universities ():
@@ -50,9 +51,10 @@ def get_Universities ():
 def get_Single_Uni(id):
     u = single_uni(id)
     if not bool(u) :
-        response = "Server Error 500: Invalid university_id"
+        raise NotFoundException("University with id " + str(id) + " not found.")
     else :
         response = Response(json.dumps(u), mimetype='application/json')
+        response.status_code = 200
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
@@ -100,9 +102,10 @@ def get_Majors ():
 def get_Single_Major(id):
     u = single_major(id)
     if not bool(u) :
-        response = "Server Error 500: Invalid major_id"
+        raise NotFoundException("Major with id " + str(id) + " not found.")
     else :
         response = Response(json.dumps(u), mimetype='application/json')
+        response.status_code = 200
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
@@ -144,9 +147,10 @@ def get_Cities ():
 def get_Single_City(id):
     u = single_city(id)
     if not bool(u) :
-        response = "Server Error 500: Invalid city_id"
+        raise NotFoundException("City with id " + str(id) + " not found.")
     else :
         response = Response(json.dumps(u), mimetype='application/json')
+        response.status_code = 200
 
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
