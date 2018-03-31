@@ -9,6 +9,7 @@ import mitchell_pic from '../../images/authors/mitchell_pic.jpg';
 import neal_pic from '../../images/authors/neal_pic.jpg';
 import christian_pic from '../../images/authors/christian_pic.jpg';
 import MembersCard from './MembersCard'
+import { RingLoader } from 'react-spinners';
 
 let request = require('request')
 export default class About extends Component {
@@ -37,7 +38,7 @@ export default class About extends Component {
       let members_data = {}
       members_data['traylor1'] = {
         "name": "Mitchell Traylor",
-        "role": "Front-End, Report Author",
+        "role": "Back-End, Testing",
         "bio": "Computer Science third-year, with special focus on cybersecurity.",
         "photo": mitchell_pic,
         "commits": 0,
@@ -46,7 +47,7 @@ export default class About extends Component {
       }
       members_data['smcw66'] = {
         "name": "Sungsup Lee",
-        "role": "Front-End, Back-End",
+        "role": "Front-End",
         "bio": "Studies Computer Science at UT Austin.",
         "photo": sungsup_pic,
         "commits": 0,
@@ -127,13 +128,22 @@ export default class About extends Component {
   }
 
   render() {
+
+      if (this.state.ready == false){
+         return <Grid><Row className="spin"><RingLoader
+             color={'#123abc'}
+             loading={this.state.loading}
+             size="100"
+
+           /> </Row></Grid>;
+       }
+
       let members_info = null
-      if (this.state.ready) {
+      if (this.state.ready == true) {
         members_info = < MembersCard members_info = {
           this.state.members_stats
         }
         />;
-      }
     return (
     <div className ='container'>
     <div className = 'introduction'>
@@ -251,4 +261,4 @@ export default class About extends Component {
 
     </div>
 
-    );};};
+)};};};

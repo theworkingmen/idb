@@ -21,7 +21,7 @@ class NavigationBar extends Component {
 					<Navbar.Collapse>
 					<Nav activeKey={this.state.highlight}>
 						<NavItem eventKey={1} href="/colleges">
-							Colleges
+							Universities
 						</NavItem>
 						<NavItem eventKey={2} href="/cities">
 							Cities

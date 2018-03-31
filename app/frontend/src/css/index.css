@@ -1,14 +1,14 @@
 body {
   margin: auto;
-  padding: 0;
   font-family: sans-serif;
-  background-image: url("../images/spiration dark.png");
+  background-image: url("../images/background.jpg");
 }
 
 .navbar {
 	background-color: rgba(77,77,77,1);
 	width: 100%;
 	height: 65px;
+    margin-bottom: 0;
 }
 
 .navbar-brand {
