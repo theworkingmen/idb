@@ -2,6 +2,7 @@ from base import Session, engine, Base
 from city import City
 from major import Major
 from university import University
+from sqlalchemy import or_
 import json
 
 def get_major(sort_name, sort_wage, sort_work, stem):
@@ -160,3 +161,23 @@ def get_major_limited(sort_name, sort_wage, sort_work, stem):
     session.close()
 
     return all_majors
+
+def search_Majors (terms):
+    all_maj =[]
+    session = Session()
+    majors = session.query(Major)
+    for t in terms :
+        # search name only
+        majors = majors.filter(or_(Major.name.ilike('%' + t + '%') \
+            )) # future thinking
+    for uni in majors :
+        u = {
+
+            'id' : uni.id,
+            'name' : uni.name,
+            'image_link' : uni.image_link,
+        }
+        all_maj.append(u)
+    session.commit()
+    session.close()
+    return all_maj

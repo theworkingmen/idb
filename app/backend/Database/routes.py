@@ -161,3 +161,20 @@ def get_Cities_Limited ():
     response.status_code = 200
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
+
+@application.route('/search/<query>', methods = ['GET'])
+def search (query):
+    query = str(query)
+    # Split the query string into separate words
+    terms = list(query.split(' '))
+    # Generate individual payloads for each model, appended to giant list
+    pre_payload = search_Universities(terms)
+    pre_payload += search_Majors(terms)
+    pre_payload += search_Cities(terms)
+    # Build final payload
+    final_size = len(pre_payload)
+    final_payload = {'totalCount': final_size, 'records': pre_payload}
+    response = Response(json.dumps(final_payload), mimetype='application/json')
+    response.status_code = 200
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response

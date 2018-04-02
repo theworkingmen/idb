@@ -2,6 +2,7 @@ from base import Session, engine, Base
 from city import City
 from major import Major
 from university import University
+from sqlalchemy import or_
 import json
 
 def get_uni(sort_tut, sort_name, f_type, state):
@@ -164,4 +165,27 @@ def get_uni_limited(sort_tut, sort_name, f_type, state):
     session.commit()
     session.close()
 
+    return all_uni
+
+def search_Universities (terms):
+    all_uni =[]
+    session = Session()
+    universities = session.query(University)
+    for t in terms :
+        # search name, state, city, and type
+        universities = universities.filter(or_(University.name.ilike('%' + t + '%'), \
+            University.state.ilike('%' + t + '%'), \
+            University.uni_type.ilike('%' + t + '%')))
+    for uni in universities :
+        u = {
+
+            'id' : uni.id,
+            'name' : uni.name,
+            'image_link' : uni.image_link,
+            'state' : uni.state,
+            'type' : uni.uni_type
+        }
+        all_uni.append(u)
+    session.commit()
+    session.close()
     return all_uni

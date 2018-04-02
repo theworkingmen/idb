@@ -2,6 +2,7 @@ from base import Session, engine, Base
 from city import City
 from major import Major
 from university import University
+from sqlalchemy import or_
 import json
 import re
 
@@ -17,13 +18,6 @@ def get_city(sort_name, sort_pop, state):
         #cities = cities.filter(City.city_name.match(state))
         cities = cities.filter(City.city_name.op('~')(", " + state + "|-" + state))
 
-    """ Original, incomplete code. New code consistent with university API
-    if sort_name != 'None':
-        cities = cities.order_by(City.city_name).all()
-
-    if sort_pop != 'None':
-        cities = cities.order_by(City.population_in_county).all()
-    """
     if sort_name == 'Desc':
         # Sort by name, descending
         cities = cities.order_by(City.city_name.desc()).all()
@@ -148,13 +142,6 @@ def get_city_limited(sort_name, sort_pop, state):
         #cities = cities.filter(City.city_name.match(state))
         cities = cities.filter(City.city_name.op('~')(", " + state + "|-" + state))
 
-    """ Original, incomplete code. New code consistent with university API
-    if sort_name != 'None':
-        cities = cities.order_by(City.city_name).all()
-
-    if sort_pop != 'None':
-        cities = cities.order_by(City.population_in_county).all()
-    """
     if sort_name == 'Desc':
         # Sort by name, descending
         cities = cities.order_by(City.city_name.desc()).all()
@@ -185,3 +172,24 @@ def get_city_limited(sort_name, sort_pop, state):
     session.close()
 
     return all_cities
+
+def search_Cities (terms):
+    all_city =[]
+    session = Session()
+    cities = session.query(City)
+    for t in terms :
+        # search name (including state), county
+        cities = cities.filter(or_(City.city_name.ilike('%' + t + '%'), \
+            City.county_name.ilike('%' + t + '%') ))
+    for uni in cities :
+        u = {
+
+            'id' : uni.id,
+            'name' : uni.city_name,
+            'image_link' : uni.city_image_link,
+            'county' : uni.county_name,
+        }
+        all_city.append(u)
+    session.commit()
+    session.close()
+    return all_city
