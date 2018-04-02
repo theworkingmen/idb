@@ -2,14 +2,15 @@ from base import Session, engine, Base
 from city import City
 from major import Major
 from university import University
+from sqlalchemy import or_
 import json
 
-def get_uni(sort_tut, sort_name, order, f_type, state):
+def get_uni(sort_tut, sort_name, f_type, state):
     all_uni =[]
     session = Session()
     universities = session.query(University)
 
-    print("Sort tution: " + sort_tut + "\nSort name: " + sort_name + "\nOrder: " + order + "\nFilter uni type: " + f_type + "\nState: " + state)
+    print("Sort tution: " + sort_tut + "\nSort name: " + sort_name + "\nFilter uni type: " + f_type + "\nState: " + state)
     #match is the way to go, don't use .like() for postgres
     if f_type != 'None':
         universities = universities.filter(University.uni_type.match(f_type))
@@ -124,12 +125,12 @@ def single_uni (uni_id) :
     session.close()
     return u
 
-def get_uni_limited(sort_tut, sort_name, order, f_type, state):
+def get_uni_limited(sort_tut, sort_name, f_type, state):
     all_uni =[]
     session = Session()
     universities = session.query(University)
     
-    print("Sort tution: " + sort_tut + "\nSort name: " + sort_name + "\nOrder: " + order + "\nFilter uni type: " + f_type + "\nState: " + state)
+    print("Sort tution: " + sort_tut + "\nSort name: " + sort_name + "\nFilter uni type: " + f_type + "\nState: " + state)
     #match is the way to go, don't use .like() for postgres
     if f_type != 'None':
         universities = universities.filter(University.uni_type.match(f_type))
@@ -164,4 +165,27 @@ def get_uni_limited(sort_tut, sort_name, order, f_type, state):
     session.commit()
     session.close()
 
+    return all_uni
+
+def search_Universities (terms):
+    all_uni =[]
+    session = Session()
+    universities = session.query(University)
+    for t in terms :
+        # search name, state, city, and type
+        universities = universities.filter(or_(University.name.ilike('%' + t + '%'), \
+            University.state.ilike('%' + t + '%'), \
+            University.uni_type.ilike('%' + t + '%')))
+    for uni in universities :
+        u = {
+
+            'id' : uni.id,
+            'name' : uni.name,
+            'image_link' : uni.image_link,
+            'state' : uni.state,
+            'type' : uni.uni_type
+        }
+        all_uni.append(u)
+    session.commit()
+    session.close()
     return all_uni

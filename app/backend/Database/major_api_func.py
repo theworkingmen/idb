@@ -2,9 +2,10 @@ from base import Session, engine, Base
 from city import City
 from major import Major
 from university import University
+from sqlalchemy import or_
 import json
 
-def get_major(sort_name, sort_wage, sort_work, order, stem):
+def get_major(sort_name, sort_wage, sort_work, stem):
     all_majors =[]
     session = Session()
     majors = session.query(Major)
@@ -14,35 +15,31 @@ def get_major(sort_name, sort_wage, sort_work, order, stem):
     elif stem == 'no' :
         majors = session.query(Major).filter(Major.is_stem == 0)
 
-    print("Sort name: " + sort_name + "\nSort wage: "+ sort_wage + "\nSort_work: " + sort_work + "\nOrder: " + order + "\nis stem: " + stem)
+    print("Sort name: " + sort_name + "\nSort wage: "+ sort_wage + "\nSort_work: " + sort_work + "\nis stem: " + stem)
     #Note, for now you can only call one sort function, wage or work, and can
     #choose the ordering.
     cast = majors.all()
 
-    if sort_name != 'None':
-        if order == "asc":
-            majors = majors.order_by(Major.name).all()
-        elif order == "desc":
-            majors = majors.order_by(Major.name.desc()).all()
-        else :
-            majors = majors.all()
-
-    if sort_wage != 'None':
-        if order == "asc":
-            majors = majors.order_by(Major.average_wage).all()
-        elif order == "desc":
+    if sort_wage == 'Asc' or sort_wage == 'Desc':
+        if sort_wage == 'Desc':
+            # Sort by average wage, descending
             majors = majors.order_by(Major.average_wage.desc()).all()
         else :
-            majors = majors.all()
-
-    if sort_work != 'None':
-        if order == "asc":
-            majors = majors.order_by(Major.total_people_in_work_foce).all()
-        elif order == "desc":
+            # Sort by average wage, ascending
+            majors = majors.order_by(Major.average_wage).all()
+    elif sort_work == 'Asc' or sort_work == 'Desc':
+        if sort_work == 'Desc':
+            # Sort by size of workforce, descending
             majors = majors.order_by(Major.total_people_in_work_foce.desc()).all()
         else :
-            majors = majors.all()    
-
+            # Sort by size of workforce, ascending
+            majors = majors.order_by(Major.total_people_in_work_foce).all()
+    elif sort_name == 'Desc' :
+        # Sort by name, descending
+        majors = majors.order_by(Major.name.desc()).all()
+    else :
+        # Sort by name, ascending (default)
+        majors = majors.order_by(Major.name).all()
 
 
     print('\n### All Majors')
@@ -114,7 +111,7 @@ def single_major (major_id) :
     session.close()
     return u
 
-def get_major_limited(sort_name, sort_wage, sort_work, order, stem):
+def get_major_limited(sort_name, sort_wage, sort_work, stem):
     all_majors =[]
     session = Session()
     majors = session.query(Major)
@@ -124,34 +121,31 @@ def get_major_limited(sort_name, sort_wage, sort_work, order, stem):
     elif stem == 'no' :
         majors = session.query(Major).filter(Major.is_stem == 0)
 
-    print("Sort name: " + sort_name + "\nSort wage: "+ sort_wage + "\nSort_work: " + sort_work + "\nOrder: " + order + "\nis stem: " + stem)
+    print("Sort name: " + sort_name + "\nSort wage: "+ sort_wage + "\nSort_work: " + sort_work + "\nis stem: " + stem)
     #Note, for now you can only call one sort function, wage or work, and can
     #choose the ordering.
     cast = majors.all()
 
-    if sort_name != 'None':
-        if order == "asc":
-            majors = majors.order_by(Major.name).all()
-        elif order == "desc":
-            majors = majors.order_by(Major.name.desc()).all()
-        else :
-            majors = majors.all()
-
-    if sort_wage != 'None':
-        if order == "asc":
-            majors = majors.order_by(Major.average_wage).all()
-        elif order == "desc":
+    if sort_wage == 'Asc' or sort_wage == 'Desc':
+        if sort_wage == 'Desc':
+            # Sort by average wage, descending
             majors = majors.order_by(Major.average_wage.desc()).all()
         else :
-            majors = majors.all()
-
-    if sort_work != 'None':
-        if order == "asc":
-            majors = majors.order_by(Major.total_people_in_work_foce).all()
-        elif order == "desc":
+            # Sort by average wage, ascending
+            majors = majors.order_by(Major.average_wage).all()
+    elif sort_work == 'Asc' or sort_work == 'Desc':
+        if sort_work == 'Desc':
+            # Sort by size of workforce, descending
             majors = majors.order_by(Major.total_people_in_work_foce.desc()).all()
         else :
-            majors = majors.all()    
+            # Sort by size of workforce, ascending
+            majors = majors.order_by(Major.total_people_in_work_foce).all()
+    elif sort_name == 'Desc' :
+        # Sort by name, descending
+        majors = majors.order_by(Major.name.desc()).all()
+    else :
+        # Sort by name, ascending (default)
+        majors = majors.order_by(Major.name).all()  
 
     print('\n### All Majors')
     for m in majors :
@@ -167,3 +161,23 @@ def get_major_limited(sort_name, sort_wage, sort_work, order, stem):
     session.close()
 
     return all_majors
+
+def search_Majors (terms):
+    all_maj =[]
+    session = Session()
+    majors = session.query(Major)
+    for t in terms :
+        # search name only
+        majors = majors.filter(or_(Major.name.ilike('%' + t + '%') \
+            )) # future thinking
+    for uni in majors :
+        u = {
+
+            'id' : uni.id,
+            'name' : uni.name,
+            'image_link' : uni.image_link,
+        }
+        all_maj.append(u)
+    session.commit()
+    session.close()
+    return all_maj

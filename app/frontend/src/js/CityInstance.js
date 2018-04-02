@@ -18,7 +18,7 @@ class CityInstance extends Component {
   }
 
   componentWillMount() {
-    var api = "http://api.majorpotential.me/cities/";
+    var api = "http://127.0.0.1:5000/cities/";
     api += this.props.match.params.id;
     fetch(api)
     .then(results => {
@@ -26,7 +26,7 @@ class CityInstance extends Component {
     }).then(data => {
       let universities = data.universities_in_city.map((college) => {
         return(
-          <Col sm={3}> 
+          <Col sm={3}>
             <Link to={`/colleges/${college.id}`}>
               <OverlayTrigger placement="bottom" overlay={<Tooltip id ="name">{college.name}</Tooltip>}>
                 <Image  className="top5" src={college.image_link} thumbnail />
@@ -38,8 +38,8 @@ class CityInstance extends Component {
 
       this.setState({
         name: data.city_name,
-        population: data.population_in_county,
-        income: data.median_household_income_in_county,
+        population: data.population_in_county.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+        income: data.median_household_income_in_county.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
         unemployment: data.unemployment_in_county*100,
         universities:universities,
         major0_name: data.top_grad_majors[0].name,
@@ -175,7 +175,7 @@ class CityInstance extends Component {
                 <Grid>{this.state.universities}</Grid>
               </Col>
             </Row>
-            
+
           </center>
         </div>
 

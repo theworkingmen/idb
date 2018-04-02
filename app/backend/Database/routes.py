@@ -34,12 +34,11 @@ def get_Universities ():
 
     sort_tut = request.args.get('sort_tut', 'None').encode('utf-8')
     sort_name = request.args.get('sort_name', 'None').encode('utf-8')
-    order = request.args.get('sort_by', 'default').encode('utf-8')
     #Filter by type of universitiy (public or private)
     f_type = request.args.get('type', 'None').encode('utf-8')
     state = request.args.get('state', 'None').encode('utf-8')
 
-    allUni = get_uni(sort_tut, sort_name, order, f_type, state)
+    allUni = get_uni(sort_tut, sort_name, f_type, state)
     totalCount = len(allUni)
     payload = {'totalCount': totalCount, 'records': allUni}
     response = Response(json.dumps(payload), mimetype='application/json')
@@ -63,12 +62,11 @@ def get_Universities_Limited ():
 
     sort_tut = request.args.get('sort_tut', 'None').encode('utf-8')
     sort_name = request.args.get('sort_name', 'Asc').encode('utf-8')
-    order = request.args.get('sort_by', 'default').encode('utf-8')
     #Filter by type of universitiy (public or private)
     f_type = request.args.get('type', 'None').encode('utf-8')
     state = request.args.get('state', 'None').encode('utf-8')
 
-    allUni = get_uni_limited(sort_tut, sort_name, order, f_type, state)
+    allUni = get_uni_limited(sort_tut, sort_name, f_type, state)
     totalCount = len(allUni)
     payload = {'totalCount': totalCount, 'records': allUni}
     response = Response(json.dumps(payload), mimetype='application/json')
@@ -79,18 +77,16 @@ def get_Universities_Limited ():
 @application.route('/majors', methods = ['GET'])
 def get_Majors ():
     #sort by major name
-    sort_name = request.args.get('sort_name', 'None').encode('utf-8')
+    sort_name = request.args.get('sort_name', 'Asc').encode('utf-8')
     #sort by average wage major makes
     sort_wage = request.args.get('sort_wage', 'None').encode('utf-8')
     #sort by number in workforce for major
     sort_work = request.args.get('sort_work', 'None').encode('utf-8')
-    #order by ascending (asc) or descending (desc)
-    order = request.args.get('sort_by', 'default').encode('utf-8')
     #filter by if the major is in STEM field
     stem = request.args.get('is_stem', 'None').encode('utf-8')
     #range filtering, set thresholds for filtering
 
-    allMajor = get_major(sort_name, sort_wage, sort_work, order, stem)
+    allMajor = get_major(sort_name, sort_wage, sort_work, stem)
     totalCount = len(allMajor)
     payload = {'totalCount': totalCount, 'records': allMajor}
     response = Response(json.dumps(payload), mimetype='application/json')
@@ -112,17 +108,15 @@ def get_Single_Major(id):
 @application.route('/majors_limited', methods = ['GET'])
 def get_Majors_Limited ():
     #sort by major names
-    sort_name = request.args.get('sort_name', 'None').encode('utf-8')
+    sort_name = request.args.get('sort_name', 'Asc').encode('utf-8')
     #sort by average wage major makes
     sort_wage = request.args.get('sort_wage', 'None').encode('utf-8')
     #sort by number in workforce for major
     sort_work = request.args.get('sort_work', 'None').encode('utf-8')
-    #order by ascending (asc) or descending (desc)
-    order = request.args.get('sort_by', 'default').encode('utf-8')
     #filter by if the major is in STEM field
     stem = request.args.get('is_stem', 'None').encode('utf-8')
     #range filtering, set thresholds for filtering
-    allMajor = get_major_limited(sort_name, sort_wage, sort_work, order, stem)
+    allMajor = get_major_limited(sort_name, sort_wage, sort_work, stem)
     totalCount = len(allMajor)
     payload = {'totalCount': totalCount, 'records': allMajor}
     response = Response(json.dumps(payload), mimetype='application/json')
@@ -164,6 +158,23 @@ def get_Cities_Limited ():
     totalCount = len(allCity)
     payload = {'totalCount': totalCount, 'records': allCity}
     response = Response(json.dumps(payload), mimetype='application/json')
+    response.status_code = 200
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
+
+@application.route('/search/<query>', methods = ['GET'])
+def search (query):
+    query = str(query)
+    # Split the query string into separate words
+    terms = list(query.split(' '))
+    # Generate individual payloads for each model, appended to giant list
+    pre_payload = search_Universities(terms)
+    pre_payload += search_Majors(terms)
+    pre_payload += search_Cities(terms)
+    # Build final payload
+    final_size = len(pre_payload)
+    final_payload = {'totalCount': final_size, 'records': pre_payload}
+    response = Response(json.dumps(final_payload), mimetype='application/json')
     response.status_code = 200
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
