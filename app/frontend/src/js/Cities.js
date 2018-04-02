@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Image, Grid, Row, Col, Thumbnail, Pagination} from 'react-bootstrap';
+import {Image, Grid, Row, Col, Thumbnail, Pagination, ButtonToolbar, DropdownButton, MenuItem} from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 import Card from './Card.js';
 import '../css/Flex.css';
@@ -15,9 +15,16 @@ class Cities extends Component {
 		cities: [],
 		pages: [],
 		page: 1,
-        loading: true
+        loading: true,
+        sort: "name",
+        order: "Asc",
+        state: "None"
 	};
 	this.changePage = this.changePage.bind(this);
+	this.changeSort = this.changeSort.bind(this);
+	this.changeOrder = this.changeOrder.bind(this);
+	this.changeState = this.changeState.bind(this);
+	this.createStates = this.createStates.bind(this);
   }
 
   changePage(num) {
@@ -74,9 +81,125 @@ class Cities extends Component {
 					 pages: items});
 
   }
+  
+  changeSort(sort) {
+	  if (sort == "name") {
+		  this.setState({sort: "name"});
+	  }
+	  else {
+		  this.setState({sort: "pop"});
+	  }
+	  fetch('http://127.0.0.1:5000/cities_limited?sort_'+sort+'='+this.state.order+"&state="+this.state.state)
+	  .then(results => {
+		  return results.json();
+		}).then(data => {
+			let cities = data.records.map((city) => {
+				return(<Card name={city.city_name} model='cities' domain={city.city_image_link} id={city.id}>  </Card>)
+			})
+			let active = 1;
+			let items = [];
+			if (Math.ceil(cities.length/20) > 1) {
+				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
+				items.push(<Pagination.Prev disabled/>);
+				for (let number = 1; number <= Math.min(10, Math.ceil(cities.length/20)); number++) {
+					items.push(
+						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
+					);
+				}
+				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}/>);
+				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(cities.length/20))}/>);
+			}
+			this.setState({pages: items});
+			this.setState({cities: cities});
+            this.setState({loading: false});
+		})
+  }
+  
+  changeOrder(order) {
+	  if (order == "Asc") {
+		  this.setState({order: "Asc"});
+	  }
+	  else {
+		  this.setState({order: "Desc"});
+	  }
+	  fetch('http://127.0.0.1:5000/cities_limited?sort_'+this.state.sort+'='+order+"&state="+this.state.state)
+	  .then(results => {
+		  return results.json();
+		}).then(data => {
+			let cities = data.records.map((city) => {
+				return(<Card name={city.city_name} model='cities' domain={city.city_image_link} id={city.id}>  </Card>)
+			})
+			let active = 1;
+			let items = [];
+			if (Math.ceil(cities.length/20) > 1) {
+				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
+				items.push(<Pagination.Prev disabled/>);
+				for (let number = 1; number <= Math.min(10, Math.ceil(cities.length/20)); number++) {
+					items.push(
+						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
+					);
+				}
+				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}/>);
+				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(cities.length/20))}/>);
+			}
+			this.setState({pages: items});
+			this.setState({cities: cities});
+            this.setState({loading: false});
+		})
+  }
+  
+  changeState(state) {
+	  this.setState({state: state});
+	  fetch('http://127.0.0.1:5000/cities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+state)
+	  .then(results => {
+		  return results.json();
+		}).then(data => {
+			let cities = data.records.map((city) => {
+				return(<Card name={city.city_name} model='cities' domain={city.city_image_link} id={city.id}>  </Card>)
+			})
+			let active = 1;
+			let items = [];
+			if (Math.ceil(cities.length/20) > 1) {
+				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
+				items.push(<Pagination.Prev disabled/>);
+				for (let number = 1; number <= Math.min(10, Math.ceil(cities.length/20)); number++) {
+					items.push(
+						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
+					);
+				}
+				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}/>);
+				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(cities.length/20))}/>);
+			}
+			this.setState({pages: items});
+			this.setState({cities: cities});
+            this.setState({loading: false});
+		})
+  }
+  
+  createStates(){
+	  let state = [["Alabama", "AL"], ["Alaska", "AK"], ["Arizona", "AZ"], ["Arkansas", "AR"],
+	   ["California", "CA"], ["Colorado", "CO"], ["Connecticut", "CT"], ["Delaware", "DE"], 
+	   ["Florida", "FL"], ["Georgia", "GA"], ["Hawaii", "HI"], ["Idaho", "ID"], ["Illinois", "IL"],
+	   ["Indiana", "IN"], ["Iowa", "IA"], ["Kansas", "KS"], ["Kentucky", "KY"], ["Louisiana", "LA"],
+	   ["Maine", "ME"], ["Maryland", "MD"], ["Massachusetts", "MA"], ["Michigan", "MI"], ["Minnesota", "MN"],
+	   ["Missouri", "MO"], ["Montana", "MT"], ["Nebraska", "NE"], ["Nevada", "NV"], ["New Hampshire", "NH"],
+	   ["New Jersey", "NJ"], ["New Mexico", "NM"], ["New York", "NY"], ["North Carolina", "NC"], 
+	   ["North Dakota", "ND"], ["Ohio", "OH"], ["Oklahoma", "OK"], ["Oregon", "OR"], ["Pennsylvania", "PA"],
+	   ["Rhode Island", "RI"], ["South Carolina", "SC"], ["South Dakota", "SD"], ["Tennessee", "TN"],
+	   ["Texas", "TX"], ["Utah", "UT"], ["Vermont", "VT"], ["Washington", "WA"], ["West Virginia", "WV"],
+	   ["Wisconsin", "WI"], ["Wyoming", "WY"]]
+	  let items = []
+	  for (let i = 0; i < state.length; i++) {
+		  items.push(<MenuItem eventKey={i} onClick={this.changeState.bind(this, state[i][1])}>{state[i][0]}</MenuItem>);
+	  }
+	  return items
+  }
+  
+ 
+  
 
   componentDidMount() {
-	  fetch('http://api.majorpotential.me/cities_limited')
+	  fetch('http://127.0.0.1:5000/cities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+this.state.state)
 	  .then(results => {
 		  return results.json();
 		}).then(data => {
@@ -122,6 +245,20 @@ class Cities extends Component {
 
     return (
 		<div>
+			<ButtonToolbar>
+				<DropdownButton title="Sort by">
+					<MenuItem eventKey="1" onClick={this.changeSort.bind(this, "name")}>Name</MenuItem>
+					<MenuItem eventKey="2" onClick={this.changeSort.bind(this, "pop")}>Population</MenuItem>
+				</DropdownButton>
+				<DropdownButton title="Order">
+					<MenuItem eventKey="1" onClick={this.changeOrder.bind(this, "Asc")}>Ascending</MenuItem>
+					<MenuItem eventKey="2" onClick={this.changeOrder.bind(this, "Desc")}>Descending</MenuItem>
+				</DropdownButton>
+				<DropdownButton title="Filter by State">
+					<MenuItem eventKey="1" onClick={this.changeState.bind(this, "None")}>None</MenuItem>
+					{this.createStates()}
+				</DropdownButton>
+			</ButtonToolbar>
 		<Grid><Row className="flex-row">{display}</Row></Grid>
 		<center><Pagination bsSize="large">{this.state.pages}</Pagination></center>
 		</div>
