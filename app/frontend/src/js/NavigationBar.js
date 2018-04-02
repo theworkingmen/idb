@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navbar, Nav, NavItem} from 'react-bootstrap';
+import { Navbar, Nav, NavItem, FormGroup, FormControl, Button} from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 
 class NavigationBar extends Component {
@@ -33,6 +33,12 @@ class NavigationBar extends Component {
 							About
 						</NavItem>
 					</Nav>
+					<Navbar.Form pullRight>
+						<FormGroup>
+							<FormControl type="text" placeholder="Search" />
+						</FormGroup>{' '}
+						<Button type="submit">Search</Button>
+					</Navbar.Form>
 					</Navbar.Collapse>
 				</Navbar>
 		    </div>

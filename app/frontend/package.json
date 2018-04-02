@@ -20,7 +20,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "mocha --require ./testSetup.js --require isomorphic-fetch --compilers babel-core/register ./test/*test.js",
+    "test": "mocha --require ./testSetup.js --require isomorphic-fetch --compilers babel-core/register ./tests.js/*test.js",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
