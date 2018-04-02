@@ -89,7 +89,7 @@ def single_uni (uni_id) :
                 'image_link' : m.image_link
             }
             top_majors.append(temp_dict)
-            
+
         u = {
 
             'type' : "university",
@@ -129,7 +129,7 @@ def get_uni_limited(sort_tut, sort_name, f_type, state):
     all_uni =[]
     session = Session()
     universities = session.query(University)
-    
+
     print("Sort tution: " + sort_tut + "\nSort name: " + sort_name + "\nFilter uni type: " + f_type + "\nState: " + state)
     #match is the way to go, don't use .like() for postgres
     if f_type != 'None':
@@ -152,13 +152,14 @@ def get_uni_limited(sort_tut, sort_name, f_type, state):
         # Sort by name, ascending (default)
         universities = universities.order_by(University.name).all()
 
-    print('\n### All Universities')
+    print('\n### Universities Limited')
     for uni in universities :
         u = {
 
             'id' : uni.id,
             'name' : uni.name,
             'image_link' : uni.image_link,
+            'type' : uni.uni_type
         }
         all_uni.append(u)
 

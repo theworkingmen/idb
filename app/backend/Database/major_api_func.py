@@ -78,7 +78,7 @@ def single_major (major_id) :
         high_grads_cities = []
         for c in m.cities_high_graduates_2015 :
             temp_dict = {
-                'id' : c.id, 
+                'id' : c.id,
                 'city_name' : c.city_name,
                 'city_image_link' : c.city_image_link,
             }
@@ -145,7 +145,7 @@ def get_major_limited(sort_name, sort_wage, sort_work, stem):
         majors = majors.order_by(Major.name.desc()).all()
     else :
         # Sort by name, ascending (default)
-        majors = majors.order_by(Major.name).all()  
+        majors = majors.order_by(Major.name).all()
 
     print('\n### All Majors')
     for m in majors :
@@ -153,7 +153,7 @@ def get_major_limited(sort_name, sort_wage, sort_work, stem):
             'id' : m.id,
             'name' : m.name,
             'image_link' : m.image_link,
-
+            'is_stem' : m.is_stem,
         }
         all_majors.append(u)
 
