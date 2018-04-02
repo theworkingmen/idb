@@ -4,12 +4,12 @@ from major import Major
 from university import University
 import json
 
-def get_uni(sort_tut, sort_name, order, f_type, state):
+def get_uni(sort_tut, sort_name, f_type, state):
     all_uni =[]
     session = Session()
     universities = session.query(University)
 
-    print("Sort tution: " + sort_tut + "\nSort name: " + sort_name + "\nOrder: " + order + "\nFilter uni type: " + f_type + "\nState: " + state)
+    print("Sort tution: " + sort_tut + "\nSort name: " + sort_name + "\nFilter uni type: " + f_type + "\nState: " + state)
     #match is the way to go, don't use .like() for postgres
     if f_type != 'None':
         universities = universities.filter(University.uni_type.match(f_type))
@@ -124,12 +124,12 @@ def single_uni (uni_id) :
     session.close()
     return u
 
-def get_uni_limited(sort_tut, sort_name, order, f_type, state):
+def get_uni_limited(sort_tut, sort_name, f_type, state):
     all_uni =[]
     session = Session()
     universities = session.query(University)
     
-    print("Sort tution: " + sort_tut + "\nSort name: " + sort_name + "\nOrder: " + order + "\nFilter uni type: " + f_type + "\nState: " + state)
+    print("Sort tution: " + sort_tut + "\nSort name: " + sort_name + "\nFilter uni type: " + f_type + "\nState: " + state)
     #match is the way to go, don't use .like() for postgres
     if f_type != 'None':
         universities = universities.filter(University.uni_type.match(f_type))
