@@ -3,6 +3,7 @@ from city import City
 from major import Major
 from university import University
 from sqlalchemy import or_
+from us_states import us_states_abbrev
 import json
 
 def get_uni(sort_tut, sort_name, f_type, state):
@@ -16,8 +17,8 @@ def get_uni(sort_tut, sort_name, f_type, state):
         universities = universities.filter(University.uni_type.match(f_type))
 
     if state != 'None':
-        universities = universities.filter(University.state == state)
-
+        universities = universities.filter(University.state == us_states_abbrev[state])
+        
     if sort_name == 'Desc':
         # Sort by name, descending
         universities = universities.order_by(University.name.desc()).all()
@@ -135,8 +136,9 @@ def get_uni_limited(sort_tut, sort_name, f_type, state):
     if f_type != 'None':
         universities = universities.filter(University.uni_type.match(f_type))
 
+    # State is passed as two character abbreviation
     if state != 'None':
-        universities = universities.filter(University.state == state)
+        universities = universities.filter(University.state == us_states_abbrev[state])
 
     if sort_name == 'Desc':
         # Sort by name, descending
