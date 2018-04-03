@@ -78,7 +78,7 @@ class Colleges extends Component {
 					 pages: items});
 
   }
-  
+
     changeSort(sort) {
 	  if (sort == "name") {
 		  this.setState({sort: "name"});
@@ -91,7 +91,7 @@ class Colleges extends Component {
 		  return results.json();
 		}).then(data => {
 			let colleges = data.records.map((college) => {
-				return(<Card name={college.name} model='colleges' domain={college.image_link} id={college.id}>  </Card>)
+				return(<Card name={college.name} model='colleges' domain={college.image_link} id={college.id} field={college.type} >  </Card>)
 			})
 			let active = 1;
 			let items = [];
@@ -111,7 +111,7 @@ class Colleges extends Component {
             this.setState({loading: false});
 		})
   }
-  
+
   changeOrder(order) {
 	  if (order == "Asc") {
 		  this.setState({order: "Asc"});
@@ -124,7 +124,7 @@ class Colleges extends Component {
 		  return results.json();
 		}).then(data => {
 			let colleges = data.records.map((college) => {
-				return(<Card name={college.name} model='colleges' domain={college.image_link} id={college.id}>  </Card>)
+				return(<Card name={college.name} model='colleges' domain={college.image_link} id={college.id} field={college.type}>  </Card>)
 			})
 			let active = 1;
 			let items = [];
@@ -144,7 +144,7 @@ class Colleges extends Component {
             this.setState({loading: false});
 		})
   }
-  
+
   changeState(state) {
 	  this.setState({state: state});
 	  fetch('http://127.0.0.1:5000/universities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+state+"&type="+this.state.type)
@@ -152,7 +152,7 @@ class Colleges extends Component {
 		  return results.json();
 		}).then(data => {
 			let colleges = data.records.map((college) => {
-				return(<Card name={college.name} model='colleges' domain={college.image_link} id={college.id}>  </Card>)
+				return(<Card name={college.name} model='colleges' domain={college.image_link} id={college.id} field={college.type}>  </Card>)
 			})
 			let active = 1;
 			let items = [];
@@ -172,7 +172,7 @@ class Colleges extends Component {
             this.setState({loading: false});
 		})
   }
-  
+
   changeType(type) {
 	  this.setState({type: type});
 	  fetch('http://127.0.0.1:5000/universities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+this.state.state+"&type="+type)
@@ -180,7 +180,7 @@ class Colleges extends Component {
 		  return results.json();
 		}).then(data => {
 			let colleges = data.records.map((college) => {
-				return(<Card name={college.name} model='colleges' domain={college.image_link} id={college.id}>  </Card>)
+				return(<Card name={college.name} model='colleges' domain={college.image_link} id={college.id} field={college.type}>  </Card>)
 			})
 			let active = 1;
 			let items = [];
@@ -200,15 +200,15 @@ class Colleges extends Component {
             this.setState({loading: false});
 		})
   }
-  
+
   createStates(){
 	  let state = [["Alabama", "AL"], ["Alaska", "AK"], ["Arizona", "AZ"], ["Arkansas", "AR"],
-	   ["California", "CA"], ["Colorado", "CO"], ["Connecticut", "CT"], ["Delaware", "DE"], 
+	   ["California", "CA"], ["Colorado", "CO"], ["Connecticut", "CT"], ["Delaware", "DE"],
 	   ["Florida", "FL"], ["Georgia", "GA"], ["Hawaii", "HI"], ["Idaho", "ID"], ["Illinois", "IL"],
 	   ["Indiana", "IN"], ["Iowa", "IA"], ["Kansas", "KS"], ["Kentucky", "KY"], ["Louisiana", "LA"],
 	   ["Maine", "ME"], ["Maryland", "MD"], ["Massachusetts", "MA"], ["Michigan", "MI"], ["Minnesota", "MN"],
 	   ["Missouri", "MO"], ["Montana", "MT"], ["Nebraska", "NE"], ["Nevada", "NV"], ["New Hampshire", "NH"],
-	   ["New Jersey", "NJ"], ["New Mexico", "NM"], ["New York", "NY"], ["North Carolina", "NC"], 
+	   ["New Jersey", "NJ"], ["New Mexico", "NM"], ["New York", "NY"], ["North Carolina", "NC"],
 	   ["North Dakota", "ND"], ["Ohio", "OH"], ["Oklahoma", "OK"], ["Oregon", "OR"], ["Pennsylvania", "PA"],
 	   ["Rhode Island", "RI"], ["South Carolina", "SC"], ["South Dakota", "SD"], ["Tennessee", "TN"],
 	   ["Texas", "TX"], ["Utah", "UT"], ["Vermont", "VT"], ["Washington", "WA"], ["West Virginia", "WV"],
@@ -226,7 +226,7 @@ class Colleges extends Component {
 		  return results.json();
 		}).then(data => {
 			let colleges = data.records.map((college) => {
-				return(<Card name={college.name} model='colleges' domain={college.image_link} id={college.id}>  </Card>)
+				return(<Card name={college.name} model='colleges' domain={college.image_link} id={college.id} field={college.type}>  </Card>)
 			})
 			let active = 1;
 			let items = [];

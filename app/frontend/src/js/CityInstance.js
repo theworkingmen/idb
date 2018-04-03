@@ -38,8 +38,8 @@ class CityInstance extends Component {
 
       this.setState({
         name: data.city_name,
-        population: data.population_in_county.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
-        income: data.median_household_income_in_county.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+        population: data.population_in_county,
+        income: data.median_household_income_in_county,
         unemployment: data.unemployment_in_county*100,
         universities:universities,
         major0_name: data.top_grad_majors[0].name,
@@ -69,6 +69,33 @@ class CityInstance extends Component {
   }
 
   render() {
+
+    /* Format the population data number */
+    let population_data = this.state.population;
+    if (population_data === null){
+        this.setState({
+            population: "Data unavailable"
+        });
+    }
+    else{
+        this.setState({
+            population: population_data.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+        })
+    }
+
+    /* Format the population data number */
+    let median_income_data = this.state.median_household_income_in_county;
+    if (median_income_data === null){
+        this.setState({
+            median_household_income_in_county: "Data unavailable"
+        })
+    }
+    else{
+        this.setState({
+            median_household_income_in_county: median_income_data.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+        })
+    }
+
     let college_chart = null;
     let high_school_chart = null;
     if (this.state.ready) {

@@ -77,7 +77,7 @@ class Cities extends Component {
 					 pages: items});
 
   }
-  
+
   changeSort(sort) {
 	  if (sort == "name") {
 		  this.setState({sort: "name"});
@@ -90,7 +90,14 @@ class Cities extends Component {
 		  return results.json();
 		}).then(data => {
 			let cities = data.records.map((city) => {
-				return(<Card name={city.city_name} model='cities' domain={city.city_image_link} id={city.id}>  </Card>)
+                let population_prop = city.population;
+                if (population_prop === null){
+                    population_prop = "Population: data unavailable"
+                }
+                else{
+                    population_prop = "Population: " + population_prop.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                }
+				return(<Card name={city.city_name} model='cities' domain={city.city_image_link} id={city.id} field = {population_prop} >  </Card>)
 			})
 			let active = 1;
 			let items = [];
@@ -110,7 +117,7 @@ class Cities extends Component {
             this.setState({loading: false});
 		})
   }
-  
+
   changeOrder(order) {
 	  if (order == "Asc") {
 		  this.setState({order: "Asc"});
@@ -123,7 +130,14 @@ class Cities extends Component {
 		  return results.json();
 		}).then(data => {
 			let cities = data.records.map((city) => {
-				return(<Card name={city.city_name} model='cities' domain={city.city_image_link} id={city.id}>  </Card>)
+                let population_prop = city.population;
+                if (population_prop === null){
+                    population_prop = "Population: data unavailable"
+                }
+                else{
+                    population_prop = "Population: " + population_prop.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                }
+				return(<Card name={city.city_name} model='cities' domain={city.city_image_link} id={city.id} field = {population_prop} >  </Card>)
 			})
 			let active = 1;
 			let items = [];
@@ -143,7 +157,7 @@ class Cities extends Component {
             this.setState({loading: false});
 		})
   }
-  
+
   changeState(state) {
 	  this.setState({state: state});
 	  fetch('http://127.0.0.1:5000/cities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+state)
@@ -151,7 +165,14 @@ class Cities extends Component {
 		  return results.json();
 		}).then(data => {
 			let cities = data.records.map((city) => {
-				return(<Card name={city.city_name} model='cities' domain={city.city_image_link} id={city.id}>  </Card>)
+                let population_prop = city.population;
+                if (population_prop === null){
+                    population_prop = "Population: data unavailable"
+                }
+                else{
+                    population_prop = "Population: " + population_prop.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                }
+                return(<Card name={city.city_name} model='cities' domain={city.city_image_link} id={city.id} field = {population_prop} >  </Card>)
 			})
 			let active = 1;
 			let items = [];
@@ -171,15 +192,15 @@ class Cities extends Component {
             this.setState({loading: false});
 		})
   }
-  
+
   createStates(){
 	  let state = [["Alabama", "AL"], ["Alaska", "AK"], ["Arizona", "AZ"], ["Arkansas", "AR"],
-	   ["California", "CA"], ["Colorado", "CO"], ["Connecticut", "CT"], ["Delaware", "DE"], 
+	   ["California", "CA"], ["Colorado", "CO"], ["Connecticut", "CT"], ["Delaware", "DE"],
 	   ["Florida", "FL"], ["Georgia", "GA"], ["Hawaii", "HI"], ["Idaho", "ID"], ["Illinois", "IL"],
 	   ["Indiana", "IN"], ["Iowa", "IA"], ["Kansas", "KS"], ["Kentucky", "KY"], ["Louisiana", "LA"],
 	   ["Maine", "ME"], ["Maryland", "MD"], ["Massachusetts", "MA"], ["Michigan", "MI"], ["Minnesota", "MN"],
 	   ["Missouri", "MO"], ["Montana", "MT"], ["Nebraska", "NE"], ["Nevada", "NV"], ["New Hampshire", "NH"],
-	   ["New Jersey", "NJ"], ["New Mexico", "NM"], ["New York", "NY"], ["North Carolina", "NC"], 
+	   ["New Jersey", "NJ"], ["New Mexico", "NM"], ["New York", "NY"], ["North Carolina", "NC"],
 	   ["North Dakota", "ND"], ["Ohio", "OH"], ["Oklahoma", "OK"], ["Oregon", "OR"], ["Pennsylvania", "PA"],
 	   ["Rhode Island", "RI"], ["South Carolina", "SC"], ["South Dakota", "SD"], ["Tennessee", "TN"],
 	   ["Texas", "TX"], ["Utah", "UT"], ["Vermont", "VT"], ["Washington", "WA"], ["West Virginia", "WV"],
@@ -190,9 +211,9 @@ class Cities extends Component {
 	  }
 	  return items
   }
-  
- 
-  
+
+
+
 
   componentDidMount() {
 	  fetch('http://127.0.0.1:5000/cities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+this.state.state)
@@ -200,7 +221,14 @@ class Cities extends Component {
 		  return results.json();
 		}).then(data => {
 			let cities = data.records.map((city) => {
-				return(<Card name={city.city_name} model='cities' domain={city.city_image_link} id={city.id}>  </Card>)
+                let population_prop = city.population;
+                if (population_prop === null){
+                    population_prop = "Population: data unavailable"
+                }
+                else{
+                    population_prop = "Population: " + population_prop.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                }
+				return(<Card name={city.city_name} model='cities' domain={city.city_image_link} id={city.id} field = {population_prop} >  </Card>)
 			})
 			let active = 1;
 			let items = [];

@@ -77,7 +77,7 @@ class Majors extends Component {
 					 pages: items});
 
   }
-  
+
   changeSort(sort) {
 	  if (sort == "name") {
 		  this.setState({sort: "name"});
@@ -93,7 +93,8 @@ class Majors extends Component {
 		  return results.json();
 		}).then(data => {
 			let majors = data.records.map((major) => {
-				return(<Card name={major.name} model='majors' domain={major.image_link} id={major.id}>  </Card>)
+                let average_wage = "Average Wage: $" + major.average_wage.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+				return(<Card name={major.name} model='majors' domain={major.image_link} id={major.id} field={average_wage}>  </Card>)
 			})
 			let active = 1;
 			let items = [];
@@ -113,7 +114,7 @@ class Majors extends Component {
             this.setState({loading: false});
 		})
   }
-  
+
   changeOrder(order) {
 	  if (order == "Asc") {
 		  this.setState({order: "Asc"});
@@ -126,7 +127,8 @@ class Majors extends Component {
 		  return results.json();
 		}).then(data => {
 			let majors = data.records.map((major) => {
-				return(<Card name={major.name} model='majors' domain={major.image_link} id={major.id}>  </Card>)
+                let average_wage = "Average Wage: $" + major.average_wage.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                return(<Card name={major.name} model='majors' domain={major.image_link} id={major.id} field={average_wage}>  </Card>)
 			})
 			let active = 1;
 			let items = [];
@@ -146,14 +148,15 @@ class Majors extends Component {
             this.setState({loading: false});
 		})
   }
-  
+
   changeSTEM(stem) {
 	  fetch('http://127.0.0.1:5000/majors_limited?sort_'+this.state.sort+'='+this.state.order+"&is_stem="+stem+"&wage="+this.state.wage)
 	  .then(results => {
 		  return results.json();
 		}).then(data => {
 			let majors = data.records.map((major) => {
-				return(<Card name={major.name} model='majors' domain={major.image_link} id={major.id}>  </Card>)
+                let average_wage = "Average Wage: $" + major.average_wage.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                return(<Card name={major.name} model='majors' domain={major.image_link} id={major.id} field={average_wage}>  </Card>)
 			})
 			let active = 1;
 			let items = [];
@@ -173,7 +176,7 @@ class Majors extends Component {
             this.setState({loading: false});
 		})
   }
-  
+
   changeWage(wage) {
   }
 
@@ -183,7 +186,8 @@ class Majors extends Component {
 		  return results.json();
 		}).then(data => {
 			let majors = data.records.map((major) => {
-				return(<Card name={major.name} model='majors' domain={major.image_link} id={major.id}>  </Card>)
+                let average_wage = "Average Wage: $" + major.average_wage.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+				return(<Card name={major.name} model='majors' domain={major.image_link} id={major.id} field={average_wage}>  </Card>)
 			})
 			let active = 1;
 			let items = [];
