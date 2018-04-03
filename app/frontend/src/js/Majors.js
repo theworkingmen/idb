@@ -43,21 +43,21 @@ class Majors extends Component {
 	  else if ((num - 5) < 1) {
 		for (let number = 1; number <= 10; number++) {
 			items.push(
-			<	Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
+			<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
 			);
 		}
 	  }
 	  else if ((num + 5) > Math.ceil(this.state.majors.length/20)) {
 		for (let number = Math.ceil(this.state.majors.length/20) - 9; number <= Math.ceil(this.state.majors.length/20); number++) {
 			items.push(
-			<	Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
+			<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
 			);
 		}
 	  }
 	  else  {
 		for (let number = num - 5; number < num + 5; number++) {
 			items.push(
-			<	Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
+			<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
 			);
 		}
 	  }
@@ -228,6 +228,9 @@ class Majors extends Component {
 
     return (
 		<div>
+		<Row>
+			<Col xs={4}></Col>
+			<Col xs	={6}>
 			<ButtonToolbar>
 				<DropdownButton title="Sort by">
 					<MenuItem eventKey="1" onClick={this.changeSort.bind(this, "name")}>Name</MenuItem>
@@ -244,6 +247,8 @@ class Majors extends Component {
 					<MenuItem eventKey="3" onClick={this.changeSTEM.bind(this, "no")}>Non-STEM</MenuItem>
 				</DropdownButton>
 			</ButtonToolbar>
+			</Col>
+		</Row>
 		<Grid><Row className="flex-row">{display}</Row></Grid>
 		<center><Pagination bsSize="large">{this.state.pages}</Pagination></center>
 		</div>

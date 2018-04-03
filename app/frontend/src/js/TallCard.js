@@ -3,7 +3,7 @@ import {Image, Col, Thumbnail} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 
-class Card extends Component {
+class TallCard extends Component {
 
 	constructor(props) {
 		super(props);
@@ -37,4 +37,4 @@ class Card extends Component {
 
 }
 
-export default Card;
+export default TallCard;
