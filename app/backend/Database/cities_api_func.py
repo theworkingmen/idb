@@ -53,7 +53,7 @@ def get_city(sort_name, sort_pop, state):
 
         u = {
 
-            'id' : c.id, 
+            'id' : c.id,
             'city_name' : c.city_name,
             'city_image_link' : c.city_image_link,
             'image_description' : c.image_description,
@@ -69,7 +69,7 @@ def get_city(sort_name, sort_pop, state):
             'people_with_college_education_in_county' : c.people_with_college_education_in_county,
             'survey_year_in_county' : c.survey_year_in_county,
             'top_grad_majors' : top_majors,
-            'universities_in_city' : all_uni 
+            'universities_in_city' : all_uni
         }
         all_cities.append(u)
 
@@ -106,7 +106,7 @@ def single_city (city_id) :
 
         u = {
 
-            'id' : c.id, 
+            'id' : c.id,
             'city_name' : c.city_name,
             'city_image_link' : c.city_image_link,
             'image_description' : c.image_description,
@@ -121,7 +121,7 @@ def single_city (city_id) :
             'median_household_income_in_county' : c.median_household_income_in_county,
             'people_with_college_education_in_county' : c.people_with_college_education_in_county,
             'survey_year_in_county' : c.survey_year_in_county,
-            'top_grad_majors' : top_majors, 
+            'top_grad_majors' : top_majors,
             'universities_in_city' : all_uni
         }
     except AttributeError:
@@ -134,7 +134,7 @@ def get_city_limited(sort_name, sort_pop, state):
     all_cities =[]
     session = Session()
     cities = session.query(City)
-    
+
     print("Sort by name " + sort_name + "\nSort by population " + sort_pop + "\nFilter by state " + state)
 
     if state != 'None' and len(state) == 2 :
@@ -161,10 +161,10 @@ def get_city_limited(sort_name, sort_pop, state):
     for c in cities :
 
         u = {
-
-            'id' : c.id, 
+            'id' : c.id,
             'city_name' : c.city_name,
             'city_image_link' : c.city_image_link,
+            'population' : c.population_in_county,
         }
         all_cities.append(u)
 
