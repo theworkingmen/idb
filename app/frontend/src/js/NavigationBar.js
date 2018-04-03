@@ -5,8 +5,15 @@ import { Link } from 'react-router-dom'
 class NavigationBar extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {highlight: props.highlight};
+		this.state = {highlight: props.highlight,
+					  search: "search",
+					  value: ''};
 	}
+	
+	handleChange(e) {
+		this.setState({ value: e.target.value });
+	}
+
 
 	render() {
 		return (
@@ -35,9 +42,9 @@ class NavigationBar extends Component {
 					</Nav>
 					<Navbar.Form pullRight>
 						<FormGroup>
-							<FormControl type="text" placeholder="Search" />
+							<FormControl type="text" placeholder="Search" value={this.state.value} onChange={this.handleChange.bind(this)} />
 						</FormGroup>{' '}
-						<Button type="submit">Search</Button>
+						<Link to={`/${this.state.search}/${this.state.value}`}><Button type="submit">Search</Button></Link>
 					</Navbar.Form>
 					</Navbar.Collapse>
 				</Navbar>

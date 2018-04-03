@@ -4,6 +4,7 @@ import Splash from './Splash.js';
 import Colleges from './Colleges.js';
 import Cities from './Cities.js';
 import Majors from './Majors.js';
+import Search from './Search.js';
 import About from './About/About.js';
 import MajorInstance from './MajorInstance.js';
 import CityInstance from './CityInstance.js';
@@ -24,6 +25,7 @@ class Router extends Component {
           <Route exact path='/cities/:id' component={CityInstance}/>
           <Route exact path='/majors' component={Majors}/>
           <Route exact path='/majors/:id' component={MajorInstance}/>
+          <Route exact path='/search/:id' component={Search}/>
           <Route exact path='/about' component={About}/>
           <Route exact path='/*' component={notFound}/>
         </Switch>
