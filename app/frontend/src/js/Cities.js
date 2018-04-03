@@ -20,11 +20,7 @@ class Cities extends Component {
         order: "Asc",
         state: "None"
 	};
-	this.changePage = this.changePage.bind(this);
-	this.changeSort = this.changeSort.bind(this);
-	this.changeOrder = this.changeOrder.bind(this);
-	this.changeState = this.changeState.bind(this);
-	this.createStates = this.createStates.bind(this);
+
   }
 
   changePage(num) {
