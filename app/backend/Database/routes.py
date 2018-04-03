@@ -168,12 +168,14 @@ def search (query):
     # Split the query string into separate words
     terms = list(query.split(' '))
     # Generate individual payloads for each model, appended to giant list
-    pre_payload = search_Universities(terms)
-    pre_payload += search_Majors(terms)
-    pre_payload += search_Cities(terms)
+    pre_payload = []
+    pre_payload.append(search_Universities(terms))
+    pre_payload.append(search_Majors(terms))
+    pre_payload.append(search_Cities(terms))
     # Build final payload
-    final_size = len(pre_payload)
-    final_payload = {'totalCount': final_size, 'records': pre_payload}
+    final_size = len(pre_payload[0]) + len(pre_payload[1]) + len(pre_payload[2])
+    final_payload = {'totalCount': final_size, 'records': {'Universities': pre_payload[0], \
+        'Majors' : pre_payload[1], 'Cities' : pre_payload[2]}}
     response = Response(json.dumps(final_payload), mimetype='application/json')
     response.status_code = 200
     response.headers.add('Access-Control-Allow-Origin', '*')
