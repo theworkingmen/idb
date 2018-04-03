@@ -21,6 +21,8 @@ def get_major(sort_name, sort_wage, sort_work, stem):
     cast = majors.all()
 
     if sort_wage == 'Asc' or sort_wage == 'Desc':
+        # Null-value bug: remove all instances with "-1" wage
+        majors = majors.filter(Major.average_wage != -1)
         if sort_wage == 'Desc':
             # Sort by average wage, descending
             majors = majors.order_by(Major.average_wage.desc()).all()
@@ -28,6 +30,8 @@ def get_major(sort_name, sort_wage, sort_work, stem):
             # Sort by average wage, ascending
             majors = majors.order_by(Major.average_wage).all()
     elif sort_work == 'Asc' or sort_work == 'Desc':
+        # Null-value bug: remove all instances with "-1" workers
+        majors = majors.filter(Major.total_people_in_work_foce != -1)
         if sort_work == 'Desc':
             # Sort by size of workforce, descending
             majors = majors.order_by(Major.total_people_in_work_foce.desc()).all()
@@ -127,19 +131,23 @@ def get_major_limited(sort_name, sort_wage, sort_work, stem):
     cast = majors.all()
 
     if sort_wage == 'Asc' or sort_wage == 'Desc':
+        # Null-value bug: remove all instances with "-1" wage
+        majors = majors.filter(Major.average_wage != -1)
         if sort_wage == 'Desc':
             # Sort by average wage, descending
-            majors = majors.order_by(Major.average_wage.desc()).all()
+            majors = majors.order_by(Major.average_wage.desc(), Major.id).all()
         else :
             # Sort by average wage, ascending
-            majors = majors.order_by(Major.average_wage).all()
+            majors = majors.order_by(Major.average_wage, Major.id).all()
     elif sort_work == 'Asc' or sort_work == 'Desc':
+        # Null-value bug: remove all instances with "-1" workers
+        majors = majors.filter(Major.total_people_in_work_foce != -1)
         if sort_work == 'Desc':
             # Sort by size of workforce, descending
-            majors = majors.order_by(Major.total_people_in_work_foce.desc()).all()
+            majors = majors.order_by(Major.total_people_in_work_foce.desc(), Major.id).all()
         else :
             # Sort by size of workforce, ascending
-            majors = majors.order_by(Major.total_people_in_work_foce).all()
+            majors = majors.order_by(Major.total_people_in_work_foce, Major.id).all()
     elif sort_name == 'Desc' :
         # Sort by name, descending
         majors = majors.order_by(Major.name.desc()).all()
@@ -154,6 +162,7 @@ def get_major_limited(sort_name, sort_wage, sort_work, stem):
             'name' : m.name,
             'image_link' : m.image_link,
             'average_wage' : m.average_wage,
+            'is_stem' : m.is_stem,
         }
         all_majors.append(u)
 

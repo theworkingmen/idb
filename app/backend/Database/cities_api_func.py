@@ -22,6 +22,8 @@ def get_city(sort_name, sort_pop, state):
         # Sort by name, descending
         cities = cities.order_by(City.city_name.desc()).all()
     elif sort_pop == 'Asc' or sort_pop == 'Desc' :
+        # Null-value bug: remove all instances with "None" population
+        cities = cities.filter(City.population_in_county != None)
         if sort_pop == 'Asc' :
             # Sort by population, ascending
             cities = cities.order_by(City.population_in_county).all()
@@ -146,6 +148,8 @@ def get_city_limited(sort_name, sort_pop, state):
         # Sort by name, descending
         cities = cities.order_by(City.city_name.desc()).all()
     elif sort_pop == 'Asc' or sort_pop == 'Desc' :
+        # Null-value bug: remove all instances with "None" population
+        cities = cities.filter(City.population_in_county != None)
         if sort_pop == 'Asc' :
             # Sort by population, ascending
             cities = cities.order_by(City.population_in_county).all()

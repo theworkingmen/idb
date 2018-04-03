@@ -14,6 +14,7 @@ except:
     from cities_api_func import *
 
 import json
+import re
 
 """
 Mitchell's note to himself: For now, these updates are incomplete.
@@ -190,8 +191,6 @@ class APITests(unittest.TestCase):
         city_list = get_city_limited('Asc', 'Asc', 'None')
         city = city_list[0]
         self.assertTrue(city['id'] == "31000US13900")
-        # Note, there is a bug that prioritizes NULL populations.
-        # Our expected result is Chicago, but until we fix the bug this test will fail.
         city_list = get_city_limited('Asc', 'Desc', 'None')
         city = city_list[0]
         self.assertTrue(city['id'] == "31000US16980")
@@ -230,6 +229,7 @@ class APITests(unittest.TestCase):
         self.assertTrue(city_list[0]['id'] == "31000US12420")
         print("Done")
     
+    
     def test_major_sorting(self) :
         print("Testing major sorting")
         major_list = get_major_limited('Asc', 'None', 'None', 'None')
@@ -240,20 +240,19 @@ class APITests(unittest.TestCase):
         self.assertTrue(major['name'] == "Video & Photographic Arts")
         major_list = get_major_limited('Asc', 'Asc', 'None', 'None')
         major = major_list[0]
-        # Two notes:
-        # -similar to cities, the null-value bug will prevent this test from passing
-        # -there are ties, and I'm not sure if the sorting will always place X major at the top because of this
-        self.assertTrue(major['id'] == "1901")
-        major_list = get_major_limited('Asc', 'Asc', 'None', 'None')
+        self.assertTrue(major['id'] == '1901')
+        major_list = get_major_limited('Asc', 'Desc', 'None', 'None')
         major = major_list[0]
-        self.assertTrue(major['id'] == "1402")
+        self.assertTrue(major['id'] == '1402')
         major_list = get_major_limited('Asc', 'None', 'Asc', 'None')
         major = major_list[0]
-        self.assertTrue(major['id'] == "2903")
+        self.assertTrue(major['id'] == '2903')
         major_list = get_major_limited('Asc', 'None', 'Desc', 'None')
         major = major_list[0]
-        self.assertTrue(major['id'] == "5207")
+        self.assertTrue(major['id'] == '5201')
         print("Done")
+
+    
     
     def test_major_filtering(self) :
         print("Testing major filtering")
@@ -276,7 +275,8 @@ class APITests(unittest.TestCase):
         major_list = search_Majors(search_terms)
         self.assertTrue(len(major_list) == 1)
         self.assertTrue(major_list[0]['id'] == "1407")
-        print("Done")  
+        print("Done") 
+    
 
 
 if __name__ == "__main__":
