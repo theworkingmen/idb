@@ -153,7 +153,7 @@ def get_major_limited(sort_name, sort_wage, sort_work, stem):
             'id' : m.id,
             'name' : m.name,
             'image_link' : m.image_link,
-            'is_stem' : m.is_stem,
+            'average_wage' : m.average_wage,
         }
         all_majors.append(u)
 
