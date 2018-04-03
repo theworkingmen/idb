@@ -2,12 +2,12 @@ import sys
 import os
 import unittest
 try:
-    sys.path.insert(0, '../app/backend/database/')
+    sys.path.insert(0, '../app/backend/Database/')
     from uni_api_func import *
     from major_api_func import *
     from cities_api_func import *
 except:
-    sys.path.insert(0, os.path.abspath('./app/backend/database/'))
+    sys.path.insert(0, os.path.abspath('./app/backend/Database/'))
     print(sys.path)
     from uni_api_func import *
     from major_api_func import *
@@ -142,16 +142,16 @@ class APITests(unittest.TestCase):
         print("Testing university sorting")
         uni_list = get_uni_limited('None', 'Asc', 'None', 'None')
         uni = uni_list[0]
-        self.assertTrue(uni['name'] == "[alphabetically first]")
+        self.assertTrue(uni['id'] == "222178")
         uni_list = get_uni_limited('None', 'Desc', 'None', 'None')
         uni = uni_list[0]
-        self.assertTrue(uni['name'] == "[alphabetically last]")
+        self.assertTrue(uni['id'] == "206695")
         uni_list = get_uni_limited('Asc', 'Asc', 'None', 'None')
         uni = uni_list[0]
-        self.assertTrue(uni['name'] == "[lowest tuition]")
+        self.assertTrue(uni['id'] == "197027")
         uni_list = get_uni_limited('Desc', 'Asc', 'None', 'None')
         uni = uni_list[0]
-        self.assertTrue(uni['name'] == "[highest tuition]")
+        self.assertTrue(uni['id'] == "122296")
         print("Done")
     
     def test_uni_filtering(self) :
@@ -160,55 +160,60 @@ class APITests(unittest.TestCase):
         for u in uni_list:
             self.assertTrue('public' in u['type'].lower())
         uni_list = get_uni_limited('None', 'Asc', 'None', 'WY')
-        self.assertTrue(len(uni_list == __))
+        self.assertTrue(len(uni_list) == 2)
         uni_list = get_uni_limited('None', 'Asc', 'private', 'WY')
-        self.assertTrue(len(uni_list == __))
+        self.assertTrue(len(uni_list) == 1)
+        self.assertTrue(uni_list[0]['id'] == "451705")
         print("Done")
     
     def test_uni_searching(self) :
         print("Testing university searching")
+        # Expected: All universities either in Texas or with Texas in name
         search_terms = ['texas']
         uni_list = search_Universities(search_terms)
-        self.assertTrue(len(uni_list) == __)
+        self.assertTrue(len(uni_list) == 116)
+        # Expected: Only find Rose-Hulman Institute of Technology
         search_terms = ['rose', 'private', 'indiana']
         uni_list = search_Universities(search_terms)
         self.assertTrue(len(uni_list) == 1)
-        self.assertTrue(uni_list[0]['id'] == __)
+        self.assertTrue(uni_list[0]['id'] == "152318")
         print("Done")
     
     def test_city_sorting(self) :
         print("Testing city sorting")
-        uni_list = get_uni_limited('Asc', 'None', 'None')
-        uni = uni_list[0]
-        self.assertTrue(uni['name'] == "alphabetically first")
-        uni_list = get_uni_limited('Desc', 'None', 'None')
-        uni = uni_list[0]
-        self.assertTrue(uni['name'] == "alphabetically last")
-        uni_list = get_uni_limited('Asc', 'Asc', 'None')
-        uni = uni_list[0]
-        self.assertTrue(uni['name'] == "lowest population")
-        uni_list = get_uni_limited('Asc', 'Desc', 'None')
-        uni = uni_list[0]
-        self.assertTrue(uni['name'] == "Highest population")
+        city_list = get_city_limited('Asc', 'None', 'None')
+        city = city_list[0]
+        self.assertTrue(city['id'] == "31000US10100")
+        city_list = get_city_limited('Desc', 'None', 'None')
+        city = city_list[0]
+        self.assertTrue(city['id'] == "31000US49780")
+        city_list = get_city_limited('Asc', 'Asc', 'None')
+        city = city_list[0]
+        self.assertTrue(city['id'] == "31000US13900")
+        # Note, there is a bug that prioritizes NULL populations.
+        # Our expected result is Chicago, but until we fix the bug this test will fail.
+        city_list = get_city_limited('Asc', 'Desc', 'None')
+        city = city_list[0]
+        self.assertTrue(city['id'] == "31000US16980")
         print("Done")
     
     def test_city_filtering(self) :
         print("Testing city filtering")
-        uni_list = get_city_limited('Asc', 'None', 'TX')
-        for c in uni_list:
+        city_list = get_city_limited('Asc', 'None', 'TX')
+        for c in city_list:
             self.assertTrue('TX' in c['city_name'])
-        chicago_id = ___
+        chicago_id = "31000US16980"
         found_chicago = False
-        uni_list = get_city_limited('Asc', 'None', 'IL')
-        for u in uni_list:
-            if u['id'] == chicago_id:
+        city_list = get_city_limited('Asc', 'None', 'IL')
+        for c in city_list:
+            if c['id'] == chicago_id:
                 found_chicago = True
                 break
         self.assertTrue(found_chicago)
         found_chicago = False
-        uni_list = get_city_limited('Asc', 'None', 'IN')
-        for u in uni_list:
-            if u['id'] == chicago_id:
+        city_list = get_city_limited('Asc', 'None', 'IN')
+        for c in city_list:
+            if c['id'] == chicago_id:
                 found_chicago = True
                 break
         self.assertTrue(found_chicago)
@@ -217,56 +222,61 @@ class APITests(unittest.TestCase):
     def test_city_searching(self) :
         print("Testing city searching")
         search_terms = ['portland']
-        uni_list = search_Cities(search_terms)
-        self.assertTrue(len(uni_list) == __)
+        city_list = search_Cities(search_terms)
+        self.assertTrue(len(city_list) == 2)
         search_terms = ['austin', 'rock']
-        uni_list = search_Cities(search_terms)
-        self.assertTrue(len(uni_list) == 1)
-        self.assertTrue(uni_list[0]['id'] == __)
+        city_list = search_Cities(search_terms)
+        self.assertTrue(len(city_list) == 1)
+        self.assertTrue(city_list[0]['id'] == "31000US12420")
         print("Done")
     
     def test_major_sorting(self) :
         print("Testing major sorting")
-        uni_list = get_uni_limited('Asc', 'None', 'None', 'None')
-        uni = uni_list[0]
-        self.assertTrue(uni['name'] == "[alphabetically first]")
-        uni_list = get_uni_limited('Desc', 'None', 'None', 'None')
-        uni = uni_list[0]
-        self.assertTrue(uni['name'] == "[alphabetically last]")
-        uni_list = get_uni_limited('Asc', 'Asc', 'None', 'None')
-        uni = uni_list[0]
-        self.assertTrue(uni['name'] == "[lowest wage]")
-        uni_list = get_uni_limited('Asc', 'Asc', 'None', 'None')
-        uni = uni_list[0]
-        self.assertTrue(uni['name'] == "[highest wage]")
-        uni_list = get_uni_limited('Asc', 'None', 'Asc', 'None')
-        uni = uni_list[0]
-        self.assertTrue(uni['name'] == "[lowest size of workforce]")
-        uni_list = get_uni_limited('Asc', 'None', 'Desc', 'None')
-        uni = uni_list[0]
-        self.assertTrue(uni['name'] == "[highest size of workforce]")
+        major_list = get_major_limited('Asc', 'None', 'None', 'None')
+        major = major_list[0]
+        self.assertTrue(major['name'] == "Accounting")
+        major_list = get_major_limited('Desc', 'None', 'None', 'None')
+        major = major_list[0]
+        self.assertTrue(major['name'] == "Video & Photographic Arts")
+        major_list = get_major_limited('Asc', 'Asc', 'None', 'None')
+        major = major_list[0]
+        # Two notes:
+        # -similar to cities, the null-value bug will prevent this test from passing
+        # -there are ties, and I'm not sure if the sorting will always place X major at the top because of this
+        self.assertTrue(major['id'] == "1901")
+        major_list = get_major_limited('Asc', 'Asc', 'None', 'None')
+        major = major_list[0]
+        self.assertTrue(major['id'] == "1402")
+        major_list = get_major_limited('Asc', 'None', 'Asc', 'None')
+        major = major_list[0]
+        self.assertTrue(major['id'] == "2903")
+        major_list = get_major_limited('Asc', 'None', 'Desc', 'None')
+        major = major_list[0]
+        self.assertTrue(major['id'] == "5207")
         print("Done")
     
     def test_major_filtering(self) :
         print("Testing major filtering")
-        uni_list = get_uni_limited('Asc', 'None', 'None', 'yes')
-        for m in uni_list :
+        major_list = get_major_limited('Asc', 'None', 'None', 'yes')
+        self.assertTrue(len(major_list) == 88)
+        for m in major_list :
             self.assertTrue(m['is_stem'] != 0)
-        uni_list = get_uni_limited('Asc', 'None', 'None', 'no')
-        for m in uni_list :
+        major_list = get_major_limited('Asc', 'None', 'None', 'no')
+        self.assertTrue(len(major_list) == 134)
+        for m in major_list :
             self.assertTrue(m['is_stem'] == 0)
         print("Done")
     
     def test_major_searching(self) :
         print("Testing major searching")
         search_terms = ['engineering']
-        uni_list = search_Majors(search_terms)
-        self.assertTrue(len(uni_list) == __)
+        major_list = search_Majors(search_terms)
+        self.assertTrue(len(major_list) == 34)
         search_terms = ['engineering', 'chemical']
-        uni_list = search_Majors(search_terms)
-        self.assertTrue(len(uni_list) == 1)
-        self.assertTrue(uni_list[0]['id'] == __)
-        print("Done")
+        major_list = search_Majors(search_terms)
+        self.assertTrue(len(major_list) == 1)
+        self.assertTrue(major_list[0]['id'] == "1407")
+        print("Done")  
 
 
 if __name__ == "__main__":
