@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Image, Grid, Row, Col, Thumbnail, Pagination} from 'react-bootstrap';
+import {Image, Grid, Row, Col, Thumbnail, Pagination, ButtonToolbar, DropdownButton, MenuItem} from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 import Card from './Card.js';
 import '../css/Flex.css';
@@ -15,7 +15,11 @@ class Majors extends Component {
 		majors: [],
         pages: [],
         page: 1,
-        loading: true
+        loading: true,
+        sort: "name",
+        order: "Asc",
+        stem: "None",
+        wage: "None"
 	};
   }
 
@@ -73,9 +77,108 @@ class Majors extends Component {
 					 pages: items});
 
   }
+  
+  changeSort(sort) {
+	  if (sort == "name") {
+		  this.setState({sort: "name"});
+	  }
+	  else if (sort == "wage") {
+		  this.setState({sort: "wage"});
+	  }
+	  else {
+		  this.setState({sort: "work"});
+	  }
+	  fetch('http://127.0.0.1:5000/majors_limited?sort_'+sort+'='+this.state.order+"&is_stem="+this.state.stem+"&wage="+this.state.wage)
+	  .then(results => {
+		  return results.json();
+		}).then(data => {
+			let majors = data.records.map((major) => {
+				return(<Card name={major.name} model='majors' domain={major.image_link} id={major.id}>  </Card>)
+			})
+			let active = 1;
+			let items = [];
+			if (Math.ceil(majors.length/20) > 1) {
+				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
+				items.push(<Pagination.Prev disabled/>);
+				for (let number = 1; number <= Math.min(10, Math.ceil(majors.length/20)); number++) {
+					items.push(
+						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
+					);
+				}
+				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}/>);
+				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(majors.length/20))}/>);
+			}
+			this.setState({pages: items});
+			this.setState({majors: majors});
+            this.setState({loading: false});
+		})
+  }
+  
+  changeOrder(order) {
+	  if (order == "Asc") {
+		  this.setState({order: "Asc"});
+	  }
+	  else {
+		  this.setState({order: "Desc"});
+	  }
+	  fetch('http://127.0.0.1:5000/majors_limited?sort_'+this.state.sort+'='+order+"&is_stem="+this.state.stem+"&wage="+this.state.wage)
+	  .then(results => {
+		  return results.json();
+		}).then(data => {
+			let majors = data.records.map((major) => {
+				return(<Card name={major.name} model='majors' domain={major.image_link} id={major.id}>  </Card>)
+			})
+			let active = 1;
+			let items = [];
+			if (Math.ceil(majors.length/20) > 1) {
+				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
+				items.push(<Pagination.Prev disabled/>);
+				for (let number = 1; number <= Math.min(10, Math.ceil(majors.length/20)); number++) {
+					items.push(
+						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
+					);
+				}
+				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}/>);
+				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(majors.length/20))}/>);
+			}
+			this.setState({pages: items});
+			this.setState({majors: majors});
+            this.setState({loading: false});
+		})
+  }
+  
+  changeSTEM(stem) {
+	  fetch('http://127.0.0.1:5000/majors_limited?sort_'+this.state.sort+'='+this.state.order+"&is_stem="+stem+"&wage="+this.state.wage)
+	  .then(results => {
+		  return results.json();
+		}).then(data => {
+			let majors = data.records.map((major) => {
+				return(<Card name={major.name} model='majors' domain={major.image_link} id={major.id}>  </Card>)
+			})
+			let active = 1;
+			let items = [];
+			if (Math.ceil(majors.length/20) > 1) {
+				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
+				items.push(<Pagination.Prev disabled/>);
+				for (let number = 1; number <= Math.min(10, Math.ceil(majors.length/20)); number++) {
+					items.push(
+						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
+					);
+				}
+				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}/>);
+				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(majors.length/20))}/>);
+			}
+			this.setState({pages: items});
+			this.setState({majors: majors});
+            this.setState({loading: false});
+		})
+  }
+  
+  changeWage(wage) {
+  }
 
   componentDidMount() {
-	  fetch('http://api.majorpotential.me/majors_limited')
+	  fetch('http://127.0.0.1:5000/majors_limited?sort_'+this.state.sort+'='+this.state.order+"&is_stem="+this.state.stem+"&wage="+this.state.wage)
 	  .then(results => {
 		  return results.json();
 		}).then(data => {
@@ -121,6 +224,22 @@ class Majors extends Component {
 
     return (
 		<div>
+			<ButtonToolbar>
+				<DropdownButton title="Sort by">
+					<MenuItem eventKey="1" onClick={this.changeSort.bind(this, "name")}>Name</MenuItem>
+					<MenuItem eventKey="2" onClick={this.changeSort.bind(this, "wage")}>Average Wage</MenuItem>
+					<MenuItem eventKey="3" onClick={this.changeSort.bind(this, "work")}>Workforce</MenuItem>
+				</DropdownButton>
+				<DropdownButton title="Order">
+					<MenuItem eventKey="1" onClick={this.changeOrder.bind(this, "Asc")}>Ascending</MenuItem>
+					<MenuItem eventKey="2" onClick={this.changeOrder.bind(this, "Desc")}>Descending</MenuItem>
+				</DropdownButton>
+				<DropdownButton title="Filter by STEM">
+					<MenuItem eventKey="1" onClick={this.changeSTEM.bind(this, "None")}>None</MenuItem>
+					<MenuItem eventKey="2" onClick={this.changeSTEM.bind(this, "yes")}>STEM</MenuItem>
+					<MenuItem eventKey="3" onClick={this.changeSTEM.bind(this, "no")}>Non-STEM</MenuItem>
+				</DropdownButton>
+			</ButtonToolbar>
 		<Grid><Row className="flex-row">{display}</Row></Grid>
 		<center><Pagination bsSize="large">{this.state.pages}</Pagination></center>
 		</div>
