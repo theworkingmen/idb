@@ -76,20 +76,19 @@ class Search extends Component {
 
   }
 
-
-  componentDidMount() {
-	  fetch('http://127.0.0.1:5000/search/'+this.props.match.params.id)
+  runSearch(searchprop) {
+  	fetch('http://127.0.0.1:5000/search/'+searchprop)
 	  .then(results => {
 		  return results.json();
 		}).then(data => {
 			let cityResults = data.records.Cities.map((city) => {
-				return(<TallCard name={city.name} model='cities' domain={city.image_link} id={city.id} field = "test" highlight={this.props.match.params.id}>  </TallCard>)
+				return(<TallCard name={city.name} model='cities' domain={city.image_link} id={city.id} field = "test" highlight={searchprop}>  </TallCard>)
 			})
 			let majorResults = data.records.Majors.map((major) => {
-				return(<TallCard name={major.name} model='majors' domain={major.image_link} id={major.id} field="" highlight={this.props.match.params.id}>  </TallCard>)
+				return(<TallCard name={major.name} model='majors' domain={major.image_link} id={major.id} field="" highlight={searchprop}>  </TallCard>)
 			})
 			let collegeResults = data.records.Universities.map((college) => {
-				return(<TallCard name={college.name} model='colleges' domain={college.image_link} id={college.id} field={college.type} highlight={this.props.match.params.id}>  </TallCard>)
+				return(<TallCard name={college.name} model='colleges' domain={college.image_link} id={college.id} field={college.type} highlight={searchprop}>  </TallCard>)
 			})
 			let active = 1;
 			let results = cityResults.concat(majorResults).concat(collegeResults);
@@ -109,44 +108,15 @@ class Search extends Component {
 			this.setState({results: results});
             this.setState({loading: false});
 		})
+  }
 
-
+  componentDidMount() {
+    this.runSearch(this.props.match.params.id);
   }
   
   componentWillReceiveProps (nextProps) {
-     var id = nextProps.match.params.id;
-	 fetch('http://127.0.0.1:5000/search/'+id)
-	  .then(results => {
-		  return results.json();
-		}).then(data => {
-			let cityResults = data.records.Cities.map((city) => {
-				return(<TallCard name={city.name} model='cities' domain={city.image_link} id={city.id} field = "test" highlight={id}>  </TallCard>)
-			})
-			let majorResults = data.records.Majors.map((major) => {
-				return(<TallCard name={major.name} model='majors' domain={major.image_link} id={major.id} field="" highlight={id}>  </TallCard>)
-			})
-			let collegeResults = data.records.Universities.map((college) => {
-				return(<TallCard name={college.name} model='colleges' domain={college.image_link} id={college.id} field={college.type} highlight={id}>  </TallCard>)
-			})
-			let active = 1;
-			let results = cityResults.concat(majorResults).concat(collegeResults);
-			let items = [];
-			if (Math.ceil(results.length/20) > 1) {
-				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
-				items.push(<Pagination.Prev disabled/>);
-				for (let number = 1; number <= Math.min(10, Math.ceil(results.length/20)); number++) {
-					items.push(
-						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
-					);
-				}
-				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}/>);
-				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(results.length/20))}/>);
-			}
-			this.setState({pages: items});
-			this.setState({results: results});
-            this.setState({loading: false});
-		})
-}
+    this.runSearch(nextProps.match.params.id);
+  }
 
   render() {
 
