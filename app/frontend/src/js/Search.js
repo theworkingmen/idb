@@ -85,11 +85,11 @@ class Search extends Component {
 		}).then(data => {
 			let cityResults = data.records.Cities.map((city) => {
 				return(<TallCard name={city.name} model='cities' domain={city.image_link} id={city.id} highlight={searchprop.split(" ")}
-												 field1={city.county}> field2={city.population} </TallCard>)
+												 field1={city.county} field2="" field3={"Population: " + city.population}> </TallCard>)
 			})
 			let majorResults = data.records.Majors.map((major) => {
 				return(<TallCard name={major.name} model='majors' domain={major.image_link} id={major.id} highlight={searchprop.split(" ")}
-												 field1={major.average_wage}> </TallCard>)
+												 field1="" field2="" field3={"Avg Wage: " + major.average_wage} > </TallCard>)
 			})
 			let collegeResults = data.records.Universities.map((college) => {
 				return(<TallCard name={college.name} model='colleges' domain={college.image_link} id={college.id} highlight={searchprop.split(" ")}
@@ -110,6 +110,7 @@ class Search extends Component {
 				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(results.length/20))}/>);
 			}
 			this.setState({pages: items});
+			this.setState({page: 1});
 			this.setState({results: results});
             this.setState({loading: false});
 		})
