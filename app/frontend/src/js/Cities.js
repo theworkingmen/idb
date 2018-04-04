@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Image, Grid, Row, Col, Thumbnail, Pagination, ButtonToolbar, DropdownButton, MenuItem} from 'react-bootstrap';
+import {Image, Grid, Row, Col, Thumbnail, Pagination, Button, ButtonToolbar, DropdownButton, MenuItem} from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 import Card from './Card.js';
 import '../css/Flex.css';
@@ -215,7 +215,45 @@ class Cities extends Component {
 	  return items
   }
 
-
+  resetSortFilter() {
+	  this.setState({
+        sort: "name",
+        order: "Asc",
+        state: "None"
+	});
+	  fetch('http://127.0.0.1:5000/cities_limited?sort_name=Asc&state=None')
+	  .then(results => {
+		  return results.json();
+		}).then(data => {
+			let cities = data.records.map((city) => {
+                let population_prop = city.population;
+                if (population_prop === null){
+                    population_prop = "Population: data unavailable"
+                }
+                else{
+                    population_prop = "Population: " + population_prop.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                }
+				return(<Card name={city.city_name} model='cities' domain={city.city_image_link} id={city.id} field = {population_prop} >  </Card>)
+			})
+			let active = 1;
+			let items = [];
+			if (Math.ceil(cities.length/20) > 1) {
+				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
+				items.push(<Pagination.Prev disabled/>);
+				for (let number = 1; number <= Math.min(10, Math.ceil(cities.length/20)); number++) {
+					items.push(
+						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
+					);
+				}
+				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}/>);
+				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(cities.length/20))}/>);
+			}
+			this.setState({pages: items});
+			this.setState({page: 1});
+			this.setState({cities: cities});
+            this.setState({loading: false});
+		})
+  }
 
 
   componentDidMount() {
@@ -288,6 +326,9 @@ class Cities extends Component {
 					<MenuItem eventKey="1" onClick={this.changeState.bind(this, "None")}>None</MenuItem>
 					{this.createStates()}
 				</DropdownButton>
+				<Button onClick={this.resetSortFilter.bind(this)}>
+					Reset
+				</Button>
 			</ButtonToolbar>
 			</Col>
 		</Row>

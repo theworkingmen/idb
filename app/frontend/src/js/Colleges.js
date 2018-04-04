@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Image, Grid, Row, Col, Thumbnail, Pagination, ButtonToolbar, DropdownButton, MenuItem} from 'react-bootstrap';
+import {Image, Grid, Row, Col, Thumbnail, Pagination, Button, ButtonToolbar, DropdownButton, MenuItem} from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 import Card from './Card.js';
 import '../css/Flex.css';
@@ -223,6 +223,40 @@ class Colleges extends Component {
 	  }
 	  return items
   }
+  
+  resetSortFilter() {
+	  this.setState({
+        sort: "name",
+        order: "Asc",
+        state: "None",
+        type: "None"
+	});
+	  fetch('http://127.0.0.1:5000/universities_limited?sort_name=Asc&state=None&type=None')
+	  .then(results => {
+		  return results.json();
+		}).then(data => {
+			let colleges = data.records.map((college) => {
+				return(<Card name={college.name} model='colleges' domain={college.image_link} id={college.id} field={college.type}>  </Card>)
+			})
+			let active = 1;
+			let items = [];
+			if (Math.ceil(colleges.length/20) > 1) {
+				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
+				items.push(<Pagination.Prev disabled/>);
+				for (let number = 1; number <= Math.min(10, Math.ceil(colleges.length/20)); number++) {
+					items.push(
+						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
+					);
+				}
+				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}/>);
+				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(colleges.length/20))}/>);
+			}
+			this.setState({pages: items});
+			this.setState({page: 1});
+			this.setState({colleges: colleges});
+            this.setState({loading: false});
+		})
+  }
 
   componentDidMount() {
 	  fetch('http://127.0.0.1:5000/universities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+this.state.state+"&type="+this.state.type)
@@ -292,6 +326,9 @@ class Colleges extends Component {
 					<MenuItem eventKey="1" onClick={this.changeType.bind(this, "private")}>Private</MenuItem>
 					<MenuItem eventKey="2" onClick={this.changeType.bind(this, "public")}>Public</MenuItem>
 				</DropdownButton>
+				<Button onClick={this.resetSortFilter.bind(this)}>
+					Reset
+				</Button>
 			</ButtonToolbar>
 			</Col>
 		</Row>
