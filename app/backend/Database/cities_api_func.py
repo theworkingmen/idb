@@ -185,13 +185,16 @@ def search_Cities (terms):
         # search name (including state), county
         cities = cities.filter(or_(City.city_name.ilike('%' + t + '%'), \
             City.county_name.ilike('%' + t + '%') ))
-    for uni in cities :
+    for c in cities :
         u = {
 
-            'id' : uni.id,
-            'name' : uni.city_name,
-            'image_link' : uni.city_image_link,
-            'county' : uni.county_name,
+            'id' : c.id,
+            'name' : c.city_name,
+            'image_link' : c.city_image_link,
+            'county' : c.county_name,
+            'population' : c.population_in_county,
+            'median income' : c.median_household_income_in_county,
+            'unemployment rate in county' : c.unemployment_in_county
         }
         all_city.append(u)
     session.commit()

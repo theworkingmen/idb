@@ -179,12 +179,17 @@ def search_Majors (terms):
         # search name only
         majors = majors.filter(or_(Major.name.ilike('%' + t + '%') \
             )) # future thinking
-    for uni in majors :
+    for m in majors :
         u = {
 
-            'id' : uni.id,
-            'name' : uni.name,
-            'image_link' : uni.image_link,
+            'id' : m.id,
+            'name' : m.name,
+            'image_link' : m.image_link,
+            'average_wage' : m.average_wage,
+            'wage growth rate' : m.wage_growth_rate,
+            'total degrees awarded' : m.total_degrees_awarded_in_2015,
+            'workforce' : m.total_people_in_work_foce
+
         }
         all_maj.append(u)
     session.commit()

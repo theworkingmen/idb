@@ -186,7 +186,9 @@ def search_Universities (terms):
             'name' : uni.name,
             'image_link' : uni.image_link,
             'state' : uni.state,
-            'type' : uni.uni_type
+            'type' : uni.uni_type,
+            'in state tuition' : uni.state_tuition,
+            'out of state tuition' : uni.oos_tuition
         }
         all_uni.append(u)
     session.commit()
