@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {Image, Col, Thumbnail} from 'react-bootstrap';
+import {Image, Col, Thumbnail} from 'react-bootstrap'
+import Highlighter from "react-highlight-words";
 import { Link } from 'react-router-dom';
 
 
@@ -25,7 +26,12 @@ class TallCard extends Component {
 								onError={(e)=>{e.target.src="https://goo.gl/NvPJj6"}}/>
 					</center>
 					{/*<Image src={`${this.props.imgsrc}`} style={{width:"100%", height:"100%"}}/>*/}
-					<h4><center style={{justifyContent:"center", height:"4em"}}>{this.props.name}</center></h4>
+					<h4><center style={{justifyContent:"center", height:"4em"}}><Highlighter
+					highlightClassName="YourHighlightClass"
+					searchWords={[this.props.highlight]}
+					autoEscape={true}
+					textToHighlight={this.props.name}
+					/></center></h4>
 					<h6><center style={{justifyContent:"center"}}>{this.props.field}</center></h6>
 
 					{/* Insert component with list of attributes of the model here */}
