@@ -84,15 +84,15 @@ class Search extends Component {
 		  return results.json();
 		}).then(data => {
 			let cityResults = data.records.Cities.map((city) => {
-				return(<TallCard name={city.name} model='cities' domain={city.image_link} id={city.id} highlight={searchprop}
+				return(<TallCard name={city.name} model='cities' domain={city.image_link} id={city.id} highlight={searchprop.split(" ")}
 												 field1={city.county}>  </TallCard>)
 			})
 			let majorResults = data.records.Majors.map((major) => {
-				return(<TallCard name={major.name} model='majors' domain={major.image_link} id={major.id} highlight={searchprop}
+				return(<TallCard name={major.name} model='majors' domain={major.image_link} id={major.id} highlight={searchprop.split(" ")}
 												 field1={needfield}>  </TallCard>)
 			})
 			let collegeResults = data.records.Universities.map((college) => {
-				return(<TallCard name={college.name} model='colleges' domain={college.image_link} id={college.id} highlight={searchprop}
+				return(<TallCard name={college.name} model='colleges' domain={college.image_link} id={college.id} highlight={searchprop.split(" ")}
 												 field1={college.state} field2={college.type}>  </TallCard>)
 			})
 			let active = 1;

@@ -113,6 +113,7 @@ class Cities extends Component {
 				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(cities.length/20))}/>);
 			}
 			this.setState({pages: items});
+			this.setState({page: 1});
 			this.setState({cities: cities});
             this.setState({loading: false});
 		})
@@ -153,6 +154,7 @@ class Cities extends Component {
 				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(cities.length/20))}/>);
 			}
 			this.setState({pages: items});
+			this.setState({page: 1});
 			this.setState({cities: cities});
             this.setState({loading: false});
 		})
@@ -188,6 +190,7 @@ class Cities extends Component {
 				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(cities.length/20))}/>);
 			}
 			this.setState({pages: items});
+			this.setState({page: 1});
 			this.setState({cities: cities});
             this.setState({loading: false});
 		})

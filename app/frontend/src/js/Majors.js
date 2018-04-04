@@ -110,6 +110,7 @@ class Majors extends Component {
 				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(majors.length/20))}/>);
 			}
 			this.setState({pages: items});
+			this.setState({page: 1});
 			this.setState({majors: majors});
             this.setState({loading: false});
 		})
@@ -144,6 +145,7 @@ class Majors extends Component {
 				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(majors.length/20))}/>);
 			}
 			this.setState({pages: items});
+			this.setState({page: 1});
 			this.setState({majors: majors});
             this.setState({loading: false});
 		})
@@ -173,6 +175,7 @@ class Majors extends Component {
 				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(majors.length/20))}/>);
 			}
 			this.setState({pages: items});
+			this.setState({page: 1});
 			this.setState({majors: majors});
             this.setState({loading: false});
 		})

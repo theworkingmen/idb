@@ -107,6 +107,7 @@ class Colleges extends Component {
 				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(colleges.length/20))}/>);
 			}
 			this.setState({pages: items});
+			this.setState({page: 1});
 			this.setState({colleges: colleges});
             this.setState({loading: false});
 		})
@@ -140,6 +141,7 @@ class Colleges extends Component {
 				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(colleges.length/20))}/>);
 			}
 			this.setState({pages: items});
+			this.setState({page: 1});
 			this.setState({colleges: colleges});
             this.setState({loading: false});
 		})
@@ -168,6 +170,7 @@ class Colleges extends Component {
 				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(colleges.length/20))}/>);
 			}
 			this.setState({pages: items});
+			this.setState({page: 1});
 			this.setState({colleges: colleges});
             this.setState({loading: false});
 		})
@@ -196,6 +199,7 @@ class Colleges extends Component {
 				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(colleges.length/20))}/>);
 			}
 			this.setState({pages: items});
+			this.setState({page: 1});
 			this.setState({colleges: colleges});
             this.setState({loading: false});
 		})

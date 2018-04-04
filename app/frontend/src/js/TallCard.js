@@ -28,7 +28,7 @@ class TallCard extends Component {
 					{/*<Image src={`${this.props.imgsrc}`} style={{width:"100%", height:"100%"}}/>*/}
 					<h4><center style={{justifyContent:"center", height:"4em"}}><Highlighter
 					highlightClassName="YourHighlightClass"
-					searchWords={[this.props.highlight]}
+					searchWords={this.props.highlight}
 					autoEscape={true}
 					textToHighlight={this.props.name}
 					/></center></h4>
