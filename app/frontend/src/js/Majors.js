@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Image, Grid, Row, Col, Thumbnail, Pagination, ButtonToolbar, DropdownButton, MenuItem} from 'react-bootstrap';
+import {Image, Grid, Row, Col, Thumbnail, Button, Pagination, ButtonToolbar, DropdownButton, MenuItem} from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 import Card from './Card.js';
 import '../css/Flex.css';
@@ -181,7 +181,39 @@ class Majors extends Component {
 		})
   }
 
-  changeWage(wage) {
+  resetSortFilter() {
+	  this.setState({
+        sort: "name",
+        order: "Asc",
+        stem: "None",
+        wage: "None"
+	});
+	  fetch('http://127.0.0.1:5000/majors_limited?sort_name=Asc&is_stem=None&wage=None')
+	  .then(results => {
+		  return results.json();
+		}).then(data => {
+			let majors = data.records.map((major) => {
+                let average_wage = "Average Wage: $" + major.average_wage.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                return(<Card name={major.name} model='majors' domain={major.image_link} id={major.id} field={average_wage}>  </Card>)
+			})
+			let active = 1;
+			let items = [];
+			if (Math.ceil(majors.length/20) > 1) {
+				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
+				items.push(<Pagination.Prev disabled/>);
+				for (let number = 1; number <= Math.min(10, Math.ceil(majors.length/20)); number++) {
+					items.push(
+						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
+					);
+				}
+				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}/>);
+				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(majors.length/20))}/>);
+			}
+			this.setState({pages: items});
+			this.setState({page: 1});
+			this.setState({majors: majors});
+            this.setState({loading: false});
+		})
   }
 
   componentDidMount() {
@@ -250,6 +282,9 @@ class Majors extends Component {
 					<MenuItem eventKey="2" onClick={this.changeSTEM.bind(this, "yes")}>STEM</MenuItem>
 					<MenuItem eventKey="3" onClick={this.changeSTEM.bind(this, "no")}>Non-STEM</MenuItem>
 				</DropdownButton>
+				<Button onClick={this.resetSortFilter.bind(this)}>
+					Reset
+				</Button>
 			</ButtonToolbar>
 			</Col>
 		</Row>
