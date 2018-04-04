@@ -2,13 +2,13 @@ import React from 'react'
 import { MemoryRouter } from 'react-router-dom'
 import { shallow, mount } from 'enzyme'
 import { expect } from 'chai'
-import Map from '../src/js/Map'
+import Search from '../src/js/Search'
 
 
 
-describe('(Component) Map', () => {
+describe('(Component) Search', () => {
   it('renders...', () => {
-	const wrapper = shallow(<Map center={[0, 0]} zoom={11} />);
+	const wrapper = shallow(<Search match={{params:{id:'Texas'}}}/>);
     expect(wrapper).to.have.length(1);
   });
 });

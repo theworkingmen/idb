@@ -85,11 +85,11 @@ class Search extends Component {
 		}).then(data => {
 			let cityResults = data.records.Cities.map((city) => {
 				return(<TallCard name={city.name} model='cities' domain={city.image_link} id={city.id} highlight={searchprop.split(" ")}
-												 field1={city.county}>  </TallCard>)
+												 field1={city.county}> field2={city.population} </TallCard>)
 			})
 			let majorResults = data.records.Majors.map((major) => {
 				return(<TallCard name={major.name} model='majors' domain={major.image_link} id={major.id} highlight={searchprop.split(" ")}
-												 field1={needfield}>  </TallCard>)
+												 field1={major.average_wage}> </TallCard>)
 			})
 			let collegeResults = data.records.Universities.map((college) => {
 				return(<TallCard name={college.name} model='colleges' domain={college.image_link} id={college.id} highlight={searchprop.split(" ")}
@@ -138,13 +138,21 @@ class Search extends Component {
 	for (let i = 0; i < 20; i++) {
 		display[i] = this.state.results[((this.state.page - 1) * 20) + i]
 	}
-
-    return (
+	
+	var ret = null
+	if (this.state.results.length == 0){
+		ret = (<div className="container" style={{backgroundColor:"white"}}><center><h1>No search results found</h1></center></div>)
+	}
+	else {
+		ret = (
 		<div>
 		<Grid><Row className="flex-row">{display}</Row></Grid>
 		<center><Pagination bsSize="large">{this.state.pages}</Pagination></center>
 		</div>
 		)
+	}
+
+    return ret
   }
 }
 

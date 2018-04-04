@@ -2,13 +2,13 @@ import React from 'react'
 import { MemoryRouter } from 'react-router-dom'
 import { shallow, mount } from 'enzyme'
 import { expect } from 'chai'
-import Map from '../src/js/Map'
+import TallCard from '../src/js/TallCard'
 
 
 
-describe('(Component) Map', () => {
+describe('(Component) TallCard', () => {
   it('renders...', () => {
-	const wrapper = shallow(<Map center={[0, 0]} zoom={11} />);
+	const wrapper = shallow(<TallCard name="test" highlight={["test"]}/>);
     expect(wrapper).to.have.length(1);
   });
 });
