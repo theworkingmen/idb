@@ -17,7 +17,7 @@ class CityInstance extends Component {
 
   }
 
-  componentWillMount() {
+  componentDidMount() {
     var api = "http://127.0.0.1:5000/cities/";
     api += this.props.match.params.id;
     fetch(api)
@@ -36,10 +36,34 @@ class CityInstance extends Component {
         )
       })
 
+      /* Format the population data number */
+      let population_data = data.population_in_county;
+      if (population_data === null){
+          this.setState({
+              population: "Data unavailable",
+          });
+      }
+      else{
+          this.setState({
+              population: population_data.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+          });
+      }
+
+      /* Format the population data number */
+      let median_income_data = data.median_household_income_in_county;
+      if (median_income_data === null){
+          this.setState({
+             income: "Data unavailable",
+          });
+      }
+      else{
+          this.setState({
+              income: median_income_data.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+          });
+      }
+
       this.setState({
         name: data.city_name,
-        population: data.population_in_county,
-        income: data.median_household_income_in_county,
         unemployment: data.unemployment_in_county*100,
         universities:universities,
         major0_name: data.top_grad_majors[0].name,
@@ -69,33 +93,6 @@ class CityInstance extends Component {
   }
 
   render() {
-
-    /* Format the population data number */
-    let population_data = this.state.population;
-    if (population_data === null){
-        this.setState({
-            population: "Data unavailable"
-        });
-    }
-    else{
-        this.setState({
-            population: population_data.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-        })
-    }
-
-    /* Format the population data number */
-    let median_income_data = this.state.median_household_income_in_county;
-    if (median_income_data === null){
-        this.setState({
-            median_household_income_in_county: "Data unavailable"
-        })
-    }
-    else{
-        this.setState({
-            median_household_income_in_county: median_income_data.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-        })
-    }
-
     let college_chart = null;
     let high_school_chart = null;
     if (this.state.ready) {
@@ -144,6 +141,8 @@ class CityInstance extends Component {
                 />;
     }
 
+
+
     return (
 
       <div className="container" style={{background: "white"}}>
@@ -166,7 +165,7 @@ class CityInstance extends Component {
           </Col>
           <Col sm={4}>
             <Thumbnail className="thumbnail">
-              <p> Income </p>
+              <p> Median Income </p>
               <h3> ${this.state.income} </h3>
             </Thumbnail>
           </Col>
