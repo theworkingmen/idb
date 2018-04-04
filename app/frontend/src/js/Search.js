@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Image, Grid, Row, Col, Thumbnail, Pagination} from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 import Card from './Card.js';
+import TallCard from './TallCard.js';
 import '../css/Flex.css';
 import { RingLoader } from 'react-spinners';
 
@@ -40,21 +41,21 @@ class Search extends Component {
 	  else if ((num - 5) < 1) {
 		for (let number = 1; number <= 10; number++) {
 			items.push(
-			<	Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
+			<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
 			);
 		}
 	  }
 	  else if ((num + 5) > Math.ceil(this.state.results.length/20)) {
 		for (let number = Math.ceil(this.state.results.length/20) - 9; number <= Math.ceil(this.state.results.length/20); number++) {
 			items.push(
-			<	Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
+			<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
 			);
 		}
 	  }
 	  else  {
 		for (let number = num - 5; number < num + 5; number++) {
 			items.push(
-			<	Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
+			<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
 			);
 		}
 	  }
@@ -82,13 +83,13 @@ class Search extends Component {
 		  return results.json();
 		}).then(data => {
 			let cityResults = data.records.Cities.map((city) => {
-				return(<Card name={city.name} model='cities' domain={city.image_link} id={city.id} field = "test" >  </Card>)
+				return(<TallCard name={city.name} model='cities' domain={city.image_link} id={city.id} field = "test" >  </TallCard>)
 			})
 			let majorResults = data.records.Majors.map((major) => {
-				return(<Card name={major.name} model='majors' domain={major.image_link} id={major.id} field="test">  </Card>)
+				return(<TallCard name={major.name} model='majors' domain={major.image_link} id={major.id} field="test">  </TallCard>)
 			})
 			let collegeResults = data.records.Universities.map((college) => {
-				return(<Card name={college.name} model='colleges' domain={college.image_link} id={college.id} field="test">  </Card>)
+				return(<TallCard name={college.name} model='colleges' domain={college.image_link} id={college.id} field="test">  </TallCard>)
 			})
 			let active = 1;
 			let results = cityResults.concat(majorResults).concat(collegeResults);
@@ -119,13 +120,13 @@ class Search extends Component {
 		  return results.json();
 		}).then(data => {
 			let cityResults = data.records.Cities.map((city) => {
-				return(<Card name={city.name} model='cities' domain={city.image_link} id={city.id} field = "test" >  </Card>)
+				return(<TallCard name={city.name} model='cities' domain={city.image_link} id={city.id} field = "test" >  </TallCard>)
 			})
 			let majorResults = data.records.Majors.map((major) => {
-				return(<Card name={major.name} model='majors' domain={major.image_link} id={major.id} field="test">  </Card>)
+				return(<TallCard name={major.name} model='majors' domain={major.image_link} id={major.id} field="test">  </TallCard>)
 			})
 			let collegeResults = data.records.Universities.map((college) => {
-				return(<Card name={college.name} model='colleges' domain={college.image_link} id={college.id} field="test">  </Card>)
+				return(<TallCard name={college.name} model='colleges' domain={college.image_link} id={college.id} field="test">  </TallCard>)
 			})
 			let active = 1;
 			let results = cityResults.concat(majorResults).concat(collegeResults);

@@ -27,10 +27,10 @@ class TallCard extends Component {
 					{/*<Image src={`${this.props.imgsrc}`} style={{width:"100%", height:"100%"}}/>*/}
 					<h4><center style={{justifyContent:"center", height:"4em"}}>{this.props.name}</center></h4>
 					<h6><center style={{justifyContent:"center"}}>{this.props.field}</center></h6>
-					<h6><center style={{justifyContent:"center"}}>{this.props.field}</center></h6>
-					<h6><center style={{justifyContent:"center"}}>{this.props.field}</center></h6>
-					<h6><center style={{justifyContent:"center"}}>{this.props.field}</center></h6>
-					<h6><center style={{justifyContent:"center"}}>{this.props.field}</center></h6>
+					<h6><center style={{justifyContent:"center"}}>field 2</center></h6>
+					<h6><center style={{justifyContent:"center"}}>field 3</center></h6>
+					<h6><center style={{justifyContent:"center"}}>field 4</center></h6>
+					<h6><center style={{justifyContent:"center"}}>field 5</center></h6>
 
 					{/* Insert component with list of attributes of the model here */}
 				</Thumbnail>
