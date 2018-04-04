@@ -150,6 +150,7 @@ class Majors extends Component {
   }
 
   changeSTEM(stem) {
+      this.setState({stem: stem});
 	  fetch('http://127.0.0.1:5000/majors_limited?sort_'+this.state.sort+'='+this.state.order+"&is_stem="+stem+"&wage="+this.state.wage)
 	  .then(results => {
 		  return results.json();
