@@ -58,10 +58,11 @@ class NavigationBar extends Component {
 										 onChange={this.handleChange.bind(this)} onKeyPress={this.handleKeyPress.bind(this)} />
 						</FormGroup>{' '}
 						<Link to={`/${this.state.search}/${this.state.value}`}><Button type="submit">Search</Button></Link>
-						{redirection}
+						
 					</Navbar.Form>
 					</Navbar.Collapse>
 				</Navbar>
+				{redirection}
 		    </div>
 		);
 	}

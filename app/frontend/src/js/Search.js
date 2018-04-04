@@ -77,18 +77,23 @@ class Search extends Component {
   }
 
   runSearch(searchprop) {
+  	var needfield = "Error: no info available"
+
   	fetch('http://127.0.0.1:5000/search/'+searchprop)
 	  .then(results => {
 		  return results.json();
 		}).then(data => {
 			let cityResults = data.records.Cities.map((city) => {
-				return(<TallCard name={city.name} model='cities' domain={city.image_link} id={city.id} field = "test" highlight={searchprop}>  </TallCard>)
+				return(<TallCard name={city.name} model='cities' domain={city.image_link} id={city.id} highlight={searchprop}
+												 field1={city.county}>  </TallCard>)
 			})
 			let majorResults = data.records.Majors.map((major) => {
-				return(<TallCard name={major.name} model='majors' domain={major.image_link} id={major.id} field="" highlight={searchprop}>  </TallCard>)
+				return(<TallCard name={major.name} model='majors' domain={major.image_link} id={major.id} highlight={searchprop}
+												 field1={needfield}>  </TallCard>)
 			})
 			let collegeResults = data.records.Universities.map((college) => {
-				return(<TallCard name={college.name} model='colleges' domain={college.image_link} id={college.id} field={college.type} highlight={searchprop}>  </TallCard>)
+				return(<TallCard name={college.name} model='colleges' domain={college.image_link} id={college.id} highlight={searchprop}
+												 field1={college.state} field2={college.type}>  </TallCard>)
 			})
 			let active = 1;
 			let results = cityResults.concat(majorResults).concat(collegeResults);
