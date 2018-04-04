@@ -11,7 +11,7 @@ def get_city(sort_name, sort_pop, state):
     session = Session()
     cities = session.query(City)
 
-    print("Sort by name " + sort_name + "\nSort by population " + sort_pop + "\nFilter by state " + state)
+    #print("Sort by name " + sort_name + "\nSort by population " + sort_pop + "\nFilter by state " + state)
 
     if state != 'None' and len(state) == 2 :
         state = state.upper()
@@ -137,7 +137,7 @@ def get_city_limited(sort_name, sort_pop, state):
     session = Session()
     cities = session.query(City)
 
-    print("Sort by name " + sort_name + "\nSort by population " + sort_pop + "\nFilter by state " + state)
+    #print("Sort by name " + sort_name + "\nSort by population " + sort_pop + "\nFilter by state " + state)
 
     if state != 'None' and len(state) == 2 :
         state = state.upper()

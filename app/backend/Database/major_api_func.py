@@ -15,7 +15,7 @@ def get_major(sort_name, sort_wage, sort_work, stem):
     elif stem == 'no' :
         majors = session.query(Major).filter(Major.is_stem == 0)
 
-    print("Sort name: " + sort_name + "\nSort wage: "+ sort_wage + "\nSort_work: " + sort_work + "\nis stem: " + stem)
+    #print("Sort name: " + sort_name + "\nSort wage: "+ sort_wage + "\nSort_work: " + sort_work + "\nis stem: " + stem)
     #Note, for now you can only call one sort function, wage or work, and can
     #choose the ordering.
     cast = majors.all()
@@ -125,7 +125,7 @@ def get_major_limited(sort_name, sort_wage, sort_work, stem):
     elif stem == 'no' :
         majors = session.query(Major).filter(Major.is_stem == 0)
 
-    print("Sort name: " + sort_name + "\nSort wage: "+ sort_wage + "\nSort_work: " + sort_work + "\nis stem: " + stem)
+    #print("Sort name: " + sort_name + "\nSort wage: "+ sort_wage + "\nSort_work: " + sort_work + "\nis stem: " + stem)
     #Note, for now you can only call one sort function, wage or work, and can
     #choose the ordering.
     cast = majors.all()

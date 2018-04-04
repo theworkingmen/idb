@@ -7,4 +7,4 @@ application.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://theworkingmen:cs37
 from routes import *
 
 if __name__ == '__main__':
-    application.run(threaded=True)
+    application.run(threaded=True, debug=True)
