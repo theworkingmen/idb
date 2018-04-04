@@ -165,7 +165,7 @@ class CityInstance extends Component {
           </Col>
           <Col sm={4}>
             <Thumbnail className="thumbnail">
-              <p> Income </p>
+              <p> Median Income </p>
               <h3> ${this.state.income} </h3>
             </Thumbnail>
           </Col>

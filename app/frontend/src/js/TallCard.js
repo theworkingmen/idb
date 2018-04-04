@@ -18,7 +18,7 @@ class TallCard extends Component {
 
 		    <Col xs={12} sm={3} md={3} lg={3}>
 		    	<Link to={`/${this.props.model}/${this.props.id}`}>
-				<Thumbnail style={{height:"23em"}}>
+				<Thumbnail style={{height:"30em"}}>
 					{/* img src needs to have a {local path} or {url}. DB needs to provide url of img. */}
 					<center>
 						<Image 	src={this.props.domain}
@@ -33,6 +33,10 @@ class TallCard extends Component {
 					textToHighlight={this.props.name}
 					/></center></h4>
 					<h6><center style={{justifyContent:"center"}}>{this.props.field}</center></h6>
+					<h6><center style={{justifyContent:"center"}}>field 2</center></h6>
+					<h6><center style={{justifyContent:"center"}}>field 3</center></h6>
+					<h6><center style={{justifyContent:"center"}}>field 4</center></h6>
+					<h6><center style={{justifyContent:"center"}}>field 5</center></h6>
 
 					{/* Insert component with list of attributes of the model here */}
 				</Thumbnail>

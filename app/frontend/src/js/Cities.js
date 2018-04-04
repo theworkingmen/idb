@@ -204,7 +204,7 @@ class Cities extends Component {
 	   ["North Dakota", "ND"], ["Ohio", "OH"], ["Oklahoma", "OK"], ["Oregon", "OR"], ["Pennsylvania", "PA"],
 	   ["Rhode Island", "RI"], ["South Carolina", "SC"], ["South Dakota", "SD"], ["Tennessee", "TN"],
 	   ["Texas", "TX"], ["Utah", "UT"], ["Vermont", "VT"], ["Washington", "WA"], ["West Virginia", "WV"],
-	   ["Wisconsin", "WI"], ["Wyoming", "WY"]]
+	   ["Wisconsin", "WI"], ["Wyoming", "WY"], ["Puerto Rico", "PR"], ["District of Columbia", "DC"]]
 	  let items = []
 	  for (let i = 0; i < state.length; i++) {
 		  items.push(<MenuItem eventKey={i} onClick={this.changeState.bind(this, state[i][1])}>{state[i][0]}</MenuItem>);
