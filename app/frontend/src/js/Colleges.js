@@ -86,7 +86,7 @@ class Colleges extends Component {
 	  else {
 		  this.setState({sort: "tut"});
 	  }
-	  fetch('http://127.0.0.1:5000/universities_limited?sort_'+sort+'='+this.state.order+"&state="+this.state.state+"&type="+this.state.type)
+	  fetch('http://api.majorpotential.me/universities_limited?sort_'+sort+'='+this.state.order+"&state="+this.state.state+"&type="+this.state.type)
 	  .then(results => {
 		  return results.json();
 		}).then(data => {
@@ -120,7 +120,7 @@ class Colleges extends Component {
 	  else {
 		  this.setState({order: "Desc"});
 	  }
-	  fetch('http://127.0.0.1:5000/universities_limited?sort_'+this.state.sort+'='+order+"&state="+this.state.state+"&type="+this.state.type)
+	  fetch('http://api.majorpotential.me/universities_limited?sort_'+this.state.sort+'='+order+"&state="+this.state.state+"&type="+this.state.type)
 	  .then(results => {
 		  return results.json();
 		}).then(data => {
@@ -149,7 +149,7 @@ class Colleges extends Component {
 
   changeState(state) {
 	  this.setState({state: state});
-	  fetch('http://127.0.0.1:5000/universities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+state+"&type="+this.state.type)
+	  fetch('http://api.majorpotential.me/universities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+state+"&type="+this.state.type)
 	  .then(results => {
 		  return results.json();
 		}).then(data => {
@@ -178,7 +178,7 @@ class Colleges extends Component {
 
   changeType(type) {
 	  this.setState({type: type});
-	  fetch('http://127.0.0.1:5000/universities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+this.state.state+"&type="+type)
+	  fetch('http://api.majorpotential.me/universities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+this.state.state+"&type="+type)
 	  .then(results => {
 		  return results.json();
 		}).then(data => {
@@ -223,7 +223,7 @@ class Colleges extends Component {
 	  }
 	  return items
   }
-  
+
   resetSortFilter() {
 	  this.setState({
         sort: "name",
@@ -231,7 +231,7 @@ class Colleges extends Component {
         state: "None",
         type: "None"
 	});
-	  fetch('http://127.0.0.1:5000/universities_limited?sort_name=Asc&state=None&type=None')
+	  fetch('http://api.majorpotential.me/universities_limited?sort_name=Asc&state=None&type=None')
 	  .then(results => {
 		  return results.json();
 		}).then(data => {
@@ -259,7 +259,7 @@ class Colleges extends Component {
   }
 
   componentDidMount() {
-	  fetch('http://127.0.0.1:5000/universities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+this.state.state+"&type="+this.state.type)
+	  fetch('http://api.majorpotential.me/universities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+this.state.state+"&type="+this.state.type)
 	  .then(results => {
 		  return results.json();
 		}).then(data => {

@@ -18,7 +18,7 @@ class CityInstance extends Component {
   }
 
   componentDidMount() {
-    var api = "http://127.0.0.1:5000/cities/";
+    var api = "http://api.majorpotential.me/cities/";
     api += this.props.match.params.id;
     fetch(api)
     .then(results => {

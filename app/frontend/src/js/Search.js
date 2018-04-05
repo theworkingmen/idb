@@ -79,7 +79,7 @@ class Search extends Component {
   runSearch(searchprop) {
   	var needfield = "Error: no info available"
 
-  	fetch('http://127.0.0.1:5000/search/'+searchprop)
+  	fetch('http://api.majorpotential.me/search/'+searchprop)
 	  .then(results => {
 		  return results.json();
 		}).then(data => {
@@ -119,7 +119,7 @@ class Search extends Component {
   componentDidMount() {
     this.runSearch(this.props.match.params.id);
   }
-  
+
   componentWillReceiveProps (nextProps) {
     this.runSearch(nextProps.match.params.id);
   }
@@ -139,7 +139,7 @@ class Search extends Component {
 	for (let i = 0; i < 20; i++) {
 		display[i] = this.state.results[((this.state.page - 1) * 20) + i]
 	}
-	
+
 	var ret = null
 	if (this.state.results.length == 0){
 		ret = (<div className="container" style={{backgroundColor:"white"}}><center><h1>No search results found</h1></center></div>)

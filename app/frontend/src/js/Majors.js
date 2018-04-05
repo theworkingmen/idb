@@ -88,7 +88,7 @@ class Majors extends Component {
 	  else {
 		  this.setState({sort: "work"});
 	  }
-	  fetch('http://127.0.0.1:5000/majors_limited?sort_'+sort+'='+this.state.order+"&is_stem="+this.state.stem+"&wage="+this.state.wage)
+	  fetch('http://api.majorpotential.me/majors_limited?sort_'+sort+'='+this.state.order+"&is_stem="+this.state.stem+"&wage="+this.state.wage)
 	  .then(results => {
 		  return results.json();
 		}).then(data => {
@@ -123,7 +123,7 @@ class Majors extends Component {
 	  else {
 		  this.setState({order: "Desc"});
 	  }
-	  fetch('http://127.0.0.1:5000/majors_limited?sort_'+this.state.sort+'='+order+"&is_stem="+this.state.stem+"&wage="+this.state.wage)
+	  fetch('http://api.majorpotential.me/majors_limited?sort_'+this.state.sort+'='+order+"&is_stem="+this.state.stem+"&wage="+this.state.wage)
 	  .then(results => {
 		  return results.json();
 		}).then(data => {
@@ -153,7 +153,7 @@ class Majors extends Component {
 
   changeSTEM(stem) {
       this.setState({stem: stem});
-	  fetch('http://127.0.0.1:5000/majors_limited?sort_'+this.state.sort+'='+this.state.order+"&is_stem="+stem+"&wage="+this.state.wage)
+	  fetch('http://api.majorpotential.me/majors_limited?sort_'+this.state.sort+'='+this.state.order+"&is_stem="+stem+"&wage="+this.state.wage)
 	  .then(results => {
 		  return results.json();
 		}).then(data => {
@@ -188,7 +188,7 @@ class Majors extends Component {
         stem: "None",
         wage: "None"
 	});
-	  fetch('http://127.0.0.1:5000/majors_limited?sort_name=Asc&is_stem=None&wage=None')
+	  fetch('http://api.majorpotential.me/majors_limited?sort_name=Asc&is_stem=None&wage=None')
 	  .then(results => {
 		  return results.json();
 		}).then(data => {
@@ -217,7 +217,7 @@ class Majors extends Component {
   }
 
   componentDidMount() {
-	  fetch('http://127.0.0.1:5000/majors_limited?sort_'+this.state.sort+'='+this.state.order+"&is_stem="+this.state.stem+"&wage="+this.state.wage)
+	  fetch('http://api.majorpotential.me/majors_limited?sort_'+this.state.sort+'='+this.state.order+"&is_stem="+this.state.stem+"&wage="+this.state.wage)
 	  .then(results => {
 		  return results.json();
 		}).then(data => {

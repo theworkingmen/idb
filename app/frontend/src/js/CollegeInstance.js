@@ -19,7 +19,7 @@ class CollegeInstance extends Component {
   }
 
   componentWillMount() {
-    var api = "http://127.0.0.1:5000/universities/";
+    var api = "http://api.majorpotential.me/universities/";
     api += this.props.match.params.id;
     fetch(api)
     .then(results => {

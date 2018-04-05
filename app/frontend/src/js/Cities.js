@@ -85,7 +85,7 @@ class Cities extends Component {
 	  else {
 		  this.setState({sort: "pop"});
 	  }
-	  fetch('http://127.0.0.1:5000/cities_limited?sort_'+sort+'='+this.state.order+"&state="+this.state.state)
+	  fetch('http://api.majorpotential.me/cities_limited?sort_'+sort+'='+this.state.order+"&state="+this.state.state)
 	  .then(results => {
 		  return results.json();
 		}).then(data => {
@@ -126,7 +126,7 @@ class Cities extends Component {
 	  else {
 		  this.setState({order: "Desc"});
 	  }
-	  fetch('http://127.0.0.1:5000/cities_limited?sort_'+this.state.sort+'='+order+"&state="+this.state.state)
+	  fetch('http://api.majorpotential.me/cities_limited?sort_'+this.state.sort+'='+order+"&state="+this.state.state)
 	  .then(results => {
 		  return results.json();
 		}).then(data => {
@@ -162,7 +162,7 @@ class Cities extends Component {
 
   changeState(state) {
 	  this.setState({state: state});
-	  fetch('http://127.0.0.1:5000/cities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+state)
+	  fetch('http://api.majorpotential.me/cities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+state)
 	  .then(results => {
 		  return results.json();
 		}).then(data => {
@@ -221,7 +221,7 @@ class Cities extends Component {
         order: "Asc",
         state: "None"
 	});
-	  fetch('http://127.0.0.1:5000/cities_limited?sort_name=Asc&state=None')
+	  fetch('http://api.majorpotential.me/cities_limited?sort_name=Asc&state=None')
 	  .then(results => {
 		  return results.json();
 		}).then(data => {
@@ -257,7 +257,7 @@ class Cities extends Component {
 
 
   componentDidMount() {
-	  fetch('http://127.0.0.1:5000/cities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+this.state.state)
+	  fetch('http://api.majorpotential.me/cities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+this.state.state)
 	  .then(results => {
 		  return results.json();
 		}).then(data => {
