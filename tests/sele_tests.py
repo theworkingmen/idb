@@ -20,7 +20,7 @@ class SeleTests():
         #self.driver = webdriver.Chrome('chrome_driver.exe')
         driver = self.driver
         driver.get("http://majorpotential.me")
-        assert "Welcome to Major Potential" in driver.page_source
+        assert "<div class=\"carousel slide\">" in driver.page_source
 
     # Test navbar - city page
     def test_navbar_city(self):
@@ -34,15 +34,15 @@ class SeleTests():
         # Pick two random city cards to test.
         random_card = randint(1, len(cards)) - 1
         inner_html = cards[random_card].get_attribute("innerHTML")
-        assert "<a href=\"/cities/" in inner_html
+        assert "Population: " in inner_html
         random_card = randint(1, len(cards)) - 1
         inner_html = cards[random_card].get_attribute("innerHTML")
-        assert "<a href=\"/cities/" in inner_html
+        assert "Population: " in inner_html
 
     # Test navbar - university page
     def test_navbar_university(self):
         driver = self.driver
-        nav_link = driver.find_element_by_link_text("Colleges")
+        nav_link = driver.find_element_by_link_text("Universities")
         nav_link.click()
         driver.implicitly_wait(3) # Wait three seconds for page to load
         assert driver.current_url == "http://majorpotential.me/colleges"
@@ -51,10 +51,13 @@ class SeleTests():
         # Pick two random university cards to test.
         random_card = randint(1, len(cards)) - 1
         inner_html = cards[random_card].get_attribute("innerHTML")
-        assert "<a href=\"/colleges/" in inner_html
+        print(inner_html)
+        type_displayed = ("public" in inner_html) or ("private" in inner_html)
+        assert type_displayed
         random_card = randint(1, len(cards)) - 1
         inner_html = cards[random_card].get_attribute("innerHTML")
-        assert "<a href=\"/colleges/" in inner_html
+        type_displayed = ("public" in inner_html) or ("private" in inner_html)
+        assert type_displayed
 
     # Test navbar - major page
     def test_navbar_major(self):
@@ -68,10 +71,10 @@ class SeleTests():
         # Pick two random major cards to test.
         random_card = randint(1, len(cards)) - 1
         inner_html = cards[random_card].get_attribute("innerHTML")
-        assert "<a href=\"/majors/" in inner_html
+        assert "Average Wage: " in inner_html
         random_card = randint(1, len(cards)) - 1
         inner_html = cards[random_card].get_attribute("innerHTML")
-        assert "<a href=\"/majors/" in inner_html
+        assert "Average Wage: " in inner_html
 
     # Test navbar - about page
     def test_navbar_about(self):
@@ -79,10 +82,14 @@ class SeleTests():
         nav_link = driver.find_element_by_link_text("About")
         nav_link.click()
         driver.implicitly_wait(3) # Wait three seconds for page to load
-        inner_html = driver.find_element_by_tag_name("body").get_attribute("innerHTML")
-        assert "Bureau of Labor Statistics" in inner_html
-        assert "Amazon Beanstalk" in inner_html
-        assert "https://github.com/theworkingmen/idb" in inner_html
+        inner_html = driver.find_element_by_class_name("group_members").get_attribute("innerHTML")
+        print(inner_html)
+        assert "The Team" in inner_html
+        try :
+            test_link = driver.find_element_by_partial_link_text("Github")
+            test_link = driver.find_element_by_partial_link_text("Report")
+        except NoSuchElementException : #pragma: no cover
+            assert False                #pragma: no cover
 
     # Close the driver
     def terminate(self):
