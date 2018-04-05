@@ -16,12 +16,6 @@ except:
 import json
 import re
 
-"""
-Mitchell's note to himself: For now, these updates are incomplete.
-Do not try running this until I can complete them, which will be done
-tomorrow, likely in the morning.
-"""
-
 class APITests(unittest.TestCase):
 
     def test_all_uni(self) :
