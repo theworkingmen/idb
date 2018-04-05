@@ -24,6 +24,7 @@ class majorInstance extends Component {
       return results.json();
     }).then(data => {
        this.setState({
+          image: data.image_link,
           name: data.name,
           univ0: data.universities_high_graduates_2015[0],
           univ0_name: data.universities_high_graduates_2015[0].name,
@@ -87,7 +88,7 @@ class majorInstance extends Component {
             {/* Name of major */}
             <div className="container" >
               <Jumbotron> <center>
-                <h2> {this.state.name} </h2>
+                <h2> <a href= {this.state.image} > {this.state.name} </a></h2>
               </center></Jumbotron>
             </div>
 

@@ -63,6 +63,7 @@ class CityInstance extends Component {
       }
 
       this.setState({
+        image: data.city_image_link,
         name: data.city_name,
         unemployment: data.unemployment_in_county*100,
         universities:universities,
@@ -150,7 +151,7 @@ class CityInstance extends Component {
         {/* Name of City */}
         <div className="container">
           <Jumbotron> <center>
-            <h2> {this.state.name} </h2>
+            <h2> <a href= {this.state.image} > {this.state.name} </a></h2>
           </center></Jumbotron>
         </div>
 
