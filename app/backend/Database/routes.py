@@ -32,11 +32,11 @@ def server_error(e):
 @application.route('/universities', methods = ['GET'])
 def get_Universities ():
 
-    sort_tut = request.args.get('sort_tut', 'None').encode('utf-8')
-    sort_name = request.args.get('sort_name', 'None').encode('utf-8')
+    sort_tut = request.args.get('sort_tut', 'None')
+    sort_name = request.args.get('sort_name', 'None')
     #Filter by type of universitiy (public or private)
-    f_type = request.args.get('type', 'None').encode('utf-8')
-    state = request.args.get('state', 'None').encode('utf-8')
+    f_type = request.args.get('type', 'None')
+    state = request.args.get('state', 'None')
 
     allUni = get_uni(sort_tut, sort_name, f_type, state)
     totalCount = len(allUni)
@@ -60,11 +60,11 @@ def get_Single_Uni(id):
 @application.route('/universities_limited', methods = ['GET'])
 def get_Universities_Limited ():
 
-    sort_tut = request.args.get('sort_tut', 'None').encode('utf-8')
-    sort_name = request.args.get('sort_name', 'Asc').encode('utf-8')
+    sort_tut = request.args.get('sort_tut', 'None')
+    sort_name = request.args.get('sort_name', 'Asc')
     #Filter by type of universitiy (public or private)
-    f_type = request.args.get('type', 'None').encode('utf-8')
-    state = request.args.get('state', 'None').encode('utf-8')
+    f_type = request.args.get('type', 'None')
+    state = request.args.get('state', 'None')
 
     allUni = get_uni_limited(sort_tut, sort_name, f_type, state)
     totalCount = len(allUni)
@@ -77,13 +77,13 @@ def get_Universities_Limited ():
 @application.route('/majors', methods = ['GET'])
 def get_Majors ():
     #sort by major name
-    sort_name = request.args.get('sort_name', 'Asc').encode('utf-8')
+    sort_name = request.args.get('sort_name', 'Asc')
     #sort by average wage major makes
-    sort_wage = request.args.get('sort_wage', 'None').encode('utf-8')
+    sort_wage = request.args.get('sort_wage', 'None')
     #sort by number in workforce for major
-    sort_work = request.args.get('sort_work', 'None').encode('utf-8')
+    sort_work = request.args.get('sort_work', 'None')
     #filter by if the major is in STEM field
-    stem = request.args.get('is_stem', 'None').encode('utf-8')
+    stem = request.args.get('is_stem', 'None')
     #range filtering, set thresholds for filtering
 
     allMajor = get_major(sort_name, sort_wage, sort_work, stem)
@@ -108,13 +108,13 @@ def get_Single_Major(id):
 @application.route('/majors_limited', methods = ['GET'])
 def get_Majors_Limited ():
     #sort by major names
-    sort_name = request.args.get('sort_name', 'Asc').encode('utf-8')
+    sort_name = request.args.get('sort_name', 'Asc')
     #sort by average wage major makes
-    sort_wage = request.args.get('sort_wage', 'None').encode('utf-8')
+    sort_wage = request.args.get('sort_wage', 'None')
     #sort by number in workforce for major
-    sort_work = request.args.get('sort_work', 'None').encode('utf-8')
+    sort_work = request.args.get('sort_work', 'None')
     #filter by if the major is in STEM field
-    stem = request.args.get('is_stem', 'None').encode('utf-8')
+    stem = request.args.get('is_stem', 'None')
     #range filtering, set thresholds for filtering
     allMajor = get_major_limited(sort_name, sort_wage, sort_work, stem)
     totalCount = len(allMajor)
@@ -126,9 +126,9 @@ def get_Majors_Limited ():
 
 @application.route('/cities', methods = ['GET'])
 def get_Cities ():
-    sort_name = request.args.get('sort_name', 'Asc').encode('utf-8')
-    sort_pop = request.args.get('sort_pop', 'None').encode('utf-8')
-    state = request.args.get('state', 'None').encode('utf-8')
+    sort_name = request.args.get('sort_name', 'Asc')
+    sort_pop = request.args.get('sort_pop', 'None')
+    state = request.args.get('state', 'None')
     allCity = get_city(sort_name, sort_pop, state)
     totalCount = len(allCity)
     payload = {'totalCount': totalCount, 'records': allCity}
@@ -151,9 +151,9 @@ def get_Single_City(id):
 
 @application.route('/cities_limited', methods = ['GET'])
 def get_Cities_Limited ():
-    sort_name = request.args.get('sort_name', 'Asc').encode('utf-8')
-    sort_pop = request.args.get('sort_pop', 'None').encode('utf-8')
-    state = request.args.get('state', 'None').encode('utf-8')
+    sort_name = request.args.get('sort_name', 'Asc')
+    sort_pop = request.args.get('sort_pop', 'None')
+    state = request.args.get('state', 'None')
     allCity = get_city_limited(sort_name, sort_pop, state)
     totalCount = len(allCity)
     payload = {'totalCount': totalCount, 'records': allCity}
