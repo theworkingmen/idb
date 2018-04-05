@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Image, Grid, Row, Col, Thumbnail, Pagination} from 'react-bootstrap';
+import {Image, Grid, Row, Col, Thumbnail, Pagination, Label} from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 import Card from './Card.js';
 import TallCard from './TallCard.js';
@@ -147,6 +147,14 @@ class Search extends Component {
 	else {
 		ret = (
 		<div>
+        <Row>
+          <h3>
+            Label <Label className="college">University</Label>
+            Label <Label className='city'>city</Label>
+            Label <Label className='major'>Major</Label>
+          </h3>
+         </Row>
+
 		<Grid><Row className="flex-row">{display}</Row></Grid>
 		<center><Pagination bsSize="large">{this.state.pages}</Pagination></center>
 		</div>
