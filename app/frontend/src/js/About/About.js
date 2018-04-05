@@ -254,7 +254,7 @@ export default class About extends Component {
       <p> </p>
        <Button> <a href = "https://theworkingmen.gitbooks.io/api/content/" > API </a></Button>
       <p> </p>
-      <Button> <a href = "https://theworkingmen.gitbooks.io/major-potential/content/" > Report </a></Button>
+      <Button> <a href = "https://theworkingmen.gitbooks.io/report/" > Report </a></Button>
       <p></p> <p></p>
       </center>
     </div>
