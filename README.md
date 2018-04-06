@@ -88,7 +88,8 @@ $ python3 app/backend/tests.py
 
 GUI Acceptance tests
 ```
-$ python3 app/frontend/guitests.py
+$ cd tests
+$ python3 sele_tests.py
 ```
 
 Mocha javascript tests
