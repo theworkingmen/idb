@@ -9,6 +9,7 @@ import mitchell_pic from '../../images/authors/mitchell_pic.jpg';
 import neal_pic from '../../images/authors/neal_pic.jpg';
 import christian_pic from '../../images/authors/christian_pic.jpg';
 import MembersCard from './MembersCard'
+import { RingLoader } from 'react-spinners';
 
 let request = require('request')
 export default class About extends Component {
@@ -37,16 +38,16 @@ export default class About extends Component {
       let members_data = {}
       members_data['traylor1'] = {
         "name": "Mitchell Traylor",
-        "role": "Front-End, Report Author",
+        "role": "Back-End, Testing",
         "bio": "Computer Science third-year, with special focus on cybersecurity.",
         "photo": mitchell_pic,
         "commits": 0,
         "issues": 0,
-        "number_tests": 13
+        "number_tests": 23
       }
       members_data['smcw66'] = {
         "name": "Sungsup Lee",
-        "role": "Front-End, Back-End",
+        "role": "Front-End",
         "bio": "Studies Computer Science at UT Austin.",
         "photo": sungsup_pic,
         "commits": 0,
@@ -69,7 +70,7 @@ export default class About extends Component {
         "bio": "I am a junior Computer Science major.",
         "commits": 0,
         "issues": 0,
-        "number_tests": 0
+        "number_tests": 28
       }
       members_data['christian-onuogu'] = {
         "name": "Christian Onuogu",
@@ -78,7 +79,7 @@ export default class About extends Component {
         "photo": christian_pic,
         "commits": 0,
         "issues": 0,
-        "number_tests": 19
+        "number_tests": 29
       }
 
       let commitJSON = JSON.parse(body)
@@ -127,13 +128,22 @@ export default class About extends Component {
   }
 
   render() {
+
+      if (this.state.ready == false){
+         return <Grid><Row className="spin"><RingLoader
+             color={'#123abc'}
+             loading={this.state.loading}
+             size="100"
+
+           /> </Row></Grid>;
+       }
+
       let members_info = null
-      if (this.state.ready) {
+      if (this.state.ready == true) {
         members_info = < MembersCard members_info = {
           this.state.members_stats
         }
         />;
-      }
     return (
     <div className ='container'>
     <div className = 'introduction'>
@@ -172,7 +182,7 @@ export default class About extends Component {
         </tr>
         <tr>
           <th>Number of Unit Tests:</th>
-          <th> 45 </th>
+          <th> 93 </th>
         </tr>
       </Table>
       </Col>
@@ -244,11 +254,11 @@ export default class About extends Component {
       <p> </p>
        <Button> <a href = "https://theworkingmen.gitbooks.io/api/content/" > API </a></Button>
       <p> </p>
-      <Button> <a href = "https://theworkingmen.gitbooks.io/major-potential/content/" > Report </a></Button>
+      <Button> <a href = "https://theworkingmen.gitbooks.io/report/" > Report </a></Button>
       <p></p> <p></p>
       </center>
     </div>
 
     </div>
 
-    );};};
+)};};};

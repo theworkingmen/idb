@@ -1,7 +1,7 @@
 {
 	"info": {
 		"name": "MajorPotential-API-Tests",
-		"_postman_id": "d6952cd1-c6e4-492e-ade3-a18a1eb6b5ba",
+		"_postman_id": "d6bc1bb0-cb5d-45a3-a2c9-03a3b30f64d3",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -103,7 +103,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "http://api.majorpotential.me/universities",
 					"protocol": "http",
@@ -116,7 +119,7 @@
 						"universities"
 					]
 				},
-				"description": ""
+				"description": null
 			},
 			"response": []
 		},
@@ -200,7 +203,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "http://api.majorpotential.me/universities/482228",
 					"protocol": "http",
@@ -214,7 +220,7 @@
 						"482228"
 					]
 				},
-				"description": ""
+				"description": null
 			},
 			"response": []
 		},
@@ -245,7 +251,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "http://api.majorpotential.me/universities/2",
 					"protocol": "http",
@@ -259,7 +268,7 @@
 						"2"
 					]
 				},
-				"description": ""
+				"description": null
 			},
 			"response": []
 		},
@@ -317,7 +326,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "http://api.majorpotential.me/universities_limited",
 					"protocol": "http",
@@ -330,7 +342,7 @@
 						"universities_limited"
 					]
 				},
-				"description": ""
+				"description": null
 			},
 			"response": []
 		},
@@ -419,7 +431,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "http://api.majorpotential.me/cities",
 					"protocol": "http",
@@ -432,7 +447,7 @@
 						"cities"
 					]
 				},
-				"description": ""
+				"description": null
 			},
 			"response": []
 		},
@@ -483,7 +498,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "http://api.majorpotential.me/cities_limited",
 					"protocol": "http",
@@ -496,7 +514,7 @@
 						"cities_limited"
 					]
 				},
-				"description": ""
+				"description": null
 			},
 			"response": []
 		},
@@ -584,7 +602,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "http://api.majorpotential.me/cities/31000US38540",
 					"protocol": "http",
@@ -598,7 +619,7 @@
 						"31000US38540"
 					]
 				},
-				"description": ""
+				"description": null
 			},
 			"response": []
 		},
@@ -686,7 +707,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "http://api.majorpotential.me/cities/31000US38540",
 					"protocol": "http",
@@ -700,7 +724,7 @@
 						"31000US38540"
 					]
 				},
-				"description": ""
+				"description": null
 			},
 			"response": []
 		},
@@ -780,7 +804,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "http://api.majorpotential.me/majors",
 					"protocol": "http",
@@ -793,7 +820,7 @@
 						"majors"
 					]
 				},
-				"description": ""
+				"description": null
 			},
 			"response": []
 		},
@@ -845,7 +872,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "http://api.majorpotential.me/majors_limited",
 					"protocol": "http",
@@ -858,7 +888,7 @@
 						"majors_limited"
 					]
 				},
-				"description": ""
+				"description": null
 			},
 			"response": []
 		},
@@ -930,7 +960,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "http://api.majorpotential.me/majors/0101",
 					"protocol": "http",
@@ -944,7 +977,7 @@
 						"0101"
 					]
 				},
-				"description": ""
+				"description": null
 			},
 			"response": []
 		},
@@ -1016,7 +1049,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "http://api.majorpotential.me/majors/0101",
 					"protocol": "http",
@@ -1030,7 +1066,7 @@
 						"0101"
 					]
 				},
-				"description": ""
+				"description": null
 			},
 			"response": []
 		},
@@ -1102,7 +1138,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "http://api.majorpotential.me/majors/0101",
 					"protocol": "http",
@@ -1114,6 +1153,2120 @@
 					"path": [
 						"majors",
 						"0101"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "Sort Universities by tutition sort (Asc)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ff5663ac-6e53-489f-9f5a-37501b5d47ad",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var uni_list = response.records;",
+							"",
+							"var total_uni = response.totalCount;",
+							"",
+							"var first_uni = uni_list[0];",
+							"",
+							"var second_uni = uni_list[1];",
+							"",
+							"var last_uni = uni_list[total_uni - 1];",
+							"",
+							"// ensure the first university exits",
+							"tests[\"The first university exists\"] = first_uni !== null;",
+							"",
+							"// ensure the last university exits ",
+							"tests[\"The last university exists\"] = last_uni !== null;",
+							"",
+							"// ensure the university data contains name",
+							"tests[\"University data contains name\"] = first_uni.name !== null;",
+							"",
+							"// ensure the university data contains city",
+							"tests[\"University data contains city\"] = first_uni.city !== null;",
+							"",
+							"// ensure the university data contains image_link",
+							"tests[\"University data contains image_link\"] = first_uni.image_link !== null;",
+							"",
+							"// ensure the university data contains city_id",
+							"tests[\"University data contains city_id\"] = first_uni.city_id !== null;",
+							"",
+							"// ensure the university data contains enrolled_men",
+							"tests[\"University data contains enrolled_men\"] = first_uni.enrolled_men !== null;",
+							"",
+							"// ensure the university data contains enrolled_women",
+							"tests[\"University data contains enrolled_women\"] = first_uni.enrolled_women !== null;",
+							"",
+							"// ensure the university data contains id",
+							"tests[\"University data contains id\"] = first_uni.id !== null;",
+							"",
+							"// ensure the university data contains id",
+							"tests[\"University data contains state\"] = first_uni.state !== null;",
+							"",
+							"// ensure the university data contains website",
+							"tests[\"University data contains website\"] = first_uni.website !== null;",
+							"",
+							"// ensure the university data contains uni_type",
+							"tests[\"University data contains uni_type\"] = first_uni.uni_type !== null;",
+							"",
+							"// ensure the university data contains state_tuition",
+							"tests[\"University data contains state_tuition\"] = first_uni.state_tuition !== null;",
+							"",
+							"// ensure that second university is less than the first university tuition",
+							"tests[\"First Uni tuition is less than second uni\"] = first_uni.state_tuition <= second_uni.state_tuition;",
+							"",
+							"// ensure that first university is less than the last university tuition ",
+							"tests[\"First Uni tuition is less than last uni\"] = first_uni.state_tuition < last_uni.state_tuition;",
+							"",
+							"// ensure the university data contains oos_tuition",
+							"tests[\"University data contains oos_tuition\"] = first_uni.oos_tuition !== null;",
+							"",
+							"// ensure the university data contains demographics_asian",
+							"tests[\"University data contains demographics_asian\"] = first_uni.demographics_asian !== null;",
+							"",
+							"// ensure the university data contains demographics_black",
+							"tests[\"University data contains demographics_black\"] = first_uni.demographics_black !== null;",
+							"",
+							"// ensure the university data contains survey_year",
+							"tests[\"University data contains survey_year\"] = first_uni.survey_year !== null;",
+							"",
+							"// ensure the university data contains top_majors",
+							"tests[\"University data contains top_majors\"] = first_uni.top_majors !== null;",
+							"majors = first_uni.top_majors;",
+							"",
+							"// ensure the university data contains 5 top_majors",
+							"tests[\"University data contains 5 top_majors\"] = Object.keys(majors).length === 5;",
+							"",
+							"// ensure the university data contains latitude",
+							"tests[\"University data contains latitude\"] = first_uni.latitude !== null;",
+							"",
+							"// ensure the university data contains longitude",
+							"tests[\"University data contains longitude\"] = first_uni.longitude !== null;",
+							"",
+							"",
+							"",
+							"",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/universities?sort_tut=Asc",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"universities"
+					],
+					"query": [
+						{
+							"key": "sort_tut",
+							"value": "Asc",
+							"equals": true
+						}
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "Sort Universities by tuition (Desc)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "83402fc1-b7bc-4378-8422-f386db7561ad",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var uni_list = response.records;",
+							"",
+							"var total_uni = response.totalCount;",
+							"",
+							"var first_uni = uni_list[0];",
+							"",
+							"var second_uni = uni_list[1];",
+							"",
+							"var last_uni = uni_list[total_uni - 1];",
+							"",
+							"// ensure the first university exits",
+							"tests[\"The first university exists\"] = first_uni !== null;",
+							"",
+							"// ensure the last university exits ",
+							"tests[\"The last university exists\"] = last_uni !== null;",
+							"",
+							"// ensure the second university exits",
+							"tests[\"The second university exists\"] = second_uni !== null;",
+							"",
+							"// ensure the university data contains state_tuition",
+							"tests[\"University data contains state_tuition\"] = first_uni.state_tuition !== null;",
+							"",
+							"// ensure that second university is greater than the first university tuition",
+							"tests[\"First Uni tuition is greater than second uni\"] = first_uni.state_tuition >= second_uni.state_tuition;",
+							"",
+							"// ensure that first university is greater than the last university tuition ",
+							"tests[\"First Uni tuition is greater than last uni\"] = first_uni.state_tuition > last_uni.state_tuition;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/universities?sort_tut=Desc",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"universities"
+					],
+					"query": [
+						{
+							"key": "sort_tut",
+							"value": "Desc",
+							"equals": true
+						}
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "Sort Universities by name (Asc)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6e2b2216-b035-4531-85ca-b005769ee641",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var uni_list = response.records;",
+							"",
+							"var total_uni = response.totalCount;",
+							"",
+							"var first_uni = uni_list[0];",
+							"",
+							"var second_uni = uni_list[1];",
+							"",
+							"var last_uni = uni_list[total_uni - 1];",
+							"",
+							"// ensure the first university exits",
+							"tests[\"The first university exists\"] = first_uni !== null;",
+							"",
+							"// ensure the last university exits ",
+							"tests[\"The last university exists\"] = last_uni !== null;",
+							"",
+							"// ensure the second university exits",
+							"tests[\"The second university exists\"] = second_uni !== null;",
+							"",
+							"// ensure that second university is less than the first university alphabetically",
+							"tests[\"First Uni name is less than second uni\"] = first_uni.name <= second_uni.name;",
+							"",
+							"// ensure that first university is less than the last university alphabetically ",
+							"tests[\"First Uni name is less than last uni\"] = first_uni.name < last_uni.name;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/universities?sort_name=Asc",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"universities"
+					],
+					"query": [
+						{
+							"key": "sort_name",
+							"value": "Asc",
+							"equals": true
+						}
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "Sort Universities by name (Desc)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0a788e82-7b73-43e9-b9d2-39ab929352a4",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var uni_list = response.records;",
+							"",
+							"var total_uni = response.totalCount;",
+							"",
+							"var first_uni = uni_list[0];",
+							"",
+							"var second_uni = uni_list[1];",
+							"",
+							"var last_uni = uni_list[total_uni - 1];",
+							"",
+							"// ensure the first university exits",
+							"tests[\"The first university exists\"] = first_uni !== null;",
+							"",
+							"// ensure the last university exits ",
+							"tests[\"The last university exists\"] = last_uni !== null;",
+							"",
+							"// ensure the second university exits",
+							"tests[\"The second university exists\"] = second_uni !== null;",
+							"",
+							"// ensure that second university is greater than the first university alphabetically",
+							"tests[\"First Uni name is greater than second uni\"] = first_uni.name >= second_uni.name;",
+							"",
+							"// ensure that first university is greater than the last university alphabetically ",
+							"tests[\"First Uni name is greater than last uni\"] = first_uni.name > last_uni.name;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/universities?sort_name=Desc",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"universities"
+					],
+					"query": [
+						{
+							"key": "sort_name",
+							"value": "Desc",
+							"equals": true
+						}
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "Filter Universites by type (private)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e1445e6b-0c2d-4ba1-89b9-44aef5c28832",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var total_uni = response.totalCount;",
+							"",
+							"// ensure that the responseBody contains results that are private",
+							"tests[\"Universities are private\"] = responseBody.has(\"private\");",
+							"",
+							"// ensure that the call returns all private universities",
+							"tests[\"Total Private Universities count\"] = total_uni === 1850;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/universities?type=private",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"universities"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "private",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Filter Universities by type (public)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2fb2493c-9dad-404a-9f8d-ad6a32560de0",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var total_uni = response.totalCount;",
+							"",
+							"// ensure that the responseBody contains results that are public",
+							"tests[\"Universities are public\"] = responseBody.has(\"public\");",
+							"",
+							"// ensure that the call returns all public universities",
+							"tests[\"Total Public Universities count\"] = total_uni === 631;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/universities?type=public",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"universities"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "public",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Filter Universities by type (non profit)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "edddc5f2-9ca2-457d-95c7-c0a8a2da27bb",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var total_uni = response.totalCount;",
+							"",
+							"// ensure that the responseBody contains results that are non profit",
+							"tests[\"Universities are non profit\"] = responseBody.has(\"non profit\");",
+							"",
+							"// ensure that the call returns all public universities",
+							"tests[\"Total Non Profit Universities count\"] = total_uni === 1314;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/universities?type=non",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"universities"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "non",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Filter Universities by state (Texas)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bec9cdfb-9af3-4cde-89bd-616670cbe5aa",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var uni_list = response.records;",
+							"",
+							"var total_uni = response.totalCount;",
+							"",
+							"var first_uni = uni_list[0];",
+							"",
+							"var second_uni = uni_list[1];",
+							"",
+							"// ensure the first university exits",
+							"tests[\"The first university exists\"] = first_uni !== null;",
+							"",
+							"// ensure the second university exits",
+							"tests[\"The second university exists\"] = second_uni !== null;",
+							"",
+							"// ensure that second university is less than the first university alphabetically",
+							"tests[\"First University is in Texas\"] = first_uni.state === \"Texas\";",
+							"",
+							"// ensure that first university is less than the last university alphabetically ",
+							"tests[\"Second University is in Texas\"] = second_uni.state === \"Texas\";",
+							"",
+							"tests[\"Total Universities in Texas\"] = total_uni === 116;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/universities?state=Texas",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"universities"
+					],
+					"query": [
+						{
+							"key": "state",
+							"value": "Texas",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Filter Universities by state (TX abbreviation)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d6c27fd2-979e-4e28-af6e-3ade759ad2b5",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var uni_list = response.records;",
+							"",
+							"var total_uni = response.totalCount;",
+							"",
+							"var first_uni = uni_list[0];",
+							"",
+							"var second_uni = uni_list[1];",
+							"",
+							"// ensure the first university exits",
+							"tests[\"The first university exists\"] = first_uni !== null;",
+							"",
+							"// ensure the second university exits",
+							"tests[\"The second university exists\"] = second_uni !== null;",
+							"",
+							"// ensure that first university is in Texas",
+							"tests[\"First University is in Texas\"] = first_uni.state === \"Texas\";",
+							"",
+							"// ensure that second university is in Texas",
+							"tests[\"Second University is in Texas\"] = second_uni.state === \"Texas\";",
+							"",
+							"// ensure correct total of Texas universities",
+							"tests[\"Total Universities in Texas\"] = total_uni === 116;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/universities?state=TX",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"universities"
+					],
+					"query": [
+						{
+							"key": "state",
+							"value": "TX",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Sort and Filter (Private, Texas Universities, sorted by Tuition)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ac331b94-b485-43a6-9b98-2b78f1afe42f",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var uni_list = response.records;",
+							"",
+							"var total_uni = response.totalCount;",
+							"",
+							"var first_uni = uni_list[0];",
+							"",
+							"var second_uni = uni_list[1];",
+							"",
+							"var last_uni = uni_list[total_uni - 1];",
+							"",
+							"// ensure the first university exits",
+							"tests[\"The first university exists\"] = first_uni !== null;",
+							"",
+							"// ensure the last university exits ",
+							"tests[\"The last university exists\"] = last_uni !== null;",
+							"",
+							"// ensure the second university exits",
+							"tests[\"The second university exists\"] = second_uni !== null;",
+							"",
+							"// ensure that second university is greater than the first university tuition",
+							"tests[\"First Uni tuition is greater than second uni\"] = first_uni.state_tuition >= second_uni.state_tuition;",
+							"",
+							"// ensure that first university is greater than the last university tuition ",
+							"tests[\"First Uni tuition is greater than last uni\"] = first_uni.state_tuition > last_uni.state_tuition;",
+							"",
+							"// ensure that first university is in Texas",
+							"tests[\"First University is in Texas\"] = first_uni.state === \"Texas\";",
+							"",
+							"// ensure that second university is in Texas",
+							"tests[\"Second University is in Texas\"] = second_uni.state === \"Texas\";",
+							"",
+							"// ensure that the last university is in Texas",
+							"tests[\"Last University is in Texas\"] = last_uni.state === \"Texas\";",
+							"",
+							"// ensure that the responseBody contains results that are private",
+							"tests[\"Universities are private\"] = responseBody.has(\"private\");",
+							"",
+							"tests[\"Total Private Universities in Texas\"] = total_uni === 73;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/universities?state=Texas&type=private&sort_tut=Desc",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"universities"
+					],
+					"query": [
+						{
+							"key": "state",
+							"value": "Texas",
+							"equals": true
+						},
+						{
+							"key": "type",
+							"value": "private",
+							"equals": true
+						},
+						{
+							"key": "sort_tut",
+							"value": "Desc",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Sort and Filter (Public, Alabama Universities, Sorted by Name)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4e0f7c1d-ff2f-4fd3-85c8-a4140917c538",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var uni_list = response.records;",
+							"",
+							"var total_uni = response.totalCount;",
+							"",
+							"var first_uni = uni_list[0];",
+							"",
+							"var second_uni = uni_list[1];",
+							"",
+							"var last_uni = uni_list[total_uni - 1];",
+							"",
+							"// ensure the first university exits",
+							"tests[\"The first university exists\"] = first_uni !== null;",
+							"",
+							"// ensure the last university exits ",
+							"tests[\"The last university exists\"] = last_uni !== null;",
+							"",
+							"// ensure the second university exits",
+							"tests[\"The second university exists\"] = second_uni !== null;",
+							"",
+							"// ensure that second university is greater than the first university alphabetically",
+							"tests[\"First Uni name is greater than second uni\"] = first_uni.name >= second_uni.name;",
+							"",
+							"// ensure that first university is greater than the last university alphabetically ",
+							"tests[\"First Uni name is greater than last uni\"] = first_uni.name > last_uni.name;",
+							"",
+							"// ensure that first university is in Alabama",
+							"tests[\"First University is in Alabama\"] = first_uni.state === \"Alabama\";",
+							"",
+							"// ensure that second university is in Alabama",
+							"tests[\"Second University is in Alabama\"] = second_uni.state === \"Alabama\";",
+							"",
+							"// ensure that the last university is in Alabama",
+							"tests[\"Last University is in Alabama\"] = last_uni.state === \"Alabama\";",
+							"",
+							"// ensure that the responseBody contains results that are public",
+							"tests[\"Universities are public\"] = responseBody.has(\"public\");",
+							"",
+							"tests[\"Total Public Universities in Alabama\"] = total_uni === 14;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/universities?state=AL&type=public&sort_name=Desc",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"universities"
+					],
+					"query": [
+						{
+							"key": "state",
+							"value": "AL",
+							"equals": true
+						},
+						{
+							"key": "type",
+							"value": "public",
+							"equals": true
+						},
+						{
+							"key": "sort_name",
+							"value": "Desc",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Sort Majors by name (Asc)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0b958d13-6b24-4f1c-898f-ffd417fda361",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var major_list = response.records;",
+							"",
+							"var total_majors = response.totalCount;",
+							"",
+							"var first_major = major_list[0];",
+							"",
+							"var second_major = major_list[1];",
+							"",
+							"var last_major = major_list[total_majors - 1];",
+							"",
+							"// ensure the first major exits",
+							"tests[\"The first major exists\"] = first_major !== null;",
+							"",
+							"// ensure the last major exits ",
+							"tests[\"The last major exists\"] = last_major !== null;",
+							"",
+							"// ensure the second major exits",
+							"tests[\"The second major exists\"] = second_major !== null;",
+							"",
+							"// ensure that second major is less than the first major alphabetically",
+							"tests[\"First major name is less than second major\"] = first_major.name <= second_major.name;",
+							"",
+							"// ensure that first major is less than the last major alphabetically ",
+							"tests[\"First major name is less than last major\"] = first_major.name < last_major.name;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/majors?sort_name=Asc",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"majors"
+					],
+					"query": [
+						{
+							"key": "sort_name",
+							"value": "Asc",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Sort Majors by name (Desc)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "51c06c28-76f7-4432-9914-ae10df7d3330",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var major_list = response.records;",
+							"",
+							"var total_majors = response.totalCount;",
+							"",
+							"var first_major = major_list[0];",
+							"",
+							"var second_major = major_list[1];",
+							"",
+							"var last_major = major_list[total_majors - 1];",
+							"",
+							"// ensure the first major exits",
+							"tests[\"The first major exists\"] = first_major !== null;",
+							"",
+							"// ensure the last major exits ",
+							"tests[\"The last major exists\"] = last_major !== null;",
+							"",
+							"// ensure the second major exits",
+							"tests[\"The second major exists\"] = second_major !== null;",
+							"",
+							"// ensure that second major is greater than the first major alphabetically",
+							"tests[\"First major name is greater than second major\"] = first_major.name >= second_major.name;",
+							"",
+							"// ensure that first major is greater than the last major alphabetically ",
+							"tests[\"First major name is greater than last major\"] = first_major.name > last_major.name;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/majors?sort_name=Desc",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"majors"
+					],
+					"query": [
+						{
+							"key": "sort_name",
+							"value": "Desc",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Sort Majors by wage (Asc)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "85e6be39-2339-49b2-b62a-183b0ad4b4e3",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var major_list = response.records;",
+							"",
+							"var total_majors = response.totalCount;",
+							"",
+							"var first_major = major_list[0];",
+							"",
+							"var second_major = major_list[1];",
+							"",
+							"var last_major = major_list[total_majors - 1];",
+							"",
+							"// ensure the first major exits",
+							"tests[\"The first major exists\"] = first_major !== null;",
+							"",
+							"// ensure the last major exits ",
+							"tests[\"The last major exists\"] = last_major !== null;",
+							"",
+							"// ensure the second major exits",
+							"tests[\"The second major exists\"] = second_major !== null;",
+							"",
+							"// ensure that second major is less than the first major for average wage",
+							"tests[\"First major average wage is less than second major\"] = first_major.average_wage <= second_major.average_wage;",
+							"",
+							"// ensure that first major is less than the last major for average wage",
+							"tests[\"First major average wage is less than last major\"] = first_major.average_wage < last_major.average_wage;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/majors?sort_wage=Asc",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"majors"
+					],
+					"query": [
+						{
+							"key": "sort_wage",
+							"value": "Asc",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Sort Majors by wage (Desc)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2d3eeb70-e7e4-4ff0-a369-2cf2d7b19be9",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var major_list = response.records;",
+							"",
+							"var total_majors = response.totalCount;",
+							"",
+							"var first_major = major_list[0];",
+							"",
+							"var second_major = major_list[1];",
+							"",
+							"var last_major = major_list[total_majors - 1];",
+							"",
+							"// ensure the first major exits",
+							"tests[\"The first major exists\"] = first_major !== null;",
+							"",
+							"// ensure the last major exits ",
+							"tests[\"The last major exists\"] = last_major !== null;",
+							"",
+							"// ensure the second major exits",
+							"tests[\"The second major exists\"] = second_major !== null;",
+							"",
+							"// ensure that second major is greater than the first major for average wage",
+							"tests[\"First major average wage is greater than second major\"] = first_major.average_wage >= second_major.average_wage;",
+							"",
+							"// ensure that first major is greater than the last major for average wage",
+							"tests[\"First major average wage is greater than last major\"] = first_major.average_wage > last_major.average_wage;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/majors?sort_wage=Desc",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"majors"
+					],
+					"query": [
+						{
+							"key": "sort_wage",
+							"value": "Desc",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Sort Majors by workforce (Asc)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d01986ab-0fb6-460a-9261-fb942f3a9fe6",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var major_list = response.records;",
+							"",
+							"var total_majors = response.totalCount;",
+							"",
+							"var first_major = major_list[0];",
+							"",
+							"var second_major = major_list[1];",
+							"",
+							"var last_major = major_list[total_majors - 1];",
+							"",
+							"// ensure the first major exits",
+							"tests[\"The first major exists\"] = first_major !== null;",
+							"",
+							"// ensure the last major exits ",
+							"tests[\"The last major exists\"] = last_major !== null;",
+							"",
+							"// ensure the second major exits",
+							"tests[\"The second major exists\"] = second_major !== null;",
+							"",
+							"// ensure that second major is less than the first major for total workforce size",
+							"tests[\"First major workforce is less than second major\"] = first_major.total_people_in_work_foce <= second_major.total_people_in_work_foce;",
+							"",
+							"// ensure that first major is less than the last major for total workforce size",
+							"tests[\"First major workforce is less than last major\"] = first_major.total_people_in_work_foce < last_major.total_people_in_work_foce;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/majors?sort_work=Asc",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"majors"
+					],
+					"query": [
+						{
+							"key": "sort_work",
+							"value": "Asc",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Sort Majors by workforce (Desc)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ac0412d1-428b-48e1-bae5-d6e2d3db4368",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var major_list = response.records;",
+							"",
+							"var total_majors = response.totalCount;",
+							"",
+							"var first_major = major_list[0];",
+							"",
+							"var second_major = major_list[1];",
+							"",
+							"var last_major = major_list[total_majors - 1];",
+							"",
+							"// ensure the first major exits",
+							"tests[\"The first major exists\"] = first_major !== null;",
+							"",
+							"// ensure the last major exits ",
+							"tests[\"The last major exists\"] = last_major !== null;",
+							"",
+							"// ensure the second major exits",
+							"tests[\"The second major exists\"] = second_major !== null;",
+							"",
+							"// ensure that second major is greater than the first major for total workforce size",
+							"tests[\"First major workforce is greater than second major\"] = first_major.total_people_in_work_foce >= second_major.total_people_in_work_foce;",
+							"",
+							"// ensure that first major is greater than the last major for total workforce size",
+							"tests[\"First major workforce is greater than last major\"] = first_major.total_people_in_work_foce > last_major.total_people_in_work_foce;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/majors?sort_work=Desc",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"majors"
+					],
+					"query": [
+						{
+							"key": "sort_work",
+							"value": "Desc",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Filter majors by stem (yes)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7ef2e3e5-b42f-4cf7-adf2-837cd2a71fa2",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var major_list = response.records;",
+							"",
+							"var total_majors = response.totalCount;",
+							"",
+							"var first_major = major_list[0];",
+							"",
+							"var second_major = major_list[1];",
+							"",
+							"var last_major = major_list[total_majors - 1];",
+							"",
+							"// ensure the first major exits",
+							"tests[\"The first major exists\"] = first_major !== null;",
+							"",
+							"// ensure the last major exits ",
+							"tests[\"The last major exists\"] = last_major !== null;",
+							"",
+							"// ensure the second major exits",
+							"tests[\"The second major exists\"] = second_major !== null;",
+							"",
+							"// ensure that the major is in the stem field",
+							"tests[\"First major is in stem\"] = first_major.is_stem >= 0;",
+							"",
+							"// ensure that the major is in the stem field",
+							"tests[\"Second major is in stem\"] = second_major.is_stem >= 0;",
+							"",
+							"// ensure that the major is in the stem field",
+							"tests[\"Last major is in stem\"] = last_major.is_stem >= 0;",
+							"",
+							"// ensure correct total of stem majors",
+							"tests[\"Correct total of stem majors\"] = total_majors === 88;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/majors?is_stem=yes",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"majors"
+					],
+					"query": [
+						{
+							"key": "is_stem",
+							"value": "yes",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Filter majors by stem (no)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cad6e41f-d071-4874-873e-b95f33bcd930",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var major_list = response.records;",
+							"",
+							"var total_majors = response.totalCount;",
+							"",
+							"var first_major = major_list[0];",
+							"",
+							"var second_major = major_list[1];",
+							"",
+							"var last_major = major_list[total_majors - 1];",
+							"",
+							"// ensure the first major exits",
+							"tests[\"The first major exists\"] = first_major !== null;",
+							"",
+							"// ensure the last major exits ",
+							"tests[\"The last major exists\"] = last_major !== null;",
+							"",
+							"// ensure the second major exits",
+							"tests[\"The second major exists\"] = second_major !== null;",
+							"",
+							"// ensure that the major is not in the stem field",
+							"tests[\"First major is not in stem\"] = first_major.is_stem === 0;",
+							"",
+							"// ensure that the major is not in the stem field",
+							"tests[\"Second major is not in stem\"] = second_major.is_stem === 0;",
+							"",
+							"// ensure that the major is not in the stem field",
+							"tests[\"Last major is not in stem\"] = last_major.is_stem === 0;",
+							"",
+							"// ensure correct total of non-stem majors",
+							"tests[\"Correct total of non-stem majors\"] = total_majors === 134;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/majors?is_stem=no",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"majors"
+					],
+					"query": [
+						{
+							"key": "is_stem",
+							"value": "no",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Sort and Filter (Stem Majors by Name Descending)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9168dcdb-03b7-464c-aea8-190dedfb47d1",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var major_list = response.records;",
+							"",
+							"var total_majors = response.totalCount;",
+							"",
+							"var first_major = major_list[0];",
+							"",
+							"var second_major = major_list[1];",
+							"",
+							"var last_major = major_list[total_majors - 1];",
+							"",
+							"// ensure the first major exits",
+							"tests[\"The first major exists\"] = first_major !== null;",
+							"",
+							"// ensure the last major exits ",
+							"tests[\"The last major exists\"] = last_major !== null;",
+							"",
+							"// ensure the second major exits",
+							"tests[\"The second major exists\"] = second_major !== null;",
+							"",
+							"// ensure that second major is greater than the first major alphabetically",
+							"tests[\"First major name is greater than second major\"] = first_major.name >= second_major.name;",
+							"",
+							"// ensure that first major is greater than the last major alphabetically ",
+							"tests[\"First major name is greater than last major\"] = first_major.name > last_major.name;",
+							"",
+							"// ensure that the major is in the stem field",
+							"tests[\"First major is in stem\"] = first_major.is_stem >= 0;",
+							"",
+							"// ensure that the major is in the stem field",
+							"tests[\"Second major is in stem\"] = second_major.is_stem >= 0;",
+							"",
+							"// ensure that the major is in the stem field",
+							"tests[\"Last major is in stem\"] = last_major.is_stem >= 0;",
+							"",
+							"// ensure correct total of stem majors",
+							"tests[\"Correct total of stem majors\"] = total_majors === 88;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/majors?is_stem=yes&sort_name=Desc",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"majors"
+					],
+					"query": [
+						{
+							"key": "is_stem",
+							"value": "yes",
+							"equals": true
+						},
+						{
+							"key": "sort_name",
+							"value": "Desc",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Sort and Filter (Non stem majors by Wage desc)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a8a0293a-f78c-4fe4-bc3d-1b8dcc6e15db",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var major_list = response.records;",
+							"",
+							"var total_majors = response.totalCount;",
+							"",
+							"var first_major = major_list[0];",
+							"",
+							"var second_major = major_list[1];",
+							"",
+							"var last_major = major_list[total_majors - 1];",
+							"",
+							"// ensure the first major exits",
+							"tests[\"The first major exists\"] = first_major !== null;",
+							"",
+							"// ensure the last major exits ",
+							"tests[\"The last major exists\"] = last_major !== null;",
+							"",
+							"// ensure the second major exits",
+							"tests[\"The second major exists\"] = second_major !== null;",
+							"",
+							"// ensure that second major is greater than the first major for average wage",
+							"tests[\"First major average wage is greater than second major\"] = first_major.average_wage >= second_major.average_wage;",
+							"",
+							"// ensure that first major is greater than the last major for average wage",
+							"tests[\"First major average wage is greater than last major\"] = first_major.average_wage > last_major.average_wage;",
+							"",
+							"// ensure that the major is not in the stem field",
+							"tests[\"First major is not in stem\"] = first_major.is_stem === 0;",
+							"",
+							"// ensure that the major is not in the stem field",
+							"tests[\"Second major is not in stem\"] = second_major.is_stem === 0;",
+							"",
+							"// ensure that the major is not in the stem field",
+							"tests[\"Last major is not in stem\"] = last_major.is_stem === 0;",
+							"",
+							"// ensure correct total of non-stem majors",
+							"tests[\"Correct total of non-stem majors\"] = total_majors === 133;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/majors?is_stem=no&sort_wage=Desc",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"majors"
+					],
+					"query": [
+						{
+							"key": "is_stem",
+							"value": "no",
+							"equals": true
+						},
+						{
+							"key": "sort_wage",
+							"value": "Desc",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Sort Cities by name (Asc)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4c5b6967-5d9f-4bdd-b270-d4a60aeb8604",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var city_list = response.records;",
+							"",
+							"var total_cities = response.totalCount;",
+							"",
+							"var first_city = city_list[0];",
+							"",
+							"var second_city = city_list[1];",
+							"",
+							"var last_city = city_list[total_cities - 1];",
+							"",
+							"// ensure the first city exits",
+							"tests[\"The first city exists\"] = first_city !== null;",
+							"",
+							"// ensure the first city exits",
+							"tests[\"The second city exists\"] = second_city !== null;",
+							"",
+							"// ensure the first city exits",
+							"tests[\"The last city exists\"] = last_city !== null;",
+							"",
+							"// ensure that second major is less than the first city alphabetically",
+							"tests[\"First city name is less than second second\"] = first_city.city_name <= second_city.city_name;",
+							"",
+							"// ensure that first major is less than the last city alphabetically ",
+							"tests[\"First city name is less than last city\"] = first_city.city_name < last_city.city_name;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/cities?sort_name=Asc",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"cities"
+					],
+					"query": [
+						{
+							"key": "sort_name",
+							"value": "Asc",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Sort Cities by name (Desc)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0e18b5bb-1da0-4603-a97d-f8c0bea6f067",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var city_list = response.records;",
+							"",
+							"var total_cities = response.totalCount;",
+							"",
+							"var first_city = city_list[0];",
+							"",
+							"var second_city = city_list[1];",
+							"",
+							"var last_city = city_list[total_cities - 1];",
+							"",
+							"// ensure the first city exits",
+							"tests[\"The first city exists\"] = first_city !== null;",
+							"",
+							"// ensure the first city exits",
+							"tests[\"The second city exists\"] = second_city !== null;",
+							"",
+							"// ensure the first city exits",
+							"tests[\"The last city exists\"] = last_city !== null;",
+							"",
+							"// ensure that second city is greater than the first city alphabetically",
+							"tests[\"First city name is greater than second second\"] = first_city.city_name >= second_city.city_name;",
+							"",
+							"// ensure that first city is greaterthan the last city alphabetically ",
+							"tests[\"First city name is greater than last city\"] = first_city.city_name > last_city.city_name;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/cities?sort_name=Desc",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"cities"
+					],
+					"query": [
+						{
+							"key": "sort_name",
+							"value": "Desc",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Sort Cities by population (Asc)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1d9a15f2-2eee-41a0-8fda-94746db258b4",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var city_list = response.records;",
+							"",
+							"var total_cities = response.totalCount;",
+							"",
+							"var first_city = city_list[0];",
+							"",
+							"var second_city = city_list[1];",
+							"",
+							"var last_city = city_list[total_cities - 1];",
+							"",
+							"// ensure the first city exits",
+							"tests[\"The first city exists\"] = first_city !== null;",
+							"",
+							"// ensure the first city exits",
+							"tests[\"The second city exists\"] = second_city !== null;",
+							"",
+							"// ensure the first city exits",
+							"tests[\"The last city exists\"] = last_city !== null;",
+							"",
+							"// ensure that second city is less than the first city by population",
+							"tests[\"First city population is less than second second\"] = first_city.population_in_county <= second_city.population_in_county;",
+							"",
+							"// ensure that first city is less than the last city by population",
+							"tests[\"First city population is less than last city\"] = first_city.population_in_county < last_city.population_in_county;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/cities?sort_pop=Asc",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"cities"
+					],
+					"query": [
+						{
+							"key": "sort_pop",
+							"value": "Asc",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Sort Cities by population (Desc)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "33a47448-17fd-4986-bdf7-92a244c37faf",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var city_list = response.records;",
+							"",
+							"var total_cities = response.totalCount;",
+							"",
+							"var first_city = city_list[0];",
+							"",
+							"var second_city = city_list[1];",
+							"",
+							"var last_city = city_list[total_cities - 1];",
+							"",
+							"// ensure the first city exits",
+							"tests[\"The first city exists\"] = first_city !== null;",
+							"",
+							"// ensure the first city exits",
+							"tests[\"The second city exists\"] = second_city !== null;",
+							"",
+							"// ensure the first city exits",
+							"tests[\"The last city exists\"] = last_city !== null;",
+							"",
+							"// ensure that second city is greater than the first city by population",
+							"tests[\"First city population is greater than second second\"] = first_city.population_in_county >= second_city.population_in_county;",
+							"",
+							"// ensure that first city is greater than the last city by population",
+							"tests[\"First city name is greater than last city\"] = first_city.population_in_county > last_city.population_in_county;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/cities?sort_pop=Desc",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"cities"
+					],
+					"query": [
+						{
+							"key": "sort_pop",
+							"value": "Desc",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Filter Cities by State (TX)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6f574e7f-48f7-4aeb-b089-31897f479ce1",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var total_city = response.totalCount;",
+							"",
+							"// ensure that the responseBody contains results that are TX",
+							"tests[\"Cities are in Texas\"] = responseBody.has(\"TX\");",
+							"",
+							"// ensure that the call returns all Texas cities",
+							"tests[\"Total Cites in Texas\"] = total_city === 34;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/cities?state=TX",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"cities"
+					],
+					"query": [
+						{
+							"key": "state",
+							"value": "TX",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Sort and Filter (Texas Cities by Name Desc)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "45a7d545-0c05-4d41-92ae-bdfb77de6715",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var city_list = response.records;",
+							"",
+							"var total_cities = response.totalCount;",
+							"",
+							"var first_city = city_list[0];",
+							"",
+							"var second_city = city_list[1];",
+							"",
+							"var last_city = city_list[total_cities - 1];",
+							"",
+							"// ensure the first city exits",
+							"tests[\"The first city exists\"] = first_city !== null;",
+							"",
+							"// ensure the first city exits",
+							"tests[\"The second city exists\"] = second_city !== null;",
+							"",
+							"// ensure the first city exits",
+							"tests[\"The last city exists\"] = last_city !== null;",
+							"",
+							"// ensure that second city is greater than the first city alphabetically",
+							"tests[\"First city name is greater than second second\"] = first_city.city_name >= second_city.city_name;",
+							"",
+							"// ensure that first city is greaterthan the last city alphabetically ",
+							"tests[\"First city name is greater than last city\"] = first_city.city_name > last_city.city_name;",
+							"",
+							"",
+							"// ensure that the responseBody contains results that are TX",
+							"tests[\"Cities are in Texas\"] = responseBody.has(\"TX\");",
+							"",
+							"// ensure that the call returns all Texas cities",
+							"tests[\"Total Cites in Texas\"] = total_cities === 34;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/cities?state=TX&sort_name=Desc",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"cities"
+					],
+					"query": [
+						{
+							"key": "state",
+							"value": "TX",
+							"equals": true
+						},
+						{
+							"key": "sort_name",
+							"value": "Desc",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Sort and Filter (Alabama Cities by Population Asc)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "577c2428-b85c-4423-bcab-d35c86c03f64",
+						"type": "text/javascript",
+						"exec": [
+							"// ensure healthy response code",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"// parse the response object",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"var city_list = response.records;",
+							"",
+							"var total_cities = response.totalCount;",
+							"",
+							"var first_city = city_list[0];",
+							"",
+							"var second_city = city_list[1];",
+							"",
+							"var last_city = city_list[total_cities - 1];",
+							"",
+							"// ensure the first city exits",
+							"tests[\"The first city exists\"] = first_city !== null;",
+							"",
+							"// ensure the first city exits",
+							"tests[\"The second city exists\"] = second_city !== null;",
+							"",
+							"// ensure the first city exits",
+							"tests[\"The last city exists\"] = last_city !== null;",
+							"",
+							"// ensure that second city is less than the first city by population",
+							"tests[\"First city population is less than second second\"] = first_city.population_in_county <= second_city.population_in_county;",
+							"",
+							"// ensure that first city is less than the last city by population",
+							"tests[\"First city population is less than last city\"] = first_city.population_in_county < last_city.population_in_county;",
+							"",
+							"// ensure that the responseBody contains results that are AL",
+							"tests[\"Cities are in Alabama\"] = responseBody.has(\"AL\");",
+							"",
+							"// ensure that the call returns all Alabama cities",
+							"tests[\"Total Cites in Alabama\"] = total_cities === 13;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.majorpotential.me/cities?state=AL&sort_pop=Asc",
+					"protocol": "http",
+					"host": [
+						"api",
+						"majorpotential",
+						"me"
+					],
+					"path": [
+						"cities"
+					],
+					"query": [
+						{
+							"key": "state",
+							"value": "AL",
+							"equals": true
+						},
+						{
+							"key": "sort_pop",
+							"value": "Asc",
+							"equals": true
+						}
 					]
 				},
 				"description": ""

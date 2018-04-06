@@ -1,56 +1,158 @@
 [![Build Status](https://travis-ci.org/theworkingmen/idb.svg?branch=master)](https://travis-ci.org/theworkingmen/idb)
 
-MajorPotential
+# MajorPotential
 
-Team:
+A website that links universities, cities where the universities are located, 
+and popular majors offered at most universities.
 
+## The Team
+```
 Abel Tesfaye,
-
 Mitchell Traylor,
-
 Christian Onuogu,
-
 Sungsup Lee,
+Neal Friesenhahn
+```
 
-Neal Friesenhahn,
+## Links
+```
+The Website - http://majorpotential.me
+API url -  http://api.majorpotential.me
+API Doc - https://theworkingmen.gitbooks.io/api
+Report - https://theworkingmen.gitbooks.io/report/
+```
 
+## Getting Started
 
-A website that links universities, the cities where the universities are located, 
-and job opportunities in cities for graduates in certain majors.
+Clone the repo by using 
+```
+git clone https://github.com/theworkingmen/idb/
+```
 
-Website url - http://majorpotential.me/about
+The app contains two sections. 
+The frontend code located at app/frontend, and the backend code located at app/backend.
 
-API url -  http://api.majorpotential.me/about
+### Prerequisites
 
-API Doc - https://www.gitbook.com/book/theworkingmen/api/details
+Python
+```
+Check to see if Python is already installed:
+$ python --version
 
-Report - https://theworkingmen.gitbooks.io/report/content/
+and install it using 
+$ sudo apt-get install python3
 
-Tools:
-Amazon Web Services (AWS) -  Elatic Beanstalk framework.
+install pip
+$ sudo apt-get install python-pip
 
-AWS Relational Database Service (RDS) - used to host our server's database.
+add all the python dependencies required by
+$ pip install -r app/backend/Database/requirements.txt
+```
 
-Slack - Used primarily for team communication, but also for coordinating tasks and meeting times.
+Node.js
+```
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
 
-React Bootstrap - Used for a front-end CSS framework.
+We are using the create-react-app for the front-end.
+```
+Learn more about the create-react-app here,
+* [Create-react-app](https://reactjs.org/docs/add-react-to-a-new-app.html)
+```
 
-Flask - Used for a back-end Python framework.
+### Running the backend server locally
 
-React - Used for developing the UI for our website.
+```
+$ python3 app/backend/Database/application.py
+```
 
-Travis-CI - Used for continuous integration, to build and test our site with each change made to our code repository.
+### Running the front-end locally
 
-Postman - It was used to design and test our API.
+```
+$ cd app/frontend
+$ npm start
+```
 
-Selenium - Testing framework for our GUI.
+## Running the tests
 
-Mocha - Testing framework for the front-end javascript.
+API Tests
+```
+$ newman run tests/Postman.json
+```
 
-SQLAlchemy - To populate and Query our database. It is an ORM framewor
+Backend Tests
+```
+$ python3 app/backend/tests.py
+```
 
+GUI Acceptance tests
+```
+$ python3 app/frontend/guitests.py
+```
 
+Mocha javascript tests
+```
+$ cd frontend; npm i .; npm run test
+```
+Read the project report for more information about the content of the tests. 
 
+## Deployment
+* [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/) - Elatic Beanstalk framework.
 
+Install the EB CLI
+```
+$ pip install awsebcli --upgrade --user
 
+Note - more steps might be needed for installing awsebcli for different OSs. Consult the AWS documentation for more info.
+```
 
+Deploy the api
+```
+$ cd app/backend/Database
+$ eb init
+$ eb create
+
+eb command should be installed when installing EB CLI
+```
+
+Deploy the react node.js site
+```
+$ cd app/frontend
+$ eb init
+$ eb create
+
+eb command should be installed when installing EB CLI
+```
+
+## Tools Used
+
+* [Amazon Web Services](https://aws.amazon.com/elasticbeanstalk/) - Elatic Beanstalk framework.
+* [AWS Relational Database Service (RDS)](https://aws.amazon.com/rds/) - used to host our server's database.
+* [React](https://reactjs.org) - Used for developing the UI for our website.
+* [React Bootstrap](https://react-bootstrap.github.io) - Used for a front-end CSS framework.
+* [Reactstrap](https://reactstrap.github.io) - Used for a front-end CSS framework.
+* [Flask](http://flask.pocoo.org) - Used for a back-end Python framework.
+* [SQLAlchemy](https://www.sqlalchemy.org) - It is an ORM framework used to populate and Query our database.
+* [Travis-CI](https://travis-ci.org) - Used for continuous integration, to build and test our site with each change made to our code repository.
+* [Slack](https://slack.com) - Used primarily for team communication and file sharing.
+* [Postman](https://www.getpostman.com) - Used to design and test our API.
+* [Selenium](https://www.seleniumhq.org) - Testing framework for our GUI.
+* [Mocha](https://mochajs.org) - Testing framework for the front-end javascript.
+
+## Data Sources
+
+* [Bureau of Labor Statistics](https://www.bls.gov/developers/api_signature_v2.html)
+* [United States Census Bureau](https://www.census.gov/data/developers/data-sets/cbp-nonemp-zbp/cbp-api.html) 
+* [Department of Education](https://api.data.gov/docs/ed/)
+* [The Integrated Postsecondary Education Data System](https://nces.ed.gov/ipeds/)
+* [Data USA API](https://datausa.io/about/datasets/)
+* [Google Maps API](https://developers.google.com/maps/)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgment
+
+This project was done as part of a project for CS373-Software Engineering at the University of Texas at Austin.

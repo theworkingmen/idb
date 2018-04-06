@@ -56,8 +56,8 @@ class CollegeInstance extends Component {
           demo_4: data.demographics_white,
           gender: data.enrolled_women,
           univ_type: data.uni_type,
-          tuition_in: data.state_tuition,
-          tuition_out: data.oos_tuition,
+          tuition_in: data.state_tuition.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+          tuition_out: data.oos_tuition.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
           longitude: data.longitude,
           latitude: data.latitude,
           ready: true

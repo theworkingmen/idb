@@ -6,7 +6,40 @@
   display: flex;
   flex-direction: column;
 }
-.flex-row.row:after, 
+.flex-row.row:after,
 .flex-row.row:before {
   display: flex;
+}
+
+.spin{
+    margin-left: 400px;
+    margin-top: 450px;
+    margin-bottom: 20px;
+}
+
+.college{
+    color:black !important;
+    margin-right: 1px;
+    margin-left: 1px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    background-color: #add8e6;
+  }
+
+.city{
+ color:black !important;
+  margin-right: 1px;
+  margin-left: 1px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  background-color: #dbffd6;
+}
+
+.major{
+  color:black !important;
+  margin-right: 1px;
+  margin-left: 1px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  background-color: #f5deb3;
 }

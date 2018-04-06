@@ -12,13 +12,16 @@
     "react-bootstrap": "^0.32.1",
     "react-chartjs-2": "^2.7.0",
     "react-dom": "^16.2.0",
+    "react-highlight-words": "^0.11.0",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.1"
+    "react-scripts": "1.1.1",
+    "react-spinners": "^0.2.6",
+    "reactstrap": "^5.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "mocha --require ./testSetup.js --require isomorphic-fetch --compilers babel-core/register ./test/*test.js",
+    "test": "mocha --require ./testSetup.js --require isomorphic-fetch --compilers babel-core/register ./tests.js/*test.js",
     "eject": "react-scripts eject"
   },
   "devDependencies": {

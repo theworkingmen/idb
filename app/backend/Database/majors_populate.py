@@ -3,6 +3,8 @@ from city import City
 from major import Major
 from university import University
 import json
+import re
+
 
 def major_basic_populate():
     Base.metadata.create_all(engine)
@@ -14,13 +16,37 @@ def major_basic_populate():
         major_db = Major(major["major_id"], major["name"])
 
         major_db.add_major_data(major["wage_growth_rate"], major["image_link"],
-        major["is_stem"], major["average_wage"], major["total_degrees_awarded_in_2015"],
-        major["total_people_in_work_foce"], major["average_age_work_force"])
+        major["is_stem"], cast_int_wage(major["average_wage"]), major["total_degrees_awarded_in_2015"],
+        cast_int_workforce(major["total_people_in_work_foce"]), major["average_age_work_force"])
 
         print("Added " + major["name"])
         session.add(major_db)
         session.commit()
         session.close()
+
+def cast_int_workforce(val):
+
+    try:
+        if 'M' in val:
+            val = float(re.sub('[#$,M]', '', val))
+            val = val * 1000000
+            val = int(val)
+        else:
+            val = int(re.sub('[#$,M]', '', val))
+    except:
+        val = -1
+        pass
+
+    return val
+
+
+def cast_int_wage(val):
+    try:
+        val = int(re.sub('[#$,]', '', val))
+    except:
+        val = -1
+
+    return val
 
 def add_city_relationship():
     with open('../scrapers/majors.json', 'r') as f:

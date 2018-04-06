@@ -1,35 +1,36 @@
-.welcome{
-  background: rgba(255, 255, 255, .001);
-  position: relative;
-  color:black;
-  max-width: 1000px;
-  height: 100px;
-  margin-bottom: 25px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
+.ctext{
+    font-weight: 100%
+}
+
+.carousel-caption .cbutton{
+  font-size: 22px;
+}
+
+.carousel-caption .cheader{
+  font-size: 40px;
+  color: white;
 }
 
 .carousel {
-  max-width: 1000px;
+  height: auto;
   margin: auto;
 }
 
-.controls {
-   	position: relative;
-   	display: block;
-    max-width: 1000px;
+img {
+  max-width: 100%;
+  width: auto   9;
+  height: 775px;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
 }
 
-logo_m {
-  font-family: 'Open Sans', sans-serif;
-  color:#CECECE;
-  font-size: 62px;
-  font-weight: 800;
-  letter-spacing: -3px;
-  line-height: 1;
-  text-shadow: #000000 3px 2px 0;
-  position: relative;
-  margin-top: 40px;
-  margin-bottom: 40px;
+.carousel img {
+  min-width: 100%;
+  height: 700px;
+  max-width: none;
+}
+
+.button {
+  width: 1000px;
 }

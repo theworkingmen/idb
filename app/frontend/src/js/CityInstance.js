@@ -17,7 +17,7 @@ class CityInstance extends Component {
 
   }
 
-  componentWillMount() {
+  componentDidMount() {
     var api = "http://api.majorpotential.me/cities/";
     api += this.props.match.params.id;
     fetch(api)
@@ -26,7 +26,7 @@ class CityInstance extends Component {
     }).then(data => {
       let universities = data.universities_in_city.map((college) => {
         return(
-          <Col sm={3}> 
+          <Col sm={3}>
             <Link to={`/colleges/${college.id}`}>
               <OverlayTrigger placement="bottom" overlay={<Tooltip id ="name">{college.name}</Tooltip>}>
                 <Image  className="top5" src={college.image_link} thumbnail />
@@ -36,10 +36,35 @@ class CityInstance extends Component {
         )
       })
 
+      /* Format the population data number */
+      let population_data = data.population_in_county;
+      if (population_data === null){
+          this.setState({
+              population: "Data unavailable",
+          });
+      }
+      else{
+          this.setState({
+              population: population_data.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+          });
+      }
+
+      /* Format the population data number */
+      let median_income_data = data.median_household_income_in_county;
+      if (median_income_data === null){
+          this.setState({
+             income: "Data unavailable",
+          });
+      }
+      else{
+          this.setState({
+              income: median_income_data.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+          });
+      }
+
       this.setState({
+        image: data.city_image_link,
         name: data.city_name,
-        population: data.population_in_county,
-        income: data.median_household_income_in_county,
         unemployment: data.unemployment_in_county*100,
         universities:universities,
         major0_name: data.top_grad_majors[0].name,
@@ -117,6 +142,8 @@ class CityInstance extends Component {
                 />;
     }
 
+
+
     return (
 
       <div className="container" style={{background: "white"}}>
@@ -124,7 +151,7 @@ class CityInstance extends Component {
         {/* Name of City */}
         <div className="container">
           <Jumbotron> <center>
-            <h2> {this.state.name} </h2>
+            <h2> <a href= {this.state.image} > {this.state.name} </a></h2>
           </center></Jumbotron>
         </div>
 
@@ -139,7 +166,7 @@ class CityInstance extends Component {
           </Col>
           <Col sm={4}>
             <Thumbnail className="thumbnail">
-              <p> Income </p>
+              <p> Median Income </p>
               <h3> ${this.state.income} </h3>
             </Thumbnail>
           </Col>
@@ -175,7 +202,7 @@ class CityInstance extends Component {
                 <Grid>{this.state.universities}</Grid>
               </Col>
             </Row>
-            
+
           </center>
         </div>
 

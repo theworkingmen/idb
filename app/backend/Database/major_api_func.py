@@ -2,12 +2,49 @@ from base import Session, engine, Base
 from city import City
 from major import Major
 from university import University
+from sqlalchemy import or_
 import json
 
-def get_major():
+def get_major(sort_name, sort_wage, sort_work, stem):
     all_majors =[]
     session = Session()
-    majors = session.query(Major).all()
+    majors = session.query(Major)
+
+    if stem == 'yes' :
+        majors = session.query(Major).filter(Major.is_stem != 0)
+    elif stem == 'no' :
+        majors = session.query(Major).filter(Major.is_stem == 0)
+
+    #print("Sort name: " + sort_name + "\nSort wage: "+ sort_wage + "\nSort_work: " + sort_work + "\nis stem: " + stem)
+    #Note, for now you can only call one sort function, wage or work, and can
+    #choose the ordering.
+    cast = majors.all()
+
+    if sort_wage == 'Asc' or sort_wage == 'Desc':
+        # Null-value bug: remove all instances with "-1" wage
+        majors = majors.filter(Major.average_wage != -1)
+        if sort_wage == 'Desc':
+            # Sort by average wage, descending
+            majors = majors.order_by(Major.average_wage.desc()).all()
+        else :
+            # Sort by average wage, ascending
+            majors = majors.order_by(Major.average_wage).all()
+    elif sort_work == 'Asc' or sort_work == 'Desc':
+        # Null-value bug: remove all instances with "-1" workers
+        majors = majors.filter(Major.total_people_in_work_foce != -1)
+        if sort_work == 'Desc':
+            # Sort by size of workforce, descending
+            majors = majors.order_by(Major.total_people_in_work_foce.desc()).all()
+        else :
+            # Sort by size of workforce, ascending
+            majors = majors.order_by(Major.total_people_in_work_foce).all()
+    elif sort_name == 'Desc' :
+        # Sort by name, descending
+        majors = majors.order_by(Major.name.desc()).all()
+    else :
+        # Sort by name, ascending (default)
+        majors = majors.order_by(Major.name).all()
+
 
     print('\n### All Majors')
     for m in majors :
@@ -45,7 +82,7 @@ def single_major (major_id) :
         high_grads_cities = []
         for c in m.cities_high_graduates_2015 :
             temp_dict = {
-                'id' : c.id, 
+                'id' : c.id,
                 'city_name' : c.city_name,
                 'city_image_link' : c.city_image_link,
             }
@@ -78,10 +115,45 @@ def single_major (major_id) :
     session.close()
     return u
 
-def get_major_limited():
+def get_major_limited(sort_name, sort_wage, sort_work, stem):
     all_majors =[]
     session = Session()
-    majors = session.query(Major).all()
+    majors = session.query(Major)
+
+    if stem == 'yes' :
+        majors = session.query(Major).filter(Major.is_stem != 0)
+    elif stem == 'no' :
+        majors = session.query(Major).filter(Major.is_stem == 0)
+
+    #print("Sort name: " + sort_name + "\nSort wage: "+ sort_wage + "\nSort_work: " + sort_work + "\nis stem: " + stem)
+    #Note, for now you can only call one sort function, wage or work, and can
+    #choose the ordering.
+    cast = majors.all()
+
+    if sort_wage == 'Asc' or sort_wage == 'Desc':
+        # Null-value bug: remove all instances with "-1" wage
+        majors = majors.filter(Major.average_wage != -1)
+        if sort_wage == 'Desc':
+            # Sort by average wage, descending
+            majors = majors.order_by(Major.average_wage.desc(), Major.id).all()
+        else :
+            # Sort by average wage, ascending
+            majors = majors.order_by(Major.average_wage, Major.id).all()
+    elif sort_work == 'Asc' or sort_work == 'Desc':
+        # Null-value bug: remove all instances with "-1" workers
+        majors = majors.filter(Major.total_people_in_work_foce != -1)
+        if sort_work == 'Desc':
+            # Sort by size of workforce, descending
+            majors = majors.order_by(Major.total_people_in_work_foce.desc(), Major.id).all()
+        else :
+            # Sort by size of workforce, ascending
+            majors = majors.order_by(Major.total_people_in_work_foce, Major.id).all()
+    elif sort_name == 'Desc' :
+        # Sort by name, descending
+        majors = majors.order_by(Major.name.desc()).all()
+    else :
+        # Sort by name, ascending (default)
+        majors = majors.order_by(Major.name).all()
 
     print('\n### All Majors')
     for m in majors :
@@ -89,7 +161,8 @@ def get_major_limited():
             'id' : m.id,
             'name' : m.name,
             'image_link' : m.image_link,
-
+            'average_wage' : m.average_wage,
+            'is_stem' : m.is_stem,
         }
         all_majors.append(u)
 
@@ -97,3 +170,28 @@ def get_major_limited():
     session.close()
 
     return all_majors
+
+def search_Majors (terms):
+    all_maj =[]
+    session = Session()
+    majors = session.query(Major)
+    for t in terms :
+        # search name only
+        majors = majors.filter(or_(Major.name.ilike('%' + t + '%') \
+            )) # future thinking
+    for m in majors :
+        u = {
+
+            'id' : m.id,
+            'name' : m.name,
+            'image_link' : m.image_link,
+            'average_wage' : m.average_wage,
+            'wage growth rate' : m.wage_growth_rate,
+            'total degrees awarded' : m.total_degrees_awarded_in_2015,
+            'workforce' : m.total_people_in_work_foce
+
+        }
+        all_maj.append(u)
+    session.commit()
+    session.close()
+    return all_maj

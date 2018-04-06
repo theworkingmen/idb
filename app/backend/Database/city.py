@@ -20,7 +20,7 @@ class City(Base):
     image_description = Column(String)
     county_id = Column(String)
     county_name = Column(String)
-    unemployment_in_county = Column(Float)
+    unemployment_in_county= Column(Float)
     motor_vehicle_crash_deaths_in_county = Column(Float)
     high_school_graduation_rate_in_county = Column(Float)
     violent_crime_in_county = Column(Float)
