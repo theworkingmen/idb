@@ -11,4 +11,11 @@ describe('(Component) NavigationBar', () => {
 	const wrapper = shallow(<NavigationBar />);
     expect(wrapper).to.have.length(1);
   });
+  
+  it('should have an initial state', function () {
+    const wrapper = shallow(<NavigationBar/>);
+    expect(wrapper.state().search).to.equal("search");
+    expect(wrapper.state().redirect).to.equal(false);
+    expect(wrapper.state().value).to.equal("");
+  });
 });
