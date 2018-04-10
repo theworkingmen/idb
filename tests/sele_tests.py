@@ -18,141 +18,53 @@ import unittest
 
 class SeleTests(unittest.TestCase):
 
-    # Create and initialize a Google Chrome webdriver to run the tests.
+    # Create and initialize a webdriver to run the tests via Google Chrome.
     def initialize(self):
         self.driver = webdriver.Chrome(executable_path='chrome_driver/chromedriver.exe')
         driver = self.driver
         driver.get("http://majorpotential.me")
         self.assertTrue("<div class=\"carousel slide\">" in driver.page_source)
 
-    # Test navbar - city page
+    # Test site's city page
     def test_navbar_city(self):
         driver = self.driver
-        nav_link = driver.find_element_by_link_text("Cities")
-        nav_link.click()
-        driver.implicitly_wait(10) # Wait ten seconds for page to load
+        self.navigate(driver, "Cities")
         self.assertTrue(driver.current_url == "http://majorpotential.me/cities")
-        cards = driver.find_elements_by_class_name("thumbnail")
-        self.assertTrue(len(cards) > 0)
-        # Pick two random city cards to test.
-        self.check_two_random_cards(cards, "Population: ")
-        
-        # Tests for filtering and sorting
-        dropdown_buttons = driver.find_elements_by_class_name("btn-group")
-        dropdown_buttons[0].click()
-        test_link = driver.find_element_by_link_text("Population")
-        test_link.click()
-        self.explicit_wait('Bismarck')
-        cards = driver.find_elements_by_class_name("thumbnail")
-        self.assertTrue("Bismarck" in cards[0].get_attribute("innerHTML"))
-        dropdown_buttons = driver.find_elements_by_class_name("btn-group")
-        dropdown_buttons[1].click()
-        test_link = driver.find_element_by_link_text("Descending")
-        test_link.click()
-        self.explicit_wait('Chicago')
-        cards = driver.find_elements_by_class_name("thumbnail")
-        self.assertTrue("Chicago" in cards[0].get_attribute("innerHTML"))
-        dropdown_buttons = driver.find_elements_by_class_name("btn-group")
-        dropdown_buttons[2].click()
-        test_link = driver.find_element_by_link_text("Kentucky")
-        test_link.click()
-        self.explicit_wait('Louisville')
-        cards = driver.find_elements_by_class_name("thumbnail")
-        self.assertTrue("Louisville" in cards[0].get_attribute("innerHTML"))
-        test_link = driver.find_elements_by_class_name("btn-default")
-        test_link[4].click()
-        self.explicit_wait('Aberdeen')
-        cards = driver.find_elements_by_class_name("thumbnail")
-        self.assertTrue("Aberdeen" in cards[0].get_attribute("innerHTML"))
-        
+        self.test_cards(driver, "Population: ")
+        filter_testvals = ((0, "Population", "Bismarck"), \
+            (1, "Descending", "Chicago"), \
+            (2, "Kentucky", "Louisville"))
+        self.test_filtering_sorting(driver, filter_testvals)
+        self.reset_inner_contents(driver, 4, "Aberdeen")
 
-    # Test navbar - university page
+    # Test site's university page
     def test_navbar_university(self):
         driver = self.driver
-        nav_link = driver.find_element_by_link_text("Universities")
-        nav_link.click()
-        driver.implicitly_wait(10) # Wait ten seconds for page to load
+        self.navigate(driver, "Universities")
         self.assertTrue(driver.current_url == "http://majorpotential.me/colleges")
-        cards = driver.find_elements_by_class_name("thumbnail")
-        self.assertTrue(len(cards) > 0)
-        # Pick two random university cards to test.
-        self.check_two_random_cards(cards, "public", "private")
-        
-        # Tests for filtering and sorting
-        dropdown_buttons = driver.find_elements_by_class_name("btn-group")
-        dropdown_buttons[0].click()
-        test_link = driver.find_element_by_link_text("In-State Tuition")
-        test_link.click()
-        self.explicit_wait('Merchant Marine')
-        cards = driver.find_elements_by_class_name("thumbnail")
-        self.assertTrue("Merchant Marine Academy" in cards[0].get_attribute("innerHTML"))
-        dropdown_buttons = driver.find_elements_by_class_name("btn-group")
-        dropdown_buttons[1].click()
-        test_link = driver.find_element_by_link_text("Descending")
-        test_link.click()
-        self.explicit_wait('Samuel Merritt')
-        cards = driver.find_elements_by_class_name("thumbnail")
-        self.assertTrue("Samuel Merritt" in cards[0].get_attribute("innerHTML"))
-        dropdown_buttons = driver.find_elements_by_class_name("btn-group")
-        dropdown_buttons[2].click()
-        test_link = driver.find_element_by_link_text("Texas")
-        test_link.click()
-        self.explicit_wait('Southern Methodist')
-        cards = driver.find_elements_by_class_name("thumbnail")
-        self.assertTrue("Southern Methodist" in cards[0].get_attribute("innerHTML"))
-        dropdown_buttons = driver.find_elements_by_class_name("btn-group")
-        dropdown_buttons[3].click()
-        test_link = driver.find_element_by_link_text("Public")
-        test_link.click()
-        self.explicit_wait('at Dallas')
-        cards = driver.find_elements_by_class_name("thumbnail")
-        self.assertTrue("at Dallas" in cards[0].get_attribute("innerHTML"))
-        test_link = driver.find_elements_by_class_name("btn-default")
-        test_link[5].click()
-        self.explicit_wait('Abilene')
-        cards = driver.find_elements_by_class_name("thumbnail")
-        self.assertTrue("Abilene" in cards[0].get_attribute("innerHTML"))
+        self.test_cards(driver, "public", "private")
+        filter_testvals = ((0, "In-State Tuition", "Merchant Marine"), \
+            (1, "Descending", "Samuel Merritt"), \
+            (2, "Texas", "Southern Methodist"), \
+            (3, "Public", "at Dallas"))
+        self.test_filtering_sorting(driver, filter_testvals)
+        self.reset_inner_contents(driver, 5, "Abilene")
 
-    # Test navbar - major page
+    # Test site's major page
     def test_navbar_major(self):
         driver = self.driver
-        nav_link = driver.find_element_by_link_text("Majors")
-        nav_link.click()
-        driver.implicitly_wait(10) # Wait ten seconds for page to load
+        self.navigate(driver, "Majors")
         self.assertTrue(driver.current_url == "http://majorpotential.me/majors")
-        cards = driver.find_elements_by_class_name("thumbnail")
-        self.assertTrue(len(cards) > 0)
-        # Pick two random major cards to test.
-        self.check_two_random_cards(cards, "Average Wage: ")
-
-        # Tests for filtering and sorting
-        dropdown_buttons = driver.find_elements_by_class_name("btn-group")
-        dropdown_buttons[1].click()
-        test_link = driver.find_element_by_link_text("Descending")
-        test_link.click()
-        self.explicit_wait('Photographic')
-        cards = driver.find_elements_by_class_name("thumbnail")
-        self.assertTrue("Photographic" in cards[0].get_attribute("innerHTML"))
-        dropdown_buttons = driver.find_elements_by_class_name("btn-group")
-        dropdown_buttons[2].click()
-        test_link = driver.find_element_by_link_text("STEM")
-        test_link.click()
-        
-        self.explicit_wait('Textile')
-        cards = driver.find_elements_by_class_name("thumbnail")
-        self.assertTrue("Textile" in cards[0].get_attribute("innerHTML"))
-        test_link = driver.find_elements_by_class_name("btn-default")
-        test_link[4].click()
-        self.explicit_wait('Accounting')
-        cards = driver.find_elements_by_class_name("thumbnail")
-        self.assertTrue("Accounting" in cards[0].get_attribute("innerHTML"))
+        self.test_cards(driver, "Average Wage: ")
+        filter_testvals = ((1, "Descending", "Photographic"), \
+            (2, "STEM", "Textile"))
+        self.test_filtering_sorting(driver, filter_testvals)
+        self.reset_inner_contents(driver, 4, "Accounting")
 
     # Test navbar - about page
     def test_navbar_about(self):
         driver = self.driver
-        nav_link = driver.find_element_by_link_text("About")
-        nav_link.click()
-        driver.implicitly_wait(10) # Wait ten seconds for page to load
+        self.navigate(driver, "About")
         inner_html = driver.find_element_by_class_name("group_members").get_attribute("innerHTML")
         self.assertTrue("The Team" in inner_html)
         try :
@@ -180,13 +92,18 @@ class SeleTests(unittest.TestCase):
     # Close the driver
     def terminate(self):
         self.driver.close()
-
-    # Explicitly wait for page to load with expeced elements
-    def explicit_wait(self, expected_text):
-        driver = self.driver
-        WebDriverWait(driver, 5).until(expected_conditions. \
-            text_to_be_present_in_element((By.CLASS_NAME, 'thumbnail'), \
-            expected_text))
+        
+    # Navigate to another page from the site's navbar
+    def navigate(self, driver, link_text):
+        nav_link = driver.find_element_by_link_text(link_text)
+        nav_link.click()
+        driver.implicitly_wait(10) # Wait ten seconds for page to load
+        
+    # Test the current page, make sure it contains cards which contain the expected values
+    def test_cards(self, driver, *expected_text):
+        cards = driver.find_elements_by_class_name("thumbnail")
+        self.assertTrue(len(cards) > 0)
+        self.check_two_random_cards(cards, *expected_text)
 
     # Given a list of cards, pick two at random and verify they contain expected contents
     def check_two_random_cards(self, cards, *expected_text):
@@ -199,6 +116,37 @@ class SeleTests(unittest.TestCase):
                 found_expected = term in inner_html or found_expected
             self.assertTrue(found_expected)
 
+    # Explicitly wait for page to load with expeced elements
+    def explicit_wait(self, expected_text):
+        driver = self.driver
+        WebDriverWait(driver, 5).until(expected_conditions. \
+            text_to_be_present_in_element((By.CLASS_NAME, 'thumbnail'), \
+            expected_text))
+            
+    # Given an iterable of 3-tuples, runs filtering and sorting tests using their values
+    def test_filtering_sorting(self, driver, testvals):
+        for test in testvals :
+            self.update_inner_contents(driver, test[0], test[1], test[2])
+            
+    # Update displayed content via filtering and sorting options
+    def update_inner_contents(self, driver, button_index, link_text, expected_text):
+        dropdown_buttons = driver.find_elements_by_class_name("btn-group")
+        dropdown_buttons[button_index].click()
+        test_link = driver.find_element_by_link_text(link_text)
+        test_link.click()
+        self.explicit_wait(expected_text)
+        cards = driver.find_elements_by_class_name("thumbnail")
+        self.assertTrue(expected_text in cards[0].get_attribute("innerHTML"))
+    
+    # Reset displayed content via the reset button
+    def reset_inner_contents(self, driver, reset_index, expected_text):
+        test_link = driver.find_elements_by_class_name("btn-default")
+        test_link[reset_index].click()
+        self.explicit_wait(expected_text)
+        cards = driver.find_elements_by_class_name("thumbnail")
+        self.assertTrue(expected_text in cards[0].get_attribute("innerHTML"))
+        
+# Testing main function: initializes the test object and its webdriver, runs all tests, then terminates
 def main() :
     tester = SeleTests()
     tester.initialize()
@@ -208,7 +156,6 @@ def main() :
     tester.test_navbar_about()
     tester.test_search()
     tester.terminate()
-    print("All tests passed.")
 
 if __name__ == "__main__" :
     main()
