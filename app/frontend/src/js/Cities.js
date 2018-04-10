@@ -33,34 +33,32 @@ class Cities extends Component {
 	  else {
 		  items.push(<Pagination.Prev disabled/>);
 	  }
+	  
+	  let start = 0;
+	  let end = 0;
 	  if (Math.ceil(this.state.cities.length/20) < 10) {
-		for (let number = 1; number <= Math.ceil(this.state.cities.length/20); number++) {
-			items.push(
-				<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
-			);
-		}
+		start = 1;
+		end = Math.ceil(this.state.cities.length/20);
 	  }
 	  else if ((num - 5) < 1) {
-		for (let number = 1; number <= 10; number++) {
-			items.push(
-				<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
-			);
-		}
+		start = 1;
+		end = 10;
 	  }
 	  else if ((num + 5) > Math.ceil(this.state.cities.length/20)) {
-		for (let number = Math.ceil(this.state.cities.length/20) - 9; number <= Math.ceil(this.state.cities.length/20); number++) {
-			items.push(
-				<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
-			);
-		}
+		start = Math.ceil(this.state.cities.length/20) - 9;
+		end = Math.ceil(this.state.cities.length/20);
 	  }
 	  else  {
-		for (let number = num - 5; number < num + 5; number++) {
+		start = num - 5;
+		end = num + 6;
+	  }
+	  
+	  for (let number = start; number <= end; number++) {
 			items.push(
 				<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
 			);
-		}
 	  }
+	  
 	  if (num < Math.ceil(this.state.cities.length/20)) {
 		items.push(<Pagination.Next onClick={this.changePage.bind(this, num + 1)}/>);
 	  }
@@ -68,11 +66,6 @@ class Cities extends Component {
 		  items.push(<Pagination.Next disabled/>);
 	  }
 	  items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(this.state.cities.length/20))}/>);
-	  /*for (let number = 1; number <= Math.ceil(this.state.cities.length/20); number++) {
-		items.push(
-			<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
-		);
-	  }*/
 	  this.setState({page: num,
 					 pages: items});
 
@@ -85,38 +78,7 @@ class Cities extends Component {
 	  else {
 		  this.setState({sort: "pop"});
 	  }
-	  fetch('http://api.majorpotential.me/cities_limited?sort_'+sort+'='+this.state.order+"&state="+this.state.state)
-	  .then(results => {
-		  return results.json();
-		}).then(data => {
-			let cities = data.records.map((city) => {
-                let population_prop = city.population;
-                if (population_prop === null){
-                    population_prop = "Population: data unavailable"
-                }
-                else{
-                    population_prop = "Population: " + population_prop.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                }
-				return(<Card name={city.city_name} model='cities' domain={city.city_image_link} id={city.id} field = {population_prop} >  </Card>)
-			})
-			let active = 1;
-			let items = [];
-			if (Math.ceil(cities.length/20) > 1) {
-				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
-				items.push(<Pagination.Prev disabled/>);
-				for (let number = 1; number <= Math.min(10, Math.ceil(cities.length/20)); number++) {
-					items.push(
-						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
-					);
-				}
-				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}/>);
-				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(cities.length/20))}/>);
-			}
-			this.setState({pages: items});
-			this.setState({page: 1});
-			this.setState({cities: cities});
-            this.setState({loading: false});
-		})
+	  this.updateCities('http://api.majorpotential.me/cities_limited?sort_'+sort+'='+this.state.order+"&state="+this.state.state)
   }
 
   changeOrder(order) {
@@ -126,43 +88,16 @@ class Cities extends Component {
 	  else {
 		  this.setState({order: "Desc"});
 	  }
-	  fetch('http://api.majorpotential.me/cities_limited?sort_'+this.state.sort+'='+order+"&state="+this.state.state)
-	  .then(results => {
-		  return results.json();
-		}).then(data => {
-			let cities = data.records.map((city) => {
-                let population_prop = city.population;
-                if (population_prop === null){
-                    population_prop = "Population: data unavailable"
-                }
-                else{
-                    population_prop = "Population: " + population_prop.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                }
-				return(<Card name={city.city_name} model='cities' domain={city.city_image_link} id={city.id} field = {population_prop} >  </Card>)
-			})
-			let active = 1;
-			let items = [];
-			if (Math.ceil(cities.length/20) > 1) {
-				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
-				items.push(<Pagination.Prev disabled/>);
-				for (let number = 1; number <= Math.min(10, Math.ceil(cities.length/20)); number++) {
-					items.push(
-						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
-					);
-				}
-				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}/>);
-				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(cities.length/20))}/>);
-			}
-			this.setState({pages: items});
-			this.setState({page: 1});
-			this.setState({cities: cities});
-            this.setState({loading: false});
-		})
+	  this.updateCities('http://api.majorpotential.me/cities_limited?sort_'+this.state.sort+'='+order+"&state="+this.state.state)
   }
 
   changeState(state) {
 	  this.setState({state: state});
-	  fetch('http://api.majorpotential.me/cities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+state)
+	  this.updateCities('http://api.majorpotential.me/cities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+state)
+  }
+  
+  updateCities(link) {
+	  fetch(link)
 	  .then(results => {
 		  return results.json();
 		}).then(data => {
@@ -220,76 +155,13 @@ class Cities extends Component {
         sort: "name",
         order: "Asc",
         state: "None"
-	});
-	  fetch('http://api.majorpotential.me/cities_limited?sort_name=Asc&state=None')
-	  .then(results => {
-		  return results.json();
-		}).then(data => {
-			let cities = data.records.map((city) => {
-                let population_prop = city.population;
-                if (population_prop === null){
-                    population_prop = "Population: data unavailable"
-                }
-                else{
-                    population_prop = "Population: " + population_prop.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                }
-				return(<Card name={city.city_name} model='cities' domain={city.city_image_link} id={city.id} field = {population_prop} >  </Card>)
-			})
-			let active = 1;
-			let items = [];
-			if (Math.ceil(cities.length/20) > 1) {
-				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
-				items.push(<Pagination.Prev disabled/>);
-				for (let number = 1; number <= Math.min(10, Math.ceil(cities.length/20)); number++) {
-					items.push(
-						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
-					);
-				}
-				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}/>);
-				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(cities.length/20))}/>);
-			}
-			this.setState({pages: items});
-			this.setState({page: 1});
-			this.setState({cities: cities});
-            this.setState({loading: false});
-		})
+	  });
+	  this.updateCities('http://api.majorpotential.me/cities_limited?sort_name=Asc&state=None')
   }
 
 
   componentDidMount() {
-	  fetch('http://api.majorpotential.me/cities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+this.state.state)
-	  .then(results => {
-		  return results.json();
-		}).then(data => {
-			let cities = data.records.map((city) => {
-                let population_prop = city.population;
-                if (population_prop === null){
-                    population_prop = "Population: data unavailable"
-                }
-                else{
-                    population_prop = "Population: " + population_prop.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                }
-				return(<Card name={city.city_name} model='cities' domain={city.city_image_link} id={city.id} field = {population_prop} >  </Card>)
-			})
-			let active = 1;
-			let items = [];
-			if (Math.ceil(cities.length/20) > 1) {
-				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
-				items.push(<Pagination.Prev disabled/>);
-				for (let number = 1; number <= Math.min(10, Math.ceil(cities.length/20)); number++) {
-					items.push(
-						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
-					);
-				}
-				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}/>);
-				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(cities.length/20))}/>);
-			}
-			this.setState({pages: items});
-			this.setState({cities: cities});
-            this.setState({loading: false});
-		})
-
-
+	  this.updateCities('http://api.majorpotential.me/cities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+this.state.state)
   }
 
   render() {
