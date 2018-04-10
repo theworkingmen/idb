@@ -16,7 +16,7 @@ from random import randint
 
 import unittest
 
-class SeleTests(): #unittest.TestCase):
+class SeleTests(unittest.TestCase):
 
     # Create and initialize a Google Chrome webdriver to run the tests.
     def initialize(self):
@@ -35,61 +35,33 @@ class SeleTests(): #unittest.TestCase):
         cards = driver.find_elements_by_class_name("thumbnail")
         self.assertTrue(len(cards) > 0)
         # Pick two random city cards to test.
-        check_two_random_cards(cards, "Population: ")
-        """
-        random_card = randint(1, len(cards)) - 1
-        inner_html = cards[random_card].get_attribute("innerHTML")
-        self.assertTrue("Population: " in inner_html)
-        random_card = randint(1, len(cards)) - 1
-        inner_html = cards[random_card].get_attribute("innerHTML")
-        self.assertTrue("Population: " in inner_html)
-        """
+        self.check_two_random_cards(cards, "Population: ")
         
         # Tests for filtering and sorting
         dropdown_buttons = driver.find_elements_by_class_name("btn-group")
         dropdown_buttons[0].click()
         test_link = driver.find_element_by_link_text("Population")
         test_link.click()
-        explicit_wait('Bismarck')
-        """
-        WebDriverWait(driver, 5).until(expected_conditions. \
-            text_to_be_present_in_element((By.CLASS_NAME, 'thumbnail'), \
-            'Bismarck')) # Explicitly Wait
-        """
+        self.explicit_wait('Bismarck')
         cards = driver.find_elements_by_class_name("thumbnail")
         self.assertTrue("Bismarck" in cards[0].get_attribute("innerHTML"))
         dropdown_buttons = driver.find_elements_by_class_name("btn-group")
         dropdown_buttons[1].click()
         test_link = driver.find_element_by_link_text("Descending")
         test_link.click()
-        explicit_wait('Chicago')
-        """
-        WebDriverWait(driver, 5).until(expected_conditions. \
-            text_to_be_present_in_element((By.CLASS_NAME, 'thumbnail'), \
-            'Chicago')) # Explicitly Wait
-        """
+        self.explicit_wait('Chicago')
         cards = driver.find_elements_by_class_name("thumbnail")
         self.assertTrue("Chicago" in cards[0].get_attribute("innerHTML"))
         dropdown_buttons = driver.find_elements_by_class_name("btn-group")
         dropdown_buttons[2].click()
         test_link = driver.find_element_by_link_text("Kentucky")
         test_link.click()
-        explicit_wait('Louisville')
-        """
-        WebDriverWait(driver, 5).until(expected_conditions. \
-            text_to_be_present_in_element((By.CLASS_NAME, 'thumbnail'), \
-            'Louisville')) # Explicitly Wait
-        """
+        self.explicit_wait('Louisville')
         cards = driver.find_elements_by_class_name("thumbnail")
         self.assertTrue("Louisville" in cards[0].get_attribute("innerHTML"))
         test_link = driver.find_elements_by_class_name("btn-default")
         test_link[4].click()
-        explicit_wait('Aberdeen')
-        """
-        WebDriverWait(driver, 5).until(expected_conditions. \
-            text_to_be_present_in_element((By.CLASS_NAME, 'thumbnail'), \
-            'Aberdeen')) # Explicitly Wait
-        """
+        self.explicit_wait('Aberdeen')
         cards = driver.find_elements_by_class_name("thumbnail")
         self.assertTrue("Aberdeen" in cards[0].get_attribute("innerHTML"))
         
@@ -104,75 +76,40 @@ class SeleTests(): #unittest.TestCase):
         cards = driver.find_elements_by_class_name("thumbnail")
         self.assertTrue(len(cards) > 0)
         # Pick two random university cards to test.
-        check_two_random_cards(cards, "public", "private")
-        """
-        random_card = randint(1, len(cards)) - 1
-        inner_html = cards[random_card].get_attribute("innerHTML")
-        type_displayed = ("public" in inner_html) or ("private" in inner_html)
-        self.assertTrue(type_displayed)
-        random_card = randint(1, len(cards)) - 1
-        inner_html = cards[random_card].get_attribute("innerHTML")
-        type_displayed = ("public" in inner_html) or ("private" in inner_html)
-        self.assertTrue(type_displayed)
-        """
+        self.check_two_random_cards(cards, "public", "private")
         
         # Tests for filtering and sorting
         dropdown_buttons = driver.find_elements_by_class_name("btn-group")
         dropdown_buttons[0].click()
         test_link = driver.find_element_by_link_text("In-State Tuition")
         test_link.click()
-        explicit_wait('Merchant Marine')
-        """
-        WebDriverWait(driver, 5).until(expected_conditions. \
-            text_to_be_present_in_element((By.CLASS_NAME, 'thumbnail'), \
-            'Merchant Marine')) # Explicitly Wait
-        """
+        self.explicit_wait('Merchant Marine')
         cards = driver.find_elements_by_class_name("thumbnail")
         self.assertTrue("Merchant Marine Academy" in cards[0].get_attribute("innerHTML"))
         dropdown_buttons = driver.find_elements_by_class_name("btn-group")
         dropdown_buttons[1].click()
         test_link = driver.find_element_by_link_text("Descending")
         test_link.click()
-        explicit_wait('Samuel Merritt')
-        """
-        WebDriverWait(driver, 5).until(expected_conditions. \
-            text_to_be_present_in_element((By.CLASS_NAME, 'thumbnail'), \
-            'Samuel Merritt')) # Explicitly Wait
-        """
+        self.explicit_wait('Samuel Merritt')
         cards = driver.find_elements_by_class_name("thumbnail")
         self.assertTrue("Samuel Merritt" in cards[0].get_attribute("innerHTML"))
         dropdown_buttons = driver.find_elements_by_class_name("btn-group")
         dropdown_buttons[2].click()
         test_link = driver.find_element_by_link_text("Texas")
         test_link.click()
-        explicit_wait('Southern Methodist')
-        """
-        WebDriverWait(driver, 5).until(expected_conditions. \
-            text_to_be_present_in_element((By.CLASS_NAME, 'thumbnail'), \
-            'Southern Methodist')) # Explicitly Wait
-        """
+        self.explicit_wait('Southern Methodist')
         cards = driver.find_elements_by_class_name("thumbnail")
         self.assertTrue("Southern Methodist" in cards[0].get_attribute("innerHTML"))
         dropdown_buttons = driver.find_elements_by_class_name("btn-group")
         dropdown_buttons[3].click()
         test_link = driver.find_element_by_link_text("Public")
         test_link.click()
-        explicit_wait('at Dallas')
-        """
-        WebDriverWait(driver, 5).until(expected_conditions. \
-            text_to_be_present_in_element((By.CLASS_NAME, 'thumbnail'), \
-            'at Dallas')) # Explicitly Wait
-        """
+        self.explicit_wait('at Dallas')
         cards = driver.find_elements_by_class_name("thumbnail")
         self.assertTrue("at Dallas" in cards[0].get_attribute("innerHTML"))
         test_link = driver.find_elements_by_class_name("btn-default")
         test_link[5].click()
-        explicit_wait('Abilene')
-        """
-        WebDriverWait(driver, 5).until(expected_conditions. \
-            text_to_be_present_in_element((By.CLASS_NAME, 'thumbnail'), \
-            'Abilene')) # Explicitly Wait
-        """
+        self.explicit_wait('Abilene')
         cards = driver.find_elements_by_class_name("thumbnail")
         self.assertTrue("Abilene" in cards[0].get_attribute("innerHTML"))
 
@@ -186,27 +123,14 @@ class SeleTests(): #unittest.TestCase):
         cards = driver.find_elements_by_class_name("thumbnail")
         self.assertTrue(len(cards) > 0)
         # Pick two random major cards to test.
-        check_two_random_cards(cards, "Average Wage: ")
-        """
-        random_card = randint(1, len(cards)) - 1
-        inner_html = cards[random_card].get_attribute("innerHTML")
-        self.assertTrue("Average Wage: " in inner_html)
-        random_card = randint(1, len(cards)) - 1
-        inner_html = cards[random_card].get_attribute("innerHTML")
-        self.assertTrue("Average Wage: " in inner_html)
-        """
+        self.check_two_random_cards(cards, "Average Wage: ")
 
         # Tests for filtering and sorting
         dropdown_buttons = driver.find_elements_by_class_name("btn-group")
         dropdown_buttons[1].click()
         test_link = driver.find_element_by_link_text("Descending")
         test_link.click()
-        explicit_wait('Photographic')
-        """
-        WebDriverWait(driver, 5).until(expected_conditions. \
-            text_to_be_present_in_element((By.CLASS_NAME, 'thumbnail'), \
-            'Photographic')) # Explicitly Wait
-        """
+        self.explicit_wait('Photographic')
         cards = driver.find_elements_by_class_name("thumbnail")
         self.assertTrue("Photographic" in cards[0].get_attribute("innerHTML"))
         dropdown_buttons = driver.find_elements_by_class_name("btn-group")
@@ -214,22 +138,12 @@ class SeleTests(): #unittest.TestCase):
         test_link = driver.find_element_by_link_text("STEM")
         test_link.click()
         
-        explicit_wait('Textile')
-        """
-        WebDriverWait(driver, 5).until(expected_conditions. \
-            text_to_be_present_in_element((By.CLASS_NAME, 'thumbnail'), \
-            'Textile')) # Explicitly Wait
-        """
+        self.explicit_wait('Textile')
         cards = driver.find_elements_by_class_name("thumbnail")
         self.assertTrue("Textile" in cards[0].get_attribute("innerHTML"))
         test_link = driver.find_elements_by_class_name("btn-default")
         test_link[4].click()
-        explicit_wait('Accounting')
-        """
-        WebDriverWait(driver, 5).until(expected_conditions. \
-            text_to_be_present_in_element((By.CLASS_NAME, 'thumbnail'), \
-            'Accounting')) # Explicitly Wait
-        """
+        self.explicit_wait('Accounting')
         cards = driver.find_elements_by_class_name("thumbnail")
         self.assertTrue("Accounting" in cards[0].get_attribute("innerHTML"))
 
