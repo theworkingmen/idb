@@ -91,8 +91,6 @@ export default class About extends Component {
         totalCommits += curUserCount
       }
 
-
-
       this.setState({
         total_commits: totalCommits
       })
@@ -111,6 +109,9 @@ export default class About extends Component {
         }
         let issueJSON = JSON.parse(body)
         for (let i = 0; i < issueJSON.length; i++) {
+
+          if (members_data[String(issueJSON[i]['user']['login'])] === undefined)
+            continue;
 
           members_data[String(issueJSON[i]['user']['login'])]["issues"] += 1
         }
