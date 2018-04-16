@@ -9,6 +9,7 @@ import { RingLoader } from 'react-spinners';
 {/* Grid automatically creates new rows for additional card components. */}
 
 class Cities extends Component {
+
   constructor() {
     super();
     this.state = {
@@ -18,7 +19,8 @@ class Cities extends Component {
         loading: true,
         sort: "name",
         order: "Asc",
-        state: "None"
+        state: "None",
+        pageCount: 0
 	};
 
   }
@@ -29,6 +31,7 @@ class Cities extends Component {
   changePage(num) {
 	  let active = num;
 	  let items = [];
+
 	  items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
 	  if (num > 1) {
 		items.push(<Pagination.Prev onClick={this.changePage.bind(this, num - 1)}/>);
@@ -39,23 +42,23 @@ class Cities extends Component {
 	  
 	  let start = 0;
 	  let end = 0;
-	  let pageCount = Math.ceil(this.state.cities.length/20);
+	  
 
-	  if (pageCount < 10) {
+	  if (this.state.pageCount < 10) {
 		start = 1;
-		end = pageCount;
+		end = this.state.pageCount;
 	  }
 	  else if ((num - 5) < 1) {
 		start = 1;
 		end = 10;
 	  }
-	  else if ((num + 5) > pageCount) {
-		start = pageCount - 9;
-		end = pageCount;
+	  else if ((num + 5) > this.state.pageCount) {
+		start = this.state.pageCount - 9;
+		end = this.state.pageCount;
 	  }
 	  else  {
 		start = num - 5;
-		end = num + 6;
+		end = num + 4;
 	  }
 	  
 	  for (let number = start; number <= end; number++) {
@@ -64,13 +67,13 @@ class Cities extends Component {
 			);
 	  }
 	  
-	  if (num < Math.ceil(this.state.cities.length/20)) {
+	  if (num < this.state.pageCount) {
 		items.push(<Pagination.Next onClick={this.changePage.bind(this, num + 1)}/>);
 	  }
 	  else {
 		  items.push(<Pagination.Next disabled/>);
 	  }
-	  items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(this.state.cities.length/20))}/>);
+	  items.push(<Pagination.Last onClick={this.changePage.bind(this, this.state.pageCount)}/>);
 	  this.setState({page: num,
 					 pages: items});
 
@@ -83,7 +86,7 @@ class Cities extends Component {
 	  else {
 		  this.setState({sort: "pop"});
 	  }
-	  this.updateCities('http://api.majorpotential.me/cities_limited?sort_'+sort+'='+this.state.order+"&state="+this.state.state)
+	  this.updateData('http://api.majorpotential.me/cities_limited?sort_'+sort+'='+this.state.order+"&state="+this.state.state)
   }
 
   changeOrder(order) {
@@ -93,15 +96,15 @@ class Cities extends Component {
 	  else {
 		  this.setState({order: "Desc"});
 	  }
-	  this.updateCities('http://api.majorpotential.me/cities_limited?sort_'+this.state.sort+'='+order+"&state="+this.state.state)
+	  this.updateData('http://api.majorpotential.me/cities_limited?sort_'+this.state.sort+'='+order+"&state="+this.state.state)
   }
 
   changeState(state) {
 	  this.setState({state: state});
-	  this.updateCities('http://api.majorpotential.me/cities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+state)
+	  this.updateData('http://api.majorpotential.me/cities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+state)
   }
   
-  updateCities(link) {
+  updateData(link) {
 	  fetch(link)
 	  .then(results => {
 		  return results.json();
@@ -116,18 +119,20 @@ class Cities extends Component {
                 }
                 return(<Card name={city.city_name} model='cities' domain={city.city_image_link} id={city.id} field = {population_prop} >  </Card>)
 			})
+			this.setState({pageCount: Math.ceil(cities.length/20)});
+
 			let active = 1;
 			let items = [];
-			if (Math.ceil(cities.length/20) > 1) {
+			if (this.state.pageCount > 1) {
 				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
 				items.push(<Pagination.Prev disabled/>);
-				for (let number = 1; number <= Math.min(10, Math.ceil(cities.length/20)); number++) {
+				for (let number = 1; number <= Math.min(10, this.state.pageCount); number++) {
 					items.push(
 						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
 					);
 				}
 				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}/>);
-				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(cities.length/20))}/>);
+				items.push(<Pagination.Last onClick={this.changePage.bind(this, this.state.pageCount)}/>);
 			}
 			this.setState({pages: items});
 			this.setState({page: 1});
@@ -161,12 +166,12 @@ class Cities extends Component {
         order: "Asc",
         state: "None"
 	  });
-	  this.updateCities('http://api.majorpotential.me/cities_limited?sort_name=Asc&state=None')
+	  this.updateData('http://api.majorpotential.me/cities_limited?sort_name=Asc&state=None')
   }
 
 
   componentDidMount() {
-	  this.updateCities('http://api.majorpotential.me/cities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+this.state.state)
+	  this.updateData('http://api.majorpotential.me/cities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+this.state.state)
   }
 
   render() {
