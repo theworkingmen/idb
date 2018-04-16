@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import {Col, Thumbnail, Image, OverlayTrigger, Tooltip} from 'react-bootstrap';
+import {Col, Image, OverlayTrigger, Tooltip} from 'react-bootstrap';
 import '../css/Top5.css';
 
 

@@ -4,12 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 class Card extends Component {
-
-	constructor(props) {
-		super(props);
-
-	}
-
+	
 	/* default img src = https://goo.gl/NvPJj6 */
 
 	render() {

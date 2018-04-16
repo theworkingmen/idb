@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
-import Chart from './Chart.js';
-import {Jumbotron, Row, Col, Thumbnail, Button } from 'react-bootstrap';
+import {Jumbotron} from 'react-bootstrap';
 
   export default class notFound extends Component {
 

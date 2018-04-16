@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
-import InstanceTitle from './InstanceTitle.js';
 import Chart from './Chart.js';
-import {Jumbotron, Row, Col, Thumbnail, Button } from 'react-bootstrap';
+import {Jumbotron, Col, Thumbnail} from 'react-bootstrap';
 import notFound from './error404.js';
 import Map from './Map.js';
 import Top5 from './Top5.js';
@@ -11,7 +9,6 @@ import Top5 from './Top5.js';
 class CollegeInstance extends Component {
   constructor() {
     super();
-    let valid = true;
     this.state = {
       ready: false,
     };

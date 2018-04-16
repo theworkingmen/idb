@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import {Image, Grid, Row, Col, Thumbnail, Pagination, Button, ButtonToolbar, DropdownButton, MenuItem} from 'react-bootstrap';
-import { Link } from 'react-router-dom'
+import {Grid, Row, Col, Pagination, Button, ButtonToolbar, DropdownButton, MenuItem} from 'react-bootstrap';
 import Card from './Card.js';
 import '../css/Flex.css';
 import { RingLoader } from 'react-spinners';
 
-
-{/* Use following url for default image: http://bit.ly/2CYI94d */}
-{/* Grid automatically creates new rows for additional card components. */}
-
 class Colleges extends Component {
+	
+  /* Use following url for default image: http://bit.ly/2CYI94d 
+	Grid automatically creates new rows for additional card components. */
+  
   constructor() {
     super();
     this.state = {
@@ -168,7 +167,7 @@ class Colleges extends Component {
 
   render() {
 
-  if (this.state.loading == true){
+  if (this.state.loading === true){
      return <Grid><Row className="spin"><RingLoader
          color={'#123abc'}
          loading={this.state.loading}

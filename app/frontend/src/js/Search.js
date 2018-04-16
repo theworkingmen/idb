@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import {Image, Grid, Row, Col, Thumbnail, Pagination, Label} from 'react-bootstrap';
-import { Link } from 'react-router-dom'
-import Card from './Card.js';
+import {Grid, Row, Pagination, Label} from 'react-bootstrap';
 import TallCard from './TallCard.js';
 import '../css/Flex.css';
 import { RingLoader } from 'react-spinners';
 
-{/* Use following url for default image: http://bit.ly/2CYI94d */}
-{/* Grid automatically creates new rows for additional card components. */}
-
 class Search extends Component {
+	
+  /* Use following url for default image: http://bit.ly/2CYI94d 
+	Grid automatically creates new rows for additional card components. */
+	
   constructor() {
     super();
     this.state = {
@@ -75,8 +74,6 @@ class Search extends Component {
   }
 
   runSearch(searchprop) {
-  	var needfield = "Error: no info available"
-
   	fetch('http://api.majorpotential.me/search/'+searchprop)
 	  .then(results => {
 		  return results.json();
@@ -125,7 +122,7 @@ class Search extends Component {
 
   render() {
 
-  if (this.state.loading == true){
+  if (this.state.loading === true){
      return <Grid><Row className="spin"><RingLoader
          color={'#123abc'}
          loading={this.state.loading}
@@ -140,7 +137,7 @@ class Search extends Component {
 	}
 
 	var ret = null
-	if (this.state.results.length == 0){
+	if (this.state.results.length === 0){
 		ret = (<div className="container" style={{backgroundColor:"white"}}><center><h1>No search results found</h1></center></div>)
 	}
 	else {

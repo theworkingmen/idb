@@ -6,19 +6,14 @@ import { Link } from 'react-router-dom';
 
 class TallCard extends Component {
 
-	constructor(props) {
-		super(props);
-
-	}
-
 	/* default img src = https://goo.gl/NvPJj6 */
 
 	render() {
 		
 		var bcolor = null;
-		if (this.props.model == "colleges") {
+		if (this.props.model === "colleges") {
 			bcolor = "#add8e6";
-		}else if (this.props.model == "majors"){
+		}else if (this.props.model === "majors"){
 			bcolor = "#f5deb3";
 		}else {
 			bcolor = "#dbffd6";

@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
-import {Jumbotron, Row, Col, Thumbnail} from 'react-bootstrap';
-import InstanceTitle from './InstanceTitle.js';
-import Chart from './Chart.js';
+import {Jumbotron, Col, Thumbnail} from 'react-bootstrap';
 import Top5 from './Top5.js';
 
 class majorInstance extends Component {

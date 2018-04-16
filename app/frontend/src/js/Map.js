@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import GoogleMapReact from 'google-map-react'
 import marker from '../images/marker.svg'
 
-const AnyReactComponent = ({ img_src }) => <div><img src={img_src} style={{height: '40px'}}/></div>;
+const AnyReactComponent = ({ img_src }) => <div><img src={img_src} style={{height: '40px'}} alt="map"/></div>;
 
 export default class Map extends Component {
 

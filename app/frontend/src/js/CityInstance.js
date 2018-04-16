@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import InstanceTitle from './InstanceTitle.js';
 import Chart from './Chart.js';
-import {Jumbotron, Row, Col, Thumbnail, Button, Image, OverlayTrigger, Tooltip, Grid } from 'react-bootstrap';
-import Map from './Map.js';
+import {Jumbotron, Row, Col, Thumbnail, Image, OverlayTrigger, Tooltip, Grid } from 'react-bootstrap';
 import Top5 from './Top5.js';
 
 
