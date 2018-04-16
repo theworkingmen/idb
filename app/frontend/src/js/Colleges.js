@@ -78,6 +78,35 @@ class Colleges extends Component {
 
   }
 
+  updateData(link) {
+  	  fetch(link)
+	  .then(results => {
+		  return results.json();
+		}).then(data => {
+			let colleges = data.records.map((college) => {
+				return(<Card name={college.name} model='colleges' domain={college.image_link} id={college.id} field={college.type}>  </Card>)
+			})
+			let active = 1;
+			let items = [];
+			this.setState({pageCount: Math.ceil(colleges.length/20)});
+			if (this.state.pageCount > 1) {
+				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
+				items.push(<Pagination.Prev disabled/>);
+				for (let number = 1; number <= Math.min(10, this.state.pageCount); number++) {
+					items.push(
+						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
+					);
+				}
+				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}/>);
+				items.push(<Pagination.Last onClick={this.changePage.bind(this, this.state.pageCount)}/>);
+			}
+			this.setState({pages: items});
+			this.setState({page: 1});
+			this.setState({colleges: colleges});
+            this.setState({loading: false});
+		})
+  }
+
     changeSort(sort) {
 	  if (sort == "name") {
 		  this.setState({sort: "name"});
@@ -109,34 +138,7 @@ class Colleges extends Component {
 	  this.updateData('http://api.majorpotential.me/universities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+this.state.state+"&type="+type);
   }
 
-  updateData(link) {
-  	  fetch(link)
-	  .then(results => {
-		  return results.json();
-		}).then(data => {
-			let colleges = data.records.map((college) => {
-				return(<Card name={college.name} model='colleges' domain={college.image_link} id={college.id} field={college.type}>  </Card>)
-			})
-			let active = 1;
-			let items = [];
-			this.setState({pageCount: Math.ceil(colleges.length/20)});
-			if (this.state.pageCount > 1) {
-				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
-				items.push(<Pagination.Prev disabled/>);
-				for (let number = 1; number <= Math.min(10, this.state.pageCount); number++) {
-					items.push(
-						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
-					);
-				}
-				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}/>);
-				items.push(<Pagination.Last onClick={this.changePage.bind(this, this.state.pageCount)}/>);
-			}
-			this.setState({pages: items});
-			this.setState({page: 1});
-			this.setState({colleges: colleges});
-            this.setState({loading: false});
-		})
-  }
+
 
   createStates(){
       let state = [["Alabama", "AL"], ["Alaska", "AK"], ["Arizona", "AZ"], ["Arkansas", "AR"],

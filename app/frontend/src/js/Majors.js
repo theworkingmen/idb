@@ -37,19 +37,19 @@ class Majors extends Component {
 
 	  let start = 0;
 	  let end   = 0;
-	  let pageCount = Math.ceil(this.state.majors.length/20);
+	  
 
-	  if (pageCount < 10) {
+	  if (this.state.pageCount < 10) {
 	  	start = 1;
-	  	end = pageCount;
+	  	end = this.state.pageCount;
 	  }
 	  else if ((num - 5) < 1) {
 	  	start = 1;
 	  	end = 10;
 	  }
-	  else if ((num + 5) > pageCount) {
-	  	start = pageCount - 9;
-	  	end = pageCount;
+	  else if ((num + 5) > this.state.pageCount) {
+	  	start = this.state.pageCount - 9;
+	  	end = this.state.pageCount;
 	  }
 	  else  {
 	  	start = num - 5;
@@ -62,21 +62,47 @@ class Majors extends Component {
 		);
 	  }
 
-	  if (num < pageCount) {
+	  if (num < this.state.pageCount) {
 		items.push(<Pagination.Next onClick={this.changePage.bind(this, num + 1)}/>);
 	  }
 	  else {
 		  items.push(<Pagination.Next disabled/>);
 	  }
-	  items.push(<Pagination.Last onClick={this.changePage.bind(this, pageCount)}/>);
-	  /*for (let number = 1; number <= pageCount; number++) {
-		items.push(
-			<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
-		);
-	  }*/
+	  items.push(<Pagination.Last onClick={this.changePage.bind(this, this.state.pageCount)}/>);
+
 	  this.setState({page: num,
 					 pages: items});
 
+  }
+
+  updateData(link) {
+  	  fetch(link)
+	  .then(results => {
+		  return results.json();
+		}).then(data => {
+			let majors = data.records.map((major) => {
+                let average_wage = "Average Wage: $" + major.average_wage.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                return(<Card name={major.name} model='majors' domain={major.image_link} id={major.id} field={average_wage}>  </Card>)
+			})
+			let active = 1;
+			let items = [];
+			this.setState({pageCount: Math.ceil(majors.length/20)});
+			if (this.state.pageCount > 1) {
+				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
+				items.push(<Pagination.Prev disabled/>);
+				for (let number = 1; number <= Math.min(10, this.state.pageCount); number++) {
+					items.push(
+						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
+					);
+				}
+				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}/>);
+				items.push(<Pagination.Last onClick={this.changePage.bind(this, this.state.pageCount)}/>);
+			}
+			this.setState({pages: items});
+			this.setState({page: 1});
+			this.setState({majors: majors});
+            this.setState({loading: false});
+		})
   }
 
   changeSort(sort) {
@@ -89,32 +115,8 @@ class Majors extends Component {
 	  else {
 		  this.setState({sort: "work"});
 	  }
-	  fetch('http://api.majorpotential.me/majors_limited?sort_'+sort+'='+this.state.order+"&is_stem="+this.state.stem+"&wage="+this.state.wage)
-	  .then(results => {
-		  return results.json();
-		}).then(data => {
-			let majors = data.records.map((major) => {
-                let average_wage = "Average Wage: $" + major.average_wage.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-				return(<Card name={major.name} model='majors' domain={major.image_link} id={major.id} field={average_wage}>  </Card>)
-			})
-			let active = 1;
-			let items = [];
-			if (Math.ceil(majors.length/20) > 1) {
-				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
-				items.push(<Pagination.Prev disabled/>);
-				for (let number = 1; number <= Math.min(10, Math.ceil(majors.length/20)); number++) {
-					items.push(
-						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
-					);
-				}
-				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}/>);
-				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(majors.length/20))}/>);
-			}
-			this.setState({pages: items});
-			this.setState({page: 1});
-			this.setState({majors: majors});
-            this.setState({loading: false});
-		})
+	  this.updateData('http://api.majorpotential.me/majors_limited?sort_'+sort+'='+this.state.order+"&is_stem="+this.state.stem+"&wage="+this.state.wage);
+	  
   }
 
   changeOrder(order) {
@@ -124,63 +126,17 @@ class Majors extends Component {
 	  else {
 		  this.setState({order: "Desc"});
 	  }
-	  fetch('http://api.majorpotential.me/majors_limited?sort_'+this.state.sort+'='+order+"&is_stem="+this.state.stem+"&wage="+this.state.wage)
-	  .then(results => {
-		  return results.json();
-		}).then(data => {
-			let majors = data.records.map((major) => {
-                let average_wage = "Average Wage: $" + major.average_wage.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                return(<Card name={major.name} model='majors' domain={major.image_link} id={major.id} field={average_wage}>  </Card>)
-			})
-			let active = 1;
-			let items = [];
-			if (Math.ceil(majors.length/20) > 1) {
-				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
-				items.push(<Pagination.Prev disabled/>);
-				for (let number = 1; number <= Math.min(10, Math.ceil(majors.length/20)); number++) {
-					items.push(
-						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
-					);
-				}
-				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}/>);
-				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(majors.length/20))}/>);
-			}
-			this.setState({pages: items});
-			this.setState({page: 1});
-			this.setState({majors: majors});
-            this.setState({loading: false});
-		})
+	  this.updateData('http://api.majorpotential.me/majors_limited?sort_'+this.state.sort+'='+order+"&is_stem="+this.state.stem+"&wage="+this.state.wage);
+	  
   }
 
   changeSTEM(stem) {
       this.setState({stem: stem});
-	  fetch('http://api.majorpotential.me/majors_limited?sort_'+this.state.sort+'='+this.state.order+"&is_stem="+stem+"&wage="+this.state.wage)
-	  .then(results => {
-		  return results.json();
-		}).then(data => {
-			let majors = data.records.map((major) => {
-                let average_wage = "Average Wage: $" + major.average_wage.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                return(<Card name={major.name} model='majors' domain={major.image_link} id={major.id} field={average_wage}>  </Card>)
-			})
-			let active = 1;
-			let items = [];
-			if (Math.ceil(majors.length/20) > 1) {
-				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
-				items.push(<Pagination.Prev disabled/>);
-				for (let number = 1; number <= Math.min(10, Math.ceil(majors.length/20)); number++) {
-					items.push(
-						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
-					);
-				}
-				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}/>);
-				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(majors.length/20))}/>);
-			}
-			this.setState({pages: items});
-			this.setState({page: 1});
-			this.setState({majors: majors});
-            this.setState({loading: false});
-		})
+	  this.updateData('http://api.majorpotential.me/majors_limited?sort_'+this.state.sort+'='+this.state.order+"&is_stem="+stem+"&wage="+this.state.wage);
+	  
   }
+
+
 
   resetSortFilter() {
 	  this.setState({
@@ -189,62 +145,12 @@ class Majors extends Component {
         stem: "None",
         wage: "None"
 	});
-	  fetch('http://api.majorpotential.me/majors_limited?sort_name=Asc&is_stem=None&wage=None')
-	  .then(results => {
-		  return results.json();
-		}).then(data => {
-			let majors = data.records.map((major) => {
-                let average_wage = "Average Wage: $" + major.average_wage.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                return(<Card name={major.name} model='majors' domain={major.image_link} id={major.id} field={average_wage}>  </Card>)
-			})
-			let active = 1;
-			let items = [];
-			if (Math.ceil(majors.length/20) > 1) {
-				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
-				items.push(<Pagination.Prev disabled/>);
-				for (let number = 1; number <= Math.min(10, Math.ceil(majors.length/20)); number++) {
-					items.push(
-						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
-					);
-				}
-				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}/>);
-				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(majors.length/20))}/>);
-			}
-			this.setState({pages: items});
-			this.setState({page: 1});
-			this.setState({majors: majors});
-            this.setState({loading: false});
-		})
+	  this.updateData('http://api.majorpotential.me/majors_limited?sort_name=Asc&is_stem=None&wage=None');
+	  
   }
 
   componentDidMount() {
-	  fetch('http://api.majorpotential.me/majors_limited?sort_'+this.state.sort+'='+this.state.order+"&is_stem="+this.state.stem+"&wage="+this.state.wage)
-	  .then(results => {
-		  return results.json();
-		}).then(data => {
-			let majors = data.records.map((major) => {
-                let average_wage = "Average Wage: $" + major.average_wage.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-				return(<Card name={major.name} model='majors' domain={major.image_link} id={major.id} field={average_wage}>  </Card>)
-			})
-			let active = 1;
-			let items = [];
-			if (Math.ceil(majors.length/20) > 1) {
-				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
-				items.push(<Pagination.Prev disabled/>);
-				for (let number = 1; number <= Math.min(10, Math.ceil(majors.length/20)); number++) {
-					items.push(
-						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
-					);
-				}
-				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}/>);
-				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(majors.length/20))}/>);
-			}
-			this.setState({pages: items});
-			this.setState({majors: majors});
-            this.setState({loading: false});
-		})
-
-
+	  this.updateData('http://api.majorpotential.me/majors_limited?sort_'+this.state.sort+'='+this.state.order+"&is_stem="+this.state.stem+"&wage="+this.state.wage);
   }
 
   render() {

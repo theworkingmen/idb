@@ -79,31 +79,6 @@ class Cities extends Component {
 
   }
 
-  changeSort(sort) {
-	  if (sort == "name") {
-		  this.setState({sort: "name"});
-	  }
-	  else {
-		  this.setState({sort: "pop"});
-	  }
-	  this.updateData('http://api.majorpotential.me/cities_limited?sort_'+sort+'='+this.state.order+"&state="+this.state.state)
-  }
-
-  changeOrder(order) {
-	  if (order == "Asc") {
-		  this.setState({order: "Asc"});
-	  }
-	  else {
-		  this.setState({order: "Desc"});
-	  }
-	  this.updateData('http://api.majorpotential.me/cities_limited?sort_'+this.state.sort+'='+order+"&state="+this.state.state)
-  }
-
-  changeState(state) {
-	  this.setState({state: state});
-	  this.updateData('http://api.majorpotential.me/cities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+state)
-  }
-  
   updateData(link) {
 	  fetch(link)
 	  .then(results => {
@@ -139,7 +114,34 @@ class Cities extends Component {
 			this.setState({cities: cities});
             this.setState({loading: false});
 		})
+  }  
+
+  changeSort(sort) {
+	  if (sort == "name") {
+		  this.setState({sort: "name"});
+	  }
+	  else {
+		  this.setState({sort: "pop"});
+	  }
+	  this.updateData('http://api.majorpotential.me/cities_limited?sort_'+sort+'='+this.state.order+"&state="+this.state.state)
   }
+
+  changeOrder(order) {
+	  if (order == "Asc") {
+		  this.setState({order: "Asc"});
+	  }
+	  else {
+		  this.setState({order: "Desc"});
+	  }
+	  this.updateData('http://api.majorpotential.me/cities_limited?sort_'+this.state.sort+'='+order+"&state="+this.state.state)
+  }
+
+  changeState(state) {
+	  this.setState({state: state});
+	  this.updateData('http://api.majorpotential.me/cities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+state)
+  }
+  
+
 
   createStates(){
 	  let state = [["Alabama", "AL"], ["Alaska", "AK"], ["Arizona", "AZ"], ["Arkansas", "AR"],
