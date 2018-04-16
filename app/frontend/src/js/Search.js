@@ -148,11 +148,11 @@ class Search extends Component {
 		ret = (
 		<div>
         <Row>
-          <h3>
-            Label <Label className="college">University</Label>
-            Label <Label className='city'>city</Label>
-            Label <Label className='major'>Major</Label>
-          </h3>
+          <center><h3>
+            <Label className="college">University</Label>
+            <Label className='city'>City</Label>
+            <Label className='major'>Major</Label>
+          </h3></center>
          </Row>
 
 		<Grid><Row className="flex-row">{display}</Row></Grid>
