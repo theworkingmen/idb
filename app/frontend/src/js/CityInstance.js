@@ -26,7 +26,7 @@ class CityInstance extends Component {
     }).then(data => {
       let universities = data.universities_in_city.map((college) => {
         return(
-          <Col sm={3}>
+          <Col sm={3} key={college.id} >
             <Link to={`/colleges/${college.id}`}>
               <OverlayTrigger placement="bottom" overlay={<Tooltip id ="name">{college.name}</Tooltip>}>
                 <Image  className="top5" src={college.image_link} thumbnail />

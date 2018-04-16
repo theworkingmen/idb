@@ -16,7 +16,8 @@ class Search extends Component {
 		results: [],
 		pages: [],
 		page: 1,
-        loading: true
+        loading: true,
+        pageCount: 0
 	};
 
   }
@@ -24,53 +25,50 @@ class Search extends Component {
   changePage(num) {
 	  let active = num;
 	  let items = [];
-	  items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
+
+	  items.push(<Pagination.First onClick={this.changePage.bind(this, 1)} key="first"/>);
 	  if (num > 1) {
-		items.push(<Pagination.Prev onClick={this.changePage.bind(this, num - 1)}/>);
+		items.push(<Pagination.Prev onClick={this.changePage.bind(this, num - 1)} key="prev"/>);
 	  }
 	  else {
-		  items.push(<Pagination.Prev disabled/>);
+		  items.push(<Pagination.Prev disabled key="prev"/>);
 	  }
-	  if (Math.ceil(this.state.results.length/20) < 10) {
-		for (let number = 1; number <= Math.ceil(this.state.results.length/20); number++) {
-			items.push(
-				<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
-			);
-		}
+
+	  let start = 0;
+	  let end   = 0;
+	  
+
+	  if (this.state.pageCount < 10) {
+	  	start = 1;
+	  	end = this.state.pageCount;
 	  }
 	  else if ((num - 5) < 1) {
-		for (let number = 1; number <= 10; number++) {
-			items.push(
-			<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
-			);
-		}
+	  	start = 1;
+	  	end = 10;
 	  }
-	  else if ((num + 5) > Math.ceil(this.state.results.length/20)) {
-		for (let number = Math.ceil(this.state.results.length/20) - 9; number <= Math.ceil(this.state.results.length/20); number++) {
-			items.push(
-			<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
-			);
-		}
+	  else if ((num + 5) > this.state.pageCount) {
+	  	start = this.state.pageCount - 9;
+	  	end = this.state.pageCount;
 	  }
 	  else  {
-		for (let number = num - 5; number < num + 5; number++) {
-			items.push(
-			<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
-			);
-		}
+	  	start = num - 5;
+	  	end = num + 4;
 	  }
-	  if (num < Math.ceil(this.state.results.length/20)) {
-		items.push(<Pagination.Next onClick={this.changePage.bind(this, num + 1)}/>);
+
+	  for (let number = start; number <= end; number++) {
+		items.push(
+			<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)} key={number}>{number}</Pagination.Item>
+		);
+	  }
+
+	  if (num < this.state.pageCount) {
+		items.push(<Pagination.Next onClick={this.changePage.bind(this, num + 1)} key="next"/>);
 	  }
 	  else {
-		  items.push(<Pagination.Next disabled/>);
+		  items.push(<Pagination.Next disabled key="next"/>);
 	  }
-	  items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(this.state.results.length/20))}/>);
-	  /*for (let number = 1; number <= Math.ceil(this.state.cities.length/20); number++) {
-		items.push(
-			<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
-		);
-	  }*/
+	  items.push(<Pagination.Last onClick={this.changePage.bind(this, this.state.pageCount)} key="last"/>);
+
 	  this.setState({page: num,
 					 pages: items});
 
@@ -85,29 +83,30 @@ class Search extends Component {
 		}).then(data => {
 			let cityResults = data.records.Cities.map((city) => {
 				return(<TallCard name={city.name} model='cities' domain={city.image_link} id={city.id} highlight={searchprop.split(" ")}
-												 field1={city.county} field2="" field3={"Population: " + city.population}> </TallCard>)
+												 field1={city.county} field2="" field3={"Population: " + city.population} key={city.id}> </TallCard>)
 			})
 			let majorResults = data.records.Majors.map((major) => {
 				return(<TallCard name={major.name} model='majors' domain={major.image_link} id={major.id} highlight={searchprop.split(" ")}
-												 field1="" field2="" field3={"Avg Wage: " + major.average_wage} > </TallCard>)
+												 field1="" field2="" field3={"Avg Wage: " + major.average_wage} key={major.id}> </TallCard>)
 			})
 			let collegeResults = data.records.Universities.map((college) => {
 				return(<TallCard name={college.name} model='colleges' domain={college.image_link} id={college.id} highlight={searchprop.split(" ")}
-												 field1={college.state} field2={college.type}>  </TallCard>)
+												 field1={college.state} field2={college.type} key={college.id}>  </TallCard>)
 			})
 			let active = 1;
 			let results = cityResults.concat(majorResults).concat(collegeResults);
 			let items = [];
-			if (Math.ceil(results.length/20) > 1) {
-				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
-				items.push(<Pagination.Prev disabled/>);
-				for (let number = 1; number <= Math.min(10, Math.ceil(results.length/20)); number++) {
+			this.setState({pageCount: Math.ceil(results.length/20)});
+			if (this.state.pageCount > 1) {
+				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)} key="first"/>);
+				items.push(<Pagination.Prev disabled key="prev"/>);
+				for (let number = 1; number <= Math.min(10, this.state.pageCount); number++) {
 					items.push(
-						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
+						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)} key={number}>{number}</Pagination.Item>
 					);
 				}
-				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}/>);
-				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(results.length/20))}/>);
+				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)} key="next"/>);
+				items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(results.length/20))} key="last"/>);
 			}
 			this.setState({pages: items});
 			this.setState({page: 1});
@@ -130,7 +129,7 @@ class Search extends Component {
      return <Grid><Row className="spin"><RingLoader
          color={'#123abc'}
          loading={this.state.loading}
-         size="100"
+         size={100}
 
        /> </Row></Grid>;
    }

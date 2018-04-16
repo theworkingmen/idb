@@ -29,12 +29,12 @@ class Cities extends Component {
 	  let active = num;
 	  let items = [];
 
-	  items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
+	  items.push(<Pagination.First onClick={this.changePage.bind(this, 1)} key="first"/>);
 	  if (num > 1) {
-		items.push(<Pagination.Prev onClick={this.changePage.bind(this, num - 1)}/>);
+		items.push(<Pagination.Prev onClick={this.changePage.bind(this, num - 1)} key="prev"/>);
 	  }
 	  else {
-		  items.push(<Pagination.Prev disabled/>);
+		  items.push(<Pagination.Prev disabled key="prev"/>);
 	  }
 	  
 	  let start = 0;
@@ -60,17 +60,17 @@ class Cities extends Component {
 	  
 	  for (let number = start; number <= end; number++) {
 			items.push(
-				<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
+				<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}key={number}>{number}</Pagination.Item>
 			);
 	  }
 	  
 	  if (num < this.state.pageCount) {
-		items.push(<Pagination.Next onClick={this.changePage.bind(this, num + 1)}/>);
+		items.push(<Pagination.Next onClick={this.changePage.bind(this, num + 1)} key="next"/>);
 	  }
 	  else {
-		  items.push(<Pagination.Next disabled/>);
+		  items.push(<Pagination.Next disabled key="next"/>);
 	  }
-	  items.push(<Pagination.Last onClick={this.changePage.bind(this, this.state.pageCount)}/>);
+	  items.push(<Pagination.Last onClick={this.changePage.bind(this, this.state.pageCount)} key="last"/>);
 	  this.setState({page: num,
 					 pages: items});
 
@@ -89,22 +89,22 @@ class Cities extends Component {
                 else{
                     population_prop = "Population: " + population_prop.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 }
-                return(<Card name={city.city_name} model='cities' domain={city.city_image_link} id={city.id} field = {population_prop} >  </Card>)
+                return(<Card name={city.city_name} model='cities' domain={city.city_image_link} id={city.id} field = {population_prop} key={city.id}>  </Card>)
 			})
 			this.setState({pageCount: Math.ceil(cities.length/20)});
 
 			let active = 1;
 			let items = [];
 			if (this.state.pageCount > 1) {
-				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
-				items.push(<Pagination.Prev disabled/>);
+				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)} key="first"/>);
+				items.push(<Pagination.Prev disabled key="prev"/>);
 				for (let number = 1; number <= Math.min(10, this.state.pageCount); number++) {
 					items.push(
-						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
+						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)} key={number}>{number}</Pagination.Item>
 					);
 				}
-				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}/>);
-				items.push(<Pagination.Last onClick={this.changePage.bind(this, this.state.pageCount)}/>);
+				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)} key="next"/>);
+				items.push(<Pagination.Last onClick={this.changePage.bind(this, this.state.pageCount)} key="last"/>);
 			}
 			
             this.setState({
@@ -147,7 +147,7 @@ class Cities extends Component {
 	   ["Wisconsin", "WI"], ["Wyoming", "WY"], ["Puerto Rico", "PR"], ["District of Columbia", "DC"]]
 	  let items = []
 	  for (let i = 0; i < state.length; i++) {
-		  items.push(<MenuItem eventKey={i} onClick={this.changeState.bind(this, state[i][1])}>{state[i][0]}</MenuItem>);
+		  items.push(<MenuItem eventKey={i} onClick={this.changeState.bind(this, state[i][1])} key={i}>{state[i][0]}</MenuItem>);
 	  }
 	  return items
   }
@@ -172,7 +172,7 @@ class Cities extends Component {
      return <Grid><Row className="spin"><RingLoader
          color={'#123abc'}
          loading={this.state.loading}
-         size="100"
+         size={100}
 
        /> </Row></Grid>;
    }
@@ -188,15 +188,15 @@ class Cities extends Component {
 			<Col xs={4}></Col>
 			<Col xs	={6}>
 			<ButtonToolbar>
-				<DropdownButton title="Sort by">
+				<DropdownButton title="Sort by" id="sort">
 					<MenuItem eventKey="1" onClick={this.changeSort.bind(this, "name")}>Name</MenuItem>
 					<MenuItem eventKey="2" onClick={this.changeSort.bind(this, "pop")}>Population</MenuItem>
 				</DropdownButton>
-				<DropdownButton title="Order">
+				<DropdownButton title="Order" id="order">
 					<MenuItem eventKey="1" onClick={this.changeOrder.bind(this, "Asc")}>Ascending</MenuItem>
 					<MenuItem eventKey="2" onClick={this.changeOrder.bind(this, "Desc")}>Descending</MenuItem>
 				</DropdownButton>
-				<DropdownButton title="Filter by State">
+				<DropdownButton title="Filter by State" id="state">
 					<MenuItem eventKey="1" onClick={this.changeState.bind(this, "None")}>None</MenuItem>
 					{this.createStates()}
 				</DropdownButton>

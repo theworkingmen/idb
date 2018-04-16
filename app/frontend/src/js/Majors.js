@@ -28,12 +28,12 @@ class Majors extends Component {
 	  let active = num;
 	  let items = [];
 
-	  items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
+	  items.push(<Pagination.First onClick={this.changePage.bind(this, 1)} key="first"/>);
 	  if (num > 1) {
-		items.push(<Pagination.Prev onClick={this.changePage.bind(this, num - 1)}/>);
+		items.push(<Pagination.Prev onClick={this.changePage.bind(this, num - 1)} key="prev"/>);
 	  }
 	  else {
-		  items.push(<Pagination.Prev disabled/>);
+		  items.push(<Pagination.Prev disabled key="prev"/>);
 	  }
 
 	  let start = 0;
@@ -59,17 +59,17 @@ class Majors extends Component {
 
 	  for (let number = start; number <= end; number++) {
 		items.push(
-			<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
+			<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)} key={number}>{number}</Pagination.Item>
 		);
 	  }
 
 	  if (num < this.state.pageCount) {
-		items.push(<Pagination.Next onClick={this.changePage.bind(this, num + 1)}/>);
+		items.push(<Pagination.Next onClick={this.changePage.bind(this, num + 1)} key="next"/>);
 	  }
 	  else {
-		  items.push(<Pagination.Next disabled/>);
+		  items.push(<Pagination.Next disabled key="next"/>);
 	  }
-	  items.push(<Pagination.Last onClick={this.changePage.bind(this, this.state.pageCount)}/>);
+	  items.push(<Pagination.Last onClick={this.changePage.bind(this, this.state.pageCount)} key="last"/>);
 
 	  this.setState({page: num,
 					 pages: items});
@@ -83,21 +83,21 @@ class Majors extends Component {
 		}).then(data => {
 			let majors = data.records.map((major) => {
                 let average_wage = "Average Wage: $" + major.average_wage.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                return(<Card name={major.name} model='majors' domain={major.image_link} id={major.id} field={average_wage}>  </Card>)
+                return(<Card name={major.name} model='majors' domain={major.image_link} id={major.id} field={average_wage} key={major.id}>  </Card>)
 			})
 			let active = 1;
 			let items = [];
 			this.setState({pageCount: Math.ceil(majors.length/20)});
 			if (this.state.pageCount > 1) {
-				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
-				items.push(<Pagination.Prev disabled/>);
+				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)} key="first"/>);
+				items.push(<Pagination.Prev disabled key="prev"/>);
 				for (let number = 1; number <= Math.min(10, this.state.pageCount); number++) {
 					items.push(
-						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
+						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)} key={number}>{number}</Pagination.Item>
 					);
 				}
-				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}/>);
-				items.push(<Pagination.Last onClick={this.changePage.bind(this, this.state.pageCount)}/>);
+				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)} key="next"/>);
+				items.push(<Pagination.Last onClick={this.changePage.bind(this, this.state.pageCount)} key="last"/>);
 			}
             this.setState({
 				pages: items,
@@ -151,7 +151,7 @@ class Majors extends Component {
      return <Grid><Row className="spin"><RingLoader
          color={'#123abc'}
          loading={this.state.loading}
-         size="100"
+         size={100}
 
        /> </Row></Grid>;
    }
@@ -167,16 +167,16 @@ class Majors extends Component {
 			<Col xs={4}></Col>
 			<Col xs	={6}>
 			<ButtonToolbar>
-				<DropdownButton title="Sort by">
+				<DropdownButton title="Sort by" id="sort">
 					<MenuItem eventKey="1" onClick={this.changeSort.bind(this, "name")}>Name</MenuItem>
 					<MenuItem eventKey="2" onClick={this.changeSort.bind(this, "wage")}>Average Wage</MenuItem>
 					<MenuItem eventKey="3" onClick={this.changeSort.bind(this, "work")}>Workforce</MenuItem>
 				</DropdownButton>
-				<DropdownButton title="Order">
+				<DropdownButton title="Order" id="order">
 					<MenuItem eventKey="1" onClick={this.changeOrder.bind(this, "Asc")}>Ascending</MenuItem>
 					<MenuItem eventKey="2" onClick={this.changeOrder.bind(this, "Desc")}>Descending</MenuItem>
 				</DropdownButton>
-				<DropdownButton title="Filter by STEM">
+				<DropdownButton title="Filter by STEM" id="STEM">
 					<MenuItem eventKey="1" onClick={this.changeSTEM.bind(this, "None")}>None</MenuItem>
 					<MenuItem eventKey="2" onClick={this.changeSTEM.bind(this, "yes")}>STEM</MenuItem>
 					<MenuItem eventKey="3" onClick={this.changeSTEM.bind(this, "no")}>Non-STEM</MenuItem>
