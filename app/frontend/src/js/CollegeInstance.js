@@ -162,7 +162,7 @@ class CollegeInstance extends Component {
           <Col sm={4}>
             <Thumbnail className="thumbnail">
               <p> Website </p>
-              <h3> <a href= {this.state.website} > link </a> </h3>
+              <h3> <a href= {this.state.website} target="_blank"> link </a> </h3>
             </Thumbnail>
           </Col>
           </center>
