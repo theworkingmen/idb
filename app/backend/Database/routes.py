@@ -6,6 +6,7 @@ from cities_api_func import *
 from exception import NotFoundException
 from flask import Flask, request, jsonify, Response, json, render_template
 
+import re
 
 @application.route('/')
 def home():
@@ -162,9 +163,15 @@ def get_Cities_Limited ():
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
+@application.route('/search/', methods = ['GET'])
+def search_empty():
+    return search("");
+
 @application.route('/search/<query>', methods = ['GET'])
 def search (query):
     query = str(query)
+    # Sanitize input, only allow alphanumerics and hyphens (and whitespace)
+    query = re.sub('[^a-zA-Z0-9-\s]','',query)
     # Split the query string into separate words
     terms = list(query.split(' '))
     # Generate individual payloads for each model, appended to giant list
