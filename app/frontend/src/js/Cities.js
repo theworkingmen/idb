@@ -25,9 +25,6 @@ class Cities extends Component {
 
   }
 
-
-
-
   changePage(num) {
 	  let active = num;
 	  let items = [];
@@ -109,10 +106,13 @@ class Cities extends Component {
 				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}/>);
 				items.push(<Pagination.Last onClick={this.changePage.bind(this, this.state.pageCount)}/>);
 			}
-			this.setState({pages: items});
-			this.setState({page: 1});
-			this.setState({cities: cities});
-            this.setState({loading: false});
+			
+            this.setState({
+				pages: items,
+				page: 1,
+				cities: cities,
+				loading: false
+			});
 		})
   }  
 

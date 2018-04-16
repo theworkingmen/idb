@@ -100,10 +100,13 @@ class Colleges extends Component {
 				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}/>);
 				items.push(<Pagination.Last onClick={this.changePage.bind(this, this.state.pageCount)}/>);
 			}
-			this.setState({pages: items});
-			this.setState({page: 1});
-			this.setState({colleges: colleges});
-            this.setState({loading: false});
+			this.setState({
+				pages: items,
+				page: 1,
+				colleges: colleges,
+				loading: false
+			});
+			
 		})
   }
 
