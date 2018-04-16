@@ -88,7 +88,7 @@ class majorInstance extends Component {
             {/* Name of major */}
             <div className="container" >
               <Jumbotron> <center>
-                <h2> <a href= {this.state.image} > {this.state.name} </a></h2>
+                <h2> <a href= {this.state.image} target="_blank"> {this.state.name} </a></h2>
               </center></Jumbotron>
             </div>
 
