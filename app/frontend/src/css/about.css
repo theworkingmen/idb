@@ -84,12 +84,11 @@ block {
 
 block_small {
   font-family: 'Open Sans', sans-serif;
-  color: #ffffff4B;
+  color: #000000;
   font-size: 30px;
   font-weight: 800;
   letter-spacing: -3px;
   line-height: 1;
-  text-shadow: #EDEDED 2px 2px 0;
   position: relative;
   margin-bottom: 25px;
   margin-top: 10px;

@@ -10,6 +10,7 @@ import neal_pic from '../../images/authors/neal_pic.jpg';
 import christian_pic from '../../images/authors/christian_pic.jpg';
 import MembersCard from './MembersCard'
 import { RingLoader } from 'react-spinners';
+import ToolCard from './ToolCard.js';
 
 let request = require('request')
 export default class About extends Component {
@@ -141,125 +142,142 @@ export default class About extends Component {
 
       let members_info = null
       if (this.state.ready == true) {
-        members_info = < MembersCard members_info = {
+        members_info = <MembersCard members_info = {
           this.state.members_stats
         }
         />;
     return (
-    <div className ='container'>
-    <div className = 'introduction'>
-      <Jumbotron>
-      <logo> <center> Major Potential </center></logo>
-      <p></p>
-        <intro ><center> A website that links universities, the cities where the universities are located,
-        and job opportunities in cities for graduates in certain majors.</center> </intro>
-      <p></p>
-      <p></p>
-      </Jumbotron>
-    </div>
+      <div className ="container" style={{background: "white"}}>
+        <div className ='container'>
+        <div className = 'introduction'>
+          <Jumbotron>
+          <logo> <center> Major Potential </center></logo>
+          <p></p>
+            <intro ><center> A website that links universities, the cities where the universities are located,
+            and job opportunities in cities for graduates in certain majors.</center> </intro>
+          <p></p>
+          <p></p>
+          </Jumbotron>
+        </div>
 
-    <div className = 'group_members'>
-      <block> <center> The Team </center> </block>
-        {members_info}
-      <p></p>
-    </div>
+        <div>
+          <block_small> <center> The Team </center> </block_small>
+            {members_info}
+          <p></p>
+        </div>
 
-    <div>
-      <Row>
-      <block_small> <center>GitHub Stats </center> </block_small>
-      <Col  xs={6} md={8}>
-      <Table>
-        <tr>
-          <th><h4> Stat </h4></th>
-          <th><h4> Value </h4></th>
-        </tr>
-        <tr>
-          <th>Number of Commits:</th>
-          <th id="total_commits"> {this.state.total_commits} </th>
-        </tr>
-        <tr>
-          <th>Number of Issues:</th>
-          <th id="total_issues"> {this.state.total_issues}</th>
-        </tr>
-        <tr>
-          <th>Number of Unit Tests:</th>
-          <th> 93 </th>
-        </tr>
-      </Table>
-      </Col>
-      </Row>
-    </div>
+        <div>
+          <Row>
+          <block_small> <center>GitHub Stats </center> </block_small>
+          <Col  xs={6} md={8}>
+          <Table>
+            <tr>
+              <th><h4> Stat </h4></th>
+              <th><h4> Value </h4></th>
+            </tr>
+            <tr>
+              <th>Number of Commits:</th>
+              <th id="total_commits"> {this.state.total_commits} </th>
+            </tr>
+            <tr>
+              <th>Number of Issues:</th>
+              <th id="total_issues"> {this.state.total_issues}</th>
+            </tr>
+            <tr>
+              <th>Number of Unit Tests:</th>
+              <th> 93 </th>
+            </tr>
+          </Table>
+          </Col>
+          </Row>
+        </div>
 
-    <div>
-      <block_small> <p> </p> <center> Sources </center> <p></p></block_small>
-        <a href="https://www.bls.gov/developers/api_signature_v2.html" class="list-group-item active">Bureau of Labor Statistics</a>
-        <a href="https://www.census.gov/data/developers/data-sets/cbp-nonemp-zbp/cbp-api.html" class="list-group-item">United States Census Bureau</a>
-        <a href="https://api.data.gov/docs/ed/" class="list-group-item active">Department of Education</a>
-        <a href="https://nces.ed.gov/ipeds/" class="list-group-item">The Integrated Postsecondary Education Data System</a>
-        <a href="https://datausa.io/about/datasets/" class="list-group-item active">Data USA API</a>
-        <a href="https://developers.google.com/maps/" class="list-group-item ">Google Maps API</a>
-    </div>
+        <div>
+          <block_small> <p> </p> <center> Sources </center> <p></p></block_small>
+          <Grid>
+            <ToolCard name="Bureau of Labor Statistics" 
+                      image="" 
+                      src="https://www.bls.gov/developers/api_signature_v2.html"></ToolCard>
+            <ToolCard name="U.S. Census Bureau" 
+                      image="" 
+                      src="https://www.census.gov/data/developers/data-sets/cbp-nonemp-zbp/cbp-api.html"></ToolCard>
+            <ToolCard name="Department of Education" 
+                      image="" 
+                      src="https://api.data.gov/docs/ed/"></ToolCard>
+            <ToolCard name="The Integrated Postsecondary Education Data System" 
+                      image="" 
+                      src="https://nces.ed.gov/ipeds/"></ToolCard>
+            <Col xs={12} sm={3} md={3} lg={3}></Col>
+            <ToolCard name="Data USA API" 
+                      image="" 
+                      src="https://datausa.io/about/datasets/"></ToolCard>
+            <ToolCard name="Google Maps API" 
+                      image="" 
+                      src="https://developers.google.com/maps/"></ToolCard>
+          </Grid>
+        </div>
 
-    <div>
-      <Row>
-        <Col  xs={6} md={8}>
-        <Table>
-          <tr>
-            <th>
-              <h3> Tools Used</h3>
-            </th>
-          </tr>
-          <tr>
-            <th>Amazon Beanstalk -  backend/frontend hosting</th>
-          </tr>
-          <tr>
-            <th>Amazon RDS -    database hosting</th>
-          </tr>
-          <tr>
-            <th>Amazon S3 -     website and database hosting</th>
-          </tr>
-          <tr>
-            <th>Slack -     communication</th>
-          </tr>
-          <tr>
-            <th>React -     frontend javascript</th>
-          </tr>
-          <tr>
-            <th>React Bootstrap -   frontend styling</th>
-          </tr>
-          <tr>
-            <th>Flask -     backend API</th>
-          </tr>
-          <tr>
-            <th>Sqlalchemy -    backend database design</th>
-          </tr>
-          <tr>
-            <th>Travis-CI -     continuous integration</th>
-          </tr>
-          <tr>
-            <th>Github -    version control</th>
-          </tr>
-          <tr>
-            <th>Postman -   API desing and testin</th>
-          </tr>
-        </Table>
-        </Col>
-      </Row>
-    </div>
+        <div>
 
-    <div>
-      <center>
-      <block_small>  <p> </p> <p> </p> <center>Project Links</center> <p></p> </block_small>
-       <Button>
-       <a href = "https://github.com/theworkingmen/idb" > Github </a> </Button>
-      <p> </p>
-       <Button> <a href = "https://theworkingmen.gitbooks.io/api/content/" > API </a></Button>
-      <p> </p>
-      <Button> <a href = "https://theworkingmen.gitbooks.io/report/" > Report </a></Button>
-      <p></p> <p></p>
-      </center>
-    </div>
+          <block_small> <center> Tools Used </center> </block_small>
+          <Grid> 
+            <ToolCard name="Amazon Beanstalk" 
+                      image="" 
+                      src=""></ToolCard>
+            <ToolCard name="Amazon RDS" 
+                      image="" 
+                      src=""></ToolCard>
+            <ToolCard name="Slack" 
+                      image="" 
+                      src=""></ToolCard>
+            <ToolCard name="React" 
+                      image="" 
+                      src=""></ToolCard>
+            <ToolCard name="React Bootstrap" 
+                      image="" 
+                      src=""></ToolCard>
+            <ToolCard name="Flask" 
+                      image="" 
+                      src=""></ToolCard>
+            <ToolCard name="SQLalchemy" 
+                      image="" 
+                      src=""></ToolCard>
+            <ToolCard name="Travis-CI" 
+                      image="" 
+                      src=""></ToolCard>
+            <ToolCard name="Github" 
+                      image="" 
+                      src=""></ToolCard>
+            <ToolCard name="Postman" 
+                      image="" 
+                      src=""></ToolCard>
+            <ToolCard name="Selenium" 
+                      image="" 
+                      src=""></ToolCard>
+            <ToolCard name="Mocha" 
+                      image="" 
+                      src=""></ToolCard>
+          </Grid>
+        </div>
 
-    </div>
+        <div>
+          <center>
+          <block_small> <center>Project Links</center> </block_small>
+          <Grid>
+            <ToolCard name="Github" 
+                      image="" 
+                      src="https://github.com/theworkingmen/idb"></ToolCard>
+            <ToolCard name="API" 
+                      image="https://theworkingmen.gitbooks.io/api/content/" 
+                      src=""></ToolCard>
+            <ToolCard name="Gitbook Report" 
+                      image="https://theworkingmen.gitbooks.io/report/" 
+                      src=""></ToolCard>                    
+          </Grid>
+          </center>
+        </div>
+
+        </div>
+      </div>
 
 )};};};
