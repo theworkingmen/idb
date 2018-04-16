@@ -26,6 +26,7 @@ class Majors extends Component {
   changePage(num) {
 	  let active = num;
 	  let items = [];
+
 	  items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
 	  if (num > 1) {
 		items.push(<Pagination.Prev onClick={this.changePage.bind(this, num - 1)}/>);
@@ -33,6 +34,9 @@ class Majors extends Component {
 	  else {
 		  items.push(<Pagination.Prev disabled/>);
 	  }
+
+	  
+	  
 	  if (Math.ceil(this.state.majors.length/20) < 10) {
 		for (let number = 1; number <= Math.ceil(this.state.majors.length/20); number++) {
 			items.push(

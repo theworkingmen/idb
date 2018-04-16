@@ -27,6 +27,7 @@ class Colleges extends Component {
   changePage(num) {
 	  let active = num;
 	  let items = [];
+	  
 	  items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}/>);
 	  if (num > 1) {
 		items.push(<Pagination.Prev onClick={this.changePage.bind(this, num - 1)}/>);
@@ -34,42 +35,40 @@ class Colleges extends Component {
 	  else {
 		  items.push(<Pagination.Prev disabled/>);
 	  }
-	  if (Math.ceil(this.state.colleges.length/20) < 10) {
-		for (let number = 1; number <= Math.ceil(this.state.colleges.length/20); number++) {
-			items.push(
-				<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
-			);
-		}
+
+	  let start = 0;
+	  let end   = 0;
+	  let pageCount = Math.ceil(this.state.colleges.length/20);
+	  
+	  if (pageCount < 10) {
+	  	start = 1;
+	  	end = pageCount;
 	  }
 	  else if ((num - 5) < 1) {
-		for (let number = 1; number <= 10; number++) {
-			items.push(
-				<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
-			);
-		}
+	  	start = 1;
+	  	end = 10;
 	  }
-	  else if ((num + 5) > Math.ceil(this.state.colleges.length/20)) {
-		for (let number = Math.ceil(this.state.colleges.length/20) - 9; number <= Math.ceil(this.state.colleges.length/20); number++) {
-			items.push(
-				<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
-			);
-		}
+	  else if ((num + 5) > pageCount) {
+	  	start = pageCount - 9;
+	  	end = pageCount;
 	  }
 	  else  {
-		for (let number = num - 5; number < num + 5; number++) {
-			items.push(
-			<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
-			);
-		}
+	  	start = num - 5;
+	  	end = num + 4; //was + 5 but compare was less than
 	  }
-	  if (num < Math.ceil(this.state.colleges.length/20)) {
+	  for (let number = start; number <= end; number++) {
+		items.push(
+  			<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
+  		);
+	  }
+	  if (num < pageCount) {
 		items.push(<Pagination.Next onClick={this.changePage.bind(this, num + 1)}/>);
 	  }
 	  else {
 		  items.push(<Pagination.Next disabled/>);
 	  }
-	  items.push(<Pagination.Last onClick={this.changePage.bind(this, Math.ceil(this.state.colleges.length/20))}/>);
-	  /*for (let number = 1; number <= Math.ceil(this.state.colleges.length/20); number++) {
+	  items.push(<Pagination.Last onClick={this.changePage.bind(this, pageCount)}/>);
+	  /*for (let number = 1; number <= pageCount; number++) {
 		items.push(
 			<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
 		);

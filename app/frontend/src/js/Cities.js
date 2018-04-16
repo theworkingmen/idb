@@ -39,19 +39,19 @@ class Cities extends Component {
 	  
 	  let start = 0;
 	  let end = 0;
-	  let pages = Math.ceil(this.state.cities.length/20);
-	  
-	  if (pages < 10) {
+	  let pageCount = Math.ceil(this.state.cities.length/20);
+
+	  if (pageCount < 10) {
 		start = 1;
-		end = pages;
+		end = pageCount;
 	  }
 	  else if ((num - 5) < 1) {
 		start = 1;
 		end = 10;
 	  }
-	  else if ((num + 5) > pages) {
-		start = pages - 9;
-		end = pages;
+	  else if ((num + 5) > pageCount) {
+		start = pageCount - 9;
+		end = pageCount;
 	  }
 	  else  {
 		start = num - 5;
