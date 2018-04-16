@@ -109,26 +109,15 @@ class Majors extends Component {
   }
 
   changeSort(sort) {
-	  if (sort == "name") {
-		  this.setState({sort: "name"});
-	  }
-	  else if (sort == "wage") {
-		  this.setState({sort: "wage"});
-	  }
-	  else {
-		  this.setState({sort: "work"});
-	  }
+  	  // sort = "name" or "wage" or "work"
+  	  this.setState({sort: sort});
 	  this.updateData('http://api.majorpotential.me/majors_limited?sort_'+sort+'='+this.state.order+"&is_stem="+this.state.stem+"&wage="+this.state.wage);
 	  
   }
 
   changeOrder(order) {
-	  if (order == "Asc") {
-		  this.setState({order: "Asc"});
-	  }
-	  else {
-		  this.setState({order: "Desc"});
-	  }
+  	  // order = "Asc" or "Desc"
+  	  this.setState({order: order});
 	  this.updateData('http://api.majorpotential.me/majors_limited?sort_'+this.state.sort+'='+order+"&is_stem="+this.state.stem+"&wage="+this.state.wage);
 	  
   }

@@ -117,22 +117,12 @@ class Cities extends Component {
   }  
 
   changeSort(sort) {
-	  if (sort == "name") {
-		  this.setState({sort: "name"});
-	  }
-	  else {
-		  this.setState({sort: "pop"});
-	  }
+	  this.setState({sort: sort});
 	  this.updateData('http://api.majorpotential.me/cities_limited?sort_'+sort+'='+this.state.order+"&state="+this.state.state)
   }
 
   changeOrder(order) {
-	  if (order == "Asc") {
-		  this.setState({order: "Asc"});
-	  }
-	  else {
-		  this.setState({order: "Desc"});
-	  }
+	  this.setState({order: order});
 	  this.updateData('http://api.majorpotential.me/cities_limited?sort_'+this.state.sort+'='+order+"&state="+this.state.state)
   }
 

@@ -111,22 +111,12 @@ class Colleges extends Component {
   }
 
     changeSort(sort) {
-	  if (sort == "name") {
-		  this.setState({sort: "name"});
-	  }
-	  else {
-		  this.setState({sort: "tut"});
-	  }
+      this.setState({sort: sort});
 	  this.updateData('http://api.majorpotential.me/universities_limited?sort_'+sort+'='+this.state.order+"&state="+this.state.state+"&type="+this.state.type);
   }
 
   changeOrder(order) {
-	  if (order == "Asc") {
-		  this.setState({order: "Asc"});
-	  }
-	  else {
-		  this.setState({order: "Desc"});
-	  }
+  	  this.setState({order: order})
 	  this.updateData('http://api.majorpotential.me/universities_limited?sort_'+this.state.sort+'='+order+"&state="+this.state.state+"&type="+this.state.type);
 	  
   }
