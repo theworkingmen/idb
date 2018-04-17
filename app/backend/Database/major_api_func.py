@@ -10,41 +10,7 @@ def get_major(sort_name, sort_wage, sort_work, stem):
     session = Session()
     majors = session.query(Major)
 
-    if stem == 'yes' :
-        majors = session.query(Major).filter(Major.is_stem != 0)
-    elif stem == 'no' :
-        majors = session.query(Major).filter(Major.is_stem == 0)
-
-    #print("Sort name: " + sort_name + "\nSort wage: "+ sort_wage + "\nSort_work: " + sort_work + "\nis stem: " + stem)
-    #Note, for now you can only call one sort function, wage or work, and can
-    #choose the ordering.
-    cast = majors.all()
-
-    if sort_wage == 'Asc' or sort_wage == 'Desc':
-        # Null-value bug: remove all instances with "-1" wage
-        majors = majors.filter(Major.average_wage != -1)
-        if sort_wage == 'Desc':
-            # Sort by average wage, descending
-            majors = majors.order_by(Major.average_wage.desc()).all()
-        else :
-            # Sort by average wage, ascending
-            majors = majors.order_by(Major.average_wage).all()
-    elif sort_work == 'Asc' or sort_work == 'Desc':
-        # Null-value bug: remove all instances with "-1" workers
-        majors = majors.filter(Major.total_people_in_work_foce != -1)
-        if sort_work == 'Desc':
-            # Sort by size of workforce, descending
-            majors = majors.order_by(Major.total_people_in_work_foce.desc()).all()
-        else :
-            # Sort by size of workforce, ascending
-            majors = majors.order_by(Major.total_people_in_work_foce).all()
-    elif sort_name == 'Desc' :
-        # Sort by name, descending
-        majors = majors.order_by(Major.name.desc()).all()
-    else :
-        # Sort by name, ascending (default)
-        majors = majors.order_by(Major.name).all()
-
+    majors = parseInputs(sort_name, sort_wage, sort_work, stem, majors)
 
     print('\n### All Majors')
     for m in majors :
@@ -120,40 +86,7 @@ def get_major_limited(sort_name, sort_wage, sort_work, stem):
     session = Session()
     majors = session.query(Major)
 
-    if stem == 'yes' :
-        majors = session.query(Major).filter(Major.is_stem != 0)
-    elif stem == 'no' :
-        majors = session.query(Major).filter(Major.is_stem == 0)
-
-    #print("Sort name: " + sort_name + "\nSort wage: "+ sort_wage + "\nSort_work: " + sort_work + "\nis stem: " + stem)
-    #Note, for now you can only call one sort function, wage or work, and can
-    #choose the ordering.
-    cast = majors.all()
-
-    if sort_wage == 'Asc' or sort_wage == 'Desc':
-        # Null-value bug: remove all instances with "-1" wage
-        majors = majors.filter(Major.average_wage != -1)
-        if sort_wage == 'Desc':
-            # Sort by average wage, descending
-            majors = majors.order_by(Major.average_wage.desc(), Major.id).all()
-        else :
-            # Sort by average wage, ascending
-            majors = majors.order_by(Major.average_wage, Major.id).all()
-    elif sort_work == 'Asc' or sort_work == 'Desc':
-        # Null-value bug: remove all instances with "-1" workers
-        majors = majors.filter(Major.total_people_in_work_foce != -1)
-        if sort_work == 'Desc':
-            # Sort by size of workforce, descending
-            majors = majors.order_by(Major.total_people_in_work_foce.desc(), Major.id).all()
-        else :
-            # Sort by size of workforce, ascending
-            majors = majors.order_by(Major.total_people_in_work_foce, Major.id).all()
-    elif sort_name == 'Desc' :
-        # Sort by name, descending
-        majors = majors.order_by(Major.name.desc()).all()
-    else :
-        # Sort by name, ascending (default)
-        majors = majors.order_by(Major.name).all()
+    majors = parseInputs(sort_name, sort_wage, sort_work, stem, majors)
 
     print('\n### All Majors')
     for m in majors :
@@ -195,3 +128,41 @@ def search_Majors (terms):
     session.commit()
     session.close()
     return all_maj
+
+def parseInputs (sort_name, sort_wage, sort_work, stem, majors) :
+    if stem == 'yes' :
+        majors = majors.filter(Major.is_stem != 0)
+    elif stem == 'no' :
+        majors = majors.filter(Major.is_stem == 0)
+
+    #print("Sort name: " + sort_name + "\nSort wage: "+ sort_wage + "\nSort_work: " + sort_work + "\nis stem: " + stem)
+    #Note, for now you can only call one sort function, wage or work, and can
+    #choose the ordering.
+    cast = majors.all()
+
+    if sort_wage == 'Asc' or sort_wage == 'Desc':
+        # Null-value bug: remove all instances with "-1" wage
+        majors = majors.filter(Major.average_wage != -1)
+        if sort_wage == 'Desc':
+            # Sort by average wage, descending
+            majors = majors.order_by(Major.average_wage.desc()).all()
+        else :
+            # Sort by average wage, ascending
+            majors = majors.order_by(Major.average_wage).all()
+    elif sort_work == 'Asc' or sort_work == 'Desc':
+        # Null-value bug: remove all instances with "-1" workers
+        majors = majors.filter(Major.total_people_in_work_foce != -1)
+        if sort_work == 'Desc':
+            # Sort by size of workforce, descending
+            majors = majors.order_by(Major.total_people_in_work_foce.desc()).all()
+        else :
+            # Sort by size of workforce, ascending
+            majors = majors.order_by(Major.total_people_in_work_foce).all()
+    elif sort_name == 'Desc' :
+        # Sort by name, descending
+        majors = majors.order_by(Major.name.desc()).all()
+    else :
+        # Sort by name, ascending (default)
+        majors = majors.order_by(Major.name).all()
+
+    return majors

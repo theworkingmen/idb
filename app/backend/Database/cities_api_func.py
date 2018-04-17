@@ -13,27 +13,7 @@ def get_city(sort_name, sort_pop, state):
 
     #print("Sort by name " + sort_name + "\nSort by population " + sort_pop + "\nFilter by state " + state)
 
-    if state != 'None' and len(state) == 2 :
-        state = state.upper()
-        #cities = cities.filter(City.city_name.match(state))
-        cities = cities.filter(City.city_name.op('~')(", " + state + "|-" + state))
-
-    if sort_name == 'Desc':
-        # Sort by name, descending
-        cities = cities.order_by(City.city_name.desc()).all()
-    elif sort_pop == 'Asc' or sort_pop == 'Desc' :
-        # Null-value bug: remove all instances with "None" population
-        cities = cities.filter(City.population_in_county != None)
-        if sort_pop == 'Asc' :
-            # Sort by population, ascending
-            cities = cities.order_by(City.population_in_county).all()
-        else :
-            # Sort by population, descending
-            cities = cities.order_by(City.population_in_county.desc()).all()
-    else :
-        # Sort by name, ascending (default)
-        cities = cities.order_by(City.city_name).all()
-
+    cities = parseInputs (sort_name, sort_pop, state, cities)
 
     print('\n### All Cities')
     for c in cities :
@@ -139,27 +119,7 @@ def get_city_limited(sort_name, sort_pop, state):
 
     #print("Sort by name " + sort_name + "\nSort by population " + sort_pop + "\nFilter by state " + state)
 
-    if state != 'None' and len(state) == 2 :
-        state = state.upper()
-        #cities = cities.filter(City.city_name.match(state))
-        cities = cities.filter(City.city_name.op('~')(", " + state + "|-" + state))
-
-    if sort_name == 'Desc':
-        # Sort by name, descending
-        cities = cities.order_by(City.city_name.desc()).all()
-    elif sort_pop == 'Asc' or sort_pop == 'Desc' :
-        # Null-value bug: remove all instances with "None" population
-        cities = cities.filter(City.population_in_county != None)
-        if sort_pop == 'Asc' :
-            # Sort by population, ascending
-            cities = cities.order_by(City.population_in_county).all()
-        else :
-            # Sort by population, descending
-            cities = cities.order_by(City.population_in_county.desc()).all()
-    else :
-        # Sort by name, ascending (default)
-        cities = cities.order_by(City.city_name).all()
-
+    cities = parseInputs (sort_name, sort_pop, state, cities)
 
     print('\n### All Cities')
     for c in cities :
@@ -200,3 +160,28 @@ def search_Cities (terms):
     session.commit()
     session.close()
     return all_city
+
+
+def parseInputs (sort_name, sort_pop, state, cities) :
+    if state != 'None' and len(state) == 2 :
+        state = state.upper()
+        #cities = cities.filter(City.city_name.match(state))
+        cities = cities.filter(City.city_name.op('~')(", " + state + "|-" + state))
+
+    if sort_name == 'Desc':
+        # Sort by name, descending
+        cities = cities.order_by(City.city_name.desc()).all()
+    elif sort_pop == 'Asc' or sort_pop == 'Desc' :
+        # Null-value bug: remove all instances with "None" population
+        cities = cities.filter(City.population_in_county != None)
+        if sort_pop == 'Asc' :
+            # Sort by population, ascending
+            cities = cities.order_by(City.population_in_county).all()
+        else :
+            # Sort by population, descending
+            cities = cities.order_by(City.population_in_county.desc()).all()
+    else :
+        # Sort by name, ascending (default)
+        cities = cities.order_by(City.city_name).all()
+
+    return cities
