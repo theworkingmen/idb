@@ -13,31 +13,9 @@ def get_uni(sort_tut, sort_name, f_type, state):
 
     #print("Sort tution: " + sort_tut + "\nSort name: " + sort_name + "\nFilter uni type: " + f_type + "\nState: " + state)
     #match is the way to go, don't use .like() for postgres
-    if f_type != 'None':
-        universities = universities.filter(University.uni_type.match(f_type))
 
-    if state != 'None':
-        #Note only works with all caps abbrivations
-        universities = universities.filter(or_(University.state == us_states_abbrev.get(state, "default"), \
-            University.state == state))
-        
-    if sort_name == 'Desc':
-        # Sort by name, descending
-        universities = universities.order_by(University.name.desc()).all()
-    elif sort_tut == 'Asc' or sort_tut == 'Desc' :
-        if sort_tut == 'Asc' :
-            # Sort by in-state tuition, ascending
-            universities = universities.order_by(University.state_tuition).all()
-        else :
-            # Sort by in-state tuition, descending
-            universities = universities.order_by(University.state_tuition.desc()).all()
-    else :
-        # Sort by name, ascending (default)
-        universities = universities.order_by(University.name).all()
+    universities = parseInputs(sort_tut, sort_name, f_type, state, universities)
 
-    #add in ordering later
-
-    #universities = session.query(University).all()
     print('\n### All Universities')
     for uni in universities :
         top_majors = []
@@ -135,27 +113,7 @@ def get_uni_limited(sort_tut, sort_name, f_type, state):
 
     #print("Sort tution: " + sort_tut + "\nSort name: " + sort_name + "\nFilter uni type: " + f_type + "\nState: " + state)
     #match is the way to go, don't use .like() for postgres
-    if f_type != 'None':
-        universities = universities.filter(University.uni_type.match(f_type))
-
-    # State is passed as two character abbreviation
-    if state != 'None':
-        #Note only works with all caps abbrivations
-        universities = universities.filter(or_(University.state == us_states_abbrev.get(state, "default"), \
-            University.state == state))
-    if sort_name == 'Desc':
-        # Sort by name, descending
-        universities = universities.order_by(University.name.desc()).all()
-    elif sort_tut == 'Asc' or sort_tut == 'Desc' :
-        if sort_tut == 'Asc' :
-            # Sort by in-state tuition, ascending
-            universities = universities.order_by(University.state_tuition).all()
-        else :
-            # Sort by in-state tuition, descending
-            universities = universities.order_by(University.state_tuition.desc()).all()
-    else :
-        # Sort by name, ascending (default)
-        universities = universities.order_by(University.name).all()
+    universities = parseInputs(sort_tut, sort_name, f_type, state, universities)
 
     print('\n### Universities Limited')
     for uni in universities :
@@ -197,3 +155,28 @@ def search_Universities (terms):
     session.commit()
     session.close()
     return all_uni
+
+def parseInputs (sort_tut, sort_name, f_type, state, universities) :
+    if f_type != 'None':
+        universities = universities.filter(University.uni_type.match(f_type))
+
+    if state != 'None':
+        #Note only works with all caps abbrivations
+        universities = universities.filter(or_(University.state == us_states_abbrev.get(state, "default"), \
+            University.state == state))
+        
+    if sort_name == 'Desc':
+        # Sort by name, descending
+        universities = universities.order_by(University.name.desc()).all()
+    elif sort_tut == 'Asc' or sort_tut == 'Desc' :
+        if sort_tut == 'Asc' :
+            # Sort by in-state tuition, ascending
+            universities = universities.order_by(University.state_tuition).all()
+        else :
+            # Sort by in-state tuition, descending
+            universities = universities.order_by(University.state_tuition.desc()).all()
+    else :
+        # Sort by name, ascending (default)
+        universities = universities.order_by(University.name).all()
+        
+    return universities
