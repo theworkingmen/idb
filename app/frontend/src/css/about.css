@@ -39,7 +39,6 @@ table, th, td {
 table {
   margin-left: 150px;
   margin-right: 150px;
-  margin-top: 20px;
   margin-bottom: 20px;
 
 }
@@ -92,8 +91,7 @@ block_small {
   font-size: 30px;
   font-weight: 800;
   letter-spacing: -3px;
-  line-height: 1;
+  line-height: 3;
   position: relative;
-  padding-bottom: 1em;
-  padding-top: 100em;
+
 }

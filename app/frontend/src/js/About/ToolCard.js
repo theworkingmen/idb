@@ -25,7 +25,7 @@ class ToolCard extends Component {
                 <OverlayTrigger	trigger={['hover', 'focus']}
 							    placement="bottom"
 							    overlay={popoverfocus}>
-                <Thumbnail  style={{height:"12em"}}
+                <Thumbnail  style={{height:"13em", width:"13em"}}
                             href ={this.props.src}
                             target="_blank">
                     {/* img src needs to have a {local path} or {url}. DB needs to provide url of img. */}
