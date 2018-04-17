@@ -1,4 +1,4 @@
-.ctext{
+.cheader{
     font-weight: 100%
 }
 
@@ -7,7 +7,7 @@
 }
 
 .carousel-caption .cheader{
-  font-size: 40px;
+  font-size: 28px;
   color: white;
 }
 

@@ -3,6 +3,7 @@ import {Carousel} from 'react-bootstrap';
 import city from '../images/newyork.jpg';
 import it from '../images/majors.jpg';
 import uni from '../images/ut.jpg';
+import '../css/splash.css'
 
 class Splash extends Component {
   render() {

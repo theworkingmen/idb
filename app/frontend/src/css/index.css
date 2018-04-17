@@ -4,3 +4,11 @@ body {
   font-family: sans-serif;
   background-image: url("../images/background.jpg");
 }
+
+.navbar-brand {
+  font-size: 23px;
+}
+
+.nav {
+  font-size: 17px;
+}
