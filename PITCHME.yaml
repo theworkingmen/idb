@@ -6,11 +6,11 @@
 #
 theme : sky
 theme-override : assets/css/PITCHME.css
-logo : assets/image/logo.png
-background : assets/image/triangles.svg
+# logo : assets/image/logo.png
+background : https://github.com/theworkingmen/idb/blob/refactoring/assets/image/triangles.svg
 background-size : cover
 background-opacity : 80
 highlight : atom-one-dark
 transition : none
 published : true
-footnote : "GitPitch Pro [ Triangles ] Presentation Template"
+footnote : "The Working Men - Presentation"
