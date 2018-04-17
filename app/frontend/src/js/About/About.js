@@ -150,10 +150,11 @@ export default class About extends Component {
         <div className ='container'>
         <div className = 'introduction'>
           <Jumbotron>
-          <logo> <center> Major Potential </center></logo>
+          <logo> <center> About Us </center></logo>
           <p></p>
-            <intro ><center> A website that links universities, the cities where the universities are located,
-            and job opportunities in cities for graduates in certain majors.</center> </intro>
+            <intro ><center> Major Potential is a website that links Universities, Cities, and Majors. We envision our website to 
+            provide important information for users who are trying to find information about 4 year universities in the United States.
+            </center> </intro>
           <p></p>
           <p></p>
           </Jumbotron>
@@ -192,8 +193,10 @@ export default class About extends Component {
         </div>
 
         <div>
-          <block_small> <p> </p> <center> Sources </center> <p></p></block_small>
+          <block_small> <center> Sources </center> </block_small>
           <Grid>
+            <Row>
+            <Col sm={1} md={1} lg={1} style={{width:"12.5%"}}></Col>
             <ToolCard name="Bureau of Labor Statistics" 
                       image="https://logo.clearbit.com/bls.gov" 
                       src="https://www.bls.gov/developers/api_signature_v2.html"></ToolCard>
@@ -203,16 +206,19 @@ export default class About extends Component {
             <ToolCard name="Department of Education" 
                       image="https://logo.clearbit.com/data.gov" 
                       src="https://api.data.gov/docs/ed/"></ToolCard>
+            </Row>
+            <Row>
+            <Col sm={1} md={1} lg={1} style={{width:"12.5%"}}></Col>
             <ToolCard name="The Integrated Postsecondary Education Data System" 
                       image="https://logo.clearbit.com/nces.ed.gov" 
                       src="https://nces.ed.gov/ipeds/"></ToolCard>
-            <Col xs={12} sm={3} md={3} lg={3}></Col>
             <ToolCard name="Data USA API" 
                       image="https://logo.clearbit.com/datausa.io" 
                       src="https://datausa.io/about/datasets/"></ToolCard>
             <ToolCard name="Google Maps API" 
                       image="https://goo.gl/PxL8TL" 
                       src="https://developers.google.com/maps/"></ToolCard>
+            </Row>
           </Grid>
         </div>
 
@@ -220,51 +226,68 @@ export default class About extends Component {
 
           <block_small> <center> Tools Used </center> </block_small>
           <Grid> 
-            <ToolCard name="Amazon Beanstalk" 
+            <ToolCard name="Amazon Web Services" 
                       image="https://logo.clearbit.com/aws.training" 
-                      src=""></ToolCard>
+                      src="https://aws.amazon.com"
+                      about="Server Hosting"></ToolCard>
             <ToolCard name="Python" 
                       image="https://logo.clearbit.com/python.org" 
-                      src=""></ToolCard>
+                      src="https://www.python.org"
+                      about="Backend Development"></ToolCard>
             <ToolCard name="Flask" 
                       image="https://i.lensdump.com/i/TDYNA.png" 
-                      src=""></ToolCard>          
+                      src="http://flask.pocoo.org"
+                      about="Backend Python Library"></ToolCard>          
             <ToolCard name="Slack" 
                       image="https://logo.clearbit.com/slack.com" 
-                      src=""></ToolCard>
+                      src="https://slack.com"
+                      about="Communication"></ToolCard>
             <ToolCard name="React" 
                       image="https://logo.clearbit.com/reactjsday.it" 
-                      src=""></ToolCard>
+                      src="https://reactjs.org"
+                      about="Frontend Development"></ToolCard>
             <ToolCard name="React Bootstrap" 
                       image="https://goo.gl/R75VBm" 
-                      src=""></ToolCard>
+                      src="https://react-bootstrap.github.io"
+                      about="Frontend CSS"></ToolCard>
             <ToolCard name="React Router" 
                       image="https://goo.gl/m9JCBZ" 
-                      src=""></ToolCard> 
+                      src="https://reacttraining.com/react-router/"
+                      about="Library of Navigational React Components"></ToolCard> 
             <ToolCard name="React Highlight Words" 
                       image="https://goo.gl/Kfuctr" 
-                      src=""></ToolCard>                    
+                      src="http://bvaughn.github.io/react-highlight.js/"
+                      about="Syntaxt highlighting Library"></ToolCard>                    
             <ToolCard name="SQLalchemy" 
                       image="https://logo.clearbit.com/sqlalchemy.org" 
-                      src=""></ToolCard>
+                      src="http://flask-sqlalchemy.pocoo.org/2.3/"
+                      about="Object Relational Mapping LIbrary for Database Connection"></ToolCard>
             <ToolCard name="Travis-CI" 
                       image="https://logo.clearbit.com/travis-ci.com" 
-                      src=""></ToolCard>
+                      src="https://travis-ci.org"
+                      about="Continuous Integration"></ToolCard>
             <ToolCard name="Github" 
                       image="https://logo.clearbit.com/github.com" 
-                      src=""></ToolCard>
+                      src="https://github.com"
+                      about="Version Control and Project Management"></ToolCard>
             <ToolCard name="Postman" 
                       image="https://logo.clearbit.com/getpostman.com" 
-                      src=""></ToolCard>
+                      src="https://www.getpostman.com"
+                      about="API Design and Testing"></ToolCard>       
+            <Col sm={1} md={1} lg={1} style={{width:"12.5%"}}></Col>
             <ToolCard name="Selenium" 
                       image="https://logo.clearbit.com/seleniumhq.org" 
-                      src=""></ToolCard>
+                      src="https://www.seleniumhq.org"
+                      about="GUI Testing"></ToolCard>
             <ToolCard name="Mocha" 
                       image="https://goo.gl/4G7jTa" 
-                      src=""></ToolCard>
+                      src="https://mochajs.org"
+                      about="Frontend Testing"></ToolCard>
             <ToolCard name="Babel" 
                       image="https://logo.clearbit.com/babeljs.io" 
-                      src=""></ToolCard>
+                      src="https://babeljs.io/"
+                      about="JavaScript Pre-Compiler"></ToolCard>
+            
                       
           </Grid>
         </div>
@@ -273,6 +296,7 @@ export default class About extends Component {
           <center>
           <block_small> <center>Project Links</center> </block_small>
           <Grid>
+            <Col sm={1} md={1} lg={1} style={{width:"12.5%"}}></Col>
             <ToolCard name="Github" 
                       image="https://logo.clearbit.com/github.com" 
                       src="https://github.com/theworkingmen/idb"></ToolCard>

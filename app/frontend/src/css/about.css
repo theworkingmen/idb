@@ -26,6 +26,10 @@
   line-height: 0.7em;
 }
 
+columncenter {
+  display: block;
+  margin: 0 auto;
+}
 
 table, th, td {
   border-bottom: 1px solid white;
@@ -90,6 +94,6 @@ block_small {
   letter-spacing: -3px;
   line-height: 1;
   position: relative;
-  margin-bottom: 30em;
-  margin-top: 100em;
+  padding-bottom: 1em;
+  padding-top: 100em;
 }
