@@ -20,7 +20,7 @@ class SeleTests(unittest.TestCase):
 
     # Create and initialize a webdriver to run the tests via Google Chrome.
     def initialize(self):
-        self.driver = webdriver.Chrome(executable_path='chrome_driver/chromedriver.exe')
+        self.driver = webdriver.Chrome()
         driver = self.driver
         driver.get("http://majorpotential.me")
         self.assertTrue("<div class=\"carousel slide\">" in driver.page_source)
