@@ -12,7 +12,8 @@ class ToolCard extends Component {
 		    <Col xs={12} sm={3} md={3} lg={3}>
 		    	
 				<Thumbnail 	style={{height:"14em"}}
-							href ={this.props.src}>
+							href ={this.props.src}
+							target="_blank">
 					{/* img src needs to have a {local path} or {url}. DB needs to provide url of img. */}
 					<center>
 						<Image 	src={this.props.image}
