@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import {Image, Col, Thumbnail} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-
+import notFound from '../images/grad-0.png';
 
 class Card extends Component {
-	
+
 	/* default img src = https://goo.gl/NvPJj6 */
 
 	render() {
@@ -17,7 +17,7 @@ class Card extends Component {
 					<center>
 						<Image 	src={this.props.domain}
 								style={{width:"14em", height:"14em"}}
-								onError={(e)=>{e.target.src="https://goo.gl/NvPJj6"}}/>
+								onError={(e)=>{e.target.src=notFound}}/>
 					</center>
 					{/*<Image src={`${this.props.imgsrc}`} style={{width:"100%", height:"100%"}}/>*/}
 					<h4><center style={{justifyContent:"center", height:"4em"}}>{this.props.name}</center></h4>
