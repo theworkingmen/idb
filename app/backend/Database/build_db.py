@@ -1,4 +1,4 @@
-import cities_populate, majors_populate, university_populate
+import Cities.cities_populate, Majors.majors_populate, Universities.university_populate
 
 if __name__ == "__main__":
     university_populate.university_basic_populate()

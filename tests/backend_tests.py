@@ -3,21 +3,21 @@ import os
 import unittest
 try:
     sys.path.insert(0, '../app/backend/Database/')
-    from uni_api_func import *
-    from major_api_func import *
-    from cities_api_func import *
+    from Universities.uni_api_func import *
+    from Majors.major_api_func import *
+    from Cities.cities_api_func import *
 except:
     sys.path.insert(0, os.path.abspath('./app/backend/Database/'))
     print(sys.path)
-    from uni_api_func import *
-    from major_api_func import *
-    from cities_api_func import *
+    from Universities.uni_api_func import *
+    from Majors.major_api_func import *
+    from Cities.cities_api_func import *
 
 import json
 import re
 
 class APITests(unittest.TestCase):
-
+    
     def test_all_uni(self) :
         uni_list = get_uni('None', 'Asc', 'None', 'None')
         self.assertTrue(len(uni_list) > 1)
@@ -175,7 +175,7 @@ class APITests(unittest.TestCase):
         city_list = search_Cities(search_terms)
         self.assertTrue(len(city_list) == 1)
         self.assertTrue(city_list[0]['id'] == "31000US12420")
-    
+        
     
     def test_major_sorting(self) :
         testvals = (('Asc', 'None', 'None', 'None', 'name', 'Accounting'), \
@@ -187,6 +187,7 @@ class APITests(unittest.TestCase):
         for test in testvals:
             major_list = get_major_limited(test[0], test[1], test[2], test[3])
             major = major_list[0]
+            print(major[test[4]])
             self.assertTrue(major[test[4]] == test[5])
     
     def test_major_filtering(self) :
@@ -198,7 +199,7 @@ class APITests(unittest.TestCase):
         self.assertTrue(len(major_list) == 134)
         for m in major_list :
             self.assertTrue(m['is_stem'] == 0)
-    
+
     def test_major_searching(self) :
         search_terms = ['engineering']
         major_list = search_Majors(search_terms)
