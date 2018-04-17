@@ -1,14 +1,8 @@
 import React, { Component } from 'react';
 import {Image, Col, Thumbnail} from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
 
 class ToolCard extends Component {
-
-	constructor(props) {
-		super(props);
-
-	}
 
 	/* default img src = https://goo.gl/NvPJj6 */
 

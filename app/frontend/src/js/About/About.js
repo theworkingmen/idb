@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Jumbotron } from 'react-bootstrap';
-import {Image, Grid, Row, Col, Thumbnail, Button, ButtonToolbar, Table} from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import {Grid, Row, Col, Table} from 'react-bootstrap';
 import '../../css/about.css';
 import abel_pic from '../../images/authors/abel_pic.jpg';
 import sungsup_pic from '../../images/authors/sungsup_pic.jpg';
@@ -76,7 +75,7 @@ export default class About extends Component {
       members_data['christian-onuogu'] = {
         "name": "Christian Onuogu",
         "role": "Front-End",
-        "bio": "I am a junior Computer Science major.",
+        "bio": "I am a sophomore Computer Science major.",
         "photo": christian_pic,
         "commits": 0,
         "issues": 0,
@@ -131,7 +130,7 @@ export default class About extends Component {
 
   render() {
 
-      if (this.state.ready == false){
+      if (this.state.ready === false){
          return <Grid><Row className="spin"><RingLoader
              color={'#123abc'}
              loading={this.state.loading}
@@ -141,7 +140,7 @@ export default class About extends Component {
        }
 
       let members_info = null
-      if (this.state.ready == true) {
+      if (this.state.ready === true) {
         members_info = <MembersCard members_info = {
           this.state.members_stats
         }
