@@ -1,8 +1,8 @@
 @title[Introduction]
-# The Working Men
+## The Working Men
 
-### GitPitch Presentation for CS373
-### See our site at [majorpotential.me](http://majorpotential.me)
+GitPitch Presentation for CS373
+See our site at [majorpotential.me](http://majorpotential.me)
 
 ---
 
@@ -10,16 +10,16 @@
 
 <br>
 
--Mitchell Traylor
--Abel Tesfaye
--Neal Friesenhahn
--Christian Onuogu
--Sungsup Lee
+- Mitchell Traylor
+- Abel Tesfaye
+- Neal Friesenhahn
+- Christian Onuogu
+- Sungsup Lee
 
 ---
 
 ## So, we should probably work on this as a group
--Anything else past here just came with the template
+- Anything else past here just came with the template
 
 ---
 
@@ -77,10 +77,6 @@ http.createServer(function (request, response) {
 @[41-53](GIST source code is beautifully rendered on any slide.)
 @[57-62](And code-presenting works seamlessly for GIST too, both online and offline.)
 
----?image=assets/image/snowscape.jpg&size=auto 80%&color=#58b9f5
-
-<!-- Sample slide background image scaling and custom color fill -->
-
 ---
 
 ## Template Help
@@ -130,6 +126,10 @@ http.createServer(function (request, response) {
 
 ### <span class="white">Get your presentation started!</span>
 ### [Download this template @fa[external-link gp-download]](https://gitpitch.com/template/download/triangles)
+
+---?image=assets/image/snowscape.jpg&size=auto 80%&color=#58b9f5
+
+<!-- Sample slide background image scaling and custom color fill -->
 
 ---
 
