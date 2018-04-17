@@ -1,8 +1,8 @@
 from application import application
 import logging
-from uni_api_func import *
-from major_api_func import *
-from cities_api_func import *
+from Universities.uni_api_func import *
+from Majors.major_api_func import *
+from Cities.cities_api_func import *
 from exception import NotFoundException
 from flask import Flask, request, jsonify, Response, json, render_template
 
