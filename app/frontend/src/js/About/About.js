@@ -128,15 +128,13 @@ export default class About extends Component {
          return <Grid><Row className="spin"><RingLoader
              color={'#123abc'}
              loading={this.state.loading}
-             size="100"
+             size={100}
            /> </Row></Grid>;
        }
 
-      let members_info = null
+      //let members_info = null
       
-      if (this.state.ready === true) {
-        var member = Object.assign({},this.state.members_stats['smcw66']);
-        
+      if (this.state.ready === true) {        
         return (
           <div className ="container" style={{background: "white"}}>
             <div className ='container'>
@@ -170,6 +168,7 @@ export default class About extends Component {
               <block_small> <center>GitHub Stats </center> </block_small>
               <Col  xs={6} md={8}>
               <Table>
+				<tbody>
                 <tr>
                   <th><h4> Stat </h4></th>
                   <th><h4> Value </h4></th>
@@ -186,6 +185,7 @@ export default class About extends Component {
                   <th>Number of Unit Tests:</th>
                   <th> 93 </th>
                 </tr>
+                </tbody>
               </Table>
               </Col>
               </Row>
