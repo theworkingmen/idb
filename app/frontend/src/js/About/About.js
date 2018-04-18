@@ -8,7 +8,6 @@ import mitchell_pic from '../../images/authors/mitchell_pic.jpg';
 import neal_pic from '../../images/authors/neal_pic.jpg';
 import christian_pic from '../../images/authors/christian_pic.jpg';
 import MembersCard from './MembersCard'
-import MembersCard2 from './MembersCard2'
 import { RingLoader } from 'react-spinners';
 import ToolCard from './ToolCard.js';
 
@@ -136,7 +135,6 @@ export default class About extends Component {
       let members_info = null
       
       if (this.state.ready === true) {
-        /*members_info = <MembersCard members_info = {this.state.members_stats}/>;*/
         var member = Object.assign({},this.state.members_stats['smcw66']);
         
         return (
@@ -157,12 +155,12 @@ export default class About extends Component {
             <div>
               <block_small> <center> The Team </center> </block_small>
               <Grid>
-                <MembersCard2 member={Object.assign({},this.state.members_stats['traylor1'])}></MembersCard2>
-                <MembersCard2 member={Object.assign({},this.state.members_stats['smcw66'])}></MembersCard2>
-                <MembersCard2 member={Object.assign({},this.state.members_stats['abelhtt'])}></MembersCard2>
+                <MembersCard member={Object.assign({},this.state.members_stats['traylor1'])}></MembersCard>
+                <MembersCard member={Object.assign({},this.state.members_stats['smcw66'])}></MembersCard>
+                <MembersCard member={Object.assign({},this.state.members_stats['abelhtt'])}></MembersCard>
                 <Col sm={2} md={2} lg={2}></Col>
-                <MembersCard2 member={Object.assign({},this.state.members_stats['NealFM'])}></MembersCard2>
-                <MembersCard2 member={Object.assign({},this.state.members_stats['christian-onuogu'])}></MembersCard2>
+                <MembersCard member={Object.assign({},this.state.members_stats['NealFM'])}></MembersCard>
+                <MembersCard member={Object.assign({},this.state.members_stats['christian-onuogu'])}></MembersCard>
               </Grid>
               
             </div>
