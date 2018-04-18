@@ -34,7 +34,6 @@ class ToolCard extends Component {
                                 onError={(e)=>{e.target.src="https://goo.gl/NvPJj6"}}
                                 style={{width:"10em", height:"10em"}}/>
                     </center>
-                    
 					
                 </Thumbnail>
                 </OverlayTrigger>
