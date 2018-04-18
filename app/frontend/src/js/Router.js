@@ -25,6 +25,7 @@ class Router extends Component {
           <Route exact path='/cities/:id' component={CityInstance}/>
           <Route exact path='/majors' component={Majors}/>
           <Route exact path='/majors/:id' component={MajorInstance}/>
+          <Route exact path='/search/' component={Search}/>
           <Route exact path='/search/:id' component={Search}/>
           <Route exact path='/about' component={About}/>
           <Route exact path='/*' component={notFound}/>
