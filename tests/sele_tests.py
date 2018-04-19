@@ -65,13 +65,15 @@ class SeleTests(unittest.TestCase):
     def test_navbar_about(self):
         driver = self.driver
         self.navigate(driver, "About")
-        inner_html = driver.find_element_by_class_name("group_members").get_attribute("innerHTML")
-        self.assertTrue("The Team" in inner_html)
-        try :
-            test_link = driver.find_element_by_partial_link_text("Github")
-            test_link = driver.find_element_by_partial_link_text("Report")
-        except NoSuchElementException : #pragma: no cover
-            self.assertTrue(False)      #pragma: no cover
+        inner_html = driver.find_element_by_tag_name("center").get_attribute("innerHTML")
+        self.assertTrue("About Us" in inner_html)
+        link_list = driver.find_elements_by_tag_name("a")
+        inner_html = link_list[6].get_attribute("innerHTML")
+        print(inner_html)
+        self.assertTrue("logo.clearbit.com/bls.gov" in inner_html)
+        inner_html = link_list[7].get_attribute("innerHTML")
+        print(inner_html)
+        self.assertTrue("logo.clearbit.com/census.gov" in inner_html)
             
     # Test global search functionality
     def test_search(self):
