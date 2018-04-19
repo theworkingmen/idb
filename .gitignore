@@ -3,3 +3,4 @@ app/frontend/node_modules
 app/frontend/src/js/npm-debug.log
 */node_modules
 *.pyc
+app/frontend/build/

@@ -8,6 +8,7 @@ import '../css/splash.css'
 class Splash extends Component {
   render() {
     return (
+        <div>
             <Carousel>
               <Carousel.Item>
                  <img width='100%' height='600px'  src={uni} alt="universities"/>
@@ -28,6 +29,7 @@ class Splash extends Component {
                 </Carousel.Caption>
               </Carousel.Item>
             </Carousel>
+        </div>
       )
     }
 }

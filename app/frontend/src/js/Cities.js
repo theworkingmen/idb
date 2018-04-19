@@ -5,8 +5,8 @@ import '../css/Flex.css';
 import { RingLoader } from 'react-spinners';
 
 class Cities extends Component {
-	
-  /* Use following url for default image: http://bit.ly/2CYI94d 
+
+  /* Use following url for default image: http://bit.ly/2CYI94d
 	Grid automatically creates new rows for additional card components. */
 
   constructor() {
@@ -35,10 +35,10 @@ class Cities extends Component {
 	  else {
 		  items.push(<Pagination.Prev disabled key="prev"/>);
 	  }
-	  
+
 	  let start = 0;
 	  let end = 0;
-	  
+
 
 	  if (this.state.pageCount < 10) {
 		start = 1;
@@ -56,13 +56,15 @@ class Cities extends Component {
 		start = num - 5;
 		end = num + 4;
 	  }
-	  
+
 	  for (let number = start; number <= end; number++) {
 			items.push(
-				<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}key={number}>{number}</Pagination.Item>
+				<Pagination.Item active={number === active}
+								 onClick={this.changePage.bind(this, number)}key={number}>{number}
+				</Pagination.Item>
 			);
 	  }
-	  
+
 	  if (num < this.state.pageCount) {
 		items.push(<Pagination.Next onClick={this.changePage.bind(this, num + 1)} key="next"/>);
 	  }
@@ -88,7 +90,10 @@ class Cities extends Component {
                 else{
                     population_prop = "Population: " + population_prop.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 }
-                return(<Card name={city.city_name} model='cities' domain={city.city_image_link} id={city.id} field = {population_prop} key={city.id}>  </Card>)
+                return(<Card name={city.city_name} model='cities'
+							domain={city.city_image_link} id={city.id}
+							field = {population_prop} key={city.id}>
+					  </Card>)
 			})
 			this.setState({pageCount: Math.ceil(cities.length/20)});
 
@@ -99,13 +104,15 @@ class Cities extends Component {
 				items.push(<Pagination.Prev disabled key="prev"/>);
 				for (let number = 1; number <= Math.min(10, this.state.pageCount); number++) {
 					items.push(
-						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)} key={number}>{number}</Pagination.Item>
+						<Pagination.Item active={number === active}
+										onClick={this.changePage.bind(this, number)}
+										key={number}>{number}</Pagination.Item>
 					);
 				}
 				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)} key="next"/>);
 				items.push(<Pagination.Last onClick={this.changePage.bind(this, this.state.pageCount)} key="last"/>);
 			}
-			
+
             this.setState({
 				pages: items,
 				page: 1,
@@ -113,7 +120,7 @@ class Cities extends Component {
 				loading: false
 			});
 		})
-  }  
+  }
 
   changeSort(sort) {
 	  this.setState({sort: sort});
@@ -129,7 +136,7 @@ class Cities extends Component {
 	  this.setState({state: state});
 	  this.updateData('http://api.majorpotential.me/cities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+state)
   }
-  
+
 
 
   createStates(){
@@ -146,7 +153,10 @@ class Cities extends Component {
 	   ["Wisconsin", "WI"], ["Wyoming", "WY"], ["Puerto Rico", "PR"], ["District of Columbia", "DC"]]
 	  let items = []
 	  for (let i = 0; i < state.length; i++) {
-		  items.push(<MenuItem eventKey={i} onClick={this.changeState.bind(this, state[i][1])} key={i}>{state[i][0]}</MenuItem>);
+		  items.push(<MenuItem eventKey={i}
+			  				   onClick={this.changeState.bind(this, state[i][1])}
+							   key={i}>{state[i][0]}
+					</MenuItem>);
 	  }
 	  return items
   }

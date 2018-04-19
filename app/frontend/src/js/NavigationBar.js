@@ -15,7 +15,7 @@ class NavigationBar extends Component {
 	}
 
 	handleChange(e) {
-		this.setState({ value: e.target.value });
+		this.setState({ value: e.target.value});
 	}
 
 	handleKeyPress(e) {
@@ -56,10 +56,14 @@ class NavigationBar extends Component {
 					</Nav>
 					<Navbar.Form pullRight>
 						<FormGroup>
-							<FormControl type="text" placeholder="Search" value={this.state.value}
-										 onChange={this.handleChange.bind(this)} onKeyPress={this.handleKeyPress.bind(this)} />
+							<FormControl type="text"
+										 placeholder="Search"
+										 value={this.state.value}
+										 onChange={this.handleChange.bind(this)}
+										 onKeyPress={this.handleKeyPress.bind(this)} />
 						</FormGroup>{' '}
-						<Link to={`/${this.state.search}/${this.state.value}`}><Button type="submit">Search</Button></Link>
+						<Link to={`/${this.state.search}/${this.state.value.replace(/(%|\$|\^|\*|@|!|#)*/, " ")}`}>
+							<Button type="submit">Search</Button></Link>
 
 					</Navbar.Form>
 					</Navbar.Collapse>

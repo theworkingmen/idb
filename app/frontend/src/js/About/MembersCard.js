@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Image, Grid, Row, Col, Thumbnail} from 'react-bootstrap';
+import {Image, Col, Thumbnail} from 'react-bootstrap';
 import '../../css/about.css';
 
 export default class MembersCard extends Component {
