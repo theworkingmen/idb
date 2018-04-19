@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Image, Col, Thumbnail} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import notFound from '../images/grad-0.png';
+import notFound from '../images/grad-0.jpg';
 
 class Card extends Component {
 
