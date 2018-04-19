@@ -1,4 +1,6 @@
-from Database.base import Session, engine, Base
+import sys
+sys.path.append("..")
+from base import Session, engine, Base
 from Cities.city import City
 from Majors.major import Major
 from university import University

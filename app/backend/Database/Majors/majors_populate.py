@@ -1,3 +1,5 @@
+import sys
+sys.path.append("..")
 from base import Session, engine, Base
 from Cities.city import City
 from major import Major
