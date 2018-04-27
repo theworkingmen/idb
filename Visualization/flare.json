@@ -1,0 +1,19 @@
+{
+ "name": "flare", "description": "Flare",
+ "children": [
+    {
+      "name": "Texas", "description": "Texas",
+      "children": [
+        {"name": "Republicans", "size": 10},
+        {"name": "Democrats", "size": 5}
+      ]
+    },
+    {
+      "name": "California", "description": "California",
+      "children": [
+        {"name": "Republicans", "size": 5},
+        {"name": "Democrats", "size": 15}
+      ]
+    }
+  ]
+}
