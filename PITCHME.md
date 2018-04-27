@@ -10,27 +10,108 @@ See our site at [majorpotential.me](http://majorpotential.me)
 
 <br>
 
-- Mitchell Traylor
-- Abel Tesfaye
-- Neal Friesenhahn
-- Christian Onuogu
-- Sungsup Lee
+- Mitchell Traylor (Back End, Testing, Report Author)
+- Abel Tesfaye (Full Stack)
+- Neal Friesenhahn (Back End, Hosting, API)
+- Christian Onuogu (Front End)
+- Sungsup Lee (Front End)
 
 ---
 
-## So, we should probably work on this as a group
+## Demo Time!
+[majorpotential.me](http://majorpotential.me)
+
+---
+
+## What Did We Do Well?
+
+- Everything |
+  + (We can elaborate, we're not narcissistic we promise) |
+- Coordination |
+- Issue Tracking and User Stories |
+
+---
+
+## Also, Google likes us
+- Add screenshot for proof
+- Or a live demo, but we should verify day-of
+
+---
+
+## How Could We Improve?
+
+- Working outside our roles |
+- Make pages more interesting |
+  + Animation, reworked content, etc |
+- More data to display |
+
+---
+
+## What Did We Learn From This?
+
+- There are MANY components to big projects like this |
+- Planning is ESSENTIAL |
+- All the tools |
+  + AWS |
+  + React |
+  + SQLAlchemy |
+  + API Building |
+  + (You get the idea) |
+
+---
+
+## What Puzzles Us?
+
+- Amazon Lambda |
+  + Thankfully we didn't use this) |
+- Elastic Beanstalk |
+  + Adding servers breaks IPs |
+- Why our peers dislike GitBook |
+  + It worked just fine for us, like any other document editor |
+
+---
+
+## We The SWEople
+- See their site at [swethepeople.me](http://swethepeople.me)
+- And yes, we all know their names are intentionally confusing
+
+---
+
+## What Did They Do Well?
+
+- Implementing suggestions |
+- Preserving filters |
+  + Wow! |
+- [TODO] |
+
+---
+
+## What Could They Do Better?
+
+- Interactive map for districts
+- [TODO] |
+- [TODO] |
+
+---
+
+## What Did We Learn From Them?
+
+- [TODO] |
+- [TODO] |
+- Site animations
+
+---
+
+## What Puzzles Us (About Them)?
+
+- Why wasn't certain data available?
+- Party sorting and filtering choices are weird
+- [TODO] |
+
+---
+
+## Placeholder slide
 - Anything else past here just came with the template
-
----
-
-## Template Features
-
-- Code Presenting |
-- Repo Source, Static Blocks, GIST |
-- Custom CSS Styling |
-- Slideshow Background Images |
-- Background Image Scaling |
-- Custom Logo, TOC, and Footnotes |
 
 ---?code=sample/go/server.go&lang=golang&title=Golang File
 
