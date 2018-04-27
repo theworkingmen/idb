@@ -1,1 +1,0 @@
-../../tests/sele_tests.py

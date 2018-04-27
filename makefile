@@ -5,13 +5,12 @@ RepoName = idb
 SHA      = 9ab8e9c7e905579d92a153e1ba321c817580d565
 
 FILES :=                         \
-    app/frontend/src             \
-	app/frontend/src/js          \
-	app/frontend/src/images      \
-	app/frontend/src/css         \
-	app/backend/Database/        \
-	app/backend/scrapers/        \
-	application.log 			 \
+  frontend/src             \
+	frontend/src/js          \
+	frontend/src/images      \
+	frontend/src/css         \
+	backend/Database/        \
+	backend/scrapers/        \
     .travis.yml
 
 githubid:
@@ -76,12 +75,8 @@ other:
 .pylintrc:
 	pylint --disable=locally-disabled --reports=no --generate-rcfile > $@
 
-log:
-	git log > application.log
-
 all:
 	make format
-	make log
 
 check:
 			@not_found=0;                                 \
@@ -107,20 +102,18 @@ clean:
 	rm -f  .pylintrc
 	rm -f  *.pyc
 	rm -f  *.tmp
-	rm -f  *.log
 
 config:
 	git config -l
 
 format:
-	autopep8 -i "app/backend/Database/university.py"
-	autopep8 -i "app/backend/Database/us_states.py"
-	autopep8 -i "app/backend/Database/major.py"
-	autopep8 -i "app/backend/Database/city.py"
+	autopep8 -i "backend/Database/university.py"
+	autopep8 -i "backend/Database/us_states.py"
+	autopep8 -i "backend/Database/major.py"
+	autopep8 -i "backend/Database/city.py"
 
 scrub:
 	make clean
-	rm -f  application.log
 
 status:
 	make clean

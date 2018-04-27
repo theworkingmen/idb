@@ -2,12 +2,12 @@ import sys
 import os
 import unittest
 try:
-    sys.path.insert(0, '../app/backend/Database/')
+    sys.path.insert(0, '../backend/Database/')
     from Universities.uni_api_func import *
     from Majors.major_api_func import *
     from Cities.cities_api_func import *
 except:
-    sys.path.insert(0, os.path.abspath('./app/backend/Database/'))
+    sys.path.insert(0, os.path.abspath('./backend/Database/'))
     print(sys.path)
     from Universities.uni_api_func import *
     from Majors.major_api_func import *
@@ -17,7 +17,7 @@ import json
 import re
 
 class APITests(unittest.TestCase):
-    
+
     def test_all_uni(self) :
         uni_list = get_uni('None', 'Asc', 'None', 'None')
         self.assertTrue(len(uni_list) > 1)
@@ -113,7 +113,7 @@ class APITests(unittest.TestCase):
         bad_id = "0110"
         bad_maj = single_major(bad_id)
         self.assertTrue(len(bad_maj) == 0)
-        
+
     def test_uni_sorting(self) :
         testvals = (('None', 'Asc', 'None', 'None', '222178'), \
             ('None', 'Desc', 'None', 'None', '206695'), \
@@ -123,7 +123,7 @@ class APITests(unittest.TestCase):
             uni_list = get_uni_limited(test[0], test[1], test[2], test[3])
             uni = uni_list[0]
             self.assertTrue(uni['id'] == test[4])
-    
+
     def test_uni_filtering(self) :
         uni_list = get_uni_limited('None', 'Asc', 'public', 'None')
         for u in uni_list:
@@ -133,7 +133,7 @@ class APITests(unittest.TestCase):
         uni_list = get_uni_limited('None', 'Asc', 'private', 'WY')
         self.assertTrue(len(uni_list) == 1)
         self.assertTrue(uni_list[0]['id'] == "451705")
-    
+
     def test_uni_searching(self) :
         search_terms = ['texas']
         uni_list = search_Universities(search_terms)
@@ -142,7 +142,7 @@ class APITests(unittest.TestCase):
         uni_list = search_Universities(search_terms)
         self.assertTrue(len(uni_list) == 1)
         self.assertTrue(uni_list[0]['id'] == "152318")
-    
+
     def test_city_sorting(self) :
         testvals = (('Asc', 'None', 'None', '31000US10100'), \
             ('Desc', 'None', 'None', '31000US49780'), \
@@ -152,7 +152,7 @@ class APITests(unittest.TestCase):
             city_list = get_city_limited(test[0], test[1], test[2])
             city = city_list[0]
             self.assertTrue(city['id'] == test[3])
-    
+
     def test_city_filtering(self) :
         city_list = get_city_limited('Asc', 'None', 'TX')
         for c in city_list:
@@ -166,7 +166,7 @@ class APITests(unittest.TestCase):
                     found_chicago = True
                     break
             self.assertTrue(found_chicago)
-    
+
     def test_city_searching(self) :
         search_terms = ['portland']
         city_list = search_Cities(search_terms)
@@ -175,8 +175,8 @@ class APITests(unittest.TestCase):
         city_list = search_Cities(search_terms)
         self.assertTrue(len(city_list) == 1)
         self.assertTrue(city_list[0]['id'] == "31000US12420")
-        
-    
+
+
     def test_major_sorting(self) :
         testvals = (('Asc', 'None', 'None', 'None', 'name', 'Accounting'), \
             ('Desc', 'None', 'None', 'None', 'name', 'Video & Photographic Arts'), \
@@ -189,7 +189,7 @@ class APITests(unittest.TestCase):
             major = major_list[0]
             print(major[test[4]])
             self.assertTrue(major[test[4]] == test[5])
-    
+
     def test_major_filtering(self) :
         major_list = get_major_limited('Asc', 'None', 'None', 'yes')
         self.assertTrue(len(major_list) == 88)
@@ -208,7 +208,7 @@ class APITests(unittest.TestCase):
         major_list = search_Majors(search_terms)
         self.assertTrue(len(major_list) == 1)
         self.assertTrue(major_list[0]['id'] == "1407")
-    
+
 
 
 if __name__ == "__main__":
