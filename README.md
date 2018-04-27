@@ -2,7 +2,7 @@
 
 # MajorPotential
 
-A website that links universities, cities where the universities are located, 
+A website that links universities, cities where the universities are located,
 and popular majors offered at most universities.
 
 ## The Team
@@ -24,13 +24,13 @@ Report - https://theworkingmen.gitbooks.io/report/
 
 ## Getting Started
 
-Clone the repo by using 
+Clone the repo by using
 ```
 git clone https://github.com/theworkingmen/idb/
 ```
 
-The app contains two sections. 
-The frontend code located at app/frontend, and the backend code located at app/backend.
+The app contains two sections.
+The frontend code located at frontend, and the backend code located at backend.
 
 ### Prerequisites
 
@@ -39,14 +39,14 @@ Python
 Check to see if Python is already installed:
 $ python --version
 
-and install it using 
+and install it using
 $ sudo apt-get install python3
 
 install pip
 $ sudo apt-get install python-pip
 
 add all the python dependencies required by
-$ pip install -r app/backend/Database/requirements.txt
+$ pip install -r backend/Database/requirements.txt
 ```
 
 Node.js
@@ -64,13 +64,13 @@ Learn more about the create-react-app here,
 ### Running the backend server locally
 
 ```
-$ python3 app/backend/Database/application.py
+$ python3 backend/Database/application.py
 ```
 
 ### Running the front-end locally
 
 ```
-$ cd app/frontend
+$ cd frontend
 $ npm start
 ```
 
@@ -83,7 +83,7 @@ $ newman run tests/Postman.json
 
 Backend Tests
 ```
-$ python3 app/backend/tests.py
+$ python3 backend/tests.py
 ```
 
 GUI Acceptance tests
@@ -96,7 +96,7 @@ Mocha javascript tests
 ```
 $ cd frontend; npm i .; npm run test
 ```
-Read the project report for more information about the content of the tests. 
+Read the project report for more information about the content of the tests.
 
 ## Deployment
 * [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/) - Elatic Beanstalk framework.
@@ -110,7 +110,7 @@ Note - more steps might be needed for installing awsebcli for different OSs. Con
 
 Deploy the api
 ```
-$ cd app/backend/Database
+$ cd backend/Database
 $ eb init
 $ eb create
 
@@ -119,7 +119,7 @@ eb command should be installed when installing EB CLI
 
 Deploy the react node.js site
 ```
-$ cd app/frontend
+$ cd frontend
 $ eb init
 $ eb create
 
@@ -144,7 +144,7 @@ eb command should be installed when installing EB CLI
 ## Data Sources
 
 * [Bureau of Labor Statistics](https://www.bls.gov/developers/api_signature_v2.html)
-* [United States Census Bureau](https://www.census.gov/data/developers/data-sets/cbp-nonemp-zbp/cbp-api.html) 
+* [United States Census Bureau](https://www.census.gov/data/developers/data-sets/cbp-nonemp-zbp/cbp-api.html)
 * [Department of Education](https://api.data.gov/docs/ed/)
 * [The Integrated Postsecondary Education Data System](https://nces.ed.gov/ipeds/)
 * [Data USA API](https://datausa.io/about/datasets/)
