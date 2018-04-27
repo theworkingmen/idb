@@ -6,7 +6,7 @@ See our site at [majorpotential.me](http://majorpotential.me)
 
 ---
 
-## Who are these jerks?
+## Who Are These Jerks?
 
 <br>
 
@@ -52,10 +52,8 @@ See our site at [majorpotential.me](http://majorpotential.me)
 - There are MANY components to big projects like this |
 - Planning is ESSENTIAL |
 - All the tools |
-  + AWS |
-  + React |
-  + SQLAlchemy |
-  + API Building |
+  + AWS,  | React,  | SQLAlchemy,  |
+  + API Building... |
   + (You get the idea) |
 
 ---
@@ -63,11 +61,16 @@ See our site at [majorpotential.me](http://majorpotential.me)
 ## What Puzzles Us?
 
 - Amazon Lambda |
-  + Thankfully we didn't use this) |
+  + Thankfully we didn't use this |
 - Elastic Beanstalk |
   + Adding servers breaks IPs |
 - Why our peers dislike GitBook |
   + It worked just fine for us, like any other document editor |
+
+---
+
+## Proving tests
+- screenshots, or live demo, or what?
 
 ---
 
@@ -80,33 +83,34 @@ See our site at [majorpotential.me](http://majorpotential.me)
 ## What Did They Do Well?
 
 - Implementing suggestions |
-- Preserving filters |
-  + Wow! |
-- [TODO] |
+- Preserving filters (wow!) |
+- Lots of information |
+- Neatly organized |
 
 ---
 
 ## What Could They Do Better?
 
-- Interactive map for districts
-- [TODO] |
-- [TODO] |
+- Interactive map for districts |
+- Their site is open for other new additions |
+  + Including senators too |
+  + Extended voting history |
 
 ---
 
 ## What Did We Learn From Them?
 
-- [TODO] |
-- [TODO] |
-- Site animations
+- Front end organizing and design |
+- Site animations |
+- So many "third" parties |
 
 ---
 
 ## What Puzzles Us (About Them)?
 
-- Why wasn't certain data available?
-- Party sorting and filtering choices are weird
-- [TODO] |
+- Why wasn't certain data available? |
+- Party sorting and filtering choices are weird |
+- Where is Benny's back? |
 
 ---
 
