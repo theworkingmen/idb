@@ -11,7 +11,7 @@ See our site at [majorpotential.me](http://majorpotential.me)
 <br>
 
 - Mitchell Traylor (Back End, Testing, Report Author)
-- Abel Tesfaye (Full Stack)
+- Abel Tesfaye (Back End, Front End)
 - Neal Friesenhahn (Back End, Hosting, API)
 - Christian Onuogu (Front End)
 - Sungsup Lee (Front End)
@@ -43,6 +43,7 @@ See our site at [majorpotential.me](http://majorpotential.me)
 - Working outside our roles |
 - Make pages more interesting |
   + Animation, reworked content, etc |
+- Make the front-end more beautiful |
 - More data to display |
 
 ---
@@ -167,7 +168,7 @@ http.createServer(function (request, response) {
 ## Template Help
 
 - [Code Presenting](https://github.com/gitpitch/gitpitch/wiki/Code-Presenting)
-  + [Repo Source](https://github.com/gitpitch/gitpitch/wiki/Code-Delimiter-Slides), [Static Blocks](https://github.com/gitpitch/gitpitch/wiki/Code-Slides), [GIST](https://github.com/gitpitch/gitpitch/wiki/GIST-Slides) 
+  + [Repo Source](https://github.com/gitpitch/gitpitch/wiki/Code-Delimiter-Slides), [Static Blocks](https://github.com/gitpitch/gitpitch/wiki/Code-Slides), [GIST](https://github.com/gitpitch/gitpitch/wiki/GIST-Slides)
 - [Custom CSS Styling](https://github.com/gitpitch/gitpitch/wiki/Slideshow-Custom-CSS)
 - [Slideshow Background Images](https://github.com/gitpitch/gitpitch/wiki/Background-Setting)
 - [Background Image Scaling](https://github.com/gitpitch/gitpitch/wiki/Image-Slides#scaling)
@@ -223,4 +224,3 @@ http.createServer(function (request, response) {
 @fa[arrows gp-tip](Press F to go Fullscreen)
 
 @fa[microphone gp-tip](Press S for Speaker Notes)
-
