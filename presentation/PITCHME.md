@@ -23,8 +23,19 @@ See our site at [majorpotential.me](http://majorpotential.me)
 
 ---
 
-## Proving tests
-- screenshots, or live demo, or what?
+## Testing
+- Because Working Men need a Working Site
+
++++
+
+## Selenium GUI Tests
+
+![](https://drive.google.com/open?id=16S3zuT9YhyO0k0u0zVTygq_8ThGAVI2P)
+
++++
+
+## Travis-CI
+- [For Continuous Integration](https://travis-ci.org/theworkingmen/idb)
 
 ---
 
@@ -38,8 +49,7 @@ See our site at [majorpotential.me](http://majorpotential.me)
 +++
 
 ## Also, Google likes us
-- Add screenshot for proof
-- Or a live demo, but we should verify day-of
+![](https://drive.google.com/open?id=1yIhLdZcCM3qEHX0cRLlQQTSW_gUnNsMW)
 
 +++
 
@@ -58,7 +68,7 @@ See our site at [majorpotential.me](http://majorpotential.me)
 - There are MANY components to big projects like this |
 - Planning is ESSENTIAL |
 - All the tools |
-  + AWS,  | React,  | SQLAlchemy,  |
+  + AWS, React, SQLAlchemy, |
   + API Building... |
   + (You get the idea) |
 
@@ -112,6 +122,12 @@ See our site at [majorpotential.me](http://majorpotential.me)
 - Why wasn't certain data available? |
 - Party sorting and filtering choices are weird |
 - Where is Benny's back? |
+
+---
+
+## Visualization
+-[Republicans vs Democrats by State](http://majorpotential.me/visualization.html)
+-[Entire U.S. Map](http://majorpotential.me/visualization2.html)
 
 ---
 
