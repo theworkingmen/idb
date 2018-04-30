@@ -1,0 +1,43 @@
+
+path {
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.democrats-1 {
+  fill: #0000FF;
+}
+
+.d{
+  color: #0000FF;
+}
+
+.r{
+  color: #FF0000;
+}
+
+.democrats-1 :hover {
+  fill: #bbb;
+}
+
+.republicans-1 {
+  fill: #FF0000;
+}
+
+.republicans-1 :hover {
+  fill: #bbb;
+}
+
+.district-boundaries {
+  pointer-events: none;
+  fill: none;
+  stroke: #000000;
+  stroke-width: .5px;
+}
+
+.state-boundaries {
+  pointer-events: none;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}

@@ -1,0 +1,906 @@
+{
+  "children": [
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 4,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 6,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "WA",
+      "description": "Washington"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 0,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 1,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "DE",
+      "description": "Delaware"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 5,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 3,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "WI",
+      "description": "Wisconsin"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 3,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 0,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "WV",
+      "description": "West Virginia"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 0,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 2,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "HI",
+      "description": "Hawaii"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 16,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 11,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "FL",
+      "description": "Florida"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 1,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 0,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "WY",
+      "description": "Wyoming"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 0,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 2,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "NH",
+      "description": "New Hampshire"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 5,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 7,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "NJ",
+      "description": "New Jersey"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 1,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 2,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "NM",
+      "description": "New Mexico"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 24,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 11,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "TX",
+      "description": "Texas"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 5,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 1,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "LA",
+      "description": "Louisiana"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 10,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 3,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "NC",
+      "description": "North Carolina"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 1,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 0,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "ND",
+      "description": "North Dakota"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 3,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 0,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "NE",
+      "description": "Nebraska"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 7,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 2,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "TN",
+      "description": "Tennessee"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 9,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 17,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "NY",
+      "description": "New York"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 12,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 6,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "PA",
+      "description": "Pennsylvania"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 0,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 2,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "RI",
+      "description": "Rhode Island"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 1,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 3,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "NV",
+      "description": "Nevada"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 7,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 4,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "VA",
+      "description": "Virginia"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 4,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 3,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "CO",
+      "description": "Colorado"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 1,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 0,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "AK",
+      "description": "Alaska"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 6,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 1,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "AL",
+      "description": "Alabama"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 4,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 0,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "AR",
+      "description": "Arkansas"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 0,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 1,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "VT",
+      "description": "Vermont"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 7,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 11,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "IL",
+      "description": "Illinois"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 10,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 4,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "GA",
+      "description": "Georgia"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 7,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 2,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "IN",
+      "description": "Indiana"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 3,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 1,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "IA",
+      "description": "Iowa"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 5,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 0,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "OK",
+      "description": "Oklahoma"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 4,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 4,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "AZ",
+      "description": "Arizona"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 14,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 39,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "CA",
+      "description": "California"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 2,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 0,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "ID",
+      "description": "Idaho"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 0,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 5,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "CT",
+      "description": "Connecticut"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 1,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 1,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "ME",
+      "description": "Maine"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 1,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 7,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "MD",
+      "description": "Maryland"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 0,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 9,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "MA",
+      "description": "Massachusetts"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 11,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 4,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "OH",
+      "description": "Ohio"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 4,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 0,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "UT",
+      "description": "Utah"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 6,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 2,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "MO",
+      "description": "Missouri"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 3,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 5,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "MN",
+      "description": "Minnesota"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 9,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 4,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "MI",
+      "description": "Michigan"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 4,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 0,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "KS",
+      "description": "Kansas"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 1,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 0,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "MT",
+      "description": "Montana"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 3,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 1,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "MS",
+      "description": "Mississippi"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 6,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 1,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "SC",
+      "description": "South Carolina"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 5,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 1,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "KY",
+      "description": "Kentucky"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 1,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 4,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "OR",
+      "description": "Oregon"
+    },
+    {
+      "children": [
+        {
+          "color": "#FF0000",
+          "size": 1,
+          "name": "Republican",
+          "description": "Republican"
+        },
+        {
+          "color": "#0000FF",
+          "size": 0,
+          "name": "Democrat",
+          "description": "Democrat"
+        }
+      ],
+      "name": "SD",
+      "description": "South Dakota"
+    }
+  ],
+  "name": "flare",
+  "description": "Flare"
+}

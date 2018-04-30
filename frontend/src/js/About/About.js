@@ -241,6 +241,10 @@ export default class About extends Component {
                           image="https://logo.clearbit.com/slack.com"
                           src="https://slack.com"
                           about="Communication"></ToolCard>
+                <ToolCard name="Javascript"
+                          image="https://logo.clearbit.com/javascript.com?s=128"
+                          src="https://javascript.com/"
+                          about="Major Language Used for the Front End."></ToolCard>
                 <ToolCard name="React"
                           image="https://logo.clearbit.com/reactjsday.it"
                           src="https://reactjs.org"
@@ -261,6 +265,10 @@ export default class About extends Component {
                           image="https://logo.clearbit.com/sqlalchemy.org"
                           src="http://flask-sqlalchemy.pocoo.org/2.3/"
                           about="Object Relational Mapping LIbrary for Database Connection"></ToolCard>
+                <ToolCard name="POSTGRESQL"
+                          image="https://logo.clearbit.com/https://www.postgresql.org?s=128"
+                          src="https://www.postgresql.org"
+                          about="For Backend Database"></ToolCard>
                 <ToolCard name="Travis-CI"
                           image="https://logo.clearbit.com/travis-ci.com"
                           src="https://travis-ci.org"
@@ -269,11 +277,14 @@ export default class About extends Component {
                           image="https://logo.clearbit.com/github.com"
                           src="https://github.com"
                           about="Version Control and Project Management"></ToolCard>
+                <ToolCard name="Gitbook"
+                          image="https://logo.clearbit.com/gitbook.com?s=128"
+                          src="https://www.gitbook.com/"
+                          about="To Write Project Reports."></ToolCard>
                 <ToolCard name="Postman"
                           image="https://logo.clearbit.com/getpostman.com"
                           src="https://www.getpostman.com"
                           about="API Design and Testing"></ToolCard>
-                <Col sm={1} md={1} lg={1} style={{width:"12.5%"}}></Col>
                 <ToolCard name="Selenium"
                           image="https://logo.clearbit.com/seleniumhq.org"
                           src="https://www.seleniumhq.org"
@@ -286,8 +297,14 @@ export default class About extends Component {
                           image="https://logo.clearbit.com/babeljs.io"
                           src="https://babeljs.io/"
                           about="JavaScript Pre-Compiler"></ToolCard>
-
-
+                <ToolCard name="D3"
+                          image="https://logo.clearbit.com/d3js.org?s=128"
+                          src="https://d3js.org/"
+                          about="To Visualize Data from swethepeople.me."></ToolCard>
+                <ToolCard name="NameCheap"
+                          image="https://logo.clearbit.com/namecheap.com?s=128"
+                          src="https://www.namecheap.com/"
+                          about="To Obtain Website URL."></ToolCard>
               </Grid>
             </div>
 
