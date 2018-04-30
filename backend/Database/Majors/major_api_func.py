@@ -1,6 +1,9 @@
 from base import Session, engine, Base
 from Cities.city import City
-from major import Major
+try:
+    from Majors.major import Major
+except:
+    from major import Major
 from Universities.university import University
 from sqlalchemy import or_
 import json

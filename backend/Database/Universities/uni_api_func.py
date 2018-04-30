@@ -1,9 +1,13 @@
 from base import Session, engine, Base
 from Cities.city import City
 from Majors.major import Major
-from university import University
+try:
+    from Universities.university import University
+    from Universities.us_states import us_states_abbrev
+except:
+    from university import University
+    from us_states import us_states_abbrev
 from sqlalchemy import or_
-from us_states import us_states_abbrev
 import json
 
 def get_uni(sort_tut, sort_name, f_type, state):

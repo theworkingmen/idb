@@ -1,5 +1,8 @@
 from base import Session, engine, Base
-from city import City
+try:
+    from Cities.city import City
+except:
+    from city import City
 from Majors.major import Major
 from Universities.university import University
 from sqlalchemy import or_
