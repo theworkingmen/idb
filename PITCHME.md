@@ -1,14 +1,13 @@
 @title[Introduction]
 ## The Working Men
 
-GitPitch Presentation for CS373
+GitPitch Presentation for UT CS373 - Software Engineering
+<br />
 See our site at [majorpotential.me](http://majorpotential.me)
 
 ---
 
 ## Who Are These Jerks?
-
-<br>
 
 - Mitchell Traylor (Back End, Testing, Report Author)
 - Abel Tesfaye (Back End, Front End)
@@ -30,7 +29,7 @@ See our site at [majorpotential.me](http://majorpotential.me)
 
 ## Selenium GUI Tests
 
-![](https://drive.google.com/open?id=16S3zuT9YhyO0k0u0zVTygq_8ThGAVI2P)
+![](sele_tests_SS.PNG)
 
 +++
 
@@ -49,7 +48,7 @@ See our site at [majorpotential.me](http://majorpotential.me)
 +++
 
 ## Also, Google likes us
-![](https://drive.google.com/open?id=1yIhLdZcCM3qEHX0cRLlQQTSW_gUnNsMW)
+![](Googlelikesus.PNG)
 
 +++
 
@@ -126,8 +125,8 @@ See our site at [majorpotential.me](http://majorpotential.me)
 ---
 
 ## Visualization
--[Republicans vs Democrats by State](http://majorpotential.me/visualization.html)
--[Entire U.S. Map](http://majorpotential.me/visualization2.html)
+- [Republicans vs Democrats by State](http://majorpotential.me/visualization.html)
+- [Entire U.S. Map](http://majorpotential.me/visualization2.html)
 
 ---
 
