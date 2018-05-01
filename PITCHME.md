@@ -1,7 +1,7 @@
 @title[Introduction]
 ## The Working Men
 
-GitPitch Presentation for UT CS373 - Software Engineering
+GitPitch Presentation for CS373
 <br />
 See our site at [majorpotential.me](http://majorpotential.me)
 
@@ -29,7 +29,7 @@ See our site at [majorpotential.me](http://majorpotential.me)
 
 ## Selenium GUI Tests
 
-![](sele_tests_SS.PNG)
+<img src="assets/sele_tests_SS.PNG" width=120% />
 
 +++
 
