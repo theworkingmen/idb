@@ -29,7 +29,7 @@ See our site at [majorpotential.me](http://majorpotential.me)
 
 ## Selenium GUI Tests
 
-<img src="assets/sele_tests_SS.PNG" width=120% />
+<img src="sele_tests_SS.PNG" width=120% />
 
 +++
 
