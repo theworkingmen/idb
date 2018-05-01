@@ -1,5 +1,5 @@
 import sys
-sys.path.append("..")
+sys.path.append("../")
 from base import Session, engine, Base
 from Cities.city import City
 from Majors.major import Major
@@ -82,7 +82,9 @@ def print_university():
 
     print('\n### All Universities')
     for uni in universities:
-        print(str(uni.name) + " has id "  + uni.id + " and major " + uni.majors[0].id + " and is located in " + uni.city.city_name + " Image " + uni.image_link + "should not be null" + str(uni.oos_tuition))
+        print(str(uni.name) + " has id "  + uni.id + " and major " + uni.majors[0].id +
+            " and is located in " + uni.city.city_name + " Image " + uni.image_link +
+                "should not be null" + str(uni.oos_tuition))
     print('all')
 
     session.commit()

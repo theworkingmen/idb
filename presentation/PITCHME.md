@@ -119,10 +119,10 @@ See our site at [majorpotential.me](http://majorpotential.me)
 
 ## What Puzzles Us (About Them)?
 
-- Why wasn't certain data available? |
-- Party sorting and filtering choices are weird |
-- Where is Benny's back? |
-
+- Their Implementation of caching in the front-end |
+  + registerServiceWorker.js |
+- How they were able to preserve filters on the website |
+  + The filters are preserved on different visits to the site |
 ---
 
 ## Visualization

@@ -107,10 +107,15 @@ config:
 	git config -l
 
 format:
-	autopep8 -i "backend/Database/university.py"
-	autopep8 -i "backend/Database/us_states.py"
-	autopep8 -i "backend/Database/major.py"
-	autopep8 -i "backend/Database/city.py"
+	autopep8 -i "backend/Database/Universities/university.py"
+	autopep8 -i "backend/Database/Universities/us_states.py"
+	autopep8 -i "backend/Database/Universities/uni_api_func.py"
+	autopep8 -i "backend/Database/Majors/major.py"
+	autopep8 -i "backend/Database/Majors/majors_populate.py"
+	autopep8 -i "backend/Database/Majors/major_api_func.py"
+	autopep8 -i "backend/Database/Cities/cities_api_func.py"
+	autopep8 -i "backend/Database/Cities/cities_populate.py"
+	autopep8 -i "backend/Database/Cities/city.py"
 
 scrub:
 	make clean
