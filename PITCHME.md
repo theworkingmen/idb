@@ -29,7 +29,7 @@ See our site at [majorpotential.me](http://majorpotential.me)
 
 ## Front-End Tests / Mocha
 
-<img src="frontend_tests.PNG" />
+<img src="frontend_tests.png" />
 
 +++
 
