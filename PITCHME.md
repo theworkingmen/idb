@@ -27,7 +27,25 @@ See our site at [majorpotential.me](http://majorpotential.me)
 
 +++
 
-## Selenium GUI Tests
+## Front-End Tests / Mocha
+
+<img src="frontend_tests.PNG" />
+
++++
+
+## Back-End Tests / Unittest
+
+<img src="backend.PNG" />
+
++++
+
+## API Tests / Postman
+
+<img src="Postman.PNG" />
+
++++
+
+## GUI Tests / Selenium
 
 <img src="sele_tests_SS.PNG" width=120% />
 
