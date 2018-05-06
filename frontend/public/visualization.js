@@ -1,4 +1,3 @@
-
 /*
  * D3 js to visualize the congressional districts in the US.
  * Most of the code was adopted from Mike Bostock.

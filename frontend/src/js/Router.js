@@ -1,11 +1,16 @@
-import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom'
+import React, {
+    Component
+} from 'react';
+import {
+    Switch,
+    Route
+} from 'react-router-dom'
 import Splash from './Splash.js';
 import Colleges from './Colleges.js';
 import Cities from './Cities.js';
 import Majors from './Majors.js';
 import Search from './Search.js';
-import About from './About/About.js';
+import About from './About.js';
 import MajorInstance from './MajorInstance.js';
 import CityInstance from './CityInstance.js';
 import CollegeInstance from './CollegeInstance.js';
@@ -13,10 +18,10 @@ import notFound from './error404.js';
 
 class Router extends Component {
 
-  render() {
+    render() {
 
-    return (
-      <main>
+        return (
+            <main>
         <Switch>
           <Route exact path='/' component={Splash}/>
           <Route exact path='/colleges' component={Colleges}/>
@@ -31,8 +36,8 @@ class Router extends Component {
           <Route exact path='/*' component={notFound}/>
         </Switch>
       </main>
-    )
-  }
+        )
+    }
 
 }
 

@@ -8,6 +8,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "chart.js": "^2.7.2",
     "google-map-react": "^0.32.0",
+    "js-beautify": "^1.7.5",
     "react": "^16.2.0",
     "react-bootstrap": "^0.32.1",
     "react-chartjs-2": "^2.7.0",

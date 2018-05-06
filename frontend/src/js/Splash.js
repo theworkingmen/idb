@@ -1,14 +1,18 @@
-import React, { Component } from 'react';
-import {Carousel} from 'react-bootstrap';
+import React, {
+    Component
+} from 'react';
+import {
+    Carousel
+} from 'react-bootstrap';
 import city from '../images/newyork.jpg';
 import it from '../images/majors.jpg';
 import uni from '../images/ut.jpg';
 import '../css/splash.css'
 
 class Splash extends Component {
-  render() {
-    return (
-        <div>
+    render() {
+        return (
+            <div>
             <Carousel>
               <Carousel.Item>
                  <img width='100%' height='600px'  src={uni} alt="universities"/>
@@ -30,8 +34,8 @@ class Splash extends Component {
               </Carousel.Item>
             </Carousel>
         </div>
-      )
+        )
     }
 }
 
-    export default Splash;
+export default Splash;

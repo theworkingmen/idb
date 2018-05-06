@@ -1,12 +1,16 @@
-import React, { Component } from 'react';
-import {Jumbotron} from 'react-bootstrap';
+import React, {
+    Component
+} from 'react';
+import {
+    Jumbotron
+} from 'react-bootstrap';
 
-  export default class notFound extends Component {
+export default class notFound extends Component {
 
 
     render() {
-      return  (
-        <div className="container">
+        return (
+            <div className="container">
           <center>
           <Jumbotron> 
             <h1> Error 404 </h1> 
@@ -15,6 +19,6 @@ import {Jumbotron} from 'react-bootstrap';
           </center>
         </div>
 
-      )
+        )
     }
-  }
+}

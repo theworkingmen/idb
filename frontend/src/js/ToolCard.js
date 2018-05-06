@@ -1,5 +1,13 @@
-import React, { Component } from 'react';
-import {Image, Col, Thumbnail, Popover, OverlayTrigger} from 'react-bootstrap';
+import React, {
+    Component
+} from 'react';
+import {
+    Image,
+    Col,
+    Thumbnail,
+    Popover,
+    OverlayTrigger
+} from 'react-bootstrap';
 
 
 class ToolCard extends Component {
@@ -8,19 +16,17 @@ class ToolCard extends Component {
 
     render() {
 
-    	let centeredTitle = (<center>{this.props.name}</center>);
-    	let popoverfocus = ( 	
-    		
-			<Popover 	id="popover-trigger-hover-focus" 
+        let centeredTitle = (<center>{this.props.name}</center>);
+        let popoverfocus = (
+            <Popover 	id="popover-trigger-hover-focus"
 						style={{margin:"auto"}}
 						title={centeredTitle}>
 					{this.props.about}
 			</Popover>
-			
-		);
+
+        );
 
         return (
-
             <Col xs={12} sm={3} md={3} lg={3}>
                 <OverlayTrigger	trigger={['hover', 'focus']}
 							    placement="bottom"
@@ -34,11 +40,11 @@ class ToolCard extends Component {
                                 onError={(e)=>{e.target.src="https://goo.gl/NvPJj6"}}
                                 style={{width:"10em", height:"10em"}}/>
                     </center>
-					
+
                 </Thumbnail>
                 </OverlayTrigger>
-                
-                
+
+
             </Col>
         );
     }

@@ -1,14 +1,18 @@
-import React, { Component } from 'react'
+import React, {
+    Component
+} from 'react'
 import GoogleMapReact from 'google-map-react'
 import marker from '../images/marker.svg'
 
-const AnyReactComponent = ({ img_src }) => <div><img src={img_src} style={{height: '40px'}} alt="map"/></div>;
+const AnyReactComponent = ({
+    img_src
+}) => <div><img src={img_src} style={{height: '40px'}} alt="map"/></div>;
 
 export default class Map extends Component {
 
-render() {
-    return (
-      <div className='google-map' style={{height: '500px', width: '100%'}}>
+    render() {
+        return (
+            <div className='google-map' style={{height: '500px', width: '100%'}}>
         <GoogleMapReact
           bootstrapURLKeys={{ key:  "AIzaSyA7J5qanag-cITUdKr3PV55SMrlAM0ACck",
 							  language: 'en'}}
@@ -23,6 +27,6 @@ render() {
 
         </GoogleMapReact>
       </div>
-    )
-  }
+        )
+    }
 }

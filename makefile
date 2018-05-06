@@ -116,6 +116,7 @@ format:
 	autopep8 -i "backend/Database/Cities/cities_api_func.py"
 	autopep8 -i "backend/Database/Cities/cities_populate.py"
 	autopep8 -i "backend/Database/Cities/city.py"
+	js-beautify -r -X frontend/src/js/*.js
 
 scrub:
 	make clean

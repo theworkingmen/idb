@@ -1,28 +1,36 @@
-import React, { Component } from 'react';
-import {Image, Col, Thumbnail} from 'react-bootstrap'
+import React, {
+    Component
+} from 'react';
+import {
+    Image,
+    Col,
+    Thumbnail
+} from 'react-bootstrap'
 import Highlighter from "react-highlight-words";
-import { Link } from 'react-router-dom';
+import {
+    Link
+} from 'react-router-dom';
 
 
 class TallCard extends Component {
 
-	/* default img src = https://goo.gl/NvPJj6 */
+    /* default img src = https://goo.gl/NvPJj6 */
 
-	render() {
-		
-		var bcolor = null;
-		if (this.props.model === "colleges") {
-			bcolor = "#add8e6";
-		}else if (this.props.model === "majors"){
-			bcolor = "#f5deb3";
-		}else {
-			bcolor = "#dbffd6";
-		}
-		
-		
-		return (
+    render() {
 
-		    <Col xs={12} sm={3} md={3} lg={3}>
+        var bcolor = null;
+        if (this.props.model === "colleges") {
+            bcolor = "#add8e6";
+        } else if (this.props.model === "majors") {
+            bcolor = "#f5deb3";
+        } else {
+            bcolor = "#dbffd6";
+        }
+
+
+        return (
+
+            <Col xs={12} sm={3} md={3} lg={3}>
 		    	<Link to={`/${this.props.model}/${this.props.id}`}>
 				<Thumbnail style={{height:"25em", backgroundColor:bcolor}}>
 					{/* img src needs to have a {local path} or {url}. DB needs to provide url of img. */}
@@ -64,8 +72,8 @@ class TallCard extends Component {
 				</Thumbnail>
 				</Link>
 			</Col>
-		);
-	}
+        );
+    }
 
 }
 

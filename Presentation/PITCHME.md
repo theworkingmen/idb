@@ -143,8 +143,8 @@ See our site at [majorpotential.me](http://majorpotential.me)
 ---
 
 ## Visualization
-- [Republicans vs Democrats by State](http://majorpotential.me/visualization.html)
-- [Entire U.S. Map](http://majorpotential.me/visualization2.html)
+- [Republicans vs Democrats by State](http://majorpotential.me/visualization-pie-chart.html)
+- [Entire U.S. Map](http://majorpotential.me/visualization-map.html)
 
 ---
 

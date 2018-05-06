@@ -1,154 +1,178 @@
-import React, { Component } from 'react';
-import {Grid, Row, Col, Table, Jumbotron} from 'react-bootstrap';
-import '../../css/about.css';
-import abel_pic from '../../images/authors/abel_pic.jpg';
-import sungsup_pic from '../../images/authors/sungsup_pic.jpg';
-import mitchell_pic from '../../images/authors/mitchell_pic.jpg';
-import neal_pic from '../../images/authors/neal_pic.jpg';
-import christian_pic from '../../images/authors/christian_pic.jpg';
+import React, {
+    Component
+} from 'react';
+import {
+    Grid,
+    Row,
+    Col,
+    Table,
+    Jumbotron
+} from 'react-bootstrap';
+import '../css/about.css';
+import abel_pic from '../images/authors/abel_pic.jpg';
+import sungsup_pic from '../images/authors/sungsup_pic.jpg';
+import mitchell_pic from '../images/authors/mitchell_pic.jpg';
+import neal_pic from '../images/authors/neal_pic.jpg';
+import christian_pic from '../images/authors/christian_pic.jpg';
 import MembersCard from './MembersCard'
-import { RingLoader } from 'react-spinners';
+import {
+    RingLoader
+} from 'react-spinners';
 import ToolCard from './ToolCard.js';
 
 let request = require('request')
 export default class About extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      ready: false,
-      total_commits: 0,
-      total_issues: 0,
-      members_stats: {},
-    }
-  }
-
-  componentWillMount() {
-    this.setState({
-      ready: false
-    })
-    let commits_options = {
-      method: 'GET',
-      url: 'https://api.github.com/repos/theworkingmen/idb/stats/contributors'
-    }
-    request(commits_options, function(error, response, body) {
-      if (error) {
-        //
-      }
-      let members_data = {}
-      members_data['traylor1'] = {
-        "name": "Mitchell Traylor",
-        "role": "Back-End, Testing",
-        "bio": "Computer Science third-year, with special focus on cybersecurity.",
-        "photo": mitchell_pic,
-        "commits": 0,
-        "issues": 0,
-        "number_tests": 23
-      }
-      members_data['smcw66'] = {
-        "name": "Sungsup Lee",
-        "role": "Front-End",
-        "bio": "Studies Computer Science at UT Austin.",
-        "photo": sungsup_pic,
-        "commits": 0,
-        "issues": 0,
-        "number_tests": 0
-      }
-      members_data['abelhtt'] = {
-        "name": "Abel Tesfaye",
-        "role": "Full Stack",
-        "bio": "I am a junior Computer Science major studying at UT Austin.",
-        "photo": abel_pic,
-        "commits": 0,
-        "issues": 0,
-        "number_tests": 13
-      }
-      members_data['NealFM'] = {
-        "name": "Neal Friesenhahn",
-        "role": "Web Hosting, API Design",
-        "photo": neal_pic,
-        "bio": "I am a junior Computer Science major.",
-        "commits": 0,
-        "issues": 0,
-        "number_tests": 28
-      }
-      members_data['christian-onuogu'] = {
-        "name": "Christian Onuogu",
-        "role": "Front-End",
-        "bio": "I am a sophomore Computer Science major.",
-        "photo": christian_pic,
-        "commits": 0,
-        "issues": 0,
-        "number_tests": 29
-      }
-
-      let commitJSON = JSON.parse(body)
-      let totalCommits = 0
-      for (let i = 0; i < commitJSON.length; i++) {
-        let curUserCount = commitJSON[i]['total']
-
-        members_data[String(commitJSON[i]['author']['login'])]["commits"] = curUserCount
-        totalCommits += curUserCount
-      }
-
-      this.setState({total_commits: totalCommits})
-
-      var issues_options = {
-        method: 'GET',
-        url: 'https://api.github.com/repos/theworkingmen/idb/issues?state=all&per_page=100&page=' + String(1),
-        qs: {state: 'all'},
-      };
-
-      request(issues_options, function(error, response, body) {
-        if (error) {
-          //
+    constructor(props) {
+        super(props)
+        this.state = {
+            ready: false,
+            total_commits: 0,
+            total_issues: 0,
+            members_stats: {},
         }
-        let issueJSON = JSON.parse(body)
-        for (let i = 0; i < issueJSON.length; i++) {
+    }
 
-          if (members_data[String(issueJSON[i]['user']['login'])] === undefined)
-            continue;
-
-          members_data[String(issueJSON[i]['user']['login'])]["issues"] += 1
-        }
-
+    componentWillMount() {
         this.setState({
-          members_stats: members_data,
-          total_issues: issueJSON.length
+            ready: false
         })
-      }.bind(this))
+        let commits_options = {
+            method: 'GET',
+            url: 'https://api.github.com/repos/theworkingmen/idb/stats/contributors'
+        }
+        request(commits_options, function(error, response, body) {
+            if (error) {
+                //
+            }
+            let members_data = {}
+            members_data['traylor1'] = {
+                "name": "Mitchell Traylor",
+                "role": "Back-End, Testing",
+                "bio": "Computer Science third-year, with special focus on cybersecurity.",
+                "photo": mitchell_pic,
+                "commits": 0,
+                "issues": 0,
+                "number_tests": 23
+            }
+            members_data['smcw66'] = {
+                "name": "Sungsup Lee",
+                "role": "Front-End",
+                "bio": "Studies Computer Science at UT Austin.",
+                "photo": sungsup_pic,
+                "commits": 0,
+                "issues": 0,
+                "number_tests": 0
+            }
+            members_data['abelhtt'] = {
+                "name": "Abel Tesfaye",
+                "role": "Full Stack",
+                "bio": "I am a junior Computer Science major studying at UT Austin.",
+                "photo": abel_pic,
+                "commits": 0,
+                "issues": 0,
+                "number_tests": 13
+            }
+            members_data['NealFM'] = {
+                "name": "Neal Friesenhahn",
+                "role": "Web Hosting, API Design",
+                "photo": neal_pic,
+                "bio": "I am a junior Computer Science major.",
+                "commits": 0,
+                "issues": 0,
+                "number_tests": 28
+            }
+            members_data['christian-onuogu'] = {
+                "name": "Christian Onuogu",
+                "role": "Front-End",
+                "bio": "I am a sophomore Computer Science major.",
+                "photo": christian_pic,
+                "commits": 0,
+                "issues": 0,
+                "number_tests": 29
+            }
 
-      this.setState({ready: true})
-    }.bind(this))
-  }
+            let commitJSON = JSON.parse(body)
+            let totalCommits = 0
+            for (let i = 0; i < commitJSON.length; i++) {
+                let curUserCount = commitJSON[i]['total']
 
-  render() {
+                members_data[String(commitJSON[i]['author']['login'])]["commits"] = curUserCount
+                totalCommits += curUserCount
+            }
 
-      if (this.state.ready === false){
-         return <Grid><Row className="spin"><RingLoader
+            this.setState({
+                total_commits: totalCommits
+            })
+
+            var issues_options = {
+                method: 'GET',
+                url: 'https://api.github.com/repos/theworkingmen/idb/issues?state=all&per_page=100&page=' + String(1),
+                qs: {
+                    state: 'all'
+                },
+            };
+
+            request(issues_options, function(error, response, body) {
+                if (error) {
+                    //
+                }
+                let issueJSON = JSON.parse(body)
+                for (let i = 0; i < issueJSON.length; i++) {
+
+                    if (members_data[String(issueJSON[i]['user']['login'])] === undefined)
+                        continue;
+
+                    members_data[String(issueJSON[i]['user']['login'])]["issues"] += 1
+                }
+
+                this.setState({
+                    members_stats: members_data,
+                    total_issues: issueJSON.length
+                })
+            }.bind(this))
+
+            this.setState({
+                ready: true
+            })
+        }.bind(this))
+    }
+
+    render() {
+
+        if (this.state.ready === false) {
+            return <Grid><Row className="spin"><RingLoader
              color={'#123abc'}
              loading={this.state.loading}
              size={100}
            /> </Row></Grid>;
-       }
+        }
 
-      if (this.state.ready === true) {
+        if (this.state.ready === true) {
 
-        return (
-          <div className ="container" style={{background: "white"}}>
+            return (
+                <div className ="container" style={{background: "white"}}>
             <div className ='container'>
             <div className = 'introduction'>
               <Jumbotron>
               <div className='logo'> <center> About Us </center></div>
               <p></p>
-              <div className="intro"> <center> Major Potential is a website that links Universities, Cities, and Majors. </center>  </div>
+              <div className="intro">
+                 <center>
+                    Major Potential is a website that links Universities, Cities, and Majors.
+                 </center>
+              </div>
               <p></p>
-              <div className="intro"> <center> We envision our website to provide help for users who are trying to find
-                  information about 4 year universities in the United States. Our website provides interesting relationships between
-                  universities, cities, and majors such as top five majors in a university and top five
-                  cities for a major based on the number of graduates. Each Model instance contains rich information about the instance and a link
-                  to the other two models. The links help to visualize the correlations between the models.
-                     </center>
-                </div>
+              <div className="intro">
+                <center>
+                    We envision our website to provide help for users who are trying to find
+                    information about 4 year universities in the United States. Our website provides
+                    interesting relationships between universities, cities, and majors such as top
+                    five majors in a university and top five cities for a major based on the number
+                    of graduates. Each Model instance contains rich information about the instance
+                    and a link to the other two models. The links help to visualize the correlations
+                    between the models.
+                </center>
+              </div>
               <p></p>
               <p></p>
               </Jumbotron>
@@ -157,12 +181,22 @@ export default class About extends Component {
             <div>
                <div className="block_small"><center> The Team </center> </div>
               <Grid>
-                <MembersCard member={Object.assign({},this.state.members_stats['traylor1'])}></MembersCard>
-                <MembersCard member={Object.assign({},this.state.members_stats['smcw66'])}></MembersCard>
-                <MembersCard member={Object.assign({},this.state.members_stats['abelhtt'])}></MembersCard>
+                <MembersCard
+                  member={Object.assign({},this.state.members_stats['traylor1'])}>
+                </MembersCard>
+                <MembersCard
+                  member={Object.assign({},this.state.members_stats['smcw66'])}>
+                </MembersCard>
+                <MembersCard
+                  member={Object.assign({},this.state.members_stats['abelhtt'])}>
+                </MembersCard>
                 <Col sm={2} md={2} lg={2}></Col>
-                <MembersCard member={Object.assign({},this.state.members_stats['NealFM'])}></MembersCard>
-                <MembersCard member={Object.assign({},this.state.members_stats['christian-onuogu'])}></MembersCard>
+                <MembersCard
+                  member={Object.assign({},this.state.members_stats['NealFM'])}>
+                </MembersCard>
+                <MembersCard
+                  member={Object.assign({},this.state.members_stats['christian-onuogu'])}>
+                </MembersCard>
               </Grid>
 
             </div>
@@ -312,7 +346,7 @@ export default class About extends Component {
               <center>
               <div className='block_small'> <center>Project Links</center> </div>
               <Grid>
-                <Col sm={1} md={1} lg={1} style={{width:"12.5%"}}></Col>
+                <Col style={{width:"12.5%"}}></Col>
                 <ToolCard name="Github"
                           image="https://logo.clearbit.com/github.com"
                           src="https://github.com/theworkingmen/idb"></ToolCard>
@@ -322,6 +356,9 @@ export default class About extends Component {
                 <ToolCard name="Gitbook Report"
                           image="https://logo.clearbit.com/gitbook.com"
                           src="https://theworkingmen.gitbooks.io/report/"></ToolCard>
+                <ToolCard name="Visualization"
+                          image="https://logo.clearbit.com/d3js.org?s=128"
+                          src="visualization.html"></ToolCard>
               </Grid>
               </center>
             </div>
@@ -329,4 +366,7 @@ export default class About extends Component {
             </div>
           </div>
 
-)};};};
+            )
+        };
+    };
+};

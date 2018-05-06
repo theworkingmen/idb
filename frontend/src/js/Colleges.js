@@ -1,103 +1,136 @@
-import React, { Component } from 'react';
-import {Grid, Row, Col, Pagination, Button, ButtonToolbar, DropdownButton, MenuItem} from 'react-bootstrap';
+import React, {
+    Component
+} from 'react';
+import {
+    Grid,
+    Row,
+    Col,
+    Pagination,
+    Button,
+    ButtonToolbar,
+    DropdownButton,
+    MenuItem
+} from 'react-bootstrap';
 import Card from './Card.js';
 import '../css/Flex.css';
-import { RingLoader } from 'react-spinners';
+import {
+    RingLoader
+} from 'react-spinners';
 
 class Colleges extends Component {
-	
-  /* Use following url for default image: http://bit.ly/2CYI94d 
+
+    /* Use following url for default image: http://bit.ly/2CYI94d
 	Grid automatically creates new rows for additional card components. */
-  
-  constructor() {
-    super();
-    this.state = {
-		colleges: [],
-        pages: [],
-        page: 1,
-        loading: true,
-        sort: "name",
-        order: "Asc",
-        state: "None",
-        type: "None",
-        pageCount: 0
-	};
-  }
 
-  changePage(num) {
-	  let active = num;
-	  let items = [];
-	  
-	  items.push(<Pagination.First onClick={this.changePage.bind(this, 1)} key="first"/>);
-	  if (num > 1) {
-		items.push(<Pagination.Prev onClick={this.changePage.bind(this, num - 1)} key="prev"/>);
-	  }
-	  else {
-		  items.push(<Pagination.Prev disabled key="prev"/>);
-	  }
+    constructor() {
+        super();
+        this.state = {
+            colleges: [],
+            pages: [],
+            page: 1,
+            loading: true,
+            sort: "name",
+            order: "Asc",
+            state: "None",
+            type: "None",
+            pageCount: 0
+        };
+    }
 
-	  let start = 0;
-	  let end   = 0;
+    changePage(num) {
+        let active = num;
+        let items = [];
 
-	  if (this.state.pageCount < 10) {
-	  	start = 1;
-	  	end = this.state.pageCount;
-	  }
-	  else if ((num - 5) < 1) {
-	  	start = 1;
-	  	end = 10;
-	  }
-	  else if ((num + 5) > this.state.pageCount) {
-	  	start = this.state.pageCount - 9;
-	  	end = this.state.pageCount;
-	  }
-	  else  {
-	  	start = num - 5;
-	  	end = num + 4;
-	  }
-	  for (let number = start; number <= end; number++) {
-		items.push(
-  			<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)} key={number}>{number}</Pagination.Item>
-  		);
-	  }
-	  if (num < this.state.pageCount) {
-		items.push(<Pagination.Next onClick={this.changePage.bind(this, num + 1)} key="next"/>);
-	  }
-	  else {
-		  items.push(<Pagination.Next disabled key="next"/>);
-	  }
-	  items.push(<Pagination.Last onClick={this.changePage.bind(this, this.state.pageCount)} key="last"/>);
-	  /*for (let number = 1; number <= this.state.pageCount; number++) {
+        items.push(<Pagination.First onClick={this.changePage.bind(this, 1)} key="first"/>);
+        if (num > 1) {
+            items.push(<Pagination.Prev onClick={this.changePage.bind(this, num - 1)} key="prev"/>);
+        } else {
+            items.push(<Pagination.Prev disabled key="prev"/>);
+        }
+
+        let start = 0;
+        let end = 0;
+
+        if (this.state.pageCount < 10) {
+            start = 1;
+            end = this.state.pageCount;
+        } else if ((num - 5) < 1) {
+            start = 1;
+            end = 10;
+        } else if ((num + 5) > this.state.pageCount) {
+            start = this.state.pageCount - 9;
+            end = this.state.pageCount;
+        } else {
+            start = num - 5;
+            end = num + 4;
+        }
+        for (let number = start; number <= end; number++) {
+            items.push(
+                <Pagination.Item
+                  active={number === active}
+                  onClick={this.changePage.bind(this, number)}
+                  key={number}>{number}
+                </Pagination.Item>
+            );
+        }
+        if (num < this.state.pageCount) {
+            items.push(<Pagination.Next onClick={this.changePage.bind(this, num + 1)}
+              key="next"/>);
+        } else {
+            items.push(<Pagination.Next disabled key="next"/>);
+        }
+        items.push(<Pagination.Last onClick={this.changePage.bind(this, this.state.pageCount)}
+          key="last"/>);
+        /*for (let number = 1; number <= this.state.pageCount; number++) {
 		items.push(
 			<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)}>{number}</Pagination.Item>
 		);
 	  }*/
-	  this.setState({page: num,
-					 pages: items});
+        this.setState({
+            page: num,
+            pages: items
+        });
 
-  }
+    }
 
-  updateData(link) {
-  	  fetch(link)
-	  .then(results => {
-		  return results.json();
-		}).then(data => {
-			let colleges = data.records.map((college) => {
-				return(<Card name={college.name} model='colleges' domain={college.image_link} id={college.id} field={college.type} key={college.id}>  </Card>)
-			})
-			let active = 1;
-			let items = [];
-			this.setState({pageCount: Math.ceil(colleges.length/20)});
-			if (this.state.pageCount > 1) {
-				items.push(<Pagination.First onClick={this.changePage.bind(this, 1)} key="first"/>);
-				items.push(<Pagination.Prev disabled key="prev"/>);
-				for (let number = 1; number <= Math.min(10, this.state.pageCount); number++) {
-					items.push(
-						<Pagination.Item active={number === active} onClick={this.changePage.bind(this, number)} key={number}>{number}</Pagination.Item>
-					);
-				}
-				items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)} key="next"/>);
-				items.push(<Pagination.Last onClick={this.changePage.bind(this, this.state.pageCount)}key="last"/>);
+    updateData(link) {
+            fetch(link)
+                .then(results => {
+                    return results.json();
+                }).then(data => {
+                        let colleges = data.records.map((college) => {
+                            return (
+                              <Card
+                                name={college.name}
+                                model='colleges'
+                                domain={college.image_link}
+                                id={college.id}
+                                field={college.type}
+                                key={college.id}>
+                              </Card>)
+                        })
+                        let active = 1;
+                        let items = [];
+                        this.setState({
+                            pageCount: Math.ceil(colleges.length / 20)
+                        });
+                        if (this.state.pageCount > 1) {
+                            items.push(<Pagination.First onClick={this.changePage.bind(this, 1)}
+                              key="first"/>);
+                            items.push(<Pagination.Prev disabled key="prev"/>);
+                            for (let number = 1; number <= Math.min(10, this.state.pageCount); number++) {
+                                items.push(
+                                    <Pagination.Item a
+                                      ctive={number === active}
+                                      onClick={this.changePage.bind(this, number)}
+                                      key={number}>{number}
+                                    </Pagination.Item>
+                                );
+                            }
+                            items.push(<Pagination.Next onClick={this.changePage.bind(this, 2)}
+                              key="next"/>);
+                            items.push(<Pagination.Last onClick={this.changePage.bind(this, this.state.pageCount)}
+                              key="last"/>);
 			}
 			this.setState({
 				pages: items,
@@ -105,29 +138,33 @@ class Colleges extends Component {
 				colleges: colleges,
 				loading: false
 			});
-			
+
 		})
   }
 
     changeSort(sort) {
       this.setState({sort: sort});
-	  this.updateData('http://api.majorpotential.me/universities_limited?sort_'+sort+'='+this.state.order+"&state="+this.state.state+"&type="+this.state.type);
+	  this.updateData('http://api.majorpotential.me/universities_limited?sort_'+sort+'='+
+      this.state.order+"&state="+this.state.state+"&type="+this.state.type);
   }
 
   changeOrder(order) {
-  	  this.setState({order: order})
-	  this.updateData('http://api.majorpotential.me/universities_limited?sort_'+this.state.sort+'='+order+"&state="+this.state.state+"&type="+this.state.type);
-	  
+  	this.setState({order: order});
+	  this.updateData('http://api.majorpotential.me/universities_limited?sort_'+this.state.sort+'='+
+      order+"&state="+this.state.state+"&type="+this.state.type);
+
   }
 
   changeState(state) {
 	  this.setState({state: state});
-	  this.updateData('http://api.majorpotential.me/universities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+state+"&type="+this.state.type);
+	  this.updateData('http://api.majorpotential.me/universities_limited?sort_'+this.state.sort+'='+
+      this.state.order+"&state="+state+"&type="+this.state.type);
   }
 
   changeType(type) {
 	  this.setState({type: type});
-	  this.updateData('http://api.majorpotential.me/universities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+this.state.state+"&type="+type);
+	  this.updateData('http://api.majorpotential.me/universities_limited?sort_'+this.state.sort+'='+
+      this.state.order+"&state="+this.state.state+"&type="+type);
   }
 
 
@@ -146,7 +183,12 @@ class Colleges extends Component {
       ["Wisconsin", "WI"], ["Wyoming", "WY"], ["Puerto Rico", "PR"], ["District of Columbia", "DC"]]
 	  let items = []
 	  for (let i = 0; i < state.length; i++) {
-		  items.push(<MenuItem eventKey={i} key={i} onClick={this.changeState.bind(this, state[i][1])}>{state[i][0]}</MenuItem>);
+		  items.push(<MenuItem
+                    eventKey={i}
+                    key={i}
+                    onClick={this.changeState.bind(this, state[i][1])}>
+                    {state[i][0]}
+                </MenuItem>);
 	  }
 	  return items
   }
@@ -162,7 +204,8 @@ class Colleges extends Component {
   }
 
   componentDidMount() {
-	  this.updateData('http://api.majorpotential.me/universities_limited?sort_'+this.state.sort+'='+this.state.order+"&state="+this.state.state+"&type="+this.state.type);
+	  this.updateData('http://api.majorpotential.me/universities_limited?sort_'+this.state.sort+'='+
+      this.state.order+"&state="+this.state.state+"&type="+this.state.type);
   }
 
   render() {
