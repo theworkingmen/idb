@@ -2,13 +2,12 @@
 ## The Working Men
 
 GitPitch Presentation for CS373
+<br />
 See our site at [majorpotential.me](http://majorpotential.me)
 
 ---
 
 ## Who Are These Jerks?
-
-<br>
 
 - Mitchell Traylor (Back End, Testing, Report Author)
 - Abel Tesfaye (Back End, Front End)
@@ -28,9 +27,27 @@ See our site at [majorpotential.me](http://majorpotential.me)
 
 +++
 
-## Selenium GUI Tests
+## Front-End Tests / Mocha
 
-![](https://drive.google.com/open?id=16S3zuT9YhyO0k0u0zVTygq_8ThGAVI2P)
+<img src="frontend_tests.png" />
+
++++
+
+## Back-End Tests / Unittest
+
+<img src="backend.PNG" />
+
++++
+
+## API Tests / Postman
+
+<img src="Postman.PNG" />
+
++++
+
+## GUI Tests / Selenium
+
+<img src="sele_tests_SS.PNG" width=120% />
 
 +++
 
@@ -49,7 +66,7 @@ See our site at [majorpotential.me](http://majorpotential.me)
 +++
 
 ## Also, Google likes us
-![](https://drive.google.com/open?id=1yIhLdZcCM3qEHX0cRLlQQTSW_gUnNsMW)
+![](Googlelikesus.PNG)
 
 +++
 
@@ -119,15 +136,15 @@ See our site at [majorpotential.me](http://majorpotential.me)
 
 ## What Puzzles Us (About Them)?
 
-- Why wasn't certain data available? |
-- Party sorting and filtering choices are weird |
-- Where is Benny's back? |
-
+- Their Implementation of caching in the front-end |
+  + registerServiceWorker.js |
+- How they were able to preserve filters on the website |
+  + The filters are preserved on different visits to the site |
 ---
 
 ## Visualization
--[Republicans vs Democrats by State](http://majorpotential.me/visualization.html)
--[Entire U.S. Map](http://majorpotential.me/visualization2.html)
+- [Republicans vs Democrats by State](http://majorpotential.me/visualization-pie-chart.html)
+- [Entire U.S. Map](http://majorpotential.me/visualization-map.html)
 
 ---
 

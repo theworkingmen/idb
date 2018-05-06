@@ -1,37 +1,60 @@
-import React, { Component } from 'react';
-import { Redirect } from 'react-router'
-import { Navbar, Nav, NavItem, FormGroup, FormControl, Button} from 'react-bootstrap';
-import {LinkContainer} from 'react-router-bootstrap'
-import { Link } from 'react-router-dom'
+import React, {
+    Component
+} from 'react';
+import {
+    Redirect
+} from 'react-router'
+import {
+    Navbar,
+    Nav,
+    NavItem,
+    FormGroup,
+    FormControl,
+    Button
+} from 'react-bootstrap';
+import {
+    LinkContainer
+} from 'react-router-bootstrap'
+import {
+    Link
+} from 'react-router-dom'
 import '../css/index.css'
 
 class NavigationBar extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {highlight: props.highlight,
-					  search: "search",
-					  redirect: false,
-					  value: ''};
-	}
+    constructor(props) {
+        super(props);
+        this.state = {
+            highlight: props.highlight,
+            search: "search",
+            redirect: false,
+            value: ''
+        };
+    }
 
-	handleChange(e) {
-		this.setState({ value: e.target.value.replace("%", "").replace("/", "").replace("\\", "")});
-	}
+    handleChange(e) {
+        this.setState({
+            value: e.target.value.replace("%", "").replace("/", "").replace("\\", "")
+        });
+    }
 
-	handleKeyPress(e) {
-	    if (e.key === 'Enter') {
-			this.setState({redirect:true})
-			}
-		}
+    handleKeyPress(e) {
+        if (e.key === 'Enter') {
+            this.setState({
+                redirect: true
+            })
+        }
+    }
 
-	render() {
-		var redirection = null;
-		if (this.state.redirect) {
-			redirection = <Redirect to={`/${this.state.search}/${this.state.value}`} />;
-			this.setState({redirect:false})
-		}
-		return (
-		    <div className = "Nav">
+    render() {
+        var redirection = null;
+        if (this.state.redirect) {
+            redirection = <Redirect to={`/${this.state.search}/${this.state.value}`} />;
+            this.setState({
+                redirect: false
+            })
+        }
+        return (
+            <div className = "Nav">
 		        <Navbar fixedTop={true} inverse={true}>
 					<Navbar.Header>
 						<Navbar.Brand>
@@ -70,8 +93,8 @@ class NavigationBar extends Component {
 				</Navbar>
 				{redirection}
 		    </div>
-		);
-	}
+        );
+    }
 }
 
 export default NavigationBar;

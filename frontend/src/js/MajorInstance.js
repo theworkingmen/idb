@@ -1,86 +1,92 @@
-import React, { Component } from 'react';
-import {Jumbotron, Col, Thumbnail} from 'react-bootstrap';
+import React, {
+    Component
+} from 'react';
+import {
+    Jumbotron,
+    Col,
+    Thumbnail
+} from 'react-bootstrap';
 import Top5 from './Top5.js';
 
 class majorInstance extends Component {
 
-  constructor() {
-    super();
+    constructor() {
+        super();
 
-    this.state = {
-      ready: false
-    };
+        this.state = {
+            ready: false
+        };
 
-  }
-
-  componentWillMount() {
-    var api = "http://api.majorpotential.me/majors/";
-    api += this.props.match.params.id;
-    fetch(api)
-    .then(results => {
-      return results.json();
-    }).then(data => {
-       this.setState({
-          image: data.image_link,
-          name: data.name,
-          univ0: data.universities_high_graduates_2015[0],
-          univ0_name: data.universities_high_graduates_2015[0].name,
-          univ1_name: data.universities_high_graduates_2015[1].name,
-          univ2_name: data.universities_high_graduates_2015[2].name,
-          univ3_name: data.universities_high_graduates_2015[3].name,
-          univ4_name: data.universities_high_graduates_2015[4].name,
-          univ0_img: data.universities_high_graduates_2015[0].image_link,
-          univ1_img: data.universities_high_graduates_2015[1].image_link,
-          univ2_img: data.universities_high_graduates_2015[2].image_link,
-          univ3_img: data.universities_high_graduates_2015[3].image_link,
-          univ4_img: data.universities_high_graduates_2015[4].image_link,
-          univ0_id: data.universities_high_graduates_2015[0].id,
-          univ1_id: data.universities_high_graduates_2015[1].id,
-          univ2_id: data.universities_high_graduates_2015[2].id,
-          univ3_id: data.universities_high_graduates_2015[3].id,
-          univ4_id: data.universities_high_graduates_2015[4].id,
-          city0_name: data.cities_high_graduates_2015[0].city_name,
-          city1_name: data.cities_high_graduates_2015[1].city_name,
-          city2_name: data.cities_high_graduates_2015[2].city_name,
-          city3_name: data.cities_high_graduates_2015[3].city_name,
-          city4_name: data.cities_high_graduates_2015[4].city_name,
-          city0_img: data.cities_high_graduates_2015[0].city_image_link,
-          city1_img: data.cities_high_graduates_2015[1].city_image_link,
-          city2_img: data.cities_high_graduates_2015[2].city_image_link,
-          city3_img: data.cities_high_graduates_2015[3].city_image_link,
-          city4_img: data.cities_high_graduates_2015[4].city_image_link,
-          city0_id: data.cities_high_graduates_2015[0].id,
-          city1_id: data.cities_high_graduates_2015[1].id,
-          city2_id: data.cities_high_graduates_2015[2].id,
-          city3_id: data.cities_high_graduates_2015[3].id,
-          city4_id: data.cities_high_graduates_2015[4].id,
-          univ_id: data.universities_high_graduates_2015[4].id,
-          wage: "$" + data.average_wage.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
-          workforce_age: data.average_age_work_force,
-          wage_growth: data.wage_growth_rate,
-          degrees: data.total_degrees_awarded_in_2015,
-          workforce: data.total_people_in_work_foce.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
-          stem: data.is_stem,
-          ready: true
-        })
-    })
-
-  }
-
-  render() {
-
-    var stem_value = null;
-
-    if (this.state.ready) {
-      if (this.state.stem > 0) {
-        stem_value = "Yes";
-      } else {
-        stem_value = "No";
-      }
     }
 
-    return (
-      <div className="container" style={{background: "white"}}>
+    componentWillMount() {
+        var api = "http://api.majorpotential.me/majors/";
+        api += this.props.match.params.id;
+        fetch(api)
+            .then(results => {
+                return results.json();
+            }).then(data => {
+                this.setState({
+                    image: data.image_link,
+                    name: data.name,
+                    univ0: data.universities_high_graduates_2015[0],
+                    univ0_name: data.universities_high_graduates_2015[0].name,
+                    univ1_name: data.universities_high_graduates_2015[1].name,
+                    univ2_name: data.universities_high_graduates_2015[2].name,
+                    univ3_name: data.universities_high_graduates_2015[3].name,
+                    univ4_name: data.universities_high_graduates_2015[4].name,
+                    univ0_img: data.universities_high_graduates_2015[0].image_link,
+                    univ1_img: data.universities_high_graduates_2015[1].image_link,
+                    univ2_img: data.universities_high_graduates_2015[2].image_link,
+                    univ3_img: data.universities_high_graduates_2015[3].image_link,
+                    univ4_img: data.universities_high_graduates_2015[4].image_link,
+                    univ0_id: data.universities_high_graduates_2015[0].id,
+                    univ1_id: data.universities_high_graduates_2015[1].id,
+                    univ2_id: data.universities_high_graduates_2015[2].id,
+                    univ3_id: data.universities_high_graduates_2015[3].id,
+                    univ4_id: data.universities_high_graduates_2015[4].id,
+                    city0_name: data.cities_high_graduates_2015[0].city_name,
+                    city1_name: data.cities_high_graduates_2015[1].city_name,
+                    city2_name: data.cities_high_graduates_2015[2].city_name,
+                    city3_name: data.cities_high_graduates_2015[3].city_name,
+                    city4_name: data.cities_high_graduates_2015[4].city_name,
+                    city0_img: data.cities_high_graduates_2015[0].city_image_link,
+                    city1_img: data.cities_high_graduates_2015[1].city_image_link,
+                    city2_img: data.cities_high_graduates_2015[2].city_image_link,
+                    city3_img: data.cities_high_graduates_2015[3].city_image_link,
+                    city4_img: data.cities_high_graduates_2015[4].city_image_link,
+                    city0_id: data.cities_high_graduates_2015[0].id,
+                    city1_id: data.cities_high_graduates_2015[1].id,
+                    city2_id: data.cities_high_graduates_2015[2].id,
+                    city3_id: data.cities_high_graduates_2015[3].id,
+                    city4_id: data.cities_high_graduates_2015[4].id,
+                    univ_id: data.universities_high_graduates_2015[4].id,
+                    wage: "$" + data.average_wage.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+                    workforce_age: data.average_age_work_force,
+                    wage_growth: data.wage_growth_rate,
+                    degrees: data.total_degrees_awarded_in_2015,
+                    workforce: data.total_people_in_work_foce.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+                    stem: data.is_stem,
+                    ready: true
+                })
+            })
+
+    }
+
+    render() {
+
+        var stem_value = null;
+
+        if (this.state.ready) {
+            if (this.state.stem > 0) {
+                stem_value = "Yes";
+            } else {
+                stem_value = "No";
+            }
+        }
+
+        return (
+            <div className="container" style={{background: "white"}}>
 
             {/* Name of major */}
             <div className="container" >
@@ -170,8 +176,8 @@ class majorInstance extends Component {
 
 
 
-    );
-  }
+        );
+    }
 }
 
 export default majorInstance;

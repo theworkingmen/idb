@@ -105,7 +105,8 @@ Install the EB CLI
 ```
 $ pip install awsebcli --upgrade --user
 
-Note - more steps might be needed for installing awsebcli for different OSs. Consult the AWS documentation for more info.
+Note - more steps might be needed for installing awsebcli for different OSs.
+ Consult the AWS documentation for more info.
 ```
 
 Deploy the api

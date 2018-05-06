@@ -1,10 +1,16 @@
-import React, { Component } from 'react';
-import {Image, Col, Thumbnail} from 'react-bootstrap';
-import '../../css/about.css';
+import React, {
+    Component
+} from 'react';
+import {
+    Image,
+    Col,
+    Thumbnail
+} from 'react-bootstrap';
+import '../css/about.css';
 
 export default class MembersCard extends Component {
-  render () {
-    return (
+    render() {
+        return (
       <Col xs={6} md={4}>
         <Thumbnail className='members'>
           <Image src={this.props.member["photo"]}
@@ -17,6 +23,6 @@ export default class MembersCard extends Component {
           <p>Number of unit tests: {this.props.member["number_tests"]}</p>
         </Thumbnail>
       </Col>
-    )
-  }
+        )
+    }
 }
