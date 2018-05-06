@@ -24,7 +24,6 @@ install:
     - pip install -U selenium
     - pip list
     - npm install newman
-    - npm install js-beautify
 
 
 before_script:

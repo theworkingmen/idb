@@ -130,5 +130,5 @@ status:
 travis:
 	make clean
 	ls -al
-	make all
+	make frontend
 	make -r check
